@@ -69,7 +69,7 @@ Fill all fields per the standard schema:
 |---|---|
 | `id` | generated slug |
 | `title` | from notebook query |
-| `authors` | from notebook query |
+| `authors` | from notebook query (must be an array of strings, e.g. `["John Doe", "Jane Smith"]`) |
 | `journal` | from notebook query (must match known journal list) |
 | `year` | integer |
 | `doi` | string only, no URL prefix; `""` if not found |

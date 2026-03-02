@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function getBasePath() {
     // If on GitHub Pages
     if (window.location.hostname === 'zhaijj.github.io') {
-        return '/jingjing-paper-notebook';
+        return '/paper-notebook';
     }
 
     // For local file:/// viewing, we need the path up to /docs

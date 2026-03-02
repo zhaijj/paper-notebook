@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function getBasePath() {
-    if (window.location.hostname === 'zhaijj.github.io') return '/jingjing-paper-notebook';
+    if (window.location.hostname === 'zhaijj.github.io') return '/paper-notebook';
     const path = window.location.pathname;
     if (path.includes('/docs/')) return path.substring(0, path.indexOf('/docs/') + 5);
     return '.';
@@ -193,7 +193,7 @@ function initUtterances() {
     // Create script element
     const script = document.createElement('script');
     script.src = 'https://utteranc.es/client.js';
-    script.setAttribute('repo', 'zhaijj/jingjing-paper-notebook');
+    script.setAttribute('repo', 'zhaijj/paper-notebook');
     script.setAttribute('issue-term', 'title');
     script.setAttribute('label', 'comment');
     script.setAttribute('theme', utterancesTheme);

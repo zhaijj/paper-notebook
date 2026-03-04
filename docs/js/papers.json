@@ -679,5 +679,106 @@
     "notes": "## Key Findings\n\n- Presents a comprehensive database of 1,018 A. lyrata + 736 A. arenosa genomes spanning their full geographic ranges\n- GWAS on latitudinal cline identifies strong associations with photoperiod-regulatory loci — a classic local adaptation signature\n- Ploidy-variable, outcrossing system enables study of regulatory evolution and polyploidy effects absent in A. thaliana\n\n## Methods Worth Noting\n\n- Searchable genome browser with population data mapped to reference genomes, available at arabidopsislyrata.org\n- Interactive geographic map of population structure clusters enables spatial analysis of genetic variation\n- Efficient subsampling tool allows targeted extraction of genetic variation from the full dataset",
     "addedDate": "2026-03-03",
     "source": "bioRxiv"
+  },
+  {
+    "id": "yang2026d3lm",
+    "title": "D3LM: A Discrete DNA Diffusion Language Model for Bidirectional DNA Understanding and Generation",
+    "authors": [
+      "Zhao Yang",
+      "Hengchang Liu",
+      "Chuan Cao",
+      "Bing Su"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2603.01780",
+    "tags": [
+      "DNA language model",
+      "diffusion model",
+      "masked diffusion",
+      "regulatory elements",
+      "genomics",
+      "machine learning",
+      "foundation model"
+    ],
+    "rating": 5,
+    "abstract": "Early DNA foundation models adopted BERT-style training, achieving good performance on DNA understanding tasks but lacking generative capabilities. Recent autoregressive models enable DNA generation, but employ left-to-right causal modeling that is suboptimal for DNA where regulatory relationships are inherently bidirectional. We present D3LM (Discrete DNA Diffusion Language Model), which unifies bidirectional representation learning and DNA generation through masked diffusion. D3LM directly adopts the Nucleotide Transformer (NT) v2 architecture but reformulates the training objective as masked diffusion in discrete DNA space, enabling both bidirectional understanding and generation capabilities within a single model. Compared to NT v2 of the same size, D3LM achieves improved performance on understanding tasks. Notably, on regulatory element generation, D3LM achieves an SFID of 10.92, closely approaching real DNA sequences (7.85) and substantially outperforming the previous best result of 29.16 from autoregressive models. Our work suggests diffusion language models as a promising paradigm for unified DNA foundation models. We further present the first systematic study of masked diffusion models in the DNA domain, investigating practical design choices such as tokenization schemes and sampling strategies, thereby providing empirical insights and a solid foundation for future research.",
+    "notes": "## Key Findings\n\n- D3LM unifies bidirectional DNA understanding and generation in a single masked-diffusion model, achieving SFID of 10.92 on regulatory element generation (vs. 29.16 from autoregressive models and 7.85 for real DNA)\n- Outperforms NT v2 on understanding benchmarks while gaining generative capabilities — a free lunch from reformulating the training objective\n- First systematic study of masked diffusion design choices (tokenization, sampling strategies) in the DNA domain\n\n## Methods Worth Noting\n\n- Adopts NT v2 architecture but replaces MLM with discrete masked diffusion objective, enabling iterative denoising generation\n- Evaluates regulatory element generation quality using SFID (spectral FID) rather than sequence similarity\n- Released on HuggingFace: https://huggingface.co/collections/Hengchang-Liu/d3lm",
+    "addedDate": "2026-03-03",
+    "source": "arXiv"
+  },
+  {
+    "id": "kendiukhov2026sae",
+    "title": "Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT",
+    "authors": [
+      "Ihor Kendiukhov"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2603.02952",
+    "tags": [
+      "mechanistic interpretability",
+      "sparse autoencoders",
+      "single-cell foundation models",
+      "Geneformer",
+      "scGPT",
+      "gene regulatory networks"
+    ],
+    "rating": 4,
+    "abstract": "Background: Single-cell foundation models such as Geneformer and scGPT encode rich biological information, but whether this includes causal regulatory logic rather than statistical co-expression remains unclear. Sparse autoencoders (SAEs) can resolve superposition in neural networks by decomposing dense activations into interpretable features, yet they have not been systematically applied to biological foundation models. Results: We trained TopK SAEs on residual stream activations from all layers of Geneformer V2-316M (18 layers, d=1152) and scGPT whole-human (12 layers, d=512), producing atlases of 82525 and 24527 features, respectively. Both atlases confirm massive superposition, with 99.8 percent of features invisible to SVD. Systematic characterization reveals rich biological organization: 29 to 59 percent of features annotate to Gene Ontology, KEGG, Reactome, STRING, or TRRUST, with U-shaped layer profiles reflecting hierarchical abstraction. Features organize into co-activation modules, exhibit causal specificity, and form cross-layer information highways. When tested against genome-scale CRISPRi perturbation data, only 3 of 48 transcription factors (6.2 percent) show regulatory-target-specific feature responses. Conclusions: These models have internalized organized biological knowledge including pathway membership and protein interactions, yet they encode minimal causal regulatory logic.",
+    "notes": "## Key Findings\n\n- SAE atlas of 82,525 (Geneformer) and 24,527 (scGPT) features reveals 99.8% of features are invisible to SVD — massive superposition confirmed\n- 29–59% of features annotate to biological pathways (GO/KEGG/Reactome), showing hierarchical biological organization\n- Only 6.2% of transcription factors show regulatory-target-specific feature responses in CRISPRi data — models learned co-expression, NOT causal regulatory logic\n\n## Methods Worth Noting\n\n- TopK sparse autoencoders trained on residual stream activations across all layers of both models\n- Validated regulatory logic using genome-scale CRISPRi perturbation data as ground truth\n- Interactive web atlas released for 107,000+ features across 30 layers of two models",
+    "addedDate": "2026-03-03",
+    "source": "arXiv"
+  },
+  {
+    "id": "kendiukhov2026circuit",
+    "title": "Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence",
+    "authors": [
+      "Ihor Kendiukhov"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2603.01752",
+    "tags": [
+      "mechanistic interpretability",
+      "circuit tracing",
+      "single-cell foundation models",
+      "Geneformer",
+      "scGPT",
+      "attention heads"
+    ],
+    "rating": 4,
+    "abstract": "We apply causal circuit tracing to Geneformer and scGPT to reveal the distinct computational architectures underlying single-cell foundation models. Our analysis finds inhibitory dominance in attention heads, strong biological coherence among sparse features, and convergent computational strategies across the two independently-trained models. These findings represent the first causal circuit tracing study on biological foundation models, revealing universal architectural motifs that emerge independently of model-specific training choices, and providing a new mechanistic lens for understanding how biological foundation models process and represent genomic information.",
+    "notes": "## Key Findings\n\n- Inhibitory dominance in attention heads is a consistent pattern across both Geneformer and scGPT, revealed through causal circuit tracing\n- Strong biological coherence among sparse features — biologically related genes cluster in shared circuits\n- Cross-model convergence: two independently-trained models develop strikingly similar computational architectures, suggesting universal motifs\n\n## Methods Worth Noting\n\n- Causal circuit tracing applied to biological FMs for the first time, adapting interpretability methods from LLM research\n- Combines activation patching with SAE features to identify causal circuits\n- Complements the SAE atlas paper (arXiv:2603.02952) as part of a broader mechanistic interpretability program",
+    "addedDate": "2026-03-03",
+    "source": "arXiv"
+  },
+  {
+    "id": "yang2026prism",
+    "title": "Extending Sequence Length is Not All You Need: Effective Integration of Multimodal Signals for Gene Expression Prediction",
+    "authors": [
+      "Zhao Yang",
+      "Yi Duan",
+      "Jiwei Zhu",
+      "Ying Ba",
+      "Chuan Cao",
+      "Bing Su"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2602.21550",
+    "tags": [
+      "gene expression prediction",
+      "DNA sequence models",
+      "epigenomics",
+      "multimodal",
+      "causal inference",
+      "ICLR 2026"
+    ],
+    "rating": 5,
+    "abstract": "Gene expression prediction, which predicts mRNA expression levels from DNA sequences, presents significant challenges. Previous works often focus on extending input sequence length to locate distal enhancers, which may influence target genes from hundreds of kilobases away. Our work first reveals that for current models, long sequence modeling can decrease performance. Even carefully designed algorithms only mitigate the performance degradation caused by long sequences. Instead, we find that proximal multimodal epigenomic signals near target genes prove more essential. Hence we focus on how to better integrate these signals, which has been overlooked. We find that different signal types serve distinct biological roles, with some directly marking active regulatory elements while others reflect background chromatin patterns that may introduce confounding effects. Simple concatenation may lead models to develop spurious associations with these background patterns. To address this challenge, we propose Prism, a framework that learns multiple combinations of high-dimensional epigenomic features to represent distinct background chromatin states and uses backdoor adjustment to mitigate confounding effects. Our experimental results demonstrate that proper modeling of multimodal epigenomic signals achieves state-of-the-art performance using only short sequences for gene expression prediction.",
+    "notes": "## Key Findings\n\n- Long-sequence DNA modeling can *decrease* gene expression prediction performance — challenges the dominant sequence-length scaling paradigm\n- Proximal multimodal epigenomic signals (ATAC-seq, histone marks) near target genes are more predictive than distal enhancers accessed via long sequences\n- Prism with causal backdoor adjustment achieves SOTA using only short sequences, by removing confounding chromatin background patterns\n\n## Methods Worth Noting\n\n- Backdoor adjustment from causal inference theory applied to epigenomic feature integration to remove spurious background chromatin correlations\n- Learns multiple combinations of high-dimensional epigenomic features representing distinct background chromatin states\n- Accepted at ICLR 2026 — peer-reviewed and highly relevant to DNA LM design",
+    "addedDate": "2026-03-03",
+    "source": "arXiv"
   }
 ]

@@ -161,16 +161,24 @@ function setupSortSelect() {
 
 // ── Sort logic ────────────────────────────────────────────────
 function sortPapers(papers) {
-    return [...papers].sort((a, b) => {
+    // Preserve original array index so we can use insertion order as a tiebreaker
+    const indexed = papers.map((p, i) => ({ p, i }));
+    indexed.sort((a, b) => {
         if (activeSort === 'rating') {
-            return (b.rating || 0) - (a.rating || 0);
+            return (b.p.rating || 0) - (a.p.rating || 0);
         }
         // Parse addedDate (YYYY-MM-DD) — fall back to year for papers without it
-        const dateA = a.addedDate ? new Date(a.addedDate).getTime() : new Date(`${a.year}-01-01`).getTime();
-        const dateB = b.addedDate ? new Date(b.addedDate).getTime() : new Date(`${b.year}-01-01`).getTime();
-        return activeSort === 'oldest' ? dateA - dateB : dateB - dateA;
+        const dateA = a.p.addedDate ? new Date(a.p.addedDate).getTime() : new Date(`${a.p.year}-01-01`).getTime();
+        const dateB = b.p.addedDate ? new Date(b.p.addedDate).getTime() : new Date(`${b.p.year}-01-01`).getTime();
+        if (dateA !== dateB) {
+            return activeSort === 'oldest' ? dateA - dateB : dateB - dateA;
+        }
+        // Same date: later array position = more recently added
+        return activeSort === 'oldest' ? a.i - b.i : b.i - a.i;
     });
+    return indexed.map(({ p }) => p);
 }
+
 
 // ── Filter logic ──────────────────────────────────────────────
 function filterPapers() {

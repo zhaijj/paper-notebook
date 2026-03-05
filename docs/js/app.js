@@ -41,12 +41,33 @@ let activeJournal = 'all';
 let activeTag = null;
 let searchQuery = '';
 let deepNotesOnly = false;
+let unreadOnly = false;
 let activeSort = 'newest'; // 'newest' | 'oldest' | 'rating'
 let displayLimit = 50;   // 25 | 50 | 100 | 0 (= all)
 
+// ── Read Status (localStorage) ────────────────────────────────
+const LS_KEY = 'paper-notebook-read';
+let readPapers = new Set();
+
+function loadReadStatus() {
+    try {
+        const stored = localStorage.getItem(LS_KEY);
+        readPapers = new Set(stored ? JSON.parse(stored) : []);
+    } catch { readPapers = new Set(); }
+}
+
+function saveReadStatus() {
+    localStorage.setItem(LS_KEY, JSON.stringify([...readPapers]));
+}
+
+function toggleRead(id) {
+    if (readPapers.has(id)) { readPapers.delete(id); } else { readPapers.add(id); }
+    saveReadStatus();
+}
+
 // ── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
-    // Determine the base path for GitHub Pages vs local
+    loadReadStatus();
     const base = getBasePath();
     allPapers = await loadPapers(base);
     renderStats();
@@ -54,6 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderCards();
     setupSearch();
     setupDeepNotesToggle();
+    setupUnreadToggle();
     setupSortSelect();
     setupDisplayLimit();
 });
@@ -151,6 +173,18 @@ function setupDeepNotesToggle() {
     });
 }
 
+// ── Unread Only Toggle ────────────────────────────────────────
+function setupUnreadToggle() {
+    const btn = document.getElementById('unread-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+        unreadOnly = !unreadOnly;
+        btn.setAttribute('aria-pressed', unreadOnly);
+        btn.classList.toggle('active', unreadOnly);
+        renderCards();
+    });
+}
+
 // ── Sort Select ───────────────────────────────────────────────
 function setupSortSelect() {
     const sel = document.getElementById('sort-select');
@@ -178,6 +212,11 @@ function sortPapers(papers) {
     // Preserve original array index as insertion-order tiebreaker
     const indexed = papers.map((p, i) => ({ p, i }));
     indexed.sort((a, b) => {
+        // Unread papers always float above read ones
+        const readA = readPapers.has(a.p.id) ? 1 : 0;
+        const readB = readPapers.has(b.p.id) ? 1 : 0;
+        if (readA !== readB) return readA - readB;
+
         if (activeSort === 'rating') {
             return (b.p.rating || 0) - (a.p.rating || 0);
         }
@@ -199,6 +238,7 @@ function filterPapers() {
         const journalMatch = activeJournal === 'all' || p.journal === activeJournal;
         const tagMatch = !activeTag || (p.tags && p.tags.includes(activeTag));
         const deepMatch = !deepNotesOnly || !!p.notebooklm_url;
+        const unreadMatch = !unreadOnly || !readPapers.has(p.id);
         const q = searchQuery;
 
         // Handle authors as string or array
@@ -209,7 +249,7 @@ function filterPapers() {
             authorsString.toLowerCase().includes(q) ||
             (p.tags && p.tags.join(' ').toLowerCase().includes(q)) ||
             (p.abstract && p.abstract.toLowerCase().includes(q));
-        return journalMatch && tagMatch && deepMatch && searchMatch;
+        return journalMatch && tagMatch && deepMatch && unreadMatch && searchMatch;
     });
 }
 
@@ -218,9 +258,10 @@ function buildCard(paper, animIndex) {
     const slug = JOURNAL_SLUGS[paper.journal] || 'default';
     const accent = JOURNAL_ACCENTS[slug] || JOURNAL_ACCENTS.default;
     const detailUrl = `paper.html?id=${paper.id}`;
+    const isRead = readPapers.has(paper.id);
 
     const card = document.createElement('a');
-    card.className = 'paper-card';
+    card.className = 'paper-card' + (isRead ? ' paper-card--read' : '');
     card.href = detailUrl;
     card.style.setProperty('--card-accent', accent);
     card.style.setProperty('--accent-glow', hexToRgba(accent, 0.15));
@@ -239,6 +280,9 @@ function buildCard(paper, animIndex) {
   <div class="card-header">
     <span class="journal-badge journal-${slug}">${paper.journal}</span>
     <span class="card-year">${paper.year}</span>
+    <button class="read-checkbox ${isRead ? 'read-checkbox--read' : ''}" title="${isRead ? 'Mark as unread' : 'Mark as read'}" aria-label="${isRead ? 'Mark as unread' : 'Mark as read'}" aria-pressed="${isRead}">
+      ${isRead ? '✓ Read' : '○ Unread'}
+    </button>
   </div>
   <h2 class="card-title">${paper.title}</h2>
   <p class="card-authors">${formatAuthors(paper.authors)}</p>
@@ -262,6 +306,24 @@ function buildCard(paper, animIndex) {
 
     const badge = card.querySelector('.nlm-badge');
     if (badge) badge.addEventListener('click', (e) => e.stopPropagation());
+
+    // Read checkbox — toggle without navigating to paper
+    const readBtn = card.querySelector('.read-checkbox');
+    if (readBtn) {
+        readBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleRead(paper.id);
+            const nowRead = readPapers.has(paper.id);
+            readBtn.classList.toggle('read-checkbox--read', nowRead);
+            readBtn.textContent = nowRead ? '✓ Read' : '○ Unread';
+            readBtn.title = nowRead ? 'Mark as unread' : 'Mark as read';
+            readBtn.setAttribute('aria-pressed', nowRead);
+            card.classList.toggle('paper-card--read', nowRead);
+            // If unread-only filter is active, re-render to hide newly read card
+            if (unreadOnly) renderCards();
+        });
+    }
 
     return card;
 }

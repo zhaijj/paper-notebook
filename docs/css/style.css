@@ -916,6 +916,17 @@ body::after {
   background: var(--bg-glass);
 }
 
+/* Active read state on detail page */
+.btn-read-active {
+  border-color: #4caf50 !important;
+  color: #4caf50 !important;
+  background: rgba(76, 175, 80, 0.1) !important;
+}
+
+.btn-read-active:hover {
+  background: rgba(76, 175, 80, 0.18) !important;
+}
+
 .paper-content {
   display: grid;
   grid-template-columns: 1fr 300px;

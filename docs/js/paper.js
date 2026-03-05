@@ -61,6 +61,43 @@ const JOURNAL_ACCENTS = {
     'default': '#8b949e',
 };
 
+// ── Read Status (shared localStorage key with app.js) ────────
+const LS_KEY = 'paper-notebook-read';
+
+function loadReadStatus() {
+    try {
+        const stored = localStorage.getItem(LS_KEY);
+        return new Set(stored ? JSON.parse(stored) : []);
+    } catch { return new Set(); }
+}
+
+function saveReadStatus(set) {
+    localStorage.setItem(LS_KEY, JSON.stringify([...set]));
+}
+
+function setupReadToggleBtn(paperId) {
+    const btn = document.getElementById('btn-read-toggle');
+    if (!btn) return;
+
+    function refresh() {
+        const readSet = loadReadStatus();
+        const isRead = readSet.has(paperId);
+        btn.innerHTML = isRead
+            ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Mark as Unread`
+            : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Mark as Read`;
+        btn.classList.toggle('btn-read-active', isRead);
+    }
+
+    btn.addEventListener('click', () => {
+        const readSet = loadReadStatus();
+        if (readSet.has(paperId)) { readSet.delete(paperId); } else { readSet.add(paperId); }
+        saveReadStatus(readSet);
+        refresh();
+    });
+
+    refresh();
+}
+
 function renderPaper(paper, base) {
     const slug = JOURNAL_SLUGS[paper.journal] || 'default';
     const accent = JOURNAL_ACCENTS[slug] || JOURNAL_ACCENTS.default;
@@ -104,6 +141,9 @@ function renderPaper(paper, base) {
     } else if (doiBtn) {
         doiBtn.style.display = 'none';
     }
+
+    // Read toggle button
+    setupReadToggleBtn(paper.id);
 
     // Sidebar info
     setHTML('info-journal', paper.journal || '—');

@@ -3,8 +3,8 @@
     "id": "kalfon2026scprint2",
     "title": "scPRINT-2: Towards the next-generation of cell foundation models and benchmarks",
     "authors": [
-      "J\u00e9r\u00e9mie Kalfon",
-      "Gabriel Peyr\u00e9",
+      "Jérémie Kalfon",
+      "Gabriel Peyré",
       "Laura Cantini"
     ],
     "journal": "bioRxiv",
@@ -21,11 +21,11 @@
     ],
     "rating": 5,
     "abstract": "scPRINT-2 is a next-generation single-cell foundation model (scFM) with 20 million active parameters using an encoder-compressor-decoder architecture, pre-trained on 350 million cells spanning 16 eukaryotic organisms and over 1 billion years of evolution. It sets new benchmarks in expression denoising, cell embedding, and zero-shot cell type prediction. The model generalizes to organisms unseen during training (cat, tiger, horse, tomato) and novel data modalities (Xenium spatial transcriptomics). An additive benchmark evaluating 42 models systematically decodes the impact of architecture choices, pre-training tasks, and data selection on scFM performance. Key architectural innovations include XPressor cross-attention compression, FSQ-VAE discrete bottleneck, ZiNB+MSE expression loss, criss-cross sub-quadratic attention, and GNN-based neighborhood expression encoding.",
-    "notes": "## Key Findings\n\n- **scPRINT-2** (20M params) trained on 350M cells across 16 organisms \u2192 SOTA on denoising, cell embedding, zero-shot cell type prediction.\n- Data diversity beats data volume \u2014 adding 100M low-diversity cells *hurt* performance until sampling was rebalanced.\n- Generalizes zero-shot to unseen organisms (incl. tomato 67% accuracy) and new modalities (Xenium spatial).\n- Integrates **ESM3 protein LM** for gene tokenization \u2014 enabling prediction on completely unseen genes.\n\n## Methods Worth Noting\n\n- XPressor: cross-attention compression of gene \u2192 cell-level latents (batch correction built-in)\n- FSQ-VAE: discrete information bottleneck on latent tokens\n- ZiNB + MSE loss: models zero-inflation + uncertainty in expression\n- Criss-cross attention: sub-quadratic alternative to full transformer attention\n- GNN (DeepSet k-NN): encodes neighboring cell expression context\n- Cluster-weighted + depth-weighted sampling to handle dataset imbalance",
+    "notes": "## Key Findings\n\n- **scPRINT-2** (20M params) trained on 350M cells across 16 organisms → SOTA on denoising, cell embedding, zero-shot cell type prediction.\n- Data diversity beats data volume — adding 100M low-diversity cells *hurt* performance until sampling was rebalanced.\n- Generalizes zero-shot to unseen organisms (incl. tomato 67% accuracy) and new modalities (Xenium spatial).\n- Integrates **ESM3 protein LM** for gene tokenization — enabling prediction on completely unseen genes.\n\n## Methods Worth Noting\n\n- XPressor: cross-attention compression of gene → cell-level latents (batch correction built-in)\n- FSQ-VAE: discrete information bottleneck on latent tokens\n- ZiNB + MSE loss: models zero-inflation + uncertainty in expression\n- Criss-cross attention: sub-quadratic alternative to full transformer attention\n- GNN (DeepSet k-NN): encodes neighboring cell expression context\n- Cluster-weighted + depth-weighted sampling to handle dataset imbalance",
     "addedDate": "2026-03-01",
     "source": "bioRxiv",
     "notebooklm_url": "https://notebooklm.google.com/notebook/fd908a2e-1ab3-4645-baed-3dfd48bd2072",
-    "notebooklm_notes": "## Key findings and main contributions\n\n- **scPRINT-2**: next-generation scFM with 20M active parameters, encoder-compressor-decoder architecture trained on 350M cells across 16 eukaryotic organisms (>1 billion years of evolution).\n- Sets SOTA on **expression denoising, cell embedding, and zero-shot cell type prediction** \u2014 outperforms supervised methods on Open Problems benchmark.\n- **Generalizes to unseen organisms** (cat, tiger, horse, tomato) and **unseen modalities** (Xenium spatial transcriptomics).\n- **Generative counterfactual abilities**: can zero-shot convert mouse \u2192 human-like expression profiles or male \u2192 female profiles.\n- Additive benchmark evaluated **42 models** across architecture, pre-training task, and data selection axes.\n\n## Important methodological details\n\n- **XPressor architecture**: cross-attention compresses gene embeddings into latent cell-level tokens \u2014 enables efficient encoding and zero-shot batch correction.\n- **FSQ-VAE**: finite scalar quantization enforces discrete information bottleneck on latent dims (finer-grained than VQ-VAE).\n- **ZiNB + MSE loss**: expression decoder outputs mean/dispersion/zero-inflation of a zero-inflated negative binomial distribution \u2014 drastically improves denoising.\n- **Criss-cross attention**: sub-quadratic memory mechanism using double cross-attention with latent tokens.\n- **GNN expression encoder** (DeepSet k-NN): encodes neighborhood cell expression simultaneously.\n- **Cluster-weighted + depth-weighted sampling**: handles massive dataset imbalance; rare cell states sampled fairly.\n- **ESM3 gene tokenization**: protein sequences fed through ESM3 to initialize gene embeddings \u2014 enables prediction on completely unseen genes across organisms.\n\n## Personal insights and analysis notes\n\n- **Data Diversity > Data Volume**: a critical lesson for biological AI \u2014 adding 100M low-diversity cells *hurt* performance until sampling was rebalanced. Generalization comes from breadth (organisms, cell types, quality), not raw count.\n- **Bridging Molecular + Cellular FMs**: ESM3 \u2192 scPRINT-2 is a major conceptual innovation, bringing evolutionary protein structures directly into single-cell transcriptomics. Gene network predictions validated against AlphaFold-Multimer and RoseTTAFold2-PPI.\n- **Redefining \"Ground Truth\"**: scPRINT-2 frequently *corrected* expert annotations on unseen organisms (e.g., identifying mislabeled macrophages), suggesting scFMs may soon outpace cluster-based human annotation as the ground truth.\n\n## Open questions or follow-ups\n\n- [ ] Current benchmarks use cluster-based cell annotations \u2014 how to develop truly continuous, cell-specific ground truths?\n- [ ] Gene regulatory network ground truths only have 1-4% overlap across major databases \u2014 how to evaluate scFM attention properly?\n- [ ] Scarce temporal/perturbation data in pre-training corpus \u2014 needed for next-gen benchmarks.\n- [ ] Benchmark restricted to 20 epochs \u2014 how do architectural advantages scale to full convergence?\n\n## Relevance to plant genomics, DNA language models, and AI\n\n- **Plant genomics**: Training data includes *Arabidopsis* and maize; zero-shot tomato prediction at 67% accuracy despite tiny proportion of training data \u2014 proves cross-plant generalization is possible.\n- **DNA/Protein LMs**: ESM3 integration is directly relevant to our DNA-LM work \u2014 demonstrates how sequence-level LMs feed into cell-level FMs. Gene network predictions cross-validated with structural protein models.\n- **AI architecture**: Criss-cross attention (sub-quadratic), FSQ-VAE discrete bottleneck, and adversarial batch-effect removal via gradient reversal are all broadly applicable AI innovations for biological FMs."
+    "notebooklm_notes": "## Key findings and main contributions\n\n- **scPRINT-2**: next-generation scFM with 20M active parameters, encoder-compressor-decoder architecture trained on 350M cells across 16 eukaryotic organisms (>1 billion years of evolution).\n- Sets SOTA on **expression denoising, cell embedding, and zero-shot cell type prediction** — outperforms supervised methods on Open Problems benchmark.\n- **Generalizes to unseen organisms** (cat, tiger, horse, tomato) and **unseen modalities** (Xenium spatial transcriptomics).\n- **Generative counterfactual abilities**: can zero-shot convert mouse → human-like expression profiles or male → female profiles.\n- Additive benchmark evaluated **42 models** across architecture, pre-training task, and data selection axes.\n\n## Important methodological details\n\n- **XPressor architecture**: cross-attention compresses gene embeddings into latent cell-level tokens — enables efficient encoding and zero-shot batch correction.\n- **FSQ-VAE**: finite scalar quantization enforces discrete information bottleneck on latent dims (finer-grained than VQ-VAE).\n- **ZiNB + MSE loss**: expression decoder outputs mean/dispersion/zero-inflation of a zero-inflated negative binomial distribution — drastically improves denoising.\n- **Criss-cross attention**: sub-quadratic memory mechanism using double cross-attention with latent tokens.\n- **GNN expression encoder** (DeepSet k-NN): encodes neighborhood cell expression simultaneously.\n- **Cluster-weighted + depth-weighted sampling**: handles massive dataset imbalance; rare cell states sampled fairly.\n- **ESM3 gene tokenization**: protein sequences fed through ESM3 to initialize gene embeddings — enables prediction on completely unseen genes across organisms.\n\n## Personal insights and analysis notes\n\n- **Data Diversity > Data Volume**: a critical lesson for biological AI — adding 100M low-diversity cells *hurt* performance until sampling was rebalanced. Generalization comes from breadth (organisms, cell types, quality), not raw count.\n- **Bridging Molecular + Cellular FMs**: ESM3 → scPRINT-2 is a major conceptual innovation, bringing evolutionary protein structures directly into single-cell transcriptomics. Gene network predictions validated against AlphaFold-Multimer and RoseTTAFold2-PPI.\n- **Redefining \"Ground Truth\"**: scPRINT-2 frequently *corrected* expert annotations on unseen organisms (e.g., identifying mislabeled macrophages), suggesting scFMs may soon outpace cluster-based human annotation as the ground truth.\n\n## Open questions or follow-ups\n\n- [ ] Current benchmarks use cluster-based cell annotations — how to develop truly continuous, cell-specific ground truths?\n- [ ] Gene regulatory network ground truths only have 1-4% overlap across major databases — how to evaluate scFM attention properly?\n- [ ] Scarce temporal/perturbation data in pre-training corpus — needed for next-gen benchmarks.\n- [ ] Benchmark restricted to 20 epochs — how do architectural advantages scale to full convergence?\n\n## Relevance to plant genomics, DNA language models, and AI\n\n- **Plant genomics**: Training data includes *Arabidopsis* and maize; zero-shot tomato prediction at 67% accuracy despite tiny proportion of training data — proves cross-plant generalization is possible.\n- **DNA/Protein LMs**: ESM3 integration is directly relevant to our DNA-LM work — demonstrates how sequence-level LMs feed into cell-level FMs. Gene network predictions cross-validated with structural protein models.\n- **AI architecture**: Criss-cross attention (sub-quadratic), FSQ-VAE discrete bottleneck, and adversarial batch-effect removal via gradient reversal are all broadly applicable AI innovations for biological FMs."
   },
   {
     "id": "liao2026rewiring",
@@ -61,7 +61,7 @@
       "AI design"
     ],
     "rating": 4,
-    "abstract": "Cold stress restricts plant growth and inorganic phosphate (Pi) uptake, reducing yield and increasing fertilizer demand. Enhancing both cold tolerance and phosphorus use efficiency (PUE) is crucial for sustainable crop productivity. Here we identify the SPX-domain-containing E3 ubiquitin ligase NITROGEN LIMITATION ADAPTATION (NLA) as a central regulator that links cold signalling to Pi homeostasis in maize (Zea mays L.). Under cold conditions, NLA promotes the degradation of the transcriptional repressor JAZ11, activating jasmonate signalling to enhance cold tolerance; however, NLA also simultaneously represses Pi uptake, through inositol polyphosphate (InsP)-dependent ubiquitination of the Pi transporter PT4. A ubiquitinome-informed genome-wide association study identified a natural PT4(K267A) (lysine-to-alanine substitution) variant that attenuates NLA-mediated degradation and increases Pi uptake in cold conditions. To overcome this nutrient\u2013 stress trade-off, we combined artificial-intelligence-guided structural modelling and ligand docking with genome editing to generate the nla\u039412 allele, which encodes an NLA variant in which binding to InsP is impaired but JAZ11 targeting is retained. The \u039412 modification selectively redirects the activity of NLA towards jasmonate signalling, resulting in improved cold resilience, higher PUE and increased yield in multi-site field trials. These findings reveal a tunable SPX regulatory module that integrates environmental and nutrient signals, and provide a molecular framework for engineering climate-resilient, nutrient-efficient crops.",
+    "abstract": "Cold stress restricts plant growth and inorganic phosphate (Pi) uptake, reducing yield and increasing fertilizer demand. Enhancing both cold tolerance and phosphorus use efficiency (PUE) is crucial for sustainable crop productivity. Here we identify the SPX-domain-containing E3 ubiquitin ligase NITROGEN LIMITATION ADAPTATION (NLA) as a central regulator that links cold signalling to Pi homeostasis in maize (Zea mays L.). Under cold conditions, NLA promotes the degradation of the transcriptional repressor JAZ11, activating jasmonate signalling to enhance cold tolerance; however, NLA also simultaneously represses Pi uptake, through inositol polyphosphate (InsP)-dependent ubiquitination of the Pi transporter PT4. A ubiquitinome-informed genome-wide association study identified a natural PT4(K267A) (lysine-to-alanine substitution) variant that attenuates NLA-mediated degradation and increases Pi uptake in cold conditions. To overcome this nutrient– stress trade-off, we combined artificial-intelligence-guided structural modelling and ligand docking with genome editing to generate the nlaΔ12 allele, which encodes an NLA variant in which binding to InsP is impaired but JAZ11 targeting is retained. The Δ12 modification selectively redirects the activity of NLA towards jasmonate signalling, resulting in improved cold resilience, higher PUE and increased yield in multi-site field trials. These findings reveal a tunable SPX regulatory module that integrates environmental and nutrient signals, and provide a molecular framework for engineering climate-resilient, nutrient-efficient crops.",
     "notes": "",
     "addedDate": "2026-03-01",
     "source": "Nature",
@@ -198,7 +198,7 @@
   },
   {
     "id": "narayanan2026codon",
-    "title": "Pichia-CLM: A language model\u2013based codon optimization pipeline for Komagataella phaffii",
+    "title": "Pichia-CLM: A language model–based codon optimization pipeline for Komagataella phaffii",
     "authors": [
       "Harini Narayanan",
       "J. Christopher Love"
@@ -214,12 +214,12 @@
       "recombinant proteins"
     ],
     "rating": 5,
-    "abstract": "The preference in synonymous codon usage\u2014the so-called codon usage bias (CUB)\u2014is governed by several factors such as the host organism, context and function of the gene, and the position of the codon within the gene itself. We demonstrated that this mapping can be learned from the host\u2019s genome using language models and subsequently applied for codon optimization of heterologous proteins expressed by the host. This pipeline called Pichia\u2013Codon language model (Pichia-CLM) was applied to the industrial host organism, Komagataella phaffii. With this approach, production of heterologous proteins was enhanced up to threefold compared to their native sequences. Furthermore, Pichia-CLM consistently yielded constructs with enhanced productivity for proteins of varied complexity, compared to commercially available tools. Finally, we showed that Pichia-CLM generates sequences resembling the properties of codon usage found in the host\u2019s intrinsic host cell proteins and learned features such as avoiding negative cis-regulatory and repeat elements based on patterns in the genome data. These results show the potential of language models to unbiasedly learn patterns and design robust sequences for improved protein production.",
+    "abstract": "The preference in synonymous codon usage—the so-called codon usage bias (CUB)—is governed by several factors such as the host organism, context and function of the gene, and the position of the codon within the gene itself. We demonstrated that this mapping can be learned from the host’s genome using language models and subsequently applied for codon optimization of heterologous proteins expressed by the host. This pipeline called Pichia–Codon language model (Pichia-CLM) was applied to the industrial host organism, Komagataella phaffii. With this approach, production of heterologous proteins was enhanced up to threefold compared to their native sequences. Furthermore, Pichia-CLM consistently yielded constructs with enhanced productivity for proteins of varied complexity, compared to commercially available tools. Finally, we showed that Pichia-CLM generates sequences resembling the properties of codon usage found in the host’s intrinsic host cell proteins and learned features such as avoiding negative cis-regulatory and repeat elements based on patterns in the genome data. These results show the potential of language models to unbiasedly learn patterns and design robust sequences for improved protein production.",
     "notes": "## Key Findings\n\n- Developed Pichia-CLM, a GRU-based language model for codon optimization in *Komagataella phaffii*.\n- Outperformed commercial tools in enhancing heterologous protein production.\n- Demonstrated that the model learned meaningful physicochemical encodings for amino acids and codons without explicit supervision.\n\n## Methods Worth Noting\n\n- Gated Recurrent Unit (GRU) based encoder-decoder architecture.\n- Bayesian hyperparameter optimization.\n- Experimental validation across six different proteins and comparison with four commercial tools.",
     "addedDate": "2026-03-02",
     "source": "PNAS",
     "notebooklm_url": "https://notebooklm.google.com/notebook/92c8f14f-7cd8-4330-b53a-4f3663b19351",
-    "notebooklm_notes": "## Key Findings\n\n- Developed Pichia-CLM, an encoder-decoder GRU-based language model for codon optimization in *Komagataella phaffii* (formerly *Pichia pastoris*).\n- Improved heterologous protein production by up to threefold (notably for Human Serum Albumin) compared to native sequences.\n- Outperformed four commercial optimization tools (Azenta, IDT, GenScript, Thermo Fisher) in 5 out of 6 experimental validations across distinct proteins (hGH, SARS-CoV-2 RBD, trastuzumab, etc.).\n- Refuted traditional Codon Adaptation Index (CAI) and CUB metrics \u2014 they do **not** consistently correlate with actual protein titers.\n- Without explicit supervision, the model learned to avoid negative cis-regulatory elements and suppressive repeat sequences, generating sequences resembling the host's natural protein properties.\n\n## Methodological Details\n\n- **Architecture**: GRU-based encoder-decoder (chosen over Transformer for better efficiency at this dataset scale).\n- **Training data**: ~27,000 amino acid / coding sequence pairs from ~5,000 native *K. phaffii* proteins \u2014 no artificial optimization goals introduced.\n- **Training objective**: from amino acid sequences to decode CDS\n- **Prediction**: Fully autoregressive, predicting the next codon based on ~50 nt upstream context until a stop codon.\n- **Host organism rationale**: *K. phaffii* is preferred in biomanufacturing for its high cell density, simple growth media, and eukaryotic secretory pathways (glycosylation, disulfide bonds).\n\n## Personal Insights & Analysis\n\n- **Directed evolution via backpropagation analogy**: The model infers a constraint surface (the host's statistical grammar) from natural genomic data and maps heterologous genes onto that surface \u2014 similar in spirit to directed evolution but gradient-based.\n- **Dialect > Scale**: Models trained on human or bovine genomes produce divergent predictions, confirming transcriptional machinery is not a generic substrate. Codon optimization is an organism-specific data collection problem, not a compute-scaling problem.\n- **Reproducibility gap**: Code is on GitHub (`NHarini-1995/PichiaCLM`)"
+    "notebooklm_notes": "## Key Findings\n\n- Developed Pichia-CLM, an encoder-decoder GRU-based language model for codon optimization in *Komagataella phaffii* (formerly *Pichia pastoris*).\n- Improved heterologous protein production by up to threefold (notably for Human Serum Albumin) compared to native sequences.\n- Outperformed four commercial optimization tools (Azenta, IDT, GenScript, Thermo Fisher) in 5 out of 6 experimental validations across distinct proteins (hGH, SARS-CoV-2 RBD, trastuzumab, etc.).\n- Refuted traditional Codon Adaptation Index (CAI) and CUB metrics — they do **not** consistently correlate with actual protein titers.\n- Without explicit supervision, the model learned to avoid negative cis-regulatory elements and suppressive repeat sequences, generating sequences resembling the host's natural protein properties.\n\n## Methodological Details\n\n- **Architecture**: GRU-based encoder-decoder (chosen over Transformer for better efficiency at this dataset scale).\n- **Training data**: ~27,000 amino acid / coding sequence pairs from ~5,000 native *K. phaffii* proteins — no artificial optimization goals introduced.\n- **Training objective**: from amino acid sequences to decode CDS\n- **Prediction**: Fully autoregressive, predicting the next codon based on ~50 nt upstream context until a stop codon.\n- **Host organism rationale**: *K. phaffii* is preferred in biomanufacturing for its high cell density, simple growth media, and eukaryotic secretory pathways (glycosylation, disulfide bonds).\n\n## Personal Insights & Analysis\n\n- **Directed evolution via backpropagation analogy**: The model infers a constraint surface (the host's statistical grammar) from natural genomic data and maps heterologous genes onto that surface — similar in spirit to directed evolution but gradient-based.\n- **Dialect > Scale**: Models trained on human or bovine genomes produce divergent predictions, confirming transcriptional machinery is not a generic substrate. Codon optimization is an organism-specific data collection problem, not a compute-scaling problem.\n- **Reproducibility gap**: Code is on GitHub (`NHarini-1995/PichiaCLM`)"
   },
   {
     "id": "xu2026lumilab",
@@ -256,21 +256,21 @@
     "id": "malszycki2026nuclear",
     "title": "Nuclear speckles enable processing of RNA from GC-rich isochores",
     "authors": [
-      "Micha\u0142 Ma\u0142szycki",
+      "Michał Małszycki",
       "Lisa Martina",
-      "\u0130brahim Av\u015far Il\u0131k",
+      "İbrahim Avşar Ilık",
       "Daniela Salgado Figueroa",
       "Nirmalya Dasgupta",
-      "Men\u015fura Feray \u00c7o\u015far",
+      "Menşura Feray Çoşar",
       "Keun-Tae Kim",
       "Gil Carraco",
       "Beatrix Fauler",
       "David Meierhofer",
       "Thorsten Mielke",
       "Hiroo Imai",
-      "Canta\u015f Alev",
+      "Cantaş Alev",
       "Ferhat Ay",
-      "Tu\u011f\u00e7e Akta\u015f"
+      "Tuğçe Aktaş"
     ],
     "journal": "Cell",
     "year": 2026,
@@ -358,7 +358,7 @@
       "maize"
     ],
     "rating": 5,
-    "abstract": "The rich information encoded in cis-regulatory DNA sequences has not been fully exploited for gene function prediction in reverse genetics. Here we show that orthologous cis-regulatory sequences that diverged approximately 160 million years ago share little sequence similarity, yet remarkably retain semantic similarity that can be effectively captured by a deep learning model, PhytoBabel. Although trained solely on orthologous cis-regulatory sequence pairs from 15 angiosperms, PhytoBabel implicitly learned spatio-temporal gene expression patterns, conserved noncoding sequences, semantically similar fragments and phylogenetic relationships among species. Furthermore, PhytoBabel enables the discovery of evolutionarily unrelated but semantically similar cis-regulatory sequences, facilitating the identification of novel genes with functions of interest. As a proof of concept, we identified somatic embryogenesis-related morphogenic regulators in maize that exhibit semantic similarity to known Arabidopsis morphogenic regulators. By bridging the gap in the cis-regulatory sequence \u2192 semantics \u2192 gene function information chain, PhytoBabel provides a valuable tool for gene function prediction in reverse genetics.",
+    "abstract": "The rich information encoded in cis-regulatory DNA sequences has not been fully exploited for gene function prediction in reverse genetics. Here we show that orthologous cis-regulatory sequences that diverged approximately 160 million years ago share little sequence similarity, yet remarkably retain semantic similarity that can be effectively captured by a deep learning model, PhytoBabel. Although trained solely on orthologous cis-regulatory sequence pairs from 15 angiosperms, PhytoBabel implicitly learned spatio-temporal gene expression patterns, conserved noncoding sequences, semantically similar fragments and phylogenetic relationships among species. Furthermore, PhytoBabel enables the discovery of evolutionarily unrelated but semantically similar cis-regulatory sequences, facilitating the identification of novel genes with functions of interest. As a proof of concept, we identified somatic embryogenesis-related morphogenic regulators in maize that exhibit semantic similarity to known Arabidopsis morphogenic regulators. By bridging the gap in the cis-regulatory sequence → semantics → gene function information chain, PhytoBabel provides a valuable tool for gene function prediction in reverse genetics.",
     "notes": "",
     "addedDate": "2026-03-03",
     "source": "Nature Plants"
@@ -583,7 +583,7 @@
     ],
     "rating": 3,
     "abstract": "The growing number of spatial transcriptomics (ST) datasets enables comprehensive multi-modal characterization of cell types across diverse biological and clinical contexts. However, integration across patient cohorts remains challenging, as local microenvironment, patient-specific variability, and technical batch effects can dominate signals. Here, we hypothesize that combining specialized transcriptomics correction methods with deep representation learning can jointly align morphology, transcriptomics, and spatial information across multiple tissue samples. This approach benefits from recent transcriptomics and pathology foundation models, projecting cells into a shared embedding space where they cluster by cell type rather than dataset-specific conditions. Applying this framework to 18 skin melanoma, 12 human brain, and 4 lung cancer datasets, we demonstrate that it outperforms conventional batch-correction approaches by 58%, 38%, and 2-fold, respectively.",
-    "notes": "## Key Findings\n\n- Combines transcriptomics batch-correction with foundation model embeddings to align morphology, transcriptomics, and spatial data across 18+ tissue datasets\n- Outperforms conventional batch correction by 38\u2013100% across skin melanoma, brain, and lung cancer cohorts\n- Cells cluster by cell type rather than dataset-specific batch effects in the shared embedding space\n\n## Methods Worth Noting\n\n- Uses pathology and transcriptomics foundation models jointly to project cells into a shared embedding space\n- Applies specialized transcriptomics correction (e.g., scVI-based) before deep representation learning\n- Framework (AESTETIK) is open-source: https://github.com/ratschlab/aestetik",
+    "notes": "## Key Findings\n\n- Combines transcriptomics batch-correction with foundation model embeddings to align morphology, transcriptomics, and spatial data across 18+ tissue datasets\n- Outperforms conventional batch correction by 38–100% across skin melanoma, brain, and lung cancer cohorts\n- Cells cluster by cell type rather than dataset-specific batch effects in the shared embedding space\n\n## Methods Worth Noting\n\n- Uses pathology and transcriptomics foundation models jointly to project cells into a shared embedding space\n- Applies specialized transcriptomics correction (e.g., scVI-based) before deep representation learning\n- Framework (AESTETIK) is open-source: https://github.com/ratschlab/aestetik",
     "addedDate": "2026-03-03",
     "source": "bioRxiv"
   },
@@ -606,7 +606,7 @@
       "RNA-seq"
     ],
     "rating": 3,
-    "abstract": "Recent advances in large-scale self-supervised learning have led to the emergence of foundation models capable of extracting transferable visual representations from high-dimensional image data. In computational pathology, such models are increasingly used as feature encoders for molecular prediction tasks. However, systematic benchmarking of publicly available image foundation models for transcriptomic prediction from whole-slide images (WSIs) remains limited. Here, we perform a comprehensive evaluation of five state-of-the-art vision foundation models \u2014 DINOv2, Phikon, UNI, H-Optimus-0, and MedSigLIP \u2014 for gene expression prediction using the TCGA-BRCA cohort. Tile embeddings from each model were aggregated via attention-based multiple instance learning (MIL), followed by multi-target regression to predict RNA-seq expression profiles. Histopathology-specific foundation models consistently outperformed general-purpose encoders, with Phikon achieving the strongest overall performance.",
+    "abstract": "Recent advances in large-scale self-supervised learning have led to the emergence of foundation models capable of extracting transferable visual representations from high-dimensional image data. In computational pathology, such models are increasingly used as feature encoders for molecular prediction tasks. However, systematic benchmarking of publicly available image foundation models for transcriptomic prediction from whole-slide images (WSIs) remains limited. Here, we perform a comprehensive evaluation of five state-of-the-art vision foundation models — DINOv2, Phikon, UNI, H-Optimus-0, and MedSigLIP — for gene expression prediction using the TCGA-BRCA cohort. Tile embeddings from each model were aggregated via attention-based multiple instance learning (MIL), followed by multi-target regression to predict RNA-seq expression profiles. Histopathology-specific foundation models consistently outperformed general-purpose encoders, with Phikon achieving the strongest overall performance.",
     "notes": "## Key Findings\n\n- Domain-specific histopathology foundation models (Phikon, UNI, H-Optimus-0) consistently outperform general-purpose encoders (DINOv2, MedSigLIP) for gene expression prediction from WSIs\n- Phikon achieves the strongest overall gene-level Spearman correlation across samples in the TCGA-BRCA cohort\n- Demonstrates that domain-aligned pretraining substantially enhances morphology-to-transcriptome inference\n\n## Methods Worth Noting\n\n- Attention-based multiple instance learning (MIL) aggregates tile embeddings from each foundation model\n- Multi-target regression predicts RNA-seq expression profiles from the aggregated patch embeddings\n- Performance assessed by gene-level Spearman correlation across samples",
     "addedDate": "2026-03-03",
     "source": "bioRxiv"
@@ -633,7 +633,7 @@
     ],
     "rating": 3,
     "abstract": "Genome architecture reorganizes over evolutionary time to support complex multicellularity without a proportional expansion of coding DNA. We conducted a cross-kingdom comparative analysis using high-quality RefSeq assemblies annotated by the NCBI Genome Annotation Pipeline, restricting the dataset to chromosome-level or complete genomes. Scaling relationships among genome size, gene content, and coding DNA content reveal compositional transitions that distinguish prokaryotic, unicellular eukaryotic, and multicellular lineages. Beyond approximately 40 Mb of genic content, coding expansion slows and saturates, indicating compositional constraints that shaped the rise of multicellularity. These results establish scaling laws that quantify how noncoding sequence expansion dominates genome growth in complex eukaryotes.",
-    "notes": "## Key Findings\n\n- Beyond ~40 Mb of genic content, coding DNA expansion saturates \u2014 noncoding sequence dominates genome growth in complex eukaryotes including plants\n- Cross-kingdom analysis identifies compositional transitions distinguishing prokaryotes, unicellular eukaryotes, and multicellular lineages\n- Establishes quantitative scaling laws for genome composition relevant to understanding regulatory complexity in large plant genomes\n\n## Methods Worth Noting\n\n- Used high-quality chromosome-level RefSeq assemblies annotated by NCBI Genome Annotation Pipeline for cross-kingdom comparison\n- Analyzed scaling relationships among genome size, gene content, and coding DNA content\n- Cross-kingdom approach enables detection of universal vs. lineage-specific genome composition rules",
+    "notes": "## Key Findings\n\n- Beyond ~40 Mb of genic content, coding DNA expansion saturates — noncoding sequence dominates genome growth in complex eukaryotes including plants\n- Cross-kingdom analysis identifies compositional transitions distinguishing prokaryotes, unicellular eukaryotes, and multicellular lineages\n- Establishes quantitative scaling laws for genome composition relevant to understanding regulatory complexity in large plant genomes\n\n## Methods Worth Noting\n\n- Used high-quality chromosome-level RefSeq assemblies annotated by NCBI Genome Annotation Pipeline for cross-kingdom comparison\n- Analyzed scaling relationships among genome size, gene content, and coding DNA content\n- Cross-kingdom approach enables detection of universal vs. lineage-specific genome composition rules",
     "addedDate": "2026-03-03",
     "source": "bioRxiv"
   },
@@ -649,7 +649,7 @@
       "Jana Flury",
       "Uliana Kolesnikova",
       "Martin Duchoslav",
-      "J\u00f6rn Gerchen",
+      "Jörn Gerchen",
       "Gabriela Sramkova",
       "Rimma Ufimov",
       "Sofia Celestini",
@@ -676,7 +676,7 @@
     ],
     "rating": 4,
     "abstract": "Genetic studies leveraging natural variation in Arabidopsis species have improved our understanding of evolutionary genetic processes underlying ecologically important and adaptive traits. Integrating the thorough functional knowledge accumulated in A. thaliana with the extensive natural variation in outcrossing Arabidopsis species is a powerful approach to study the basis of adaptation in natural evolutionary and ecological contexts. Here we present an integrated genomics database of sequenced genomes from several studies in A. lyrata (1018 genomes in total) and A. arenosa (736 genomes in total), spanning the geographic ranges of these two ploidy-variable, outcrossing taxa. We provide a searchable genome browser with population data mapped to respective reference genomes, an interactive geographic map of population structure clusters, and an efficient way to subsample the full dataset of genetic variation, available at arabidopsislyrata.org. To demonstrate its utility, we perform a genome-wide association study on a latitudinal cline of A. lyrata and find strong associations of several loci with latitude, including variants in key regulators of photoperiodic growth.",
-    "notes": "## Key Findings\n\n- Presents a comprehensive database of 1,018 A. lyrata + 736 A. arenosa genomes spanning their full geographic ranges\n- GWAS on latitudinal cline identifies strong associations with photoperiod-regulatory loci \u2014 a classic local adaptation signature\n- Ploidy-variable, outcrossing system enables study of regulatory evolution and polyploidy effects absent in A. thaliana\n\n## Methods Worth Noting\n\n- Searchable genome browser with population data mapped to reference genomes, available at arabidopsislyrata.org\n- Interactive geographic map of population structure clusters enables spatial analysis of genetic variation\n- Efficient subsampling tool allows targeted extraction of genetic variation from the full dataset",
+    "notes": "## Key Findings\n\n- Presents a comprehensive database of 1,018 A. lyrata + 736 A. arenosa genomes spanning their full geographic ranges\n- GWAS on latitudinal cline identifies strong associations with photoperiod-regulatory loci — a classic local adaptation signature\n- Ploidy-variable, outcrossing system enables study of regulatory evolution and polyploidy effects absent in A. thaliana\n\n## Methods Worth Noting\n\n- Searchable genome browser with population data mapped to reference genomes, available at arabidopsislyrata.org\n- Interactive geographic map of population structure clusters enables spatial analysis of genetic variation\n- Efficient subsampling tool allows targeted extraction of genetic variation from the full dataset",
     "addedDate": "2026-03-03",
     "source": "bioRxiv"
   },
@@ -703,7 +703,7 @@
     ],
     "rating": 5,
     "abstract": "Early DNA foundation models adopted BERT-style training, achieving good performance on DNA understanding tasks but lacking generative capabilities. Recent autoregressive models enable DNA generation, but employ left-to-right causal modeling that is suboptimal for DNA where regulatory relationships are inherently bidirectional. We present D3LM (Discrete DNA Diffusion Language Model), which unifies bidirectional representation learning and DNA generation through masked diffusion. D3LM directly adopts the Nucleotide Transformer (NT) v2 architecture but reformulates the training objective as masked diffusion in discrete DNA space, enabling both bidirectional understanding and generation capabilities within a single model. Compared to NT v2 of the same size, D3LM achieves improved performance on understanding tasks. Notably, on regulatory element generation, D3LM achieves an SFID of 10.92, closely approaching real DNA sequences (7.85) and substantially outperforming the previous best result of 29.16 from autoregressive models. Our work suggests diffusion language models as a promising paradigm for unified DNA foundation models. We further present the first systematic study of masked diffusion models in the DNA domain, investigating practical design choices such as tokenization schemes and sampling strategies, thereby providing empirical insights and a solid foundation for future research.",
-    "notes": "## Key Findings\n\n- D3LM unifies bidirectional DNA understanding and generation in a single masked-diffusion model, achieving SFID of 10.92 on regulatory element generation (vs. 29.16 from autoregressive models and 7.85 for real DNA)\n- Outperforms NT v2 on understanding benchmarks while gaining generative capabilities \u2014 a free lunch from reformulating the training objective\n- First systematic study of masked diffusion design choices (tokenization, sampling strategies) in the DNA domain\n\n## Methods Worth Noting\n\n- Adopts NT v2 architecture but replaces MLM with discrete masked diffusion objective, enabling iterative denoising generation\n- Evaluates regulatory element generation quality using SFID (spectral FID) rather than sequence similarity\n- Released on HuggingFace: https://huggingface.co/collections/Hengchang-Liu/d3lm",
+    "notes": "## Key Findings\n\n- D3LM unifies bidirectional DNA understanding and generation in a single masked-diffusion model, achieving SFID of 10.92 on regulatory element generation (vs. 29.16 from autoregressive models and 7.85 for real DNA)\n- Outperforms NT v2 on understanding benchmarks while gaining generative capabilities — a free lunch from reformulating the training objective\n- First systematic study of masked diffusion design choices (tokenization, sampling strategies) in the DNA domain\n\n## Methods Worth Noting\n\n- Adopts NT v2 architecture but replaces MLM with discrete masked diffusion objective, enabling iterative denoising generation\n- Evaluates regulatory element generation quality using SFID (spectral FID) rather than sequence similarity\n- Released on HuggingFace: https://huggingface.co/collections/Hengchang-Liu/d3lm",
     "addedDate": "2026-03-03",
     "source": "arXiv"
   },
@@ -726,7 +726,7 @@
     ],
     "rating": 4,
     "abstract": "Background: Single-cell foundation models such as Geneformer and scGPT encode rich biological information, but whether this includes causal regulatory logic rather than statistical co-expression remains unclear. Sparse autoencoders (SAEs) can resolve superposition in neural networks by decomposing dense activations into interpretable features, yet they have not been systematically applied to biological foundation models. Results: We trained TopK SAEs on residual stream activations from all layers of Geneformer V2-316M (18 layers, d=1152) and scGPT whole-human (12 layers, d=512), producing atlases of 82525 and 24527 features, respectively. Both atlases confirm massive superposition, with 99.8 percent of features invisible to SVD. Systematic characterization reveals rich biological organization: 29 to 59 percent of features annotate to Gene Ontology, KEGG, Reactome, STRING, or TRRUST, with U-shaped layer profiles reflecting hierarchical abstraction. Features organize into co-activation modules, exhibit causal specificity, and form cross-layer information highways. When tested against genome-scale CRISPRi perturbation data, only 3 of 48 transcription factors (6.2 percent) show regulatory-target-specific feature responses. Conclusions: These models have internalized organized biological knowledge including pathway membership and protein interactions, yet they encode minimal causal regulatory logic.",
-    "notes": "## Key Findings\n\n- SAE atlas of 82,525 (Geneformer) and 24,527 (scGPT) features reveals 99.8% of features are invisible to SVD \u2014 massive superposition confirmed\n- 29\u201359% of features annotate to biological pathways (GO/KEGG/Reactome), showing hierarchical biological organization\n- Only 6.2% of transcription factors show regulatory-target-specific feature responses in CRISPRi data \u2014 models learned co-expression, NOT causal regulatory logic\n\n## Methods Worth Noting\n\n- TopK sparse autoencoders trained on residual stream activations across all layers of both models\n- Validated regulatory logic using genome-scale CRISPRi perturbation data as ground truth\n- Interactive web atlas released for 107,000+ features across 30 layers of two models",
+    "notes": "## Key Findings\n\n- SAE atlas of 82,525 (Geneformer) and 24,527 (scGPT) features reveals 99.8% of features are invisible to SVD — massive superposition confirmed\n- 29–59% of features annotate to biological pathways (GO/KEGG/Reactome), showing hierarchical biological organization\n- Only 6.2% of transcription factors show regulatory-target-specific feature responses in CRISPRi data — models learned co-expression, NOT causal regulatory logic\n\n## Methods Worth Noting\n\n- TopK sparse autoencoders trained on residual stream activations across all layers of both models\n- Validated regulatory logic using genome-scale CRISPRi perturbation data as ground truth\n- Interactive web atlas released for 107,000+ features across 30 layers of two models",
     "addedDate": "2026-03-03",
     "source": "arXiv"
   },
@@ -749,7 +749,7 @@
     ],
     "rating": 4,
     "abstract": "We apply causal circuit tracing to Geneformer and scGPT to reveal the distinct computational architectures underlying single-cell foundation models. Our analysis finds inhibitory dominance in attention heads, strong biological coherence among sparse features, and convergent computational strategies across the two independently-trained models. These findings represent the first causal circuit tracing study on biological foundation models, revealing universal architectural motifs that emerge independently of model-specific training choices, and providing a new mechanistic lens for understanding how biological foundation models process and represent genomic information.",
-    "notes": "## Key Findings\n\n- Inhibitory dominance in attention heads is a consistent pattern across both Geneformer and scGPT, revealed through causal circuit tracing\n- Strong biological coherence among sparse features \u2014 biologically related genes cluster in shared circuits\n- Cross-model convergence: two independently-trained models develop strikingly similar computational architectures, suggesting universal motifs\n\n## Methods Worth Noting\n\n- Causal circuit tracing applied to biological FMs for the first time, adapting interpretability methods from LLM research\n- Combines activation patching with SAE features to identify causal circuits\n- Complements the SAE atlas paper (arXiv:2603.02952) as part of a broader mechanistic interpretability program",
+    "notes": "## Key Findings\n\n- Inhibitory dominance in attention heads is a consistent pattern across both Geneformer and scGPT, revealed through causal circuit tracing\n- Strong biological coherence among sparse features — biologically related genes cluster in shared circuits\n- Cross-model convergence: two independently-trained models develop strikingly similar computational architectures, suggesting universal motifs\n\n## Methods Worth Noting\n\n- Causal circuit tracing applied to biological FMs for the first time, adapting interpretability methods from LLM research\n- Combines activation patching with SAE features to identify causal circuits\n- Complements the SAE atlas paper (arXiv:2603.02952) as part of a broader mechanistic interpretability program",
     "addedDate": "2026-03-03",
     "source": "arXiv"
   },
@@ -777,7 +777,7 @@
     ],
     "rating": 5,
     "abstract": "Gene expression prediction, which predicts mRNA expression levels from DNA sequences, presents significant challenges. Previous works often focus on extending input sequence length to locate distal enhancers, which may influence target genes from hundreds of kilobases away. Our work first reveals that for current models, long sequence modeling can decrease performance. Even carefully designed algorithms only mitigate the performance degradation caused by long sequences. Instead, we find that proximal multimodal epigenomic signals near target genes prove more essential. Hence we focus on how to better integrate these signals, which has been overlooked. We find that different signal types serve distinct biological roles, with some directly marking active regulatory elements while others reflect background chromatin patterns that may introduce confounding effects. Simple concatenation may lead models to develop spurious associations with these background patterns. To address this challenge, we propose Prism, a framework that learns multiple combinations of high-dimensional epigenomic features to represent distinct background chromatin states and uses backdoor adjustment to mitigate confounding effects. Our experimental results demonstrate that proper modeling of multimodal epigenomic signals achieves state-of-the-art performance using only short sequences for gene expression prediction.",
-    "notes": "## Key Findings\n\n- Long-sequence DNA modeling can *decrease* gene expression prediction performance \u2014 challenges the dominant sequence-length scaling paradigm\n- Proximal multimodal epigenomic signals (ATAC-seq, histone marks) near target genes are more predictive than distal enhancers accessed via long sequences\n- Prism with causal backdoor adjustment achieves SOTA using only short sequences, by removing confounding chromatin background patterns\n\n## Methods Worth Noting\n\n- Backdoor adjustment from causal inference theory applied to epigenomic feature integration to remove spurious background chromatin correlations\n- Learns multiple combinations of high-dimensional epigenomic features representing distinct background chromatin states\n- Accepted at ICLR 2026 \u2014 peer-reviewed and highly relevant to DNA LM design",
+    "notes": "## Key Findings\n\n- Long-sequence DNA modeling can *decrease* gene expression prediction performance — challenges the dominant sequence-length scaling paradigm\n- Proximal multimodal epigenomic signals (ATAC-seq, histone marks) near target genes are more predictive than distal enhancers accessed via long sequences\n- Prism with causal backdoor adjustment achieves SOTA using only short sequences, by removing confounding chromatin background patterns\n\n## Methods Worth Noting\n\n- Backdoor adjustment from causal inference theory applied to epigenomic feature integration to remove spurious background chromatin correlations\n- Learns multiple combinations of high-dimensional epigenomic features representing distinct background chromatin states\n- Accepted at ICLR 2026 — peer-reviewed and highly relevant to DNA LM design",
     "addedDate": "2026-03-03",
     "source": "arXiv"
   },
@@ -818,5 +818,108 @@
     "source": "https://www.nature.com/articles/s41586-026-10176-5",
     "notebooklm_url": "",
     "notebooklm_notes": ""
+  },
+  {
+    "id": "xiong2026circadian",
+    "title": "A circadian rheostat drives proton electrochemical gradients to optimize cell-type-specific growth in Arabidopsis",
+    "authors": [
+      "Lu Xiong",
+      "Motohide Seki",
+      "Akiko Satake",
+      "Paloma Mas"
+    ],
+    "journal": "Cell",
+    "year": 2026,
+    "doi": "10.1016/j.cell.2025.11.030",
+    "tags": [
+      "Arabidopsis",
+      "circadian clock",
+      "plant growth",
+      "CCA1",
+      "electrochemical gradients",
+      "plant genomics"
+    ],
+    "rating": 3,
+    "abstract": "The clock component CCA1 functions as a molecular rheostat, fine-tuning cell-type-specific electrochemical gradients to optimize carbon allocation and the timely coordination of shoot and root growth balance.",
+    "notes": "## Key Findings\n\n- CCA1, a core circadian clock TF in Arabidopsis, acts as a molecular rheostat controlling proton electrochemical gradients in a cell-type-specific manner\n- Circadian regulation of H+-ATPase activity coordinates carbon allocation and the balance between shoot and root growth\n- Reveals a direct link between circadian oscillation and cellular bioenergetics in plant growth\n\n## Methods Worth Noting\n\n- Cell-type-specific dissection of circadian-dependent electrochemical gradients\n- Genetic and pharmacological manipulation of H+-ATPase activity in Arabidopsis",
+    "addedDate": "2026-03-08",
+    "source": "Cell"
+  },
+  {
+    "id": "yang2026strigolactone",
+    "title": "Editing strigolactone hormone receptor for robust antiviral silencing in rice",
+    "authors": [
+      "Guoyi Yang",
+      "Ming Wu",
+      "Shuai Zhang",
+      "Yucen Huang",
+      "Yixiao Liu",
+      "Xiyuan Yu",
+      "Jiayang Hu",
+      "Le Mi",
+      "Peng Gan",
+      "Yuansheng Wu",
+      "Jing Zou",
+      "Baogang Zhang",
+      "Qun Hu",
+      "Jie Hu",
+      "Ruifeng Yao",
+      "Bojian Zhong",
+      "Xianbo Huang",
+      "Huiting Xie",
+      "Yinghua Ji",
+      "Yi Li",
+      "Jie Zhang",
+      "Liming Yan",
+      "Shou-wei Ding",
+      "Shanshan Zhao",
+      "Jianguo Wu"
+    ],
+    "journal": "Cell",
+    "year": 2026,
+    "doi": "10.1016/j.cell.2026.01.013",
+    "tags": [
+      "rice",
+      "CRISPR",
+      "genome editing",
+      "antiviral resistance",
+      "strigolactone",
+      "RNA silencing"
+    ],
+    "rating": 3,
+    "abstract": "Precise genome editing of the rice strigolactone receptor DWARF14 confers robust, transgene-free antiviral resistance by blocking viral suppression of endogenous RNA silencing, offering a promising strategy for durable disease protection without a yield penalty.",
+    "notes": "## Key Findings\n\n- CRISPR editing of DWARF14 (D14), the rice strigolactone receptor, disrupts its interaction with the viral suppressor of RNA silencing\n- The edited plants display robust, heritable antiviral resistance without a yield penalty and with no transgene integration\n- Demonstrates that a hormone receptor can be repurposed via genome editing to enhance crop immunity\n\n## Methods Worth Noting\n\n- Precise CRISPR-Cas9 genome editing at DWARF14 locus in rice\n- Transgene-free screening of edited progeny lines\n- Agronomic evaluation across field conditions to confirm no yield penalty",
+    "addedDate": "2026-03-08",
+    "source": "Cell"
+  },
+  {
+    "id": "havens2026selection",
+    "title": "Dynamics of natural selection preceding human viral epidemics and pandemics",
+    "authors": [
+      "Jennifer L. Havens",
+      "Sergei L. Kosakovsky Pond",
+      "Jordan D. Zehr",
+      "Jonathan E. Pekar",
+      "Edyth Parker",
+      "Michael Worobey",
+      "Kristian G. Andersen",
+      "Joel O. Wertheim"
+    ],
+    "journal": "Cell",
+    "year": 2026,
+    "doi": "10.1016/j.cell.2026.02.004",
+    "tags": [
+      "evolutionary biology",
+      "phylogenetics",
+      "natural selection",
+      "viral evolution",
+      "zoonosis",
+      "population genetics"
+    ],
+    "rating": 3,
+    "abstract": "Phylogenetic-based selection analysis of viral evolution before and after spillover reveals that viral adaptation in the host reservoir is not a necessary precursor of novel zoonotic virus epidemics and pandemics, including SARS-CoV-2. In contrast, the 1977 reemergence of H1N1 influenza A virus was preceded by selection consistent with laboratory passage.",
+    "notes": "## Key Findings\n\n- Large-scale phylogenomic selection analysis of 10+ viral lineages reveals that reservoir-host adaptation is not required for pandemic potential\n- SARS-CoV-2 shows no evidence of elevated positive selection in animal reservoir prior to human spillover\n- The 1977 H1N1 emergence is an outlier, with selection patterns consistent with lab passage rather than natural evolution\n\n## Methods Worth Noting\n\n- Phylogenetic-based dN/dS and selection analysis (HyPhy suite: BUSTED, MEME, FEL) applied genome-wide\n- Pre- vs. post-spillover comparative framework across diverse zoonotic viruses\n- Open Access — data and code available",
+    "addedDate": "2026-03-08",
+    "source": "Cell"
   }
 ]

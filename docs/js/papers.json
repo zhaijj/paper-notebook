@@ -1074,5 +1074,65 @@
     "notes": "## Key Findings\n\n- Two maize NILs differing at chr4 chilling QTLs show distinct cold responses; proteome (soluble + cell wall) contributes most strongly to genotypic differences\n- A 5.15 Mb QTL region on chr4 drives differences in photosynthetic efficiency and leaf development under cold\n- Benzoxazinoid pathway genes (BX1 + DIBOA/HBOA glucosides) located within the divergence region are specifically associated with chilling tolerance — novel stress signaling role\n\n## Methods Worth Noting\n\n- Integrated multi-omics: transcriptomics + soluble/cell wall proteomics + metabolomics (primary + specialized)\n- Near-isogenic line (NIL) design isolates chr4 QTL effects from background variation\n- Univariate + multivariate integrative statistical framework for multi-omic data analysis",
     "addedDate": "2026-03-08",
     "source": "bioRxiv"
+  },
+  {
+    "id": "cavanagh2026conformational",
+    "title": "Computational design of conformation-biasing mutations to alter protein functions",
+    "authors": [
+      "Peter E. Cavanagh",
+      "Andrew G. Xue",
+      "Shizhong A. Dai",
+      "Albert Qiang",
+      "Tsutomu Matsui",
+      "Alice Y. Ting"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.adv7953",
+    "tags": [
+      "protein design",
+      "inverse folding",
+      "AI",
+      "conformational biasing",
+      "foundation models"
+    ],
+    "rating": 4,
+    "abstract": "Conformational biasing (CB) is a rapid and streamlined computational method that uses contrastive scoring by inverse folding models to predict protein variants biased toward desired conformational states. We successfully validated CB across seven diverse proteins and used it to engineer lipoic acid ligase (LplA) variants biased toward open or closed conformational states. Variants favoring the closed state showed increased selectivity for the natural substrate, whereas open-state variants displayed enhanced promiscuity, enabling broad protein labeling inside living mammalian cells. CB provides a fast and accessible route to tune protein function through conformational control.",
+    "notes": "## Key Findings\n\n- Conformational biasing (CB) uses inverse folding models (IFMs) to identify mutations that preferentially stabilize one protein conformation over another via contrastive scoring\n- Validated across seven proteins including K-Ras, SARS-CoV-2 spike protein, and β2 adrenergic receptor\n- Applied to lipoic acid ligase (LplA): closed-biased variants gained selectivity; open-biased variants became highly promiscuous for protein labeling in living cells\n\n## Methods Worth Noting\n\n- Contrastive scoring with inverse folding models (e.g., ProteinMPNN-class IFMs) against two known conformational states\n- Biophysical validation via small-angle X-ray scattering (SAXS) and tryptophan fluorescence\n- In-cell validation using mammalian cell labeling assays",
+    "addedDate": "2026-03-12",
+    "source": "Science"
+  },
+  {
+    "id": "anstett2026evolutionary",
+    "title": "Rapid evolution predicts demographic recovery after extreme drought",
+    "authors": [
+      "Daniel N. Anstett",
+      "Julia Anstett",
+      "Seema N. Sheth",
+      "Dylan R. Moxley",
+      "Haley A. Branch",
+      "Mojtaba Jahani",
+      "Kaichi Huang",
+      "Marco Todesco",
+      "Rebecca Jordan",
+      "Jose Miguel Lazaro-Guevara",
+      "Loren H. Rieseberg",
+      "Amy L. Angert"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.adu0995",
+    "tags": [
+      "plant genomics",
+      "evolutionary rescue",
+      "population genetics",
+      "climate adaptation",
+      "whole-genome sequencing"
+    ],
+    "rating": 4,
+    "abstract": "Populations that are declining as a result of climate change may need to evolve to persist. Although evolutionary rescue has been demonstrated in theory and in the laboratory, its relevance to natural populations facing climate change remains unknown. Here we link rapid evolution and population dynamics in scarlet monkeyflower, Mimulus cardinalis, during exceptional drought. We leverage whole-genome sequencing across 55 populations to identify climate-associated loci. Simultaneously we track demography and allele frequency change throughout the drought. We establish range-wide population decline during the drought, geographically variable rapid evolution, and variable population recovery that is predictable by standing genetic variation in, and rapid evolution at, climate-associated loci. These findings demonstrate the possibility of evolutionary rescue in the wild, showing that genetic variation at adaptive, but not neutral, loci predicts population recovery.",
+    "notes": "## Key Findings\n\n- Tracked 55 populations of scarlet monkeyflower (*Mimulus cardinalis*) across 8 years including the most extreme recorded drought on the US/Mexico west coast\n- Populations with greater allele frequency shifts toward drought-adapted climate-associated loci recovered faster — demonstrating evolutionary rescue in the wild\n- Standing genetic variation at adaptive (not neutral) loci predicts demographic recovery, not just genome-wide diversity\n\n## Methods Worth Noting\n\n- Whole-genome sequencing across 55 natural populations for GWAS-style identification of climate-associated loci\n- Joint tracking of allele frequency dynamics and population census size over time\n- Longitudinal demographic monitoring linking genotype-to-fitness in a natural setting",
+    "addedDate": "2026-03-12",
+    "source": "Science"
   }
 ]

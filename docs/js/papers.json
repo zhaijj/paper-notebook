@@ -1134,5 +1134,31 @@
     "notes": "## Key Findings\n\n- Tracked 55 populations of scarlet monkeyflower (*Mimulus cardinalis*) across 8 years including the most extreme recorded drought on the US/Mexico west coast\n- Populations with greater allele frequency shifts toward drought-adapted climate-associated loci recovered faster — demonstrating evolutionary rescue in the wild\n- Standing genetic variation at adaptive (not neutral) loci predicts demographic recovery, not just genome-wide diversity\n\n## Methods Worth Noting\n\n- Whole-genome sequencing across 55 natural populations for GWAS-style identification of climate-associated loci\n- Joint tracking of allele frequency dynamics and population census size over time\n- Longitudinal demographic monitoring linking genotype-to-fitness in a natural setting",
     "addedDate": "2026-03-12",
     "source": "Science"
+  },
+  {
+    "id": "zhang2026annevo",
+    "title": "Highly accurate ab initio gene annotation with ANNEVO",
+    "authors": [
+      "Pengyu Zhang",
+      "Tun Xu",
+      "Kai Ye"
+    ],
+    "journal": "Nature Methods",
+    "year": 2026,
+    "doi": "10.1038/s41592-026-03036-7",
+    "tags": [
+      "genome annotation",
+      "genomic language model",
+      "mixture of experts",
+      "machine learning",
+      "deep learning",
+      "gene prediction",
+      "evolution"
+    ],
+    "rating": 5,
+    "abstract": "Accurate gene annotation is essential for deciphering the mapping from genomic sequences to their functional roles. However, current methods struggle to model complex gene transmission patterns, such as vertical inheritance and horizontal gene transfer. Here we introduce ANNEVO, a mixture of experts-based genomic language model that directly models distal sequence dependencies and joint evolutionary relationships from diverse genomes, enabling precise ab initio gene annotation. Through extensive benchmarking on 566 phylogenetically diverse species, we demonstrate that ANNEVO substantially outperforms existing ab initio methods and achieves performance comparable to state-of-the-art annotation pipelines. Furthermore, ANNEVO's independence from external evidence allows it to deliver more complete annotations than reference annotations for a broad range of species while correcting errors within them. These advancements will improve genome sequence interpretation and provide a framework capable of integrating evolutionary insights.",
+    "notes": "## Key Findings\n\n- ANNEVO is a mixture-of-experts (MoE) genomic language model for ab initio gene annotation that models long-range sequence dependencies and cross-species evolutionary relationships\n- Benchmarked on 566 phylogenetically diverse species — outperforms all existing ab initio tools and matches state-of-the-art annotation pipelines that rely on external evidence\n- Can correct errors in existing reference annotations and produce more complete annotations for under-annotated species without RNA-seq or protein homology input\n\n## Methods Worth Noting\n\n- Mixture of Experts (MoE) architecture applied to genomic sequences for scalable modeling of diverse genomes\n- Joint modeling of vertical inheritance and horizontal gene transfer across diverse taxa\n- Fully ab initio — no external evidence (RNA-seq, protein homology) required",
+    "addedDate": "2026-03-12",
+    "source": "Nature Methods"
   }
 ]

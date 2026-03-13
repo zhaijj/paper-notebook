@@ -19,11 +19,20 @@ This skill configures the agent to automatically scrape the recent publications 
 When the user invokes this skill, follow these exact steps:
 
 1. **Scrape Journal Pages:**
-   Use the `firecrawl_scrape` tool to fetch the latest research articles from the current issue of Science. Try the current TOC page first:
+   Use the `firecrawl_scrape` tool to fetch articles from **both** of the following Science pages:
+
+   a. **Current print issue TOC** (weekly articles):
    ```
    firecrawl_scrape(url="https://www.science.org/toc/science/current", formats=["markdown"])
    ```
-   If that is blocked or returns insufficient content, fall back to `firecrawl_search` with a query like `"site:science.org research article 2026"`.
+
+   b. **First Release** (articles published online ahead of print — these never appear in the weekly TOC):
+   ```
+   firecrawl_scrape(url="https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science", formats=["markdown"])
+   ```
+   Or alternatively scrape: `https://www.science.org/toc/science/ahead-of-print`
+
+   Combine the article lists from both sources before filtering. If either URL is blocked or returns insufficient content, fall back to `firecrawl_search` with a query like `"site:science.org research article 2026"`.
 
 2. **Filter & Select:**
    Read the scraped content and identify all relevant papers based on the user's core research background. The core research interests to prioritize are:

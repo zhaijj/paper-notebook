@@ -1624,5 +1624,55 @@
     "notes": "## Key Findings\n\n- Mechanistic interpretability applied to scGPT reveals a compact hematopoietic manifold in model internals.\n- Extracted algorithm resolves into explicit gene programs without any retraining.\n- Demonstrates that useful biology can be extracted directly from foundation model weights.\n\n## Methods Worth Noting\n\n- Mechanistic interpretability techniques (activation patching, probing) applied to scGPT.\n- Algorithm extraction from model internals without fine-tuning or retraining.",
     "addedDate": "2026-03-12",
     "source": "arXiv"
+  },
+  {
+    "id": "ugarković2026genome",
+    "title": "Transposable Element Dynamics Drive Genome Size Variation along Environmental Gradients in Hordeum",
+    "authors": [
+      "Jakov Ugarković",
+      "Tal Dagan",
+      "Eran Fridman"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag051",
+    "tags": [
+      "plant genomics",
+      "transposable elements",
+      "genome size",
+      "Hordeum",
+      "GWAS",
+      "drought adaptation"
+    ],
+    "rating": 4,
+    "abstract": "A substantial variation in genome size has been observed among individuals of the same species. Theory predicts that increased genome size may confer an advantage in populations with small effective size. However, contradictory evidence for the correlation with environmental variation, and limited understanding of the underlying genetic mechanisms, has cast doubts on the adaptive role of genome size variation. To address this, we studied two Hordeum species which were collected at the same sites along a wide range of environments but differ in life habits (annual/perennial) and mating strategy (self/outcrossing). We detected substantial genome size variation, with differences of up to 10% in both species. While the mating system influenced the distribution of variation within populations, it did not alter the overall range of genome sizes. Drought emerged as the primary environmental factor associated with larger genomes, with past transposable elements (TE) bursts identified as the potential source of genome expansion. Genome-wide association analyses revealed that TE silencing is central to genome size regulation, with selection maintaining smaller genomes among individuals with higher fitness in favorable habitats. Under stressful conditions, silencing becomes less efficient, allowing larger genomes to persist and thereby increasing the reservoir of genetic variation available for selection. Together, these findings provide an integrative view of genome size dynamics in natural populations and underscore its exaptive role in maintenance of genetic variation under environmental stress.",
+    "notes": "## Key Findings\n\n- Genome size varies up to 10% within *Hordeum* species, primarily driven by TE burst activity.\n- Drought is the main environmental factor correlated with larger genome size.\n- GWAS reveals TE silencing machinery as the central regulator of genome size; selection favors smaller genomes in favorable habitats but relaxes under stress, allowing TE-expanded genomes to persist.\n\n## Methods Worth Noting\n\n- Comparative study of annual/perennial and self/outcrossing *Hordeum* pairs sampled at the same sites for controlled environmental comparison.\n- Genome-wide association study (GWAS) linking genome size to TE silencing gene variants.\n- TE burst timing inferred from genomic analysis to link historical TE activity to current genome expansion.",
+    "addedDate": "2026-03-18",
+    "source": "MBE"
+  },
+  {
+    "id": "ketchum2026soft",
+    "title": "Signatures of Soft Selective Sweeps Predominate in the Yellow Fever Mosquito Aedes aegypti",
+    "authors": [
+      "Rebekah N Ketchum",
+      "Daniel R Matute",
+      "Daniel R Schrider"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag068",
+    "tags": [
+      "machine learning",
+      "population genetics",
+      "selective sweeps",
+      "Aedes aegypti",
+      "insecticide resistance",
+      "deep learning"
+    ],
+    "rating": 4,
+    "abstract": "The Aedes aegypti mosquito is a vector for human arboviruses and zoonotic diseases and therefore poses a serious threat to public health. Understanding how Ae. aegypti adapts to environmental pressures-such as insecticides-is critical for developing effective mitigation strategies. However, most traditional methods for detecting recent positive selection search for signatures of classic 'hard' selective sweeps, and to date no studies have examined soft sweeps in Ae. aegypti. This is a significant limitation as this is vital information for understanding the pace of adaptation-populations that can immediately respond to new selective pressures are expected to adapt more often via standing variation or recurrent adaptive mutations (both of which may produce soft sweeps) than via de novo mutations (which produces hard sweeps). To this end, we used a machine learning method capable of detecting hard and soft sweeps to investigate positive selection in Ae. aegypti population samples from Africa and the Americas. Our results reveal that soft sweeps are significantly more common than hard sweeps, which may imply that this species can respond quickly to environmental stressors. This is a particularly concerning finding for vector control methods that aim to eradicate Ae. aegypti using insecticides. We highlight genes under selection that include both well-characterized and putatively novel insecticide resistance genes. These findings underscore the importance of using methods capable of detecting and distinguishing hard and soft sweeps, implicate soft sweeps as a major selective mode in Ae. aegypti, and highlight genes that may aid in the control of Ae. aegypti populations.",
+    "notes": "## Key Findings\n\n- Soft selective sweeps (from standing variation or recurrent mutations) are significantly more common than hard sweeps in *Ae. aegypti*, suggesting this mosquito adaptss rapidly to new pressures like insecticides.\n- ML method successfully distinguishes hard vs. soft sweep signatures genome-wide, identifying both known and novel candidate insecticide resistance genes.\n- Findings have direct implications for vector control: insecticide eradication strategies may be undermined by soft-sweep-mediated rapid resistance evolution.\n\n## Methods Worth Noting\n\n- Used a machine learning classifier capable of distinguishing hard sweeps, soft sweeps, and neutral regions from population genomic data.\n- Applied to population samples from Africa and the Americas to assess geographic variation in sweep mode.\n- Methodological approach is broadly applicable for population genomics studies in any species, including crop plants.",
+    "addedDate": "2026-03-18",
+    "source": "MBE"
   }
 ]

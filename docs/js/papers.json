@@ -1674,5 +1674,40 @@
     "notes": "## Key Findings\n\n- Soft selective sweeps (from standing variation or recurrent mutations) are significantly more common than hard sweeps in *Ae. aegypti*, suggesting this mosquito adaptss rapidly to new pressures like insecticides.\n- ML method successfully distinguishes hard vs. soft sweep signatures genome-wide, identifying both known and novel candidate insecticide resistance genes.\n- Findings have direct implications for vector control: insecticide eradication strategies may be undermined by soft-sweep-mediated rapid resistance evolution.\n\n## Methods Worth Noting\n\n- Used a machine learning classifier capable of distinguishing hard sweeps, soft sweeps, and neutral regions from population genomic data.\n- Applied to population samples from Africa and the Americas to assess geographic variation in sweep mode.\n- Methodological approach is broadly applicable for population genomics studies in any species, including crop plants.",
     "addedDate": "2026-03-18",
     "source": "MBE"
+  },
+  {
+    "id": "phan2025conservation",
+    "title": "Conservation of regulatory elements with highly diverged sequences across large evolutionary distances",
+    "authors": [
+      "Mai H. Q. Phan",
+      "Tobias Zehnder",
+      "Fiona Puntieri",
+      "Andreas Magg",
+      "Blanka Majchrzycka",
+      "Milan Antonović",
+      "Hannah Wieler",
+      "Bai-Wei Lo",
+      "Damir Baranasic",
+      "Boris Lenhard",
+      "Ferenc Müller",
+      "Martin Vingron",
+      "Daniel M. Ibrahim"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2025,
+    "doi": "10.1038/s41588-025-02202-5",
+    "tags": [
+      "cis-regulatory elements",
+      "sequence conservation",
+      "synteny",
+      "enhancers",
+      "comparative genomics",
+      "gene regulation"
+    ],
+    "rating": 3,
+    "abstract": "Developmental gene expression is a remarkably conserved process, yet most cis-regulatory elements (CREs) lack sequence conservation, especially at larger evolutionary distances. Some evidence suggests that CREs at the same genomic position remain functionally conserved independent of sequence conservation. However, the extent of such positional conservation remains unclear. Here, we profiled the regulatory genome in mouse and chicken embryonic hearts at equivalent developmental stages and found that most CREs lack sequence conservation. To identify positionally conserved CREs, we introduced the synteny-based algorithm interspecies point projection, which identifies up to fivefold more orthologs than alignment-based approaches. We termed positionally conserved orthologs 'indirectly conserved' and showed that they exhibited chromatin signatures and sequence composition similar to sequence-conserved CREs but greater shuffling of transcription factor binding sites between orthologs. Finally, we validated indirectly conserved chicken enhancers using in vivo reporter assays in mouse. By overcoming alignment-based limitations, we revealed widespread functional conservation of sequence-divergent CREs.",
+    "notes": "## Key Findings\n\n- Most cis-regulatory elements (CREs) lack sequence conservation across large evolutionary distances, yet developmental gene expression remains conserved.\n- A novel synteny-based algorithm called 'interspecies point projection' identifies up to 5x more orthologous CREs than alignment-based approaches.\n- Positionally conserved ('indirectly conserved') CREs share chromatin signatures with sequence-conserved CREs but show greater shuffling of transcription factor binding sites.\n\n## Methods Worth Noting\n\n- Profiling of regulatory genome in mouse and chicken embryonic hearts at equivalent developmental stages.\n- Synteny-based interspecies point projection algorithm for identifying positionally conserved CRE orthologs.\n- In vivo reporter assays in mouse to validate predicted conserved chicken enhancers.",
+    "addedDate": "2026-03-19",
+    "source": "Nature Genetics"
   }
 ]

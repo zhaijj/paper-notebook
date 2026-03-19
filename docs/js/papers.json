@@ -1767,5 +1767,128 @@
     "notes": "## Key Findings\n\n- Analyzed developmental transcriptomes of 7 angiosperm species spanning 160 million years of evolution, revealing rapid divergence of gene expression patterns.\n- Genes involved in response to endogenous and environmental stimuli show the highest rates of expression change, linking ecological adaptation to speciation.\n- Rates of expression divergence in angiosperms differ markedly from those described in mammals, highlighting kingdom-level differences.\n\n## Methods Worth Noting\n\n- Comparative developmental transcriptomics across 7 angiosperm species chosen to span 160 million years of evolutionary history.\n- Cross-kingdom comparison with existing mammalian transcriptome evolution data.\n- Provides a public resource for comparative transcriptome evolution studies.",
     "addedDate": "2026-03-19",
     "source": "Cell"
+  },
+  {
+    "id": "breslow2025genomic",
+    "title": "Genomic Next-Token Predictors are In-Context Learners",
+    "authors": [
+      "Nathan Breslow",
+      "Aayush Mishra",
+      "Mahler Revsine",
+      "Michael C. Schatz",
+      "Anqi Liu",
+      "Daniel Khashabi"
+    ],
+    "journal": "arXiv",
+    "year": 2025,
+    "doi": "10.48550/arXiv.2511.12797",
+    "tags": [
+      "DNA language model",
+      "in-context learning",
+      "Evo2",
+      "genomic foundation model",
+      "next-token prediction",
+      "sequence modeling"
+    ],
+    "rating": 5,
+    "abstract": "In-context learning (ICL) -- the capacity of a model to infer and apply abstract patterns from examples provided within its input -- has been extensively studied in large language models trained for next-token prediction on human text. In fact, prior work often attributes this emergent behavior to distinctive statistical properties in human language. This raises a fundamental question: can ICL arise organically in other sequence domains purely through large-scale predictive training? To explore this, we turn to genomic sequences, an alternative symbolic domain rich in statistical structure. Specifically, we study the Evo2 genomic model, trained predominantly on next-nucleotide (A/T/C/G) prediction, at a scale comparable to mid-sized LLMs. We develop a controlled experimental framework comprising symbolic reasoning tasks instantiated in both linguistic and genomic forms, enabling direct comparison of ICL across genomic and linguistic models. Our results show that genomic models, like their linguistic counterparts, exhibit log-linear gains in pattern induction as the number of in-context demonstrations increases. To the best of our knowledge, this is the first evidence of organically emergent ICL in genomic sequences, supporting the hypothesis that ICL arises as a consequence of large-scale predictive modeling over rich data. These findings extend emergent meta-learning beyond language, pointing toward a unified, modality-agnostic view of in-context learning.",
+    "notes": "## Key Findings\n\n- Evo2 genomic foundation model exhibits in-context learning (ICL) capabilities analogous to language models, showing log-linear gains with more in-context demonstrations\n- First evidence of organically emergent ICL in genomic sequences, supporting the hypothesis that ICL is a general property of large-scale predictive models\n- Results suggest a unified, modality-agnostic view of in-context learning that extends beyond language to DNA sequences\n\n## Methods Worth Noting\n\n- Controlled experimental framework with symbolic reasoning tasks instantiated in both linguistic and genomic forms for direct comparison\n- Evaluation of the Evo2 model (trained on next-nucleotide A/T/C/G prediction) at scale comparable to mid-sized LLMs",
+    "addedDate": "2026-03-19",
+    "source": "arXiv"
+  },
+  {
+    "id": "shaik2026bioworldmodel",
+    "title": "BioWorldModel: A Multi-Kingdom Trajectory Architecture for Genomic Prediction with Evolutionary Curriculum Learning",
+    "authors": [
+      "Khasim Hussain Baji Shaik"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.03.15.711913",
+    "tags": [
+      "genomic prediction",
+      "machine learning",
+      "deep learning",
+      "multi-species",
+      "cross-kingdom",
+      "genotype-to-phenotype",
+      "foundation model"
+    ],
+    "rating": 5,
+    "abstract": "Genomic prediction models are trained on single species and ignore temporal dynamics -- assumptions that limit their biological scope. Here I present BioWorldModel, a unified architecture that predicts multi-trait phenotypic distributions across fungi, plants, and animals with a single set of parameters. The model introduces a scalable genotype encoder with organism-conditioned attention pooling, a four-channel biological memory system, and a Gaussian output head with diagonal variance parameterization. Trained jointly on five organisms spanning three kingdoms (S. cerevisiae, A. thaliana, D. melanogaster, O. sativa, Z. mays; 641 traits total), the model achieves organism-averaged R-squared = 0.821 (trait-weighted R-squared = 0.413) and substantially outperforms GBLUP, BayesB, Lasso, and Random Forest baselines trained per organism. These results demonstrate that genotype-to-phenotype mapping follows shared principles across kingdoms that a single model can exploit.",
+    "notes": "## Key Findings\n\n- A single unified model predicts phenotypes across fungi, plants, and animals (5 organisms, 3 kingdoms, 641 traits) with organism-averaged R² = 0.821\n- Substantially outperforms GBLUP, BayesB, Lasso, and Random Forest baselines that are trained per organism\n- Demonstrates that genotype-to-phenotype mapping follows shared principles across kingdoms\n\n## Methods Worth Noting\n\n- Scalable genotype encoder with organism-conditioned attention pooling\n- Four-channel biological memory system and Gaussian output head with diagonal variance parameterization\n- Evolutionary curriculum learning for multi-kingdom training",
+    "addedDate": "2026-03-19",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "yao2026breeding",
+    "title": "Breeding ideotype maize with enhanced yield through genomics-guided pyramiding of favorable alleles",
+    "authors": [
+      "Wen Yao",
+      "Lixia Ku",
+      "Yanhui Chen"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2026,
+    "doi": "10.1038/s41588-026-02522-0",
+    "tags": [
+      "maize",
+      "crop genomics",
+      "genomics-guided breeding",
+      "plant architecture",
+      "yield improvement",
+      "allele pyramiding"
+    ],
+    "rating": 5,
+    "abstract": "Breeding ideotype maize for high-density planting is crucial for increasing yield but is hindered by a limited understanding of plant architecture regulation. Here we uncover a prominent role for the accumulation of homozygous favorable alleles in genes regulating four principal shoot traits constituting a maize ideotype, and we identify and functionally validate eight architecture-regulating genes. Guided by genomics, we selected the elite hybrid Yufeng303 as a chassis to develop five improved parental lines by pyramiding favorable alleles of these eight genes together with genome-wide loci associated with these traits. These improved parental lines led to the creation of four new hybrids better suited for high-density planting, achieving 4.1–9.2% higher plot yields than Yufeng303 across eight environments. This study exemplifies the power of genomics-guided allele pyramiding in enhancing crop performance.",
+    "notes": "## Key Findings\n\n- Identified and validated eight architecture-regulating genes controlling four principal shoot traits in maize ideotype\n- Pyramiding favorable alleles of these genes created hybrids achieving 4.1–9.2% higher plot yields across eight environments\n- Demonstrates practical genomics-guided breeding strategy for high-density planting maize improvement\n\n## Methods Worth Noting\n\n- Genomics-guided allele pyramiding approach combining GWAS-identified loci with functional validation\n- Used elite hybrid Yufeng303 as chassis for developing improved parental lines",
+    "addedDate": "2026-03-19",
+    "source": "Nature Genetics"
+  },
+  {
+    "id": "zhang2026genetic",
+    "title": "A genetic module boosts grain yield and nitrogen use efficiency by improving nitrate transport in maize",
+    "authors": [
+      "Meiling Zhang"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2026,
+    "doi": "10.1038/s41588-026-02532-y",
+    "tags": [
+      "maize",
+      "nitrogen use efficiency",
+      "crop genomics",
+      "nitrate transport",
+      "GWAS",
+      "sustainable agriculture"
+    ],
+    "rating": 5,
+    "abstract": "Although nitrogen fertilizer use has boosted crop yields, excessive application diminishes crop nitrogen use efficiency (NUE) and causes environmental problems. Therefore, increasing crop NUE is urgently needed for agricultural sustainability. Through a genome-wide association study, we identified a locus, NCR1 (Nitrate Concentration Regulator 1), that correlates with nitrate concentrations in maize root xylem. NCR1 encodes a MYB transcription factor that positively regulates the transcription of nitrate transporter NRT2.3 expressed predominantly in root xylem parenchyma cells. The NCR1–NRT2.3 transcription module responds to external nitrogen and controls nitrate translocation from roots to shoots. The superior NCR1−In allele with a 123-bp promoter deletion has decreased in frequency as nitrogen fertilizer use in China has increased. Overexpression of NCR1 or NRT2.3 significantly enhances grain yield and NUE in maize.",
+    "notes": "## Key Findings\n\n- Identified NCR1 (MYB transcription factor) that regulates nitrate transporter NRT2.3, controlling nitrate translocation from roots to shoots in maize\n- The superior NCR1−In allele (123-bp promoter deletion) has decreased in frequency with increased nitrogen fertilizer use in China\n- Overexpression of NCR1 or NRT2.3 significantly enhances both grain yield and nitrogen use efficiency\n\n## Methods Worth Noting\n\n- GWAS on nitrate concentrations in maize root xylem to identify NCR1 locus\n- Functional validation through overexpression and characterization of NCR1–NRT2.3 transcription module",
+    "addedDate": "2026-03-19",
+    "source": "Nature Genetics"
+  },
+  {
+    "id": "obrien2026faba",
+    "title": "Allelic variation at a single locus distinguishes spring and winter faba beans",
+    "authors": [
+      "Ronan O'Sullivan"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2026,
+    "doi": "10.1038/s41588-026-02524-y",
+    "tags": [
+      "faba bean",
+      "plant genomics",
+      "winter hardiness",
+      "crop improvement",
+      "GWAS",
+      "reference genome"
+    ],
+    "rating": 4,
+    "abstract": "Winter faba beans exhibit significant yield advantages over spring cultivars and hold promise for enhancing local protein production and agricultural sustainability. However, the threat of winter kill limits wider cultivation, and the genetics of faba bean winter hardiness remain unresolved. Here we develop a greatly improved faba bean reference genome and combine this with resequencing and phenotyping of winter and spring accessions to identify genetic determinants of winter hardiness. Genome-wide association analysis of frost tolerance traits identifies a major winter hardiness locus, the most strongly associated variant of which explains the vast majority of phenotypic variation and accurately differentiates between winter and spring types. Furthermore, we identify additional signals within the winter faba bean gene pool that could lead to further improvement of winter hardiness.",
+    "notes": "## Key Findings\n\n- Developed a greatly improved faba bean reference genome\n- Identified a major winter hardiness locus that explains the vast majority of phenotypic variation between winter and spring types\n- Found additional genetic signals within winter faba beans for further hardiness improvement\n\n## Methods Worth Noting\n\n- Combined improved reference genome with resequencing and phenotyping of winter/spring accessions\n- GWAS of frost tolerance traits to map the major winter hardiness locus",
+    "addedDate": "2026-03-19",
+    "source": "Nature Genetics"
   }
 ]

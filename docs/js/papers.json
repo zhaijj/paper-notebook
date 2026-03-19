@@ -1709,5 +1709,63 @@
     "notes": "## Key Findings\n\n- Most cis-regulatory elements (CREs) lack sequence conservation across large evolutionary distances, yet developmental gene expression remains conserved.\n- A novel synteny-based algorithm called 'interspecies point projection' identifies up to 5x more orthologous CREs than alignment-based approaches.\n- Positionally conserved ('indirectly conserved') CREs share chromatin signatures with sequence-conserved CREs but show greater shuffling of transcription factor binding sites.\n\n## Methods Worth Noting\n\n- Profiling of regulatory genome in mouse and chicken embryonic hearts at equivalent developmental stages.\n- Synteny-based interspecies point projection algorithm for identifying positionally conserved CRE orthologs.\n- In vivo reporter assays in mouse to validate predicted conserved chicken enhancers.",
     "addedDate": "2026-03-19",
     "source": "Nature Genetics"
+  },
+  {
+    "id": "coorens2025gtex",
+    "title": "The human and non-human primate developmental GTEx projects",
+    "authors": [
+      "Tim H. H. Coorens",
+      "Amy Guillaumet-Adkins",
+      "Rothem Kovner",
+      "Rebecca L. Linn",
+      "Victoria H. J. Roberts",
+      "Amrita Sule",
+      "Patrick M. Van Hoose",
+      "the dGTEx Consortium"
+    ],
+    "journal": "Nature",
+    "year": 2025,
+    "doi": "10.1038/s41586-024-08244-9",
+    "tags": [
+      "GTEx",
+      "developmental genomics",
+      "gene expression",
+      "non-human primates",
+      "functional genomics",
+      "transcriptomics"
+    ],
+    "rating": 3,
+    "abstract": "Many human diseases are the result of early developmental defects. As most paediatric diseases and disorders are rare, children are critically underrepresented in research. Functional genomics studies primarily rely on adult tissues and lack critical cell states in specific developmental windows. In parallel, little is known about the conservation of developmental programmes across non-human primate (NHP) species, with implications for human evolution. Here we introduce the developmental Genotype-Tissue Expression (dGTEx) projects, which span humans and NHPs and aim to integrate gene expression, regulation and genetics data across development and species. The dGTEx cohort will consist of 74 tissue sites across 120 human donors from birth to adulthood, and developmentally matched NHP age groups, with additional prenatal and adult animals, with 126 rhesus macaques (Macaca mulatta) and 72 common marmosets (Callithrix jacchus). The data will comprise whole-genome sequencing, extensive bulk, single-cell and spatial gene expression profiles, and chromatin accessibility data across tissues and development. Through community engagement and donor diversity, the human dGTEx study seeks to address disparities in genomic research. Thus, dGTEx will provide a reference human and NHP dataset and tissue bank, enabling research into developmental changes in expression and gene regulation, childhood disorders and the effect of genetic variation on development.",
+    "notes": "## Key Findings\n\n- Introduces the developmental GTEx (dGTEx) project spanning humans and non-human primates (NHPs) to study developmental gene expression and regulation.\n- Cohort includes 120 human donors (birth to adulthood) across 74 tissue sites, plus 126 rhesus macaques and 72 common marmosets at matched developmental stages.\n- Will integrate WGS, bulk/single-cell/spatial transcriptomics, and chromatin accessibility data across development.\n\n## Methods Worth Noting\n\n- Multi-species comparative approach: human, rhesus macaque, and common marmoset developmental cohorts.\n- Combined multimodal genomics: WGS, bulk RNA-seq, scRNA-seq, spatial transcriptomics, and ATAC-seq.\n- Community engagement strategy to address disparities in genomic research representation.",
+    "addedDate": "2026-03-19",
+    "source": "Nature"
+  },
+  {
+    "id": "schuster2026evolutionary",
+    "title": "Evolutionary transcriptomics unveils rapid changes of gene expression patterns in flowering plants",
+    "authors": [
+      "Christoph Schuster",
+      "Alexander Gabel",
+      "Hajk-Georg Drost",
+      "Ivo Grosse",
+      "Ottoline Leyser",
+      "Elliot M. Meyerowitz"
+    ],
+    "journal": "Cell",
+    "year": 2026,
+    "doi": "10.1016/j.cell.2025.12.015",
+    "tags": [
+      "angiosperm",
+      "evolutionary transcriptomics",
+      "gene expression",
+      "flowering plants",
+      "speciation",
+      "comparative genomics"
+    ],
+    "rating": 4,
+    "abstract": "The evolutionary history of angiosperms (flowering plants) is characterized by a highly accelerated rate of diversification. Although a number of hypotheses have been proposed to explain the ecological success and rapid rise of angiosperms, the molecular mechanisms underlying their speciation are only partially understood. In this study, we analyzed the developmental transcriptomes of seven angiosperm species spanning 160 million years of evolution. We demonstrate that angiosperm protein-coding gene expression patterns diverged rapidly. Particularly high rates of expression changes were found for genes that are involved in the response to endogenous and environmental stimuli, promoting broad ecological tolerances, adaptive evolution, and speciation. This study highlights how ecological and evolutionary dynamics are highly interrelated, shows that the rates of expression divergence differ from those previously described for mammals, and provides a comprehensive resource to perform cross-kingdom comparative studies of transcriptome evolution.",
+    "notes": "## Key Findings\n\n- Analyzed developmental transcriptomes of 7 angiosperm species spanning 160 million years of evolution, revealing rapid divergence of gene expression patterns.\n- Genes involved in response to endogenous and environmental stimuli show the highest rates of expression change, linking ecological adaptation to speciation.\n- Rates of expression divergence in angiosperms differ markedly from those described in mammals, highlighting kingdom-level differences.\n\n## Methods Worth Noting\n\n- Comparative developmental transcriptomics across 7 angiosperm species chosen to span 160 million years of evolutionary history.\n- Cross-kingdom comparison with existing mammalian transcriptome evolution data.\n- Provides a public resource for comparative transcriptome evolution studies.",
+    "addedDate": "2026-03-19",
+    "source": "Cell"
   }
 ]

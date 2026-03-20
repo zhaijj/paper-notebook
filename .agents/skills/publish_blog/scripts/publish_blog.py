@@ -25,6 +25,22 @@ from datetime import date
 # Minimal Markdown → HTML converter (no external deps)
 # ---------------------------------------------------------------------------
 
+def parse_table_row(row: str) -> list:
+    """Split a markdown table row into cell strings."""
+    # Strip leading/trailing | and whitespace, then split on |
+    row = row.strip()
+    if row.startswith('|'):
+        row = row[1:]
+    if row.endswith('|'):
+        row = row[:-1]
+    return [cell.strip() for cell in row.split('|')]
+
+
+def is_table_separator(row: str) -> bool:
+    """Return True if the row is a markdown table separator (e.g. |---|---|)."""
+    return bool(re.match(r'^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?$', row.strip()))
+
+
 def md_to_html(md: str) -> str:
     """Convert a subset of Markdown to HTML."""
     lines = md.split('\n')
@@ -146,6 +162,46 @@ def md_to_html(md: str) -> str:
             continue
 
         close_list()
+
+        # Markdown table: collect all consecutive table lines
+        if line.startswith('|') or (line.strip() and re.match(r'^\|', line)):
+            # Gather consecutive table lines
+            table_lines = []
+            j = i
+            while j < len(lines) and (lines[j].startswith('|') or (lines[j].strip().startswith('|'))):
+                table_lines.append(lines[j])
+                j += 1
+            if len(table_lines) >= 2:
+                close_blockquote()
+                html_lines.append('<table>')
+                header_done = False
+                body_open = False
+                for tl in table_lines:
+                    if is_table_separator(tl):
+                        if not header_done:
+                            html_lines.append('</thead>')
+                            html_lines.append('<tbody>')
+                            header_done = True
+                            body_open = True
+                        continue
+                    cells = parse_table_row(tl)
+                    if not header_done:
+                        html_lines.append('<thead><tr>')
+                        for cell in cells:
+                            html_lines.append(f'  <th>{inline(cell)}</th>')
+                        html_lines.append('</tr>')
+                    else:
+                        html_lines.append('<tr>')
+                        for cell in cells:
+                            html_lines.append(f'  <td>{inline(cell)}</td>')
+                        html_lines.append('</tr>')
+                if body_open:
+                    html_lines.append('</tbody>')
+                elif not header_done:
+                    html_lines.append('</thead>')
+                html_lines.append('</table>')
+                i = j
+                continue
 
         # Empty line
         if line.strip() == '':

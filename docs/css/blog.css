@@ -152,3 +152,39 @@
   color: var(--accent) !important;
   font-weight: 600;
 }
+
+/* Tables inside blog posts */
+.blog-post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.blog-post-content thead {
+  background: rgba(var(--accent-rgb, 99,102,241), 0.12);
+}
+
+.blog-post-content th,
+.blog-post-content td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.blog-post-content th {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.blog-post-content tbody tr:nth-child(even) {
+  background: var(--tag-bg, rgba(var(--accent-rgb, 99,102,241), 0.05));
+}
+
+.blog-post-content tbody tr:hover {
+  background: rgba(var(--accent-rgb, 99,102,241), 0.1);
+}

@@ -187,34 +187,69 @@
 
   <script src="../js/theme.js"></script>
   <script>
-    // Emoji reaction bar — localStorage-backed, one choice per post
+    // Emoji reactions — Supabase-backed live counts + localStorage for personal highlight
     (function () {
+      var SB_URL = 'https://njcxyuzvoolfmgiempid.supabase.co';
+      var SB_KEY = 'sb_publishable_Vtj9I-RWxjw1OiqzV2iT7Q_UIy6W3N1';
       var bar = document.getElementById('reaction-bar');
       if (!bar) return;
       var slug = bar.dataset.slug;
-      var key = 'pn-react-' + slug;
-      var saved = localStorage.getItem(key);
+      var localKey = 'pn-react-' + slug;
+      var saved = localStorage.getItem(localKey);
       var btns = bar.querySelectorAll('.reaction-btn');
+
       function updateUI(chosen) {
         btns.forEach(function (btn) {
           btn.classList.toggle('active', btn.dataset.emoji === chosen);
         });
       }
       if (saved) updateUI(saved);
+
+      // Fetch live counts from Supabase
+      fetch(SB_URL + '/rest/v1/reactions?select=emoji,count&slug=eq.' + encodeURIComponent(slug), {
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var counts = {};
+        data.forEach(function (row) { counts[row.emoji] = row.count; });
+        btns.forEach(function (btn) {
+          var span = btn.querySelector('.reaction-count');
+          if (span) span.textContent = counts[btn.dataset.emoji] > 0 ? counts[btn.dataset.emoji] : '';
+        });
+      });
+
       btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
           var emoji = btn.dataset.emoji;
           if (saved === emoji) {
-            localStorage.removeItem(key);
+            localStorage.removeItem(localKey);
             saved = null;
             updateUI(null);
           } else {
-            localStorage.setItem(key, emoji);
+            var prev = saved;
+            localStorage.setItem(localKey, emoji);
             saved = emoji;
             updateUI(emoji);
             btn.classList.add('pop');
             setTimeout(function () { btn.classList.remove('pop'); }, 300);
             if (typeof umami !== 'undefined') { umami.track('reaction', { emoji: emoji, post: slug }); }
+            // Increment in Supabase (atomic via RPC)
+            fetch(SB_URL + '/rest/v1/rpc/increment_reaction', {
+              method: 'POST',
+              headers: {
+                'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ p_slug: slug, p_emoji: emoji })
+            });
+            // Optimistic count update
+            btns.forEach(function (b) {
+              var span = b.querySelector('.reaction-count');
+              if (!span) return;
+              var cur = parseInt(span.textContent) || 0;
+              if (b.dataset.emoji === emoji) span.textContent = cur + 1;
+            });
           }
         });
       });

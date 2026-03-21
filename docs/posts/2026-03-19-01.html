@@ -13,6 +13,7 @@
   <script>
     (function () { var t = localStorage.getItem('pn-theme') || 'light'; document.documentElement.setAttribute('data-theme', t); })();
   </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b220f945-a9de-4c7d-89d8-818713c63ea1"></script>
 </head>
 
 <body>
@@ -192,6 +193,7 @@
             updateUI(emoji);
             btn.classList.add('pop');
             setTimeout(function () { btn.classList.remove('pop'); }, 300);
+            if (typeof umami !== 'undefined') { umami.track('reaction', { emoji: emoji, post: slug }); }
           }
         });
       });

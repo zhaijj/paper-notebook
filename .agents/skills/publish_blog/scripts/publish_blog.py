@@ -114,7 +114,7 @@ def md_to_html(md: str) -> str:
             close_blockquote()
             level = len(m.group(1))
             text = inline(m.group(2))
-            slug = re.sub(r'[^\w\-]', '-', m.group(2).lower()).strip('-')
+            slug = slugify_heading(m.group(2))
             html_lines.append(f'<h{level} id="{slug}">{text}</h{level}>')
             i += 1
             continue
@@ -289,6 +289,38 @@ POST_TEMPLATE = """\
       <article class="blog-post-content">
         {content_html}
       </article>
+
+      <!-- REACTION BAR -->
+      <div class="reaction-bar" id="reaction-bar" data-slug="{slug}">
+        <span class="reaction-label">Was this useful?</span>
+        <div class="reaction-buttons">
+          <button class="reaction-btn" data-emoji="👍" title="Helpful">👍 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="❤️" title="Love it">❤️ <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🌱" title="Interesting">🌱 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🤯" title="Mind-blowing">🤯 <span class="reaction-count"></span></button>
+        </div>
+      </div>
+
+      <!-- COMMENTS (Giscus) -->
+      <div class="comments-section">
+        <h3 class="comments-title">💬 Discussion</h3>
+        <script src="https://giscus.app/client.js"
+          data-repo="zhaijj/paper-notebook"
+          data-repo-id="R_kgDONi0ydQ"
+          data-category="General"
+          data-category-id="DIC_kwDONi0ydc4CsO9k"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="0"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
     </div>
   </main>
 
@@ -304,6 +336,40 @@ POST_TEMPLATE = """\
   </footer>
 
   <script src="../js/theme.js"></script>
+  <script>
+    // Emoji reaction bar — localStorage-backed, one choice per post
+    (function () {{
+      var bar = document.getElementById('reaction-bar');
+      if (!bar) return;
+      var slug = bar.dataset.slug;
+      var key = 'pn-react-' + slug;
+      var saved = localStorage.getItem(key);
+      var btns = bar.querySelectorAll('.reaction-btn');
+      function updateUI(chosen) {{
+        btns.forEach(function (btn) {{
+          btn.classList.toggle('active', btn.dataset.emoji === chosen);
+        }});
+      }}
+      if (saved) updateUI(saved);
+      btns.forEach(function (btn) {{
+        btn.addEventListener('click', function () {{
+          var emoji = btn.dataset.emoji;
+          if (saved === emoji) {{
+            // toggle off
+            localStorage.removeItem(key);
+            saved = null;
+            updateUI(null);
+          }} else {{
+            localStorage.setItem(key, emoji);
+            saved = emoji;
+            updateUI(emoji);
+            btn.classList.add('pop');
+            setTimeout(function () {{ btn.classList.remove('pop'); }}, 300);
+          }}
+        }});
+      }});
+    }})();
+  </script>
 
 </body>
 
@@ -389,11 +455,28 @@ def rebuild_blog_listing(blogs: list, blog_html_path: str):
 # Main
 # ---------------------------------------------------------------------------
 
-def slugify(text: str) -> str:
+def slugify_heading(text: str) -> str:
+    """Text-based slug for HTML heading IDs (may contain Unicode, used as #fragment only)."""
     text = text.lower().strip()
-    text = re.sub(r'[^\w\s-]', '', text)
+    text = re.sub(r'[^\w\s-]', '-', text)
     text = re.sub(r'[\s_-]+', '-', text)
     return text.strip('-')
+
+
+def make_date_slug(date_str: str, posts_dir: str) -> str:
+    """Generate a clean ASCII slug like 2026-03-19-01.
+
+    Counts existing posts whose filename starts with date_str to determine
+    the next two-digit index.
+    """
+    existing = []
+    if os.path.isdir(posts_dir):
+        existing = [
+            f for f in os.listdir(posts_dir)
+            if f.startswith(date_str) and f.endswith('.html')
+        ]
+    idx = len(existing) + 1
+    return f'{date_str}-{idx:02d}'
 
 
 def main():
@@ -425,8 +508,8 @@ def main():
     # Convert
     content_html = md_to_html(md_content)
 
-    # Build slug
-    slug = slugify(args.title)
+    # Build slug — ASCII date-based (YYYY-MM-DD-NN)
+    slug = make_date_slug(args.date, posts_dir)
 
     # Tags
     tags = [t.strip() for t in args.tags.split(',') if t.strip()]
@@ -439,6 +522,7 @@ def main():
         date=args.date,
         tags_display=tags_display,
         content_html=content_html,
+        slug=slug,
     )
 
     # Write post file

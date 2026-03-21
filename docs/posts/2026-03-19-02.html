@@ -61,7 +61,7 @@
       <article class="blog-post-content">
         <h1 id="c4草地扩张-一场改变了马的脚趾和人类姿势的植被革命">C4草地扩张：一场改变了马的脚趾和人类姿势的植被革命</h1>
 
-<p>上一篇我们聊了<a href="./从板块碰撞到c4光合作用一个跨越5000万年的因果链.html" target="_blank" rel="noopener">板块碰撞如何把大气CO₂从1000 ppm拉到200–300 ppm，从而逼出了C4光合作用</a>。这篇接着讲后半段故事——C4草本大规模扩张之后，动物们发生了什么。</p>
+<p>上一篇我们聊了<a href="./2026-03-19-01.html" target="_blank" rel="noopener">板块碰撞如何把大气CO₂从1000 ppm拉到200–300 ppm，从而逼出了C4光合作用</a>。这篇接着讲后半段故事——C4草本大规模扩张之后，动物们发生了什么。</p>
 
 <h2 id="牙齿里的碳同位素-我们怎么知道草地何时扩张">牙齿里的碳同位素：我们怎么知道草地何时扩张</h2>
 
@@ -138,6 +138,38 @@
 </ul>
 
       </article>
+
+      <!-- REACTION BAR -->
+      <div class="reaction-bar" id="reaction-bar" data-slug="2026-03-19-02">
+        <span class="reaction-label">Was this useful?</span>
+        <div class="reaction-buttons">
+          <button class="reaction-btn" data-emoji="👍" title="Helpful">👍 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="❤️" title="Love it">❤️ <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🌱" title="Interesting">🌱 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🤯" title="Mind-blowing">🤯 <span class="reaction-count"></span></button>
+        </div>
+      </div>
+
+      <!-- COMMENTS (Giscus) -->
+      <div class="comments-section">
+        <h3 class="comments-title">💬 Discussion</h3>
+        <script src="https://giscus.app/client.js"
+          data-repo="zhaijj/paper-notebook"
+          data-repo-id="R_kgDONi0ydQ"
+          data-category="General"
+          data-category-id="DIC_kwDONi0ydc4CsO9k"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="0"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
     </div>
   </main>
 
@@ -153,6 +185,39 @@
   </footer>
 
   <script src="../js/theme.js"></script>
+  <script>
+    // Emoji reaction bar — localStorage-backed, one choice per post
+    (function () {
+      var bar = document.getElementById('reaction-bar');
+      if (!bar) return;
+      var slug = bar.dataset.slug;
+      var key = 'pn-react-' + slug;
+      var saved = localStorage.getItem(key);
+      var btns = bar.querySelectorAll('.reaction-btn');
+      function updateUI(chosen) {
+        btns.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.emoji === chosen);
+        });
+      }
+      if (saved) updateUI(saved);
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var emoji = btn.dataset.emoji;
+          if (saved === emoji) {
+            localStorage.removeItem(key);
+            saved = null;
+            updateUI(null);
+          } else {
+            localStorage.setItem(key, emoji);
+            saved = emoji;
+            updateUI(emoji);
+            btn.classList.add('pop');
+            setTimeout(function () { btn.classList.remove('pop'); }, 300);
+          }
+        });
+      });
+    })();
+  </script>
 
 </body>
 

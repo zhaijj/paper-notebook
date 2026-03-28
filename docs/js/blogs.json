@@ -37,5 +37,19 @@
       "climate change"
     ],
     "url": "posts/2026-03-22-01.html"
+  },
+  {
+    "slug": "2026-03-27-01",
+    "title": "一片叶子的驯化困局：茶树如何绕过木本植物的演化瓶颈",
+    "description": "茶树驯化为何比禾本科作物慢得多？从世代时间、扦插繁殖、两次独立驯化到殖民时代的奠基者效应，解析茶树独特的演化路径。",
+    "date": "2026-03-27",
+    "tags": [
+      "tea",
+      "domestication",
+      "population-genetics",
+      "plant-genomics",
+      "evolution"
+    ],
+    "url": "posts/2026-03-27-01.html"
   }
 ]

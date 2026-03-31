@@ -2424,5 +2424,196 @@
     "notes": "## Key Findings\n\n- Co-distillation of ESM protein language models achieves state-of-the-art variant effect prediction (VEP) without requiring structural, homology, or population genetics data beyond the evolutionary signals in pretraining\n- Individual PLMs self-improve by distilling the most confident predictions from multiple models in the same family, enabling iterative performance gains\n- The improved VEP accuracy enables quantification of variant effect severity on continuous clinical phenotypes in biobank data\n\n## Methods Worth Noting\n\n- Co-distillation framework applied to ESM family models: iterative adaptation using only sequence data\n- Benchmarked across multiple VEP datasets; compared against methods using additional structural/homology information",
     "addedDate": "2026-03-31",
     "source": "Nature Methods"
+  },
+  {
+    "id": "tanaka2026sesame",
+    "title": "An evolutionary landscape of sesame: chromosomal variation, allopolyploid speciation and metabolic specialization",
+    "authors": [
+      "H. Tanaka",
+      "E. Ono",
+      "T. Segawa",
+      "J. Murata",
+      "H. Takagi",
+      "Y. Uegaki",
+      "H. Toyonaga",
+      "A. Shiraishi",
+      "M. Takagi",
+      "A. Toyoda",
+      "K. Sato",
+      "T. Wakasugi",
+      "M. Horikawa",
+      "M. Kawase",
+      "T. Itoh",
+      "M. P. Yamamoto"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.03.27.714335",
+    "tags": [
+      "plant genomics",
+      "sesame",
+      "allopolyploidy",
+      "chromosome evolution",
+      "comparative genomics",
+      "lignan biosynthesis"
+    ],
+    "rating": 4,
+    "abstract": "Sesame (Sesamum indicum) is one of the earliest domesticated oilseed crops and is valued for antioxidant lignans that stabilize oil quality. However, the genomic and evolutionary history of the genus Sesamum, including the origin of its allotetraploid relative S. radiatum and the diversification of lignan metabolism, remains poorly understood owing to limited chromosome-scale genomic resources. Here we present chromosome-level genome assemblies for three wild Sesamum species, two Ceratotheca species and a Japanese sesame cultivar to reconstruct genome and karyotype evolution across the Sesamum-Ceratotheca complex. Comparative analyses show that the derived x=16 lineage originated from an ancestral x=13 karyotype through chromosome fission, fusion and translocation, whereas another x=13 lineage underwent extensive restructuring associated with retrotransposon expansion. Phylogenomics places Ceratotheca within the x=16 Sesamum clade and reveals that S. radiatum originated through hybridization involving a C. sesamoides-like ancestor. The antioxidative lignan gene CYP92B14 was reintroduced via the BB progenitor, linking hybridization with restoration of oil-stabilizing metabolism during sesame evolution.",
+    "notes": "## Key Findings\n\n- Chromosome-level assemblies for 6 Sesamum/Ceratotheca species: x=16 karyotype derived from x=13 via chromosome fission, fusion, and translocation.\n- S. radiatum (allotetraploid) originated through hybridization with a C. sesamoides-like ancestor; antioxidant lignan gene CYP92B14 reintroduced via BB progenitor.\n- Retrotransposon expansion associated with extensive genome restructuring in a second x=13 lineage.\n\n## Methods Worth Noting\n\n- Chromosome-level genome assembly for 6 species (3 wild Sesamum, 2 Ceratotheca, 1 Japanese cultivar)\n- Phylogenomics to reconstruct karyotype and WGD history across Sesamum-Ceratotheca complex\n- Comparative transcriptomics to trace lignan biosynthesis gene (CYP92B14) evolution",
+    "addedDate": "2026-03-31",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "ji2026wheatgrass",
+    "title": "Haplotype-resolved Genome Assemblies of Hybrid Wheatgrass and Bluebunch Wheatgrass Reveal the Stepwise Polyploid Origin and Biased Subgenome Dominance",
+    "authors": [
+      "Y. Ji",
+      "R. Chaudhary",
+      "N. Khan",
+      "S. Perumal",
+      "Z. Wang",
+      "L. Moghanloo",
+      "P. Hucl",
+      "B. Biligetu",
+      "A. G. Sharpe",
+      "L. Jin"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.03.27.714782",
+    "tags": [
+      "plant genomics",
+      "polyploidy",
+      "wheatgrass",
+      "subgenome dominance",
+      "haplotype assembly",
+      "grass genomics"
+    ],
+    "rating": 4,
+    "abstract": "Concerns over climate change have intensified the demand for stress resistant crops like hybrid wheatgrass (HWG; Elymus hoffmannii, StStStStHH), a perennial forage species known for its exceptional salt and drought tolerance. However, hexaploidy and high heterozygosity have complicated efforts to resolve its genomic structure and evolutionary history. Here, we present high-quality, haplotype-resolved, chromosome-level genome assemblies for HWG (CDC Saltking) and its putative progenitor, bluebunch wheatgrass (Pseudoroegneria spicata). By integrating PacBio HiFi and ultra-long Oxford Nanopore sequencing with Hi-C scaffolding, we assembled the 10.7 Gb HWG genome into 21 pseudochromosomes per haplotype. Our phylogenomic analysis redefines the origin of the H subgenome, positioning it as an intermediate between Old-World Hordeum marinum (sea barley) and Hordeum brevisubulatum. Notably, we identified significant chromosomal rearrangements, including a unique duplication on St chromosome 4. Transcriptome analysis across multiple tissues revealed a pronounced expression dominance of the H subgenome. This dominance was not associated with reduced LTR density, suggesting that selective pressures for rapid adaptation of the latest subgenome entrant may drive its dominance. Using the f-branch statistic, population genomic analysis of 189 accessions representing eight Elymus and Pseudoroegneria species revealed extensive reticulate evolutionary relationships and identified P. spicata as a major, asymmetric genetic donor within the wheatgrass complex.",
+    "notes": "## Key Findings\n\n- First haplotype-resolved chromosome-level assembly of hexaploid hybrid wheatgrass (10.7 Gb, 21 pseudochromosomes per haplotype) and diploid progenitor P. spicata.\n- H subgenome origin repositioned between Old-World Hordeum marinum and H. brevisubulatum; H subgenome shows pronounced expression dominance not explained by LTR density.\n- Population genomics (189 accessions) reveals P. spicata as major asymmetric genetic donor; extensive reticulate evolution in Elymus/Pseudoroegneria complex.\n\n## Methods Worth Noting\n\n- PacBio HiFi + ultra-long ONT + Hi-C scaffolding for hexaploid haplotype assembly\n- f-branch statistic for detecting introgression in polyploid lineages\n- Subgenome homeolog expression bias analysis across multiple tissues",
+    "addedDate": "2026-03-31",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "zhu2026nlrome",
+    "title": "A Pangenome Centralized NLRome Drives Lineage Specific Diversification and Functional Differentiation in Solanoideae",
+    "authors": [
+      "H. Zhu",
+      "C. Huo",
+      "L. Wang",
+      "J. Cao",
+      "Z. Pan",
+      "Z. Ma",
+      "Y. Yuan",
+      "Z. Zhao"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.03.24.712282",
+    "tags": [
+      "plant pangenome",
+      "NLR genes",
+      "Solanaceae",
+      "immune evolution",
+      "crop genomics",
+      "gene family evolution"
+    ],
+    "rating": 4,
+    "abstract": "The Solanoideae subfamily comprises numerous economically important crops that deploy a diverse repertoire of nucleotide-binding leucine-rich repeat receptors (NLRs) to defend against pathogens. However, the evolutionary trajectory of these NLR immune receptors remains poorly understood. Here, we dissect NLR family evolution across 23 Solanoideae species by integrating genomic and transcriptomic data. We uncover a distinctive pangenome-centralized architecture wherein a mere 11.56% of soft-core orthogroups contribute 67.81% of the total NLR repertoire, with copy-number variation driven by lineage-specific expansions rather than stochastic distribution or genome size. This finding indicates that Solanoideae plants counteract biotic stress through targeted amplification of specific key families rather than undergoing broad diversification. Phylogenomic analysis resolves NLRs into four subclasses, revealing CC-NLR dominance across all species alongside extreme TIR-NLR degeneration in certain lineages, suggesting profound immune adaptive shifts. Mechanistically, recent NLR expansions are primarily fueled by proximal and tandem duplications, whereas whole-genome duplications contribute in a ploidy- and time-dependent manner, with WGD-derived genes undergoing extensive loss during diploidization. Transcriptional profiling further demonstrates duplication-type-dependent expression patterns, enabling a robust, multilayered defense network upon pathogen infection. Collectively, our study delineates the asymmetric evolutionary trajectory of the Solanoideae NLRome and establishes a framework model that provides new insights into the adaptive evolution of plant immune systems and resistance gene discovery.",
+    "notes": "## Key Findings\n\n- Pan-NLRome of 23 Solanoideae species: 11.56% of soft-core orthogroups encode 67.81% of all NLRs — a highly concentrated immune architecture driven by targeted expansion.\n- NLR expansions fueled primarily by proximal/tandem duplications; WGD-derived NLRs largely lost during diploidization.\n- CC-NLR dominance universal; TIR-NLRs extremely degenerate in some lineages suggesting major adaptive immune shifts.\n\n## Methods Worth Noting\n\n- Pan-NLRome construction across 23 Solanoideae genomes with copy-number variation analysis\n- Phylogenomics to classify NLR subclasses (CC, TIR, RPW8, CCR) and infer duplication mechanisms\n- Transcriptome profiling under pathogen infection to assess duplication-type-dependent expression patterns",
+    "addedDate": "2026-03-31",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "lindsey2026lambda",
+    "title": "LAMBDA: A Prophage Detection Benchmark for Genomic Language Models",
+    "authors": [
+      "L. M. Lindsey",
+      "N. L. Pershing",
+      "K. Dufault-Thompson",
+      "H. Gwak",
+      "A. Habib",
+      "A. Schindler",
+      "A. Rakheja",
+      "J. Round",
+      "W. Z. Stephens",
+      "A. J. Blaschke",
+      "H. Sundar",
+      "X. Jiang"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.03.26.714501",
+    "tags": [
+      "genomic language models",
+      "benchmark",
+      "DNA LM",
+      "prophage detection",
+      "bacterial genomics",
+      "evaluation"
+    ],
+    "rating": 4,
+    "abstract": "Transformer-based genomic sequence models represent an emerging frontier in computational biology. Yet, their embeddings have not yet shown the same level of predictive power as natural and protein language models, indicating a gap between current implementations and theoretical promise. Existing benchmarks for DNA language models primarily focus on classifying regulatory elements in eukaryotic genomes, leaving open the fundamental question of whether these models learn sequence-level features across whole genomes. We introduce LAMBDA, a benchmark designed to rigorously evaluate genome language model embeddings through phage-bacteria sequence discrimination across four categories of increasing complexity: probing tasks, fine-tuning assessments, diagnostic tests, and genome-wide prophage detection. Our comprehensive analysis of current genomic language models provides novel insights into the importance of training data quality relative to model size, the need for domain-specific training, and the application of genomic language models for detecting prophage sequences. This benchmark represents a challenging genomic annotation task in the bacterial domain and addresses a key computational problem with direct relevance to microbiology and medicine.",
+    "notes": "## Key Findings\n\n- DNA LM embeddings lag behind protein LMs; LAMBDA quantifies this gap via phage-bacteria sequence discrimination.\n- Training data quality matters more than model size — domain-specific training is essential for genomic LMs.\n- Four task categories of increasing difficulty: probing → fine-tuning → diagnostics → genome-wide prophage detection.\n\n## Methods Worth Noting\n\n- Benchmark designed around phage-bacteria classification as a whole-genome annotation challenge (bacterial domain)\n- Evaluated multiple current DNA LMs across 4 complexity levels\n- Prophage detection as a novel downstream evaluation task for genomic LMs",
+    "addedDate": "2026-03-31",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "koilakos2026poisoning",
+    "title": "Poisoning the Genome: Targeted Backdoor Attacks on DNA Foundation Models",
+    "authors": [
+      "Charalampos Koilakos",
+      "Ioannis Mouratidis",
+      "Ilias Georgakopoulos-Soares"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "",
+    "tags": [
+      "DNA language model",
+      "adversarial attack",
+      "data poisoning",
+      "machine learning",
+      "foundation model",
+      "robustness",
+      "variant effect prediction"
+    ],
+    "rating": 4,
+    "abstract": "Genomic foundation models trained on DNA sequences have demonstrated remarkable capabilities across diverse biological tasks, from variant effect prediction to genome design. These models are typically trained on massive, publicly sourced genomic datasets comprising trillions of nucleotide tokens, which renders them intrinsically susceptible to errors, artifacts, and adversarial issues embedded in the training data. Unlike natural language, DNA sequences lack the semantic transparency that might allow model makers to filter out corrupted entries, making genomic training corpora particularly susceptible to undetected manipulation. While training data poisoning has been established as a credible threat to large language models, its implications for genomic foundation models remain unexplored. Here, we present the first systematic investigation of training data poisoning in genomic language models. We demonstrate two complementary attack vectors. First, we show that adversarially crafted sequences can selectively degrade generative behavior on targeted genomic contexts, with backdoor activation following a sigmoidal dose-response relationship and full implantation achieved at 1 percent cumulative poison exposure. Second, targeted label corruption of downstream training data can selectively compromise clinically relevant variant classification, demonstrated using BRCA1 variant effect prediction. Our results reveal that genomic foundation models are vulnerable to targeted data poisoning attacks, underscoring the need for data provenance tracking, integrity verification, and adversarial robustness evaluation in the genomic foundation model development pipeline.",
+    "notes": "## Key Findings\n\n- First systematic study of training data poisoning in genomic LMs: backdoor implantation achieved at just 1% cumulative poison exposure (sigmoidal dose-response).\n- Two attack vectors: (1) adversarially crafted sequences degrade generative behavior on targeted genomic contexts; (2) label corruption compromises BRCA1 variant effect classification.\n- DNA lacks semantic transparency → genomic corpora more vulnerable to undetected manipulation than NLP corpora.\n\n## Methods Worth Noting\n\n- Backdoor attack design using adversarially crafted DNA sequences with sigmoidal dose-response characterization\n- Targeted label corruption evaluation on BRCA1 variant effect prediction benchmark\n- Analysis of data provenance and integrity verification requirements for defense",
+    "addedDate": "2026-03-31",
+    "source": "arXiv"
+  },
+  {
+    "id": "zhang2026lingshucell",
+    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
+    "authors": [
+      "Han Zhang",
+      "Guo-Hua Yuan",
+      "Chaohao Yuan",
+      "Tingyang Xu",
+      "Tian Bian",
+      "Hong Cheng",
+      "Wenbing Huang",
+      "Deli Zhao",
+      "Yu Rong"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "",
+    "tags": [
+      "cell foundation model",
+      "transcriptomics",
+      "diffusion model",
+      "virtual cell",
+      "perturbation prediction",
+      "single-cell"
+    ],
+    "rating": 4,
+    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
+    "notes": "## Key Findings\n\n- Lingshu-Cell: masked discrete diffusion model in token space — models full transcriptomic state distributions across ~18,000 genes without prior gene selection.\n- SOTA on Virtual Cell Challenge H1 genetic perturbation benchmark; strong cytokine-response prediction in human PBMCs.\n- Jointly embeds cell identity + perturbation for whole-transcriptome simulation of novel combinations.\n\n## Methods Worth Noting\n\n- Masked discrete diffusion in token space (compatible with sparse, non-sequential scRNA-seq data)\n- Joint conditioning on cell type / donor identity + perturbation for conditional generative simulation\n- Benchmark: Virtual Cell Challenge H1 (genetic perturbation) + cytokine PBMC prediction",
+    "addedDate": "2026-03-31",
+    "source": "arXiv"
   }
 ]

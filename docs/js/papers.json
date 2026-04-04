@@ -2709,5 +2709,77 @@
     "notes": "## Key Findings\n\n- Costa Rican farmer-managed cacao harbors multiple major genetic groups plus locally distinct lineages not in global reference collections — an underappreciated reservoir of crop genetic diversity.\n- Criollo-derived lineages identified; kinship patterns driven by farmer practices (seed-saving, clonal propagation) rather than geography.\n- Heterozygosity variation reflects a mixture of inbred Criollo and admixed genotypes, with implications for conservation of rare germplasm.\n\n## Methods Worth Noting\n\n- WGS of 94 farmer-maintained trees from 17 Costa Rican farms + 166 global reference accessions\n- Population structure (STRUCTURE/ADMIXTURE), phylogenetic reconstruction, and network approaches\n- Kinship analysis to infer farmer-mediated gene flow patterns",
     "addedDate": "2026-04-04",
     "source": "bioRxiv"
+  },
+  {
+    "id": "kempynck2026crested",
+    "title": "CREsted: modeling genomic and synthetic cell-type-specific enhancers across tissues and species",
+    "authors": [
+      "Niklas Kempynck",
+      "Seppe De Winter",
+      "Casper H. Blaauw",
+      "Vasileios Konstantakos",
+      "Eren Can Ekşi",
+      "Sam Dieltiens",
+      "Darina Abaffyová",
+      "Valérie Bercier",
+      "Ibrahim I. Taskiran",
+      "Gert Hulselmans",
+      "Katina Spanier",
+      "Valerie Christiaens",
+      "Ludo Van Den Bosch",
+      "Lukas Mahieu",
+      "Stein Aerts"
+    ],
+    "journal": "Nature Methods",
+    "year": 2026,
+    "doi": "10.1038/s41592-026-03057-2",
+    "tags": [
+      "machine learning",
+      "deep learning",
+      "enhancers",
+      "cis-regulatory elements",
+      "sequence design",
+      "cross-species",
+      "genomic foundation models",
+      "scATAC-seq"
+    ],
+    "rating": 5,
+    "abstract": "Sequence-based deep learning models have become the state of the art for analyzing the genomic regulatory code. Particularly for enhancers, these models excel at deciphering sequence grammar that underlies their activity. To enable end-to-end enhancer modeling and design, we developed a software package called CREsted (cis-regulatory element sequence training, explanation and design). It combines preprocessing and analysis of single-cell assay for transposase-accessible chromatin using sequencing data, modeling chromatin accessibility from sequence, sequence design and downstream analysis to decipher enhancer grammar. We demonstrate CREsted's functionality on a mouse cortex and a human peripheral blood mononuclear cell dataset. Additionally, we use CREsted to compare mesenchymal-like cancer cell states between tumor types, and we investigate different fine-tuning strategies of genomic foundation models within CREsted. Finally, we train a model on a zebrafish development atlas and use this to design and in vivo validate cell-type-specific enhancers. For varying datasets, we demonstrate that CREsted facilitates efficient training and analyses, enabling scrutinization of the enhancer logic and design of synthetic enhancers across tissues and species.",
+    "notes": "## Key Findings\n\n- CREsted is an end-to-end software package for training, explaining, and designing cis-regulatory elements (enhancers) using sequence-based deep learning models.\n- Demonstrates cross-species enhancer design: trained a model on zebrafish development atlas and in vivo validated cell-type-specific synthetic enhancers.\n- Benchmarks fine-tuning strategies for genomic foundation models (e.g., Enformer-class), providing a practical framework for adapting pretrained models to new tissues/species.\n\n## Methods Worth Noting\n\n- Integrates scATAC-seq preprocessing, sequence-to-accessibility modeling, and sequence design (mutagenesis, gradient-based) into a unified pipeline.\n- Supports comparison of mesenchymal-like cancer cell states across tumor types using chromatin accessibility sequence models.\n- Fine-tuning strategies for genomic foundation models are systematically evaluated, relevant for transfer learning in plant/crop genomics contexts.",
+    "addedDate": "2026-04-04",
+    "source": "Nature Methods"
+  },
+  {
+    "id": "jiang2026erast",
+    "title": "Scalable homology detection with ERAST",
+    "authors": [
+      "Yinuo Jiang",
+      "Bing He",
+      "Zihan Wu",
+      "Fang Wang",
+      "Tianxu Lv",
+      "Yuran Jia",
+      "Yu Zhao",
+      "Chenchen Qin",
+      "Huajun Chen",
+      "Qiang Zhang",
+      "Jianhua Yao"
+    ],
+    "journal": "Nature Biotechnology",
+    "year": 2026,
+    "doi": "10.1038/s41587-026-03051-1",
+    "tags": [
+      "homology search",
+      "biological language models",
+      "vector database",
+      "sequence analysis",
+      "evolutionary relationships",
+      "scalable bioinformatics"
+    ],
+    "rating": 4,
+    "abstract": "Homology search plays a fundamental role in computational biology, enabling the identification of evolutionary relationships and functional similarities among biological sequences. However, current homology search methods, including BLAST, Foldseek and MMseqs2, often struggle to efficiently and accurately process the vast scale of biological databases. Here we introduce ERAST (efficient retrieval-augmented search tool), a solution designed to handle approximately 1 billion biological sequences within the largest vector database to date. ERAST combines large language models and vector database technology to provide both efficient and precise searches for homologous biological sequences. It enhances search quality by integrating preretrieval, retrieval and postretrieval optimization stages, and supports both nucleotide and protein sequences. Through advanced indexing techniques, fine-grained segmentation and metadata integration, ERAST achieves better precision while operating approximately 50 times faster than Foldseek and 50,000 times faster than TM-align. This performance allows ERAST to conduct accurate searches against billions of biological sequences in mere milliseconds. The vector database integrated with ERAST can be accessed at https://ai4s.tencent.com/erast.",
+    "notes": "## Key Findings\n\n- ERAST scales homology search to ~1 billion biological sequences using a vector database, outperforming BLAST, Foldseek, and MMseqs2 in both speed and accuracy.\n- ~50× faster than Foldseek and ~50,000× faster than TM-align, enabling millisecond-scale searches at billion-sequence scale.\n- Supports both nucleotide and protein sequences, making it applicable to pangenome-scale and cross-species comparative genomics.\n\n## Methods Worth Noting\n\n- Combines biological large language model embeddings with retrieval-augmented search (preretrieval, retrieval, postretrieval optimization stages).\n- Uses advanced indexing, fine-grained segmentation, and metadata integration for high-precision approximate nearest neighbor search.\n- Relevant for accelerating cross-species sequence analysis and large-scale population genomics queries in plant genomics contexts.",
+    "addedDate": "2026-04-04",
+    "source": "Nature Biotechnology"
   }
 ]

@@ -2925,5 +2925,63 @@
     "notes": "## Key Findings\n\n- EMF2b-1 (maize SUZ12 homolog) is a key PRC2 component that regulates endosperm cell cycling and kernel size in maize\n- Loss-of-function mutants show reduced kernel size, enhanced endoreduplication, and dramatically decreased H3K27me3 levels\n- 353 downstream target genes identified via ChIP-seq, enriched for cell cycle regulators, linking PRC2/H3K27me3 to endosperm developmental transitions\n\n## Methods Worth Noting\n\n- H3K27me3 ChIP-seq combined with transcriptome profiling in maize endosperm mutants\n- Integration of loss-of-function genetics with epigenomic mapping to link PRC2 recruitment to developmental phenotypes\n- Identification of direct vs. indirect EMF2b-1 targets using ChIP-seq peak overlap with differential expression",
     "addedDate": "2026-04-04",
     "source": "Genome Biology"
+  },
+  {
+    "id": "mordret2026protein",
+    "title": "Protein and genomic language models uncover the unexplored diversity of bacterial immunity",
+    "authors": [
+      "Ernest Mordret",
+      "Alexandre Hervé",
+      "Florian Tesson",
+      "Hugo Vaysset",
+      "Tyler Clabby",
+      "Arthur Loubat",
+      "Helena Shomar",
+      "Remi Planel",
+      "Rachel Lavenir",
+      "Jean Cury",
+      "Aude Bernheim"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.adv8275",
+    "tags": [
+      "protein language model",
+      "genomic language model",
+      "bacterial immunity",
+      "antiphage defense",
+      "machine learning",
+      "functional annotation"
+    ],
+    "rating": 5,
+    "abstract": "The bacterial pangenome contains a vast and largely uncharted diversity of antiphage defense systems. In this study, complementary machine learning approaches using protein and genomic language models were developed to systematically predict antiphage defense functions by analyzing genomic context, protein sequence, or a combination of both. The models achieved up to 99% precision and 92% recall in predicting antiphage functions. Applied to over 32,000 bacterial genomes, they identified more than 19,000 candidate defense operon families, over 85% of which were previously uncharacterized. Experimental validation in Escherichia and Streptomyces led to the discovery of 12 novel antiphage systems. The analysis suggests that approximately 1.5% of bacterial genomes are devoted to defense. An interactive catalog of candidate operon families is provided to facilitate further experimental exploration.",
+    "notes": "## Key Findings\n\n- Protein and genomic language models achieve 99% precision and 92% recall for predicting antiphage defense functions from sequence and genomic context\n- Over 85% of the >19,000 predicted defense operon families across 32,000 genomes were previously uncharacterized\n- 12 novel antiphage systems experimentally validated in E. coli and Streptomyces; ~1.5% of bacterial genomes devoted to defense\n\n## Methods Worth Noting\n\n- Complementary approaches combining protein language model embeddings with genomic context features\n- Systematic validation pipeline from computational prediction to experimental confirmation\n- Interactive catalog of >19,000 candidate operon families released as a community resource",
+    "addedDate": "2026-04-04",
+    "source": "Science"
+  },
+  {
+    "id": "deweirdt2026defensepredictor",
+    "title": "DefensePredictor: A machine learning model to discover prokaryotic immune systems",
+    "authors": [
+      "Peter C. DeWeirdt",
+      "Emily M. Mahoney",
+      "Michael T. Laub"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.adv7924",
+    "tags": [
+      "protein language model",
+      "prokaryotic defense",
+      "machine learning",
+      "CRISPR",
+      "functional prediction",
+      "open-source"
+    ],
+    "rating": 4,
+    "abstract": "Anti-phage defense systems are essential for bacterial survival against viral infections and have proven to be a rich source of biotechnological tools such as CRISPR-Cas9. While many systems have been identified by their co-localization in genomic defense islands, this method misses systems distributed elsewhere in the genome. DefensePredictor is a machine-learning model that leverages embeddings from a protein language model to classify proteins as defensive based on their sequences and genomic context. Applied to 69 diverse E. coli strains, the model predicted hundreds of previously unknown immune systems and experimentally validated the defensive function of 42. The study identified 15 previously uncharacterized protein domains essential for defense. Extending the analysis to over 1,000 bacterial genomes, the model identified nearly 3,000 protein clusters that appear distinct from known bacterial immune systems. DefensePredictor is provided as open-source software to assist the broader scientific community.",
+    "notes": "## Key Findings\n\n- DefensePredictor uses protein language model embeddings + genomic context to predict defensive proteins beyond known defense islands\n- Experimentally validated 42 previously unknown immune systems in 69 diverse E. coli strains and identified 15 uncharacterized defense protein domains\n- Extended to >1,000 genomes, revealing ~3,000 novel protein clusters distinct from all known bacterial immune systems\n\n## Methods Worth Noting\n\n- Protein language model embeddings as feature representations for defensive protein classification\n- Genomic context features capture defense island co-localization patterns and extend beyond them\n- Open-source tool released for community-wide defense system discovery",
+    "addedDate": "2026-04-04",
+    "source": "Science"
   }
 ]

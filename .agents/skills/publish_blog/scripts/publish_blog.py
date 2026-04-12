@@ -598,6 +598,19 @@ def main():
     rebuild_blog_listing(blogs, blog_html_path)
     print(f'✅ blog.html listing updated')
 
+    # Regenerate RSS feed
+    try:
+        from generate_rss import generate_rss
+        generate_rss(repo)
+    except ImportError:
+        # Try with full path
+        import importlib.util
+        rss_script = os.path.join(os.path.dirname(__file__), 'generate_rss.py')
+        spec = importlib.util.spec_from_file_location('generate_rss', rss_script)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        mod.generate_rss(repo)
+
     print(f'\n📝 Post URL: posts/{slug}.html')
     print(f'📋 Total posts: {len(blogs)}')
 

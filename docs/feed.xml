@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jingjing&#x27;s Blog</title>
+    <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
+    <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Apr 2026 14:27:11 +0000</lastBuildDate>
+    <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>沙漠里的&quot;快闪人生&quot;：一场雨，一辈子</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-11-01.html</link>
+      <description>沙漠短命植物如何用种皮化学雨量计、分散下注策略和极端压缩的生命周期，完成自然界最极致的风险管理和延迟满足。</description>
+      <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-11-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>plant biology</category>
+      <category>desert ecology</category>
+      <category>evolution</category>
+      <category>seed biology</category>
+      <category>bet-hedging</category>
+    </item>
+    <item>
+      <title>第四纪冰期如何塑造了人类的演化？</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-09-01.html</link>
+      <description>从冰期陆桥到人口瓶颈，从尼安德特人基因渐渗到乳糖耐受的演化——第四纪气候波动如何塑造了人类的大脑、迁徙与基因组。</description>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-09-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>evolution</category>
+      <category>human-genetics</category>
+      <category>quaternary</category>
+      <category>population-genetics</category>
+      <category>adaptation</category>
+    </item>
+    <item>
+      <title>一座小小陆桥，如何同时改变了两个大陆的命运和全球的气候</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-05-01.html</link>
+      <description>巴拿马地峡的闭合如何同时触发了美洲生物大交换、全球洋流重组和北半球冰期——一条60公里宽的陆桥改写了地球的生物演化和气候历史。</description>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-05-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>geology</category>
+      <category>paleontology</category>
+      <category>evolution</category>
+      <category>climate</category>
+      <category>biogeography</category>
+    </item>
+    <item>
+      <title>一片叶子的驯化困局：茶树如何绕过木本植物的演化瓶颈</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-03-27-01.html</link>
+      <description>茶树驯化为何比禾本科作物慢得多？从世代时间、扦插繁殖、两次独立驯化到殖民时代的奠基者效应，解析茶树独特的演化路径。</description>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-03-27-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>tea</category>
+      <category>domestication</category>
+      <category>population-genetics</category>
+      <category>plant-genomics</category>
+      <category>evolution</category>
+    </item>
+    <item>
+      <title>5600万年前那次最快的全球变暖，地球经历了什么</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-03-22-01.html</link>
+      <description>古新世-始新世极热事件（PETM）：5600万年前的碳循环扰动如何重塑深海生态与哺乳动物演化，以及它对当今气候变化的警示。</description>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-03-22-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>paleoclimate</category>
+      <category>PETM</category>
+      <category>carbon cycle</category>
+      <category>climate change</category>
+    </item>
+    <item>
+      <title>从板块碰撞到C4光合作用：一个跨越5000万年的因果链</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-03-19-01.html</link>
+      <description>追溯C4光合作用演化的地质根源——从印度-欧亚板块碰撞、青藏高原隆升、大气CO₂下降，到C4独立演化60余次的完整因果链</description>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-03-19-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>C4 photosynthesis</category>
+      <category>plant evolution</category>
+      <category>geoscience</category>
+      <category>genomics</category>
+    </item>
+    <item>
+      <title>C4草地扩张：一场改变了马的脚趾和人类姿势的植被革命</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-03-19-02.html</link>
+      <description>C4草地在8–6 Mya的扩张如何驱动了马的高冠齿与单蹄、食草动物军备竞赛，乃至东非森林退缩与人类直立行走的起点</description>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-03-19-02.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>C4 photosynthesis</category>
+      <category>plant evolution</category>
+      <category>palaeontology</category>
+      <category>human evolution</category>
+    </item>
+  </channel>
+</rss>

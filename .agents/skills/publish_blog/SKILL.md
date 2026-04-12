@@ -63,13 +63,14 @@ The script will:
 - Convert Markdown → HTML, saved to `docs/posts/{slug}.html`
 - Append/update the entry in `docs/js/blogs.json`
 - Update the blog listing in `docs/blog.html` between the `<!-- BLOG_POSTS_START -->` / `<!-- BLOG_POSTS_END -->` markers
+- Regenerate the RSS feed at `docs/feed.xml`
 
 ### Step 3 — Commit and Push
 
 ```bash
 cd /Users/zhaijj/Documents/00PostDoc/Buckler_lab/GitHub/paper-notebook
 
-git add docs/posts/ docs/js/blogs.json docs/blog.html
+git add docs/posts/ docs/js/blogs.json docs/blog.html docs/feed.xml
 git commit -m "feat: publish blog post — {title} ({date})"
 git push
 ```

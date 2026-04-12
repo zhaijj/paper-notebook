@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一朵不是花的花——头状花序如何让菊科称霸植物界 | Jingjing's Paper Notebook</title>
+  <meta name="description" content="菊科植物如何用头状花序的分工协作、先雄后雌的传粉传送带、黄金角的数学排列和冠毛的分离涡环飞行，成为植物界最大的科。" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>" />
+  <script>
+    (function () { var t = localStorage.getItem('pn-theme') || 'light'; document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b220f945-a9de-4c7d-89d8-818713c63ea1"></script>
+  <style>
+    /* Scoped styles for the interactive phyllotaxis demo */
+    .interactive-box {
+      background: var(--tag-bg, rgba(var(--accent-rgb, 99,102,241), 0.07));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0 32px;
+    }
+    .interactive-box .box-title {
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .phyl-wrap {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .phyl-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .phyl-label {
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .phyl-sub {
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      color: var(--text-dim);
+      text-align: center;
+      max-width: 220px;
+      line-height: 1.5;
+    }
+    .ctrl-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px auto 0;
+      justify-content: center;
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    #angle-val {
+      min-width: 48px;
+      text-align: right;
+      font-weight: 600;
+      color: var(--text);
+    }
+    input[type="range"] {
+      flex: 0 1 180px;
+      accent-color: var(--accent);
+    }
+    .blog-post-content .footnote {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">📚</div>
+        <div>
+          <span class="logo-text">Paper Notebook</span>
+          <span class="logo-sub">Jingjing Zhai</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="nav-active">Blog</a></li>
+        <li><a href="https://github.com/zhaijj/paper-notebook" target="_blank">GitHub</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+            <span class="toggle-icon">🌙</span>
+            <span class="toggle-label">Dark</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <header class="hero">
+    <div class="container">
+      <a href="../blog.html" class="back-link" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:1.5rem;font-size:0.875rem;color:var(--accent);text-decoration:none;">
+        ← All Posts
+      </a>
+      <div class="hero-eyebrow">botany · Asteraceae · plant evolution · phyllotaxis · biomechanics</div>
+      <h1>一朵不是花的花——头状花序如何让菊科称霸植物界</h1>
+      <p>菊科植物如何用头状花序的分工协作、先雄后雌的传粉传送带、黄金角的数学排列和冠毛的分离涡环飞行，成为植物界最大的科。</p>
+      <div style="margin-top:1rem;font-size:0.875rem;color:var(--text-dim);">
+        2026-04-12 · by Jingjing Zhai
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="blog-post-content">
+
+<blockquote>
+<p>你以为向日葵是一朵花？不，它是一家公司——有广告部、生产部、物流部，还有一套精密到令人窒息的排班系统。</p>
+</blockquote>
+
+<h2>一、广告牌和流水线</h2>
+
+<p>拿起一朵雏菊，你看到的"花瓣"其实不是花瓣。</p>
+
+<p>菊科植物最核心的发明是<strong>头状花序</strong>（capitulum）——把几十到几百朵微小的花聚合在一个花盘上，外面围一圈特化的舌状花，整体看起来像"一朵大花"。但它不是。它是一个<strong>由上百个个体组成的协作系统</strong>。</p>
+
+<p>外圈的舌状花负责"广告"——鲜艳、张扬、面积大，让蜜蜂在几十米外就能定位。但很多菊科植物的舌状花是不育的，不产种子。它们存在的唯一理由就是把传粉者引过来。</p>
+
+<p>中间密密麻麻的管状花才是"生产部"——每一朵都是一个完整的花，有雄蕊、有雌蕊、能结种子。它们单个只有几毫米大，毫不起眼，但这正是分工的精妙之处：广告的归广告，生产的归生产。</p>
+
+<p>一株植物把资源投入到不育的结构上，表面上看是浪费。但没有舌状花的"招牌"，传粉者找不到你，管状花再多也无人授粉。这就像一家公司——广告部门不直接产生利润，但没有广告就没有客户。</p>
+
+<h2>二、一条设计好的传送带</h2>
+
+<p>故事还没完。如果你仔细观察向日葵花盘，会发现管状花不是同时开放的，而是<strong>从外向内一圈一圈依次开放</strong>，整个过程持续好几天。</p>
+
+<p>更精妙的是，每朵管状花自身也有时间程序：先伸出花药散粉（雄性阶段），等花药枯萎后柱头才张开（雌性阶段）。这叫<strong>先雄后雌</strong>（protandry）。</p>
+
+<p>把这两个机制叠在一起，会发生什么？在任何一个时间点，花盘上外圈是已经进入雌性阶段的花（柱头张开、等待花粉），内圈是正在雄性阶段的花（花药正在散粉）。一只蜜蜂从外圈爬向内圈——先路过外圈张开的柱头，把身上从<strong>别株</strong>向日葵带来的花粉卸下来；然后到达内圈正在散粉的花药，装上<strong>这株</strong>的新花粉，飞走。</p>
+
+<p>整个花盘变成了一条单向传送带：先卸货、再装货。巧妙地促进了异花授粉，同时避免了自花授粉。更多的向日葵品种还有自交不亲和机制兜底——即使同株花粉意外落到自己的柱头上，也无法受精。</p>
+
+<h2>三、一道数学题</h2>
+
+<p>向日葵花盘上管状花的排列方式，是植物学和数学交汇的经典案例。</p>
+
+<p>如果你数向日葵花盘上的螺旋线，会发现顺时针和逆时针的螺旋数通常是两个相邻的斐波那契数——比如34和55，或者55和89。这不是巧合，而是一个简单几何规则的必然结果：每一朵新的小花以约<strong>137.5°</strong>（黄金角）的角度相对于前一朵依次长出来。</p>
+
+<p>为什么偏偏是这个角度？因为137.5°和360°之间是无理数关系——永远除不尽。这意味着每一朵新花都不会和前面任何一朵花对齐，自然就均匀填满了整个圆盘，没有空行、没有空隙。</p>
+
+<p>想象如果这个角度变成120°：360 ÷ 120 = 3，所有小花会排成三条辐射状直线，线与线之间大片空白。任何能被360°整除的角度都会产生这种"几条线"的问题。只有黄金角这样的无理角度，才能让花盘上的空间利用率最大化。</p>
+
+<div class="interactive-box">
+  <div class="box-title">互动实验：不同角度的花盘排列</div>
+  <div class="phyl-wrap">
+    <div class="phyl-col">
+      <span class="phyl-label">120.0°</span>
+      <canvas id="c1" width="220" height="220"></canvas>
+      <span class="phyl-sub">花排成3条直线，大量空间浪费</span>
+    </div>
+    <div class="phyl-col">
+      <span class="phyl-label">137.5°（黄金角）</span>
+      <canvas id="c2" width="220" height="220"></canvas>
+      <span class="phyl-sub">均匀填满整个花盘，无空隙</span>
+    </div>
+  </div>
+  <div class="ctrl-row">
+    <span>自定义角度</span>
+    <input type="range" id="angle-slider" min="1" max="360" value="137.5" step="0.5" oninput="updateCustom(this.value)">
+    <span id="angle-val">137.5°</span>
+  </div>
+  <div class="phyl-wrap" style="margin-top:12px">
+    <div class="phyl-col">
+      <canvas id="c3" width="220" height="220"></canvas>
+      <span class="phyl-sub" id="custom-desc">黄金角：均匀分布</span>
+    </div>
+  </div>
+</div>
+
+<p>一个向日葵花盘同时优化了至少四件事：视觉吸引（舌状花广告牌）、传粉方向控制（外→内依次开放 + 先雄后雌）、自花授粉规避（时间错开 + 自交不亲和）、空间利用效率（黄金角排列）。这不是四个独立的适应，而是一个<strong>高度整合的系统解决方案</strong>。</p>
+
+<h2>四、一种从未见过的飞行方式</h2>
+
+<p>种子结好了，下一步：怎么送出去？</p>
+
+<p>蒲公英的答案是<strong>冠毛</strong>（pappus）——那个毛茸茸的降落伞。但如果你仔细看，会发现它不是一个实心的薄膜伞面，而是由约100根细丝呈放射状排列组成的<strong>镂空结构</strong>。</p>
+
+<p>直觉上，实心膜应该能兜住更多空气、飞得更远。但2018年爱丁堡大学的研究团队发表在Nature上的工作揭示了一个令人震惊的事实：空气穿过冠毛细丝的间隙时，会在冠毛上方生成一个稳定的<strong>分离涡环</strong>（separated vortex ring）——一种此前从未在自然界中被观察到的流体力学现象。</p>
+
+<p>这个涡环不是紧贴在冠毛表面的，而是悬浮在上方，像一个"隐形降落伞"。镂空结构允许空气穿过，恰恰是形成这种分离涡环的关键条件——实心膜反而形成不了。</p>
+
+<p>而且，冠毛的孔隙率被精确调控在一个狭窄的最优区间。太密就等同于实心膜，气流不稳定，种子会翻转；太疏则涡环无法形成，升力不足。蒲公英的冠毛恰好处于那个"刚刚好"的孔隙率上——涡环稳定、升力足够、材料消耗最少。</p>
+
+<p>结果就是：蒲公英种子可以在空中悬浮极长时间，借助上升气流飞行几十公里甚至更远。仅用约100根细丝和一粒微小的种子，就实现了比人类降落伞更精妙的飞行控制。</p>
+
+<h2>五、一场始于四千万年前的征服</h2>
+
+<p>头状花序、先雄后雌、黄金角排列、冠毛飞行——这些创新叠加在一起，给了菊科一套近乎全能的竞争工具包。但工具再好，也需要历史机遇。</p>
+
+<p>菊科大约在始新世（~4000万年前）开始快速辐射，恰逢全球气候变冷、森林退缩、草地和开阔生境大面积扩张。菊科以草本为主的生长型（世代短、进化快）和冠毛的超强扩散能力，让它们成为占领新生开阔地的先锋。</p>
+
+<p>种子飞到新地方，适应当地环境，逐渐和母种群分化——广撒网式的地理隔离不断制造新物种。同时，菊科丰富的次生代谢物（倍半萜内酯等萜类化合物）提供了强大的化学防御，让它们在和herbivore的军备竞赛中占据上风。频繁的多倍化事件则提供了基因组层面的原材料，加速适应性进化。</p>
+
+<p>结果：约32,000种，横扫全球几乎所有陆地生态系统。从热带雨林到北极苔原边缘，从海滨到4000米以上的高山，菊科无处不在。</p>
+
+<h2>六、一朵"花"背后的启示</h2>
+
+<p>下次你看到一朵雏菊、一朵蒲公英或一盘向日葵瓜子的时候，请记住：</p>
+
+<p>你看到的不是一朵花，而是一个<strong>进化了四千万年的精密系统</strong>——它用不育的舌状花做广告牌，用先雄后雌的管状花做单向传送带，用黄金角把上千个生产单元塞进一个最紧密的平面，用镂空细丝创造了一种全新的飞行方式，然后搭上了全球气候变迁的顺风车，征服了整个星球。</p>
+
+<p>一朵不是花的花，做到了花做不到的事。</p>
+
+<hr>
+
+<p class="footnote"><em>参考文献：Cummins et al. (2018) A separated vortex ring underlies the flight of the dandelion. Nature 562: 414–418.</em></p>
+
+<p class="footnote"><em>本文是"植物科的故事"系列第二篇。第一篇：《沙漠里的"快闪人生"》（十字花科）。</em></p>
+
+      </article>
+
+      <!-- REACTION BAR -->
+      <div class="reaction-bar" id="reaction-bar" data-slug="2026-04-12-01">
+        <span class="reaction-label">Was this useful?</span>
+        <div class="reaction-buttons">
+          <button class="reaction-btn" data-emoji="👍" title="Helpful">👍 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="❤️" title="Love it">❤️ <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🌱" title="Interesting">🌱 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🤯" title="Mind-blowing">🤯 <span class="reaction-count"></span></button>
+        </div>
+      </div>
+
+      <!-- COMMENTS (Giscus) -->
+      <div class="comments-section">
+        <h3 class="comments-title">💬 Discussion</h3>
+        <script src="https://giscus.app/client.js"
+          data-repo="zhaijj/paper-notebook"
+          data-repo-id="R_kgDORcCTiQ"
+          data-category="General"
+          data-category-id="DIC_kwDORcCTic4C49c0"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="0"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Maintained by <a href="https://github.com/zhaijj" target="_blank">Jingjing Zhai</a> ·
+        Built with 💚 and plain HTML ·
+        <a href="https://github.com/zhaijj/paper-notebook" target="_blank">View on GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+
+  <!-- Interactive phyllotaxis visualization -->
+  <script>
+    function drawPhyl(canvas, angleDeg, n) {
+      var ctx = canvas.getContext('2d');
+      var w = canvas.width, h = canvas.height;
+      var cx = w / 2, cy = h / 2;
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      ctx.clearRect(0, 0, w, h);
+      ctx.beginPath();
+      ctx.arc(cx, cy, 100, 0, Math.PI * 2);
+      ctx.fillStyle = dark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
+      ctx.fill();
+      var angleRad = angleDeg * Math.PI / 180;
+      for (var i = 0; i < n; i++) {
+        var r = 3.8 * Math.sqrt(i);
+        if (r > 98) continue;
+        var theta = i * angleRad;
+        var x = cx + r * Math.cos(theta);
+        var y = cy + r * Math.sin(theta);
+        var t = i / n;
+        if (dark) {
+          ctx.fillStyle = 'rgba(' + Math.round(80+140*t) + ',' + Math.round(160+60*(1-t)) + ',' + Math.round(60+80*(1-t)) + ',0.85)';
+        } else {
+          ctx.fillStyle = 'rgba(' + Math.round(30+180*t) + ',' + Math.round(120+80*(1-t)) + ',' + Math.round(20+60*(1-t)) + ',0.8)';
+        }
+        ctx.beginPath();
+        ctx.arc(x, y, Math.max(1.6, 3.2 - i * 0.003), 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    drawPhyl(document.getElementById('c1'), 120, 500);
+    drawPhyl(document.getElementById('c2'), 137.5, 500);
+    drawPhyl(document.getElementById('c3'), 137.5, 500);
+
+    function updateCustom(v) {
+      var angle = parseFloat(v);
+      document.getElementById('angle-val').textContent = angle + '°';
+      drawPhyl(document.getElementById('c3'), angle, 500);
+      var ratio = 360 / angle;
+      var desc = document.getElementById('custom-desc');
+      if (Math.abs(angle - 137.5) < 1) {
+        desc.textContent = '黄金角：均匀分布';
+      } else if (Math.abs(ratio - Math.round(ratio)) < 0.05 && Math.round(ratio) <= 20) {
+        desc.textContent = '360÷' + angle + '≈' + Math.round(ratio) + '，排成' + Math.round(ratio) + '条线';
+      } else {
+        desc.textContent = '角度 ' + angle + '°';
+      }
+    }
+
+    // Redraw canvases when theme changes
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      setTimeout(function() {
+        drawPhyl(document.getElementById('c1'), 120, 500);
+        drawPhyl(document.getElementById('c2'), 137.5, 500);
+        var slider = document.getElementById('angle-slider');
+        drawPhyl(document.getElementById('c3'), parseFloat(slider.value), 500);
+      }, 100);
+    });
+  </script>
+
+  <script>
+    // Emoji reactions — Supabase-backed live counts + localStorage for personal highlight
+    (function () {
+      var SB_URL = 'https://njcxyuzvoolfmgiempid.supabase.co';
+      var SB_KEY = 'sb_publishable_Vtj9I-RWxjw1OiqzV2iT7Q_UIy6W3N1';
+      var bar = document.getElementById('reaction-bar');
+      if (!bar) return;
+      var slug = bar.dataset.slug;
+      var localKey = 'pn-react-' + slug;
+      var saved = localStorage.getItem(localKey);
+      var btns = bar.querySelectorAll('.reaction-btn');
+
+      function updateUI(chosen) {
+        btns.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.emoji === chosen);
+        });
+      }
+      if (saved) updateUI(saved);
+
+      // Fetch live counts from Supabase
+      fetch(SB_URL + '/rest/v1/reactions?select=emoji,count&slug=eq.' + encodeURIComponent(slug), {
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var counts = {};
+        data.forEach(function (row) { counts[row.emoji] = row.count; });
+        btns.forEach(function (btn) {
+          var span = btn.querySelector('.reaction-count');
+          if (span) span.textContent = counts[btn.dataset.emoji] > 0 ? counts[btn.dataset.emoji] : '';
+        });
+      });
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var emoji = btn.dataset.emoji;
+          if (saved === emoji) {
+            localStorage.removeItem(localKey);
+            saved = null;
+            updateUI(null);
+          } else {
+            var prev = saved;
+            localStorage.setItem(localKey, emoji);
+            saved = emoji;
+            updateUI(emoji);
+            btn.classList.add('pop');
+            setTimeout(function () { btn.classList.remove('pop'); }, 300);
+            if (typeof umami !== 'undefined') { umami.track('reaction', { emoji: emoji, post: slug }); }
+            // Increment in Supabase (atomic via RPC)
+            fetch(SB_URL + '/rest/v1/rpc/increment_reaction', {
+              method: 'POST',
+              headers: {
+                'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ p_slug: slug, p_emoji: emoji })
+            });
+            // Optimistic count update
+            btns.forEach(function (b) {
+              var span = b.querySelector('.reaction-count');
+              if (!span) return;
+              var cur = parseInt(span.textContent) || 0;
+              if (b.dataset.emoji === emoji) span.textContent = cur + 1;
+            });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

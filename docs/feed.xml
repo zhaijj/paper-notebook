@@ -5,8 +5,21 @@
     <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
     <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Apr 2026 14:27:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 16:25:28 +0000</lastBuildDate>
     <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一朵不是花的花——头状花序如何让菊科称霸植物界</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-12-01.html</link>
+      <description>菊科植物如何用头状花序的分工协作、先雄后雌的传粉传送带、黄金角的数学排列和冠毛的分离涡环飞行，成为植物界最大的科。</description>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-12-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>botany</category>
+      <category>Asteraceae</category>
+      <category>plant evolution</category>
+      <category>phyllotaxis</category>
+      <category>biomechanics</category>
+    </item>
     <item>
       <title>沙漠里的&quot;快闪人生&quot;：一场雨，一辈子</title>
       <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-11-01.html</link>

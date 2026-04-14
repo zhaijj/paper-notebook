@@ -3193,5 +3193,28 @@
     "notes": "## Key Findings\n\n- Co-distillation enables sequence-only PLMs to match SOTA VEP performance\n- No need for structure, MSA, or population genetics auxiliary inputs\n- Enables quantification of variant severity on continuous clinical phenotypes in biobanks\n\n## Methods Worth Noting\n\n- Co-distillation across ESM family models\n- Self-improvement via high-confidence prediction transfer",
     "addedDate": "2026-04-06",
     "source": "Nature Methods"
+  },
+  {
+    "id": "cheng2026mechanistic",
+    "title": "The Mechanistic Invariance Test: Genomic Language Models Fail to Learn Positional Regulatory Logic",
+    "authors": [
+      "Bryan Cheng",
+      "Jasper Zhang"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2604.06549",
+    "tags": [
+      "genomic language models",
+      "gene regulation",
+      "benchmark",
+      "positional logic",
+      "DNA foundation models"
+    ],
+    "rating": 5,
+    "abstract": "Genomic language models (gLMs) have transformed computational biology, achieving state-of-the-art performance across genomic tasks. Yet a fundamental question threatens the foundation of this success: do these models learn the mechanistic principles governing gene regulation, or do they merely exploit statistical shortcuts? We introduce the Mechanistic Invariance Test (MIT), a rigorous 650-sequence benchmark across 8 classes with scrambled controls that enables clean discrimination between compositional sensitivity and genuine positional understanding. We evaluate five gLMs spanning all major architectural paradigms (autoregressive, masked, and bidirectional state-space models) and uncover a universal failure mode. Through systematic mechanistic probing via AT titration, positional ablation, spacing perturbation, and strand orientation tests, we demonstrate that apparent compensation sensitivity is driven entirely by AT content correlation (r=0.78-0.96 across architectures), not positional regulatory logic. The failures are striking: Evo2-1B and Caduceus score regulatory elements at incorrect positions higher than correct positions, inverting biological reality. All models are strand-blind. Compositional effects dominate positional effects by 46-fold. Perhaps most revealing, a simple 100-parameter position-aware PWM achieves perfect performance (CSS=1.00, SCR=0.98), exposing that billion-parameter gLMs fail not from insufficient capacity but from fundamentally misaligned inductive biases. Larger models show stronger compositional bias, demonstrating that scale amplifies rather than corrects this limitation. These findings reveal that current gLMs capture surface statistics while missing the positional grammar essential for gene regulation, demanding architectural innovation before deployment in synthetic biology, gene therapy, and clinical variant interpretation.",
+    "notes": "## Key Findings\n\n- All five tested genomic language models (spanning autoregressive, masked, and SSM architectures) fail to learn positional regulatory logic, relying instead on AT content correlation (r=0.78-0.96)\n- Compositional effects dominate positional effects by 46-fold across all models; all models are strand-blind\n- A simple 100-parameter position-aware PWM achieves perfect performance (CSS=1.00, SCR=0.98), showing the failure stems from misaligned inductive biases, not insufficient capacity\n\n## Methods Worth Noting\n\n- Mechanistic Invariance Test (MIT): 650-sequence benchmark across 8 classes with scrambled controls for clean discrimination between compositional sensitivity and positional understanding\n- Systematic mechanistic probing via AT titration, positional ablation, spacing perturbation, and strand orientation tests",
+    "addedDate": "2026-04-13",
+    "source": "arXiv"
   }
 ]

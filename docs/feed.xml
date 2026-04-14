@@ -5,8 +5,22 @@
     <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
     <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Apr 2026 16:25:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 01:04:56 +0000</lastBuildDate>
     <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>水稻：把别的作物最怕的东西变成自己武器的植物</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-13-01.html</link>
+      <description>水稻的成功不在于某个性状突出，而在于水生适应性、驯化遗传结构和稻田生态系统三者的耦合——从演化、遗传到生态层面环环相扣的系统。</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-13-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>水稻</category>
+      <category>驯化</category>
+      <category>植物基因组</category>
+      <category>农业生态</category>
+      <category>C3光合</category>
+      <category>演化</category>
+    </item>
     <item>
       <title>一朵不是花的花——头状花序如何让菊科称霸植物界</title>
       <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-12-01.html</link>

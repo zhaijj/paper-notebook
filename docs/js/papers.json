@@ -3216,5 +3216,34 @@
     "notes": "## Key Findings\n\n- All five tested genomic language models (spanning autoregressive, masked, and SSM architectures) fail to learn positional regulatory logic, relying instead on AT content correlation (r=0.78-0.96)\n- Compositional effects dominate positional effects by 46-fold across all models; all models are strand-blind\n- A simple 100-parameter position-aware PWM achieves perfect performance (CSS=1.00, SCR=0.98), showing the failure stems from misaligned inductive biases, not insufficient capacity\n\n## Methods Worth Noting\n\n- Mechanistic Invariance Test (MIT): 650-sequence benchmark across 8 classes with scrambled controls for clean discrimination between compositional sensitivity and positional understanding\n- Systematic mechanistic probing via AT titration, positional ablation, spacing perturbation, and strand orientation tests",
     "addedDate": "2026-04-13",
     "source": "arXiv"
+  },
+  {
+    "id": "huang2026evolen",
+    "title": "EvoLen: Evolution-Guided Tokenization for DNA Language Model",
+    "authors": [
+      "Nan Huang",
+      "Xiaoxiao Zhou",
+      "Junxia Cui",
+      "Mario Tapia-Pacheco",
+      "Tiffany Amariuta",
+      "Yang Li",
+      "Jingbo Shang"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2604.08698",
+    "tags": [
+      "DNA language model",
+      "tokenization",
+      "evolution",
+      "BPE",
+      "regulatory motifs",
+      "genomics"
+    ],
+    "rating": 5,
+    "abstract": "Tokens serve as the basic units of representation in DNA language models (DNALMs), yet their design remains underexplored. Unlike natural language, DNA lacks inherent token boundaries or predefined compositional rules, making tokenization a fundamental modeling decision rather than a naturally specified one. While existing approaches like byte-pair encoding (BPE) excel at capturing token structures that reflect human-generated linguistic regularities, DNA is organized by biological function and evolutionary constraint rather than linguistic convention. We argue that DNA tokenization should prioritize functional sequence patterns like regulatory motifs-short, recurring segments under evolutionary constraint and typically preserved across species. We incorporate evolutionary information directly into the tokenization process through EvoLen, a tokenizer that combines evolutionary stratification with length-aware decoding to better preserve motif-scale functional sequence units. EvoLen uses cross-species evolutionary signals to group DNA sequences, trains separate BPE tokenizers on each group, merges the resulting vocabularies via a rule prioritizing preserved patterns, and applies length-aware decoding with dynamic programming. Through controlled experiments, EvoLen improves the preservation of functional sequence patterns, differentiation across genomic contexts, and alignment with evolutionary constraint, while matching or outperforming standard BPE across diverse DNALM benchmarks. These results demonstrate that tokenization introduces a critical inductive bias and that incorporating evolutionary information yields more biologically meaningful and interpretable sequence representations.",
+    "notes": "## Key Findings\n\n- DNA tokenization should prioritize functional sequence patterns (regulatory motifs) rather than purely statistical frequency patterns used in standard BPE\n- EvoLen combines evolutionary stratification with length-aware decoding to preserve motif-scale functional units, outperforming standard BPE across diverse DNALM benchmarks\n- Tokenization introduces a critical inductive bias — incorporating evolutionary information yields more biologically meaningful and interpretable sequence representations\n\n## Methods Worth Noting\n\n- Cross-species evolutionary signals used to stratify DNA sequences into groups, with separate BPE tokenizers trained per group\n- Vocabulary merging via rules that prioritize evolutionarily preserved patterns\n- Length-aware decoding using dynamic programming to maintain motif-scale boundaries during tokenization",
+    "addedDate": "2026-04-16",
+    "source": "arXiv"
   }
 ]

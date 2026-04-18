@@ -5,7 +5,7 @@
     <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
     <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Apr 2026 03:37:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 03:48:23 +0000</lastBuildDate>
     <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>几个二硫键如何分裂了东西方的餐桌</title>
@@ -31,6 +31,20 @@
       <category>capsaicin</category>
       <category>seed dispersal</category>
       <category>TRPV1</category>
+      <category>evolution</category>
+    </item>
+    <item>
+      <title>茄科的故事（2）：一个科的毒药柜——从曼陀罗到阿托品</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-17-03.html</link>
+      <description>茄科为何走上化学防御之路？尼古丁、阿托品、茄碱——三种武器，三种策略，殊途同归地瘫痪动物界最古老的神经信号系统。</description>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-17-03.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>Solanaceae</category>
+      <category>alkaloids</category>
+      <category>atropine</category>
+      <category>nicotine</category>
+      <category>chemical defense</category>
       <category>evolution</category>
     </item>
     <item>

@@ -136,5 +136,19 @@
       "food culture"
     ],
     "url": "posts/2026-04-17-01.html"
+  },
+  {
+    "slug": "2026-04-17-02",
+    "title": "茄科的故事（1）：一把只对哺乳动物开火的化学枪",
+    "description": "辣椒素如何同时充当抗真菌剂、哺乳动物驱避剂和鸟类传播滤器——一个分子，三个靶标，三种结局。",
+    "date": "2026-04-17",
+    "tags": [
+      "Solanaceae",
+      "capsaicin",
+      "seed dispersal",
+      "TRPV1",
+      "evolution"
+    ],
+    "url": "posts/2026-04-17-02.html"
   }
 ]

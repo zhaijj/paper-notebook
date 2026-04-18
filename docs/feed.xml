@@ -5,7 +5,7 @@
     <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
     <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Apr 2026 01:03:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 03:37:03 +0000</lastBuildDate>
     <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>几个二硫键如何分裂了东西方的餐桌</title>
@@ -19,6 +19,19 @@
       <category>polyploidy</category>
       <category>evolution</category>
       <category>food culture</category>
+    </item>
+    <item>
+      <title>茄科的故事（1）：一把只对哺乳动物开火的化学枪</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-17-02.html</link>
+      <description>辣椒素如何同时充当抗真菌剂、哺乳动物驱避剂和鸟类传播滤器——一个分子，三个靶标，三种结局。</description>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-17-02.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>Solanaceae</category>
+      <category>capsaicin</category>
+      <category>seed dispersal</category>
+      <category>TRPV1</category>
+      <category>evolution</category>
     </item>
     <item>
       <title>水稻：把别的作物最怕的东西变成自己武器的植物</title>

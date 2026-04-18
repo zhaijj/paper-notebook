@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>茄科的故事（1）：一把只对哺乳动物开火的化学枪 | Jingjing's Paper Notebook</title>
+  <meta name="description" content="辣椒素如何同时充当抗真菌剂、哺乳动物驱避剂和鸟类传播滤器——一个分子，三个靶标，三种结局。" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>" />
+  <script>
+    (function () { var t = localStorage.getItem('pn-theme') || 'light'; document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b220f945-a9de-4c7d-89d8-818713c63ea1"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">📚</div>
+        <div>
+          <span class="logo-text">Paper Notebook</span>
+          <span class="logo-sub">Jingjing Zhai</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="nav-active">Blog</a></li>
+        <li><a href="https://github.com/zhaijj/paper-notebook" target="_blank">GitHub</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+            <span class="toggle-icon">🌙</span>
+            <span class="toggle-label">Dark</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- POST HERO -->
+  <header class="hero">
+    <div class="container">
+      <a href="../blog.html" class="back-link" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:1.5rem;font-size:0.875rem;color:var(--accent);text-decoration:none;">
+        ← All Posts
+      </a>
+      <div class="hero-eyebrow">Solanaceae · capsaicin · seed dispersal · TRPV1 · evolution</div>
+      <h1>茄科的故事（1）：一把只对哺乳动物开火的化学枪</h1>
+      <p>辣椒素如何同时充当抗真菌剂、哺乳动物驱避剂和鸟类传播滤器——一个分子，三个靶标，三种结局。</p>
+      <div style="margin-top:1rem;font-size:0.875rem;color:var(--text-dim);">
+        2026-04-17 · by Jingjing Zhai
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="blog-post-content">
+        <h1 id="茄科的故事-1-一把只对哺乳动物开火的化学枪">茄科的故事（1）：一把只对哺乳动物开火的化学枪</h1>
+
+<blockquote>
+<p>果实存在的意义是被吃掉。但辣椒偏偏往果实里灌满了让人痛不欲生的化学武器。这是在自杀，还是另有图谋？</p>
+</blockquote>
+
+<h2 id="一个果实的悖论">一个果实的悖论</h2>
+
+<p>进化论对果实的解释很简单：果实是植物给动物的"贿赂"。你吃我的果肉，帮我把种子带到远方。双赢。</p>
+
+<p>但辣椒的做法看起来完全违反了这个逻辑。它的果实里充满了<strong>辣椒素（capsaicin）</strong>，一种让哺乳动物产生剧烈灼烧感的化学物质。如果目标是让动物来吃，你往食物里下"毒"算怎么回事？</p>
+
+<p>这个悖论困扰了生物学家很多年，直到Joshua Tewksbury在玻利维亚和亚利桑那的野生辣椒丛中找到了答案。答案优雅得令人叫绝。</p>
+
+<h2 id="好的搬运工和坏的搬运工">好的搬运工和坏的搬运工</h2>
+
+<p>不是所有吃果实的动物都是合格的种子搬运工。</p>
+
+<p><strong>哺乳动物是糟糕的搬运工。</strong> 它们有<strong>臼齿</strong>，会把种子嚼碎。种子被碾碎就死了，传播无从谈起。更糟糕的是，哺乳动物的消化道对种子的发芽能力也有破坏作用。</p>
+
+<p><strong>鸟类是理想的搬运工。</strong> 鸟没有牙齿，整粒吞咽，种子完整地通过消化道排出。不仅如此，鸟类消化道的处理反而对种子有好处——经过鸟肠道的野生辣椒种子，存活率比直接从果实中取出的种子高出<strong>370%</strong>。鸟肠道的处理减少了种子表面的<strong>镰刀菌（<em>Fusarium</em>）</strong>感染，还降低了种子被蚂蚁发现的概率。再加上鸟类飞行距离远，能把种子散布到远离母株的新栖息地。</p>
+
+<p>所以问题变成了：<strong>有没有一种方法，能把坏搬运工赶走，同时对好搬运工完全透明？</strong></p>
+
+<p>辣椒素就是这个问题的完美解。</p>
+
+<h2 id="一个受体的分子差异">一个受体的分子差异</h2>
+
+<p>辣椒素的靶点是一种叫<strong>TRPV1</strong>的离子通道。TRPV1是一种<strong>热/痛觉感受器</strong>，存在于感觉神经元的细胞膜上。在哺乳动物体内，当TRPV1被辣椒素激活时，它会打开，让钙离子涌入神经细胞，向大脑发送"灼烧"的信号。这就是你吃辣时嘴里着火的原因——辣椒素本质上是在"欺骗"你的神经系统，让它以为嘴里的温度超过了43°C。</p>
+
+<p>关键来了：<strong>鸟类也有TRPV1受体，但它们的TRPV1对辣椒素不敏感。</strong></p>
+
+<p>2002年，David Julius实验室（他后来因发现温度和触觉受体的工作与Ardem Patapoutian共同获得了2021年诺贝尔生理学或医学奖）发表了一项经典研究。他们克隆了鸡的TRPV1受体，发现它和大鼠的TRPV1一样能被<strong>高温</strong>和<strong>酸性环境</strong>激活，但对辣椒素浓度高达100 µmol/L时仍然毫无反应。通过构建大鼠-鸡TRPV1嵌合体蛋白，他们定位了差异所在：<strong>第三和第四跨膜结构域（S3-S4）之间的一小段区域</strong>决定了辣椒素能否结合。后续研究进一步精确到鸡TRPV1的<strong>第578位丙氨酸</strong>——只要把这个位点突变成谷氨酸，鸡的受体就变得对辣椒素敏感了。</p>
+
+<p>一个氨基酸的差异，决定了辣椒对一整个纲的动物是"火焰"还是"空气"。</p>
+
+<h2 id="tewksbury的野外实验">Tewksbury的野外实验</h2>
+
+<p>分子机制解释了"为什么鸟不怕辣"，但辣椒素真的是被自然选择用来"筛选搬运工"的吗？这需要野外证据。</p>
+
+<p>Tewksbury和同事在亚利桑那沙漠中研究野生辣椒（<em>Capsicum annuum</em>）。他们用摄像机监控辣椒丛，发现<strong>只有弯嘴曲嘴鸫（curve-billed thrasher）在吃辣椒</strong>，而该地区最常见的哺乳类食果动物——<strong>林鼠和仙人掌鼠——完全不碰辣椒果实</strong>。</p>
+
+<p>但仅仅观察到"哺乳动物不吃辣椒"还不够，也许它们只是不喜欢辣椒的颜色或形状。Tewksbury需要证明是辣椒素本身在起作用。他找到了一个天然对照：玻利维亚的野生辣椒<em>Capsicum chacoense</em>，由于一个遗传变异，部分植株<strong>完全不产生辣椒素</strong>。当他把不辣的辣椒喂给林鼠、仙人掌鼠和鸟类时，所有动物都欣然接受。但换成有辣椒素的辣椒后，鸟类照吃不误，<strong>啮齿动物拒绝碰一口</strong>。</p>
+
+<p>更妙的是，弯嘴曲嘴鸫喜欢栖息在有浆果的灌木丛中，排泄物自然就落在灌木下。而辣椒幼苗在灌木遮荫下的生长表现远好于暴露的沙漠。<strong>鸟不仅完整地传播了种子，还恰好把它们送到了最适合生长的地方。</strong></p>
+
+<h2 id="第二层防御-抗真菌">第二层防御：抗真菌</h2>
+
+<p>如果故事到这里就结束了，已经足够精彩。但2008年Tewksbury团队在玻利维亚的后续研究揭示了辣椒素的<strong>第二重功能</strong>。</p>
+
+<p>野生辣椒面临的最大种子杀手不是哺乳动物，而是一种叫<strong>半裸镰刀菌（<em>Fusarium semitectum</em>）</strong>的真菌。这种真菌通过一种<strong>半翅目昆虫（<em>Acroleucus coxalis</em>）</strong>取食时在果皮上留下的伤口进入果实，感染并杀死种子。在Tewksbury调查的所有种群中，超过90%的成熟果实都有镰刀菌感染。</p>
+
+<p><em>C. chacoense</em>天然存在辣与不辣的多态性，不同种群中产辣椒素植株的比例从0%到100%不等。Tewksbury发现这个比例和当地的<strong>昆虫取食压力</strong>高度相关：昆虫多的地方，几乎所有植株都产辣椒素；昆虫少的地方，大部分植株是不辣的。</p>
+
+<p>实验室实验直接证明了辣椒素能显著抑制镰刀菌的生长。不辣的果实中种子被真菌杀死的比例是辣果实的两倍。</p>
+
+<p>所以辣椒素可能最初是作为<strong>抗微生物防御</strong>演化出来的。种子传播的定向选择——赶走哺乳动物、放行鸟类——是叠加在这个基础之上的第二层功能。辣椒能同时做到这两件事，是因为它利用了一个生物学上极其罕见的巧合：<strong>它的化学武器对最大的种子威胁（真菌）和最差的种子搬运工（哺乳动物）同时有效，却对最好的种子搬运工（鸟类）完全无害。</strong></p>
+
+<h2 id="一个反直觉的对比-番茄的策略">一个反直觉的对比：番茄的策略</h2>
+
+<p>辣椒的策略有多独特，和它的近亲番茄一比就清楚了。番茄和辣椒同属茄科，亲缘关系很近。</p>
+
+<p>番茄的做法是"先苦后甜"：未成熟时果实充满苦味的<strong>α-番茄碱（α-tomatine）</strong>，让动物不来吃；成熟后苦味消失，变甜变红，吸引动物传播种子。这是大多数果实的标准策略。但问题是：果实成熟后化学防御消失，就暴露在了真菌面前。</p>
+
+<p>辣椒恰恰相反：<strong>果实越成熟，辣椒素含量越高</strong>。这看起来很矛盾——成熟的果实应该"欢迎"动物来吃才对——但辣椒之所以"负担得起"这个策略，正是因为它的化学武器对鸟类完全透明。它可以在成熟期同时保持最高水平的抗真菌防御和最高水平的对鸟类的吸引力。</p>
+
+<p>这是一个绝大多数植物做不到的事情。用Tewksbury的话说：很多植物大概都"想"这么干——在果实成熟后继续保持化学防线——但除非你恰好拥有一种对你的传播者无效的武器，否则你做不到。</p>
+
+<h2 id="辣椒素的三重身份">辣椒素的三重身份</h2>
+
+<p>回过头来看辣椒素在自然界的角色，它同时扮演了三个身份：</p>
+
+<p><strong>抗真菌剂</strong> → 保护种子免受镰刀菌杀伤</p>
+<p><strong>哺乳动物驱避剂</strong> → 赶走会破坏种子的食客</p>
+<p><strong>鸟类传播者滤器</strong> → 对合格搬运工完全透明</p>
+
+<p>这三层功能叠加在一个分子上，靠的不是三种不同的机制，而是不同生物对同一个分子的<strong>不同敏感性</strong>。真菌的细胞膜和呼吸链被辣椒素干扰，哺乳动物的TRPV1被激活产生灼痛，鸟类的TRPV1因为关键氨基酸的差异而无动于衷。</p>
+
+<p>一个分子，三个靶标，三种结局。这就是自然选择打磨了几百万年的结果。</p>
+
+<hr>
+
+<p><em>延伸阅读</em></p>
+
+<ol>
+<li>Tewksbury JJ, Nabhan GP (2001) Directed deterrence by capsaicin in chillies. <em>Nature</em> 412: 403–404.</li>
+<li>Jordt SE, Julius D (2002) Molecular basis for species-specific sensitivity to "hot" chili peppers. <em>Cell</em> 108: 421–430.</li>
+<li>Tewksbury JJ et al. (2008) Evolutionary ecology of pungency in wild chilies. <em>Proc Natl Acad Sci USA</em> 105: 11808–11811.</li>
+<li>Fricke EC et al. (2013) When condition trumps location: seed consumption by fruit-eating birds removes pathogens and predator attractants. <em>Ecology Letters</em> 16: 1031–1036.</li>
+</ol>
+
+<p><em>本文是"茄科的故事"系列第一篇。第二篇：《茄科的毒药柜——从曼陀罗到阿托品》（即将推出）。</em></p>
+
+      </article>
+
+      <!-- REACTION BAR -->
+      <div class="reaction-bar" id="reaction-bar" data-slug="2026-04-17-02">
+        <span class="reaction-label">Was this useful?</span>
+        <div class="reaction-buttons">
+          <button class="reaction-btn" data-emoji="👍" title="Helpful">👍 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="❤️" title="Love it">❤️ <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🌱" title="Interesting">🌱 <span class="reaction-count"></span></button>
+          <button class="reaction-btn" data-emoji="🤯" title="Mind-blowing">🤯 <span class="reaction-count"></span></button>
+        </div>
+      </div>
+
+      <!-- COMMENTS (Giscus) -->
+      <div class="comments-section">
+        <h3 class="comments-title">💬 Discussion</h3>
+        <script src="https://giscus.app/client.js"
+          data-repo="zhaijj/paper-notebook"
+          data-repo-id="R_kgDORcCTiQ"
+          data-category="General"
+          data-category-id="DIC_kwDORcCTic4C49c0"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="0"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Maintained by <a href="https://github.com/zhaijj" target="_blank">Jingjing Zhai</a> ·
+        Built with 💚 and plain HTML ·
+        <a href="https://github.com/zhaijj/paper-notebook" target="_blank">View on GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script>
+    // Emoji reactions — Supabase-backed live counts + localStorage for personal highlight
+    (function () {
+      var SB_URL = 'https://njcxyuzvoolfmgiempid.supabase.co';
+      var SB_KEY = 'sb_publishable_Vtj9I-RWxjw1OiqzV2iT7Q_UIy6W3N1';
+      var bar = document.getElementById('reaction-bar');
+      if (!bar) return;
+      var slug = bar.dataset.slug;
+      var localKey = 'pn-react-' + slug;
+      var saved = localStorage.getItem(localKey);
+      var btns = bar.querySelectorAll('.reaction-btn');
+
+      function updateUI(chosen) {
+        btns.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.emoji === chosen);
+        });
+      }
+      if (saved) updateUI(saved);
+
+      // Fetch live counts from Supabase
+      fetch(SB_URL + '/rest/v1/reactions?select=emoji,count&slug=eq.' + encodeURIComponent(slug), {
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var counts = {};
+        data.forEach(function (row) { counts[row.emoji] = row.count; });
+        btns.forEach(function (btn) {
+          var span = btn.querySelector('.reaction-count');
+          if (span) span.textContent = counts[btn.dataset.emoji] > 0 ? counts[btn.dataset.emoji] : '';
+        });
+      });
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var emoji = btn.dataset.emoji;
+          if (saved === emoji) {
+            localStorage.removeItem(localKey);
+            saved = null;
+            updateUI(null);
+          } else {
+            var prev = saved;
+            localStorage.setItem(localKey, emoji);
+            saved = emoji;
+            updateUI(emoji);
+            btn.classList.add('pop');
+            setTimeout(function () { btn.classList.remove('pop'); }, 300);
+            if (typeof umami !== 'undefined') { umami.track('reaction', { emoji: emoji, post: slug }); }
+            // Increment in Supabase (atomic via RPC)
+            fetch(SB_URL + '/rest/v1/rpc/increment_reaction', {
+              method: 'POST',
+              headers: {
+                'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ p_slug: slug, p_emoji: emoji })
+            });
+            // Optimistic count update
+            btns.forEach(function (b) {
+              var span = b.querySelector('.reaction-count');
+              if (!span) return;
+              var cur = parseInt(span.textContent) || 0;
+              if (b.dataset.emoji === emoji) span.textContent = cur + 1;
+            });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

@@ -5,8 +5,21 @@
     <link>https://zhaijj.github.io/paper-notebook/blog.html</link>
     <description>Blog posts on plant genomics, DNA language models, evolution, and AI by Jingjing Zhai.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Apr 2026 01:04:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 01:03:42 +0000</lastBuildDate>
     <atom:link href="https://zhaijj.github.io/paper-notebook/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>几个二硫键如何分裂了东西方的餐桌</title>
+      <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-17-01.html</link>
+      <description>小麦储藏蛋白的二硫键交联能力如何催生了面筋，以及一次意外的六倍体化如何让发酵面包成为可能，最终塑造了东西方饮食文化的根本分野。</description>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://zhaijj.github.io/paper-notebook/posts/2026-04-17-01.html</guid>
+      <author>Jingjing Zhai</author>
+      <category>wheat</category>
+      <category>gluten</category>
+      <category>polyploidy</category>
+      <category>evolution</category>
+      <category>food culture</category>
+    </item>
     <item>
       <title>水稻：把别的作物最怕的东西变成自己武器的植物</title>
       <link>https://zhaijj.github.io/paper-notebook/posts/2026-04-13-01.html</link>

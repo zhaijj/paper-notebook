@@ -3245,5 +3245,347 @@
     "notes": "## Key Findings\n\n- DNA tokenization should prioritize functional sequence patterns (regulatory motifs) rather than purely statistical frequency patterns used in standard BPE\n- EvoLen combines evolutionary stratification with length-aware decoding to preserve motif-scale functional units, outperforming standard BPE across diverse DNALM benchmarks\n- Tokenization introduces a critical inductive bias — incorporating evolutionary information yields more biologically meaningful and interpretable sequence representations\n\n## Methods Worth Noting\n\n- Cross-species evolutionary signals used to stratify DNA sequences into groups, with separate BPE tokenizers trained per group\n- Vocabulary merging via rules that prioritize evolutionarily preserved patterns\n- Length-aware decoding using dynamic programming to maintain motif-scale boundaries during tokenization",
     "addedDate": "2026-04-16",
     "source": "arXiv"
+  },
+  {
+    "id": "peng2025sparseunknown",
+    "title": "Use Sparse Autoencoders to Discover Unknown Concepts, Not to Act on Known Concepts",
+    "authors": [
+      "Kenny Peng",
+      "Rajiv Movva",
+      "Jon Kleinberg",
+      "Emma Pierson",
+      "Nikhil Garg"
+    ],
+    "journal": "arXiv",
+    "year": 2025,
+    "doi": "10.48550/arXiv.2506.23845",
+    "tags": [
+      "sparse autoencoders",
+      "concept discovery",
+      "mechanistic interpretability",
+      "critical perspective",
+      "preprint"
+    ],
+    "rating": 4,
+    "abstract": "While sparse autoencoders (SAEs) have generated significant excitement, a series of negative results have added to skepticism about their usefulness. Here, we establish a conceptual distinction that reconciles competing narratives surrounding SAEs. We argue that while SAEs are less effective tools for acting on known concepts, SAEs are powerful tools for discovering unknown concepts. This distinction cleanly separates existing negative and positive results, and suggests several classes of SAE applications. Specifically, we outline use cases for SAEs in (i) text as data, (ii) bridging prediction and explanation in ML-based science, and (iii) ML interpretability, explainability, fairness, and auditing.",
+    "notes": "## Key Findings\n\n- **Question:** When are sparse autoencoders genuinely useful despite negative results on probing, steering, and unlearning known concepts?\n- **Approach:** This position paper organizes prior SAE evidence around a distinction between acting on prespecified concepts and discovering concepts that are not known in advance.\n- **Finding:** The authors argue that SAEs are better justified as exploratory tools for unknown-concept discovery than as privileged directions for manipulating known concepts.\n- **PlantCAD relevance:** SAE analyses of PlantCAD hidden states should prioritize hypothesis generation and unexpected regulatory features, while causal intervention should be benchmarked against simpler supervised directions.\n- **Caveat:** This is a conceptual synthesis submitted to the NeurIPS 2025 Position Paper Track, not a peer-reviewed genomics study; its recommendations still need direct validation on DNA models.",
+    "addedDate": "2026-08-02",
+    "source": "arXiv"
+  },
+  {
+    "id": "leask2025sparsecanonical",
+    "title": "Sparse Autoencoders Do Not Find Canonical Units of Analysis",
+    "authors": [
+      "Patrick Leask",
+      "Bart Bussmann",
+      "Michael Pearce",
+      "Joseph Bloom",
+      "Curt Tigges",
+      "Noura Al Moubayed",
+      "Lee Sharkey",
+      "Neel Nanda"
+    ],
+    "journal": "ICLR",
+    "year": 2025,
+    "doi": "",
+    "tags": [
+      "sparse autoencoders",
+      "feature granularity",
+      "mechanistic interpretability",
+      "critical perspective",
+      "conference paper"
+    ],
+    "rating": 4,
+    "abstract": "A common goal of mechanistic interpretability is to decompose the activations of neural networks into features: interpretable properties of the input computed by the model. Sparse autoencoders (SAEs) are a popular method for finding these features in LLMs, and it has been postulated that they can be used to find a canonical set of units: a unique and complete list of atomic features. We cast doubt on this belief using two novel techniques: SAE stitching to show they are incomplete, and meta-SAEs to show they are not atomic. SAE stitching involves inserting or swapping latents from a larger SAE into a smaller one. Latents from the larger SAE can be divided into two categories: novel latents, which improve performance when added to the smaller SAE, indicating they capture novel information, and reconstruction latents, which can replace corresponding latents in the smaller SAE that have similar behavior. The existence of novel features indicates incompleteness of smaller SAEs. Using meta-SAEs—SAEs trained on the decoder matrix of another SAE—we find that latents in SAEs often decompose into combinations of latents from a smaller SAE, showing that larger SAE latents are not atomic. The resulting decompositions are often interpretable; for example, a latent representing Einstein decomposes into scientist, Germany and famous person. To train meta-SAEs we introduce BatchTopK SAEs, an improved variant of the popular TopK SAE method, that only enforces a fixed average sparsity. Even if SAEs do not find canonical units of analysis, they may still be useful tools. We suggest that future research should either pursue different approaches for identifying such units, or pragmatically choose the SAE size suited to their task.",
+    "notes": "## Key Findings\n\n- **Question:** Do SAE latents form a unique, complete, and atomic basis for interpreting a neural network?\n- **Approach:** The authors use SAE stitching to test completeness and meta-SAEs trained on decoder weights to test whether learned latents are atomic.\n- **Finding:** SAE dictionaries vary with scale, omit useful features, and contain latents that can themselves be decomposed; they are therefore pragmatic analysis tools rather than canonical units.\n- **PlantCAD relevance:** Any SAE map of PlantCAD hidden states should include stability tests across dictionary size, seed, layer, and sparsity, and causal feature interventions should not assume one latent equals one biological mechanism.\n- **Caveat:** The experiments center on language models rather than genomic models, so the extent of the instability in regulatory sequence representations remains an empirical question.",
+    "addedDate": "2026-08-02",
+    "source": "ICLR"
+  },
+  {
+    "id": "vaishnav2022evolution",
+    "title": "The evolution, evolvability and engineering of gene regulatory DNA",
+    "authors": [
+      "Eeshit Dhaval Vaishnav",
+      "Carl G. de Boer",
+      "Jennifer Molinet",
+      "Moran Yassour",
+      "Lin Fan",
+      "Xian Adiconis",
+      "Dawn A. Thompson",
+      "Joshua Z. Levin",
+      "Francisco A. Cubillos",
+      "Aviv Regev"
+    ],
+    "journal": "Nature",
+    "year": 2022,
+    "doi": "10.1038/s41586-022-04506-6",
+    "tags": [
+      "regulatory evolution",
+      "promoter engineering",
+      "MPRA",
+      "sequence design",
+      "reading priority 10"
+    ],
+    "rating": 4,
+    "abstract": "Mutations in non-coding regulatory DNA sequences can alter gene expression, organismal phenotype and fitness. Constructing complete fitness landscapes, in which DNA sequences are mapped to fitness, is a long-standing goal in biology, but has remained elusive because it is challenging to generalize reliably to vast sequence spaces. Here we build sequence-to-expression models that capture fitness landscapes and use them to decipher principles of regulatory evolution. Using millions of randomly sampled promoter DNA sequences and their measured expression levels in the yeast Saccharomyces cerevisiae, we learn deep neural network models that generalize with excellent prediction performance, and enable sequence design for expression engineering. Using our models, we study expression divergence under genetic drift and strong-selection weak-mutation regimes to find that regulatory evolution is rapid and subject to diminishing returns epistasis; that conflicting expression objectives in different environments constrain expression adaptation; and that stabilizing selection on gene expression leads to the moderation of regulatory complexity. We present an approach for using such models to detect signatures of selection on expression from natural variation in regulatory sequences and use it to discover an instance of convergent regulatory evolution. We assess mutational robustness, finding that regulatory mutation effect sizes follow a power law, characterize regulatory evolvability, visualize promoter fitness landscapes, discover evolvability archetypes and illustrate the mutational robustness of natural regulatory sequence populations. Our work provides a general framework for designing regulatory sequences and addressing fundamental questions in regulatory evolution.",
+    "notes": "## Key Findings\n\n- **Question:** Can large experimental sequence–expression landscapes reveal general rules of regulatory evolution and support promoter engineering?\n- **Approach:** Deep sequence-to-expression models were trained on millions of random yeast promoters and used to simulate evolutionary regimes, analyze natural variation, and design sequences.\n- **Finding:** The learned landscapes support rapid but constrained adaptation, reveal diminishing-returns epistasis and convergent regulatory evolution, and enable expression-directed design.\n- **PlantCAD relevance:** This is a direct template for pairing promoter MPRA or Plant STARR-seq with PlantCAD to study evolvability, robustness, and convergent evolution rather than prediction alone.\n- **Caveat:** Random yeast promoters and laboratory expression objectives do not capture plant chromatin, tissue specificity, distal regulation, or organism-level fitness.\n\n## Reading Priority\n\n- **10 of 10:** Read after the modeling and experimental-design papers as the evolutionary synthesis.",
+    "addedDate": "2026-08-02",
+    "source": "Nature"
+  },
+  {
+    "id": "deboer2020deciphering",
+    "title": "Deciphering eukaryotic gene-regulatory logic with 100 million random promoters",
+    "authors": [
+      "Carl G. de Boer",
+      "Eeshit Dhaval Vaishnav",
+      "Ronen Sadeh",
+      "Esteban Luis Abeyta",
+      "Nir Friedman",
+      "Aviv Regev"
+    ],
+    "journal": "Nature Biotechnology",
+    "year": 2020,
+    "doi": "10.1038/s41587-019-0315-8",
+    "tags": [
+      "promoter MPRA",
+      "synthetic regulatory genomics",
+      "regulatory grammar",
+      "machine learning",
+      "reading priority 9"
+    ],
+    "rating": 4,
+    "abstract": "How transcription factors (TFs) interpret cis-regulatory DNA sequence to control gene expression remains unclear, largely because past studies using native and engineered sequences had insufficient scale. Here, we measure the expression output of more than 100 million synthetic yeast promoter sequences that are fully random. These sequences yield diverse, reproducible expression levels that can be explained by their chance inclusion of functional TF binding sites. We use machine learning to build interpretable models of transcriptional regulation that predict approximately 94% of the expression driven from independent test promoters and approximately 89% of the expression driven from native yeast promoter fragments. These models allow us to characterize each TF's specificity, activity and interactions with chromatin. TF activity depends on binding-site strand, position, DNA helical face and chromatin context. Notably, expression level is influenced by weak regulatory interactions, which confound designed-sequence studies. Our analyses show that massive-throughput assays of fully random DNA can provide the big data necessary to develop complex, predictive models of gene regulation.",
+    "notes": "## Key Findings\n\n- **Question:** Can sufficiently large random-DNA assays expose eukaryotic promoter logic that genomic sequences alone undersample?\n- **Approach:** A gigantic parallel reporter assay measured expression from more than 100 million random yeast promoters, followed by interpretable machine-learning models of TF activity and context.\n- **Finding:** Random sequences support predictive models that recover motif strength, position, orientation, helical-face, chromatin, and weak-interaction effects.\n- **PlantCAD relevance:** A plant promoter MPRA with broad random or designed sequence coverage could expose regulatory rules absent from the reference genome and provide causal training data for PlantCAD.\n- **Caveat:** The assay is episomal and yeast-specific; plant promoters, chromatin, and multicellular context may require different libraries and validation designs.\n\n## Reading Priority\n\n- **9 of 10:** Read as the foundational large-scale random-promoter experiment.",
+    "addedDate": "2026-08-02",
+    "source": "Nature Biotechnology"
+  },
+  {
+    "id": "simon2025interplm",
+    "title": "InterPLM: discovering interpretable features in protein language models via sparse autoencoders",
+    "authors": [
+      "Elana Simon",
+      "James Zou"
+    ],
+    "journal": "Nature Methods",
+    "year": 2025,
+    "doi": "10.1038/s41592-025-02836-7",
+    "tags": [
+      "protein language model",
+      "sparse autoencoders",
+      "mechanistic interpretability",
+      "causal intervention",
+      "reading priority 8"
+    ],
+    "rating": 4,
+    "abstract": "Despite their success in protein modeling and design, the internal mechanisms of protein language models (PLMs) are poorly understood. Here we present a systematic framework to extract and analyze interpretable features from PLMs using sparse autoencoders. Training sparse autoencoders on ESM-2 embeddings, we identify thousands of interpretable features highlighting biological concepts including binding sites, structural motifs and functional domains. Individual neurons show considerably less conceptual alignment, suggesting PLMs store concepts in superposition. This superposition persists across model scales and larger PLMs capture more interpretable concepts. Beyond known annotations, ESM-2 learns coherent patterns across evolutionarily distinct protein families. To systematically analyze these numerous features, we developed an automated interpretation approach using large language models for feature description and validation. As practical applications, these features can accurately identify missing database annotations and enable targeted steering of sequence generation. Our results show PLM representations can be decomposed into interpretable components, demonstrating the feasibility and utility of mechanistically interpreting these models.",
+    "notes": "## Key Findings\n\n- **Question:** Can sparse autoencoders decompose protein-language-model activations into biologically interpretable and actionable features?\n- **Approach:** SAEs were trained on ESM-2 embeddings, features were compared with known annotations and automatically described, and selected features were used for annotation and generation steering.\n- **Finding:** SAE features align with binding sites, motifs, domains, and cross-family patterns more clearly than individual model neurons, consistent with superposition.\n- **PlantCAD relevance:** The workflow is the clearest practical blueprint for fitting SAEs to PlantCAD hidden states, annotating regulatory features, and testing causal interventions in sequence design.\n- **Caveat:** Protein annotations and residue-level structure provide richer ground truth than non-coding plant regulation; feature labels and steering effects require orthogonal perturbation assays.\n\n## Reading Priority\n\n- **8 of 10:** Read before implementing SAE-based PlantCAD interpretation.",
+    "addedDate": "2026-08-02",
+    "source": "Nature Methods"
+  },
+  {
+    "id": "toneyan2024interpreting",
+    "title": "Interpreting cis-regulatory interactions from large-scale deep neural networks",
+    "authors": [
+      "Shushan Toneyan",
+      "Peter K. Koo"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2024,
+    "doi": "10.1038/s41588-024-01923-3",
+    "tags": [
+      "mechanistic interpretability",
+      "long-range regulation",
+      "in silico perturbation",
+      "enhancers",
+      "reading priority 7"
+    ],
+    "rating": 4,
+    "abstract": "The rise of large-scale, sequence-based deep neural networks for predicting gene expression has introduced challenges in their evaluation and interpretation. Current evaluations align model predictions with orthogonal experimental data, providing insights into generalization but offering limited insights into their decision-making process. Existing model explainability tools focus mainly on motif analysis, which becomes complex when interpreting longer sequences. Here we present cis-regulatory element model explanations (CREME), an in silico perturbation toolkit that interprets the rules of gene regulation learned by a genomic deep neural network. Applying CREME to Enformer, a state-of-the-art deep neural network, we identify cis-regulatory elements that enhance or silence gene expression and characterize their complex interactions. CREME can provide interpretations across multiple scales of genomic organization, from cis-regulatory elements to fine-mapped functional sequence elements within them, offering high-resolution insights into the regulatory architecture of the genome. CREME provides a powerful toolkit for translating the predictions of genomic deep neural networks into mechanistic insights of gene regulation.",
+    "notes": "## Key Findings\n\n- **Question:** What promoter, enhancer, silencer, distance, and higher-order interaction rules has a long-context genomic model actually learned?\n- **Approach:** CREME performs controlled in silico deletions, substitutions, distance tests, tile searches, and combinatorial perturbations on Enformer predictions.\n- **Finding:** The toolkit exposes enhancing and silencing elements and non-additive CRE interactions at multiple scales, turning opaque predictions into testable regulatory hypotheses.\n- **PlantCAD relevance:** CREME-style perturbations can distinguish nominal context length from functional receptive field and nominate causal PlantCAD features for promoter MPRA or Plant STARR-seq.\n- **Caveat:** These are explanations of model behavior, not direct evidence that the inferred rules operate in vivo; experimental perturbation remains essential.\n\n## Reading Priority\n\n- **7 of 10:** Read as the long-context interpretation toolkit.",
+    "addedDate": "2026-08-02",
+    "source": "Nature Genetics"
+  },
+  {
+    "id": "avsec2021baseresolution",
+    "title": "Base-resolution models of transcription-factor binding reveal soft motif syntax",
+    "authors": [
+      "Žiga Avsec",
+      "Melanie Weilert",
+      "Avanti Shrikumar",
+      "Sabrina Krueger",
+      "Amr Alexandari",
+      "Khyati Dalal",
+      "Robin Fropf",
+      "Charles McAnany",
+      "Julien Gagneur",
+      "Anshul Kundaje",
+      "Julia Zeitlinger"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2021,
+    "doi": "10.1038/s41588-021-00782-6",
+    "tags": [
+      "regulatory motifs",
+      "regulatory grammar",
+      "mechanistic interpretability",
+      "CRISPR",
+      "reading priority 6"
+    ],
+    "rating": 4,
+    "abstract": "The arrangement, or syntax, of transcription factor binding motifs is an important part of the cis-regulatory code, yet remains elusive. We introduce a deep learning model, BPNet, that uses DNA sequence to predict base-resolution ChIP–nexus binding profiles of pluripotency transcription factors. We develop interpretation tools to learn predictive motif representations and identify soft syntax rules for cooperative transcription factor binding interactions. Strikingly, Nanog preferentially binds with helical periodicity, and transcription factors often cooperate in a directional manner, which we validate using CRISPR-induced point mutations. Our model represents a powerful general approach to uncover the motifs and syntax of cis-regulatory sequences in genomics data.",
+    "notes": "## Key Findings\n\n- **Question:** Can base-resolution sequence models recover motif instances and the flexible syntax governing cooperative TF binding?\n- **Approach:** BPNet predicts ChIP–nexus profiles from sequence; attribution and motif-discovery tools extract motifs and interaction rules, with selected predictions tested by CRISPR point mutations.\n- **Finding:** The model recovers soft, directional, and periodically spaced motif interactions that conventional consensus motifs miss.\n- **PlantCAD relevance:** This establishes a standard for interpreting plant TF occupancy models: base-resolution outputs, motif-instance attribution, interaction analysis, and causal mutation validation.\n- **Caveat:** Results come from a small set of pluripotency TFs in mouse embryonic stem cells, and inferred syntax can be assay- and factor-specific.\n\n## Reading Priority\n\n- **6 of 10:** Read as the foundational motif-syntax and causal-validation study.",
+    "addedDate": "2026-08-02",
+    "source": "Nature Genetics"
+  },
+  {
+    "id": "karollus2024speciesaware",
+    "title": "Species-aware DNA language models capture regulatory elements and their evolution",
+    "authors": [
+      "Alexander Karollus",
+      "Johannes Hingerl",
+      "Dennis Gankin",
+      "Martin Grosshauser",
+      "Kristian Klemon",
+      "Julien Gagneur"
+    ],
+    "journal": "Genome Biology",
+    "year": 2024,
+    "doi": "10.1186/s13059-024-03221-x",
+    "tags": [
+      "DNA language model",
+      "cross-species",
+      "regulatory evolution",
+      "transfer learning",
+      "reading priority 5"
+    ],
+    "rating": 4,
+    "abstract": "The rise of large-scale multi-species genome sequencing projects promises to shed new light on how genomes encode gene regulatory instructions. To this end, new algorithms are needed that can leverage conservation to capture regulatory elements while accounting for their evolution. Here, we introduce species-aware DNA language models, which we trained on more than 800 species spanning over 500 million years of evolution. Investigating their ability to predict masked nucleotides from context, we show that DNA language models distinguish transcription factor and RNA-binding protein motifs from background non-coding sequence. Owing to their flexibility, DNA language models capture conserved regulatory elements over much further evolutionary distances than sequence alignment would allow. Remarkably, DNA language models reconstruct motif instances bound in vivo better than unbound ones and account for the evolution of motif sequences and their positional constraints, showing that these models capture functional high-order sequence and evolutionary context. We further show that species-aware training yields improved sequence representations for endogenous and MPRA-based gene expression prediction, as well as motif discovery. Collectively, these results demonstrate that species-aware DNA language models are a powerful, flexible, and scalable tool to integrate information from large compendia of highly diverged genomes.",
+    "notes": "## Key Findings\n\n- **Question:** Can multi-species DNA language modeling learn conserved and species-specific regulatory signals beyond sequence alignment?\n- **Approach:** Species-token-aware masked language models were trained on more than 800 fungal genomes and evaluated on motif reconstruction, endogenous expression, MPRA prediction, and motif discovery.\n- **Finding:** The models capture bound motifs, positional constraints, and long-range evolutionary conservation, while species-aware training improves downstream regulatory representations.\n- **PlantCAD relevance:** The design directly motivates species-conditioned PlantCAD pretraining and explicit tests of cross-species regulatory transfer and convergent regulatory evolution.\n- **Caveat:** The taxonomic setting is fungal and focused on promoter and 3′ regulatory regions; gains must be re-established across plant genome complexity and deeper divergence.\n\n## Reading Priority\n\n- **5 of 10:** Read after the DNA-LM baseline paper to see where comparative pretraining may add value.",
+    "addedDate": "2026-08-02",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "tang2025representational",
+    "title": "Evaluating the representational power of pre-trained DNA language models for regulatory genomics",
+    "authors": [
+      "Ziqi Tang",
+      "Nirali Somia",
+      "Yiyang Yu",
+      "Peter K. Koo"
+    ],
+    "journal": "Genome Biology",
+    "year": 2025,
+    "doi": "10.1186/s13059-025-03674-8",
+    "tags": [
+      "DNA language model",
+      "representation learning",
+      "model evaluation",
+      "one-hot baseline",
+      "reading priority 4"
+    ],
+    "rating": 4,
+    "abstract": "The emergence of genomic language models offers an unsupervised approach to learning a wide diversity of cis-regulatory patterns in the non-coding genome without requiring labels of functional activity generated by wet-lab experiments. Previous evaluations have shown that pretrained genomic language models can be leveraged to improve predictive performance across a broad range of regulatory genomics tasks, albeit using relatively simple benchmark datasets and baseline models. Since the genomic language models in these studies were tested upon fine-tuning their weights for each downstream task, determining whether their representations embody a foundational understanding of cis-regulatory biology remains an open question. Here, we evaluate the representational power of pretrained genomic language models to predict and interpret cell-type-specific functional genomics data that span DNA and RNA regulation for six major functional genomics prediction tasks. Our findings suggest that probing the representations of current pretrained genomic language models does not offer substantial advantages over conventional machine-learning approaches that use one-hot encoded sequences. Nevertheless, highly tuned supervised models trained from scratch using one-hot encoded sequences can achieve performance competitive with or better than pretrained models across the datasets explored in this study. This work highlights a major gap with current genomic language models, raising potential issues in conventional pretraining strategies for the non-coding genome.",
+    "notes": "## Key Findings\n\n- **Question:** Do frozen representations from pretrained DNA language models encode regulatory information that meaningfully exceeds strong one-hot supervised baselines?\n- **Approach:** Multiple genomic language models were probed across six cell-type-specific DNA- and RNA-regulation tasks and compared with tuned conventional models.\n- **Finding:** Pretrained representations generally provide little advantage; well-tuned one-hot models trained from scratch are competitive or better on the evaluated tasks.\n- **PlantCAD relevance:** PlantCAD claims about pretraining should be tested against capacity-matched one-hot baselines, frozen probes, full fine-tuning, and biologically meaningful out-of-distribution splits.\n- **Caveat:** Negative probing results do not exclude benefits from other architectures, larger or better-curated pretraining corpora, fine-tuning regimes, or plant-specific comparative data.\n\n## Reading Priority\n\n- **4 of 10:** Read immediately after the initial three to sharpen PlantCAD baseline design.",
+    "addedDate": "2026-08-02",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "yin2025iterative",
+    "title": "Iterative deep learning design of human enhancers exploits condensed sequence grammar to achieve cell-type specificity",
+    "authors": [
+      "Christopher Yin",
+      "Sebastian Castillo-Hair",
+      "Gun Woo Byeon",
+      "Peter Bromley",
+      "Wouter Meuleman",
+      "Georg Seelig"
+    ],
+    "journal": "Cell Systems",
+    "year": 2025,
+    "doi": "10.1016/j.cels.2025.101302",
+    "tags": [
+      "synthetic enhancers",
+      "sequence design",
+      "MPRA",
+      "AI-experiment loop",
+      "reading priority 3"
+    ],
+    "rating": 5,
+    "abstract": "An important and largely unsolved problem in synthetic biology is how to target gene expression to specific cell types. Here, we apply iterative deep learning to design synthetic enhancers with strong differential activity between two human cell lines. We initially train models on published datasets of enhancer activity and chromatin accessibility and use them to guide the design of synthetic enhancers that maximize predicted specificity. We experimentally validate these sequences, use the measurements to re-optimize the model, and design a second generation of enhancers with improved specificity. Our design methods embed relevant transcription factor binding site motifs with higher frequency than comparable endogenous enhancers while using a more selective motif vocabulary, and we show that enhancer activity is correlated with transcription factor expression at the single-cell level. Finally, we characterize causal features of top enhancers via perturbation experiments and show that enhancers as short as 50 bp can maintain specificity. A record of this paper's transparent peer review process is included in the supplemental information.",
+    "notes": "## Key Findings\n\n- **Question:** Can iterative model–experiment cycles design synthetic enhancers with progressively stronger cell-type specificity and expose their causal grammar?\n- **Approach:** Models trained on MPRA or chromatin-accessibility data designed HepG2- and K562-specific enhancers; measurements were fed back into retraining, followed by a second design round, motif ablation, and single-cell MPRA.\n- **Finding:** Iterative retraining improves specificity and yields compact enhancers with dense, selective TF-motif vocabularies; perturbations connect the learned grammar to activity.\n- **PlantCAD relevance:** This is a concrete blueprint for PlantCAD → Plant STARR-seq → retraining loops, including causal feature tests and efficient small-data refinement.\n- **Caveat:** Two human cell lines and selected assay contexts do not establish transfer to plant tissues or in vivo chromatin; active loops also risk narrowing toward model-favored sequence space.\n\n## Reading Priority\n\n- **3 of 10:** Complete the initial priority sequence with the clearest end-to-end AI–experiment feedback loop.",
+    "addedDate": "2026-08-02",
+    "source": "Cell Systems"
+  },
+  {
+    "id": "deboer2024holdout",
+    "title": "Hold out the genome: a roadmap to solving the cis-regulatory code",
+    "authors": [
+      "Carl G. de Boer",
+      "Jussi Taipale"
+    ],
+    "journal": "Nature",
+    "year": 2024,
+    "doi": "10.1038/s41586-023-06661-w",
+    "tags": [
+      "cis-regulatory",
+      "synthetic regulatory genomics",
+      "MPRA",
+      "model generalization",
+      "reading priority 2"
+    ],
+    "rating": 5,
+    "abstract": "Gene expression is regulated by transcription factors that work together to read cis-regulatory DNA sequences. The cis-regulatory code—how cells interpret DNA sequences to determine when, where and how much genes should be expressed—has proven to be exceedingly complex. Recently, advances in the scale and resolution of functional genomics assays and machine learning have enabled substantial progress towards deciphering this code. However, the cis-regulatory code will probably never be solved if models are trained only on genomic sequences; regions of homology can easily lead to overestimation of predictive performance, and our genome is too short and has insufficient sequence diversity to learn all relevant parameters. Fortunately, randomly synthesized DNA sequences enable testing a far larger sequence space than exists in our genomes, and designed DNA sequences enable targeted queries to maximally improve the models. As the same biochemical principles are used to interpret DNA regardless of its source, models trained on these synthetic data can predict genomic activity, often better than genome-trained models. Here we provide an outlook on the field, and propose a roadmap towards solving the cis-regulatory code by a combination of machine learning and massively parallel assays using synthetic DNA.",
+    "notes": "## Key Findings\n\n- **Question:** What data and evaluation strategy are needed to learn a genuinely generalizable cis-regulatory code rather than memorize one genome?\n- **Approach:** This Perspective synthesizes machine learning with random and designed DNA MPRAs, emphasizing genome holdout, synthetic sequence diversity, and targeted experiments.\n- **Finding:** Genomic training data are too homologous and too limited in sequence diversity; large synthetic libraries can test broader hypotheses and often transfer back to endogenous regulation.\n- **PlantCAD relevance:** PlantCAD evaluation should hold out homologous regions and species, then use promoter MPRA or Plant STARR-seq libraries to explore regulatory sequence space beyond natural genomes.\n- **Caveat:** Synthetic assays can miss chromosomal context, distal regulation, tissue effects, and organismal selection, so transfer to native plant loci must be measured rather than assumed.\n\n## Reading Priority\n\n- **2 of 10:** Read second for the experimental roadmap that answers the weaknesses exposed by Karollus et al.",
+    "addedDate": "2026-08-02",
+    "source": "Nature"
+  },
+  {
+    "id": "karollus2023distalenhancers",
+    "title": "Current sequence-based models capture gene expression determinants in promoters but mostly ignore distal enhancers",
+    "authors": [
+      "Alexander Karollus",
+      "Thomas Mauermeier",
+      "Julien Gagneur"
+    ],
+    "journal": "Genome Biology",
+    "year": 2023,
+    "doi": "10.1186/s13059-023-02899-9",
+    "tags": [
+      "long-range regulation",
+      "enhancers",
+      "model evaluation",
+      "perturbation assays",
+      "reading priority 1"
+    ],
+    "rating": 5,
+    "abstract": "The largest sequence-based models of transcription control to date are obtained by predicting genome-wide gene regulatory assays across the human genome. This setting is fundamentally correlative, as those models are exposed during training solely to the sequence variation between human genes that arose through evolution, questioning the extent to which those models capture genuine causal signals. Here we confront predictions of state-of-the-art models of transcription regulation against data from two large-scale observational studies and five deep perturbation assays. The most advanced of these sequence-based models, Enformer, by and large, captures causal determinants of human promoters. However, models fail to capture the causal effects of enhancers on expression, notably in medium to long distances and particularly for highly expressed promoters. More generally, the predicted impact of distal elements on gene expression predictions is small and the ability to correctly integrate long-range information is significantly more limited than the receptive fields of the models suggest. This is likely caused by the escalating class imbalance between actual and candidate regulatory elements as distance increases. Our results suggest that sequence-based models have advanced to the point that in silico study of promoter regions and promoter variants can provide meaningful insights and we provide practical guidance on how to use them. Moreover, we foresee that it will require significantly more and particularly new kinds of data to train models accurately accounting for distal elements.",
+    "notes": "## Key Findings\n\n- **Question:** Does a long input window give genomic sequence models a genuinely long functional receptive field for gene-expression regulation?\n- **Approach:** Enformer and related predictions were challenged with two observational datasets and five perturbation assays covering promoters, enhancers, eQTLs, and genomic context.\n- **Finding:** Promoter effects are often captured, but distal enhancer effects are strongly underestimated; nominal context length therefore overstates effective regulatory integration.\n- **PlantCAD relevance:** PlantCAD should be evaluated with distance-stratified causal perturbations and enhancer–promoter assays, not only held-out genomic prediction, before claiming value from longer context windows.\n- **Caveat:** The benchmark is human and expression-centered; failures may combine architecture, training data, enhancer–gene assignment, and assay limitations rather than context length alone.\n\n## Reading Priority\n\n- **1 of 10:** Start here because it directly tests the functional-receptive-field question.",
+    "addedDate": "2026-08-02",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "nagai2026generalizable",
+    "title": "Toward generalizable and interpretable AI in regulatory genomics",
+    "authors": [
+      "Masayuki Nagai",
+      "Alan E. Murphy",
+      "Kaeli Rizzo",
+      "Peter K. Koo"
+    ],
+    "journal": "Nature Genetics",
+    "year": 2026,
+    "doi": "10.1038/s41588-026-02670-3",
+    "tags": [
+      "regulatory genomics",
+      "sequence modeling",
+      "model generalization",
+      "mechanistic interpretability",
+      "AI-experiment loop"
+    ],
+    "rating": 5,
+    "abstract": "Deciphering how DNA sequence encodes gene regulation remains a central challenge in biology. Advances in machine learning and functional genomics have enabled sequence-to-function (seq2func) models that predict molecular regulatory readouts directly from DNA sequence, supporting variant effect prediction, mechanistic interpretation and regulatory sequence design. Despite strong performance on held-out genomic regions, generalization across genetic variation and cellular contexts remains inconsistent. In this Review, we examine how model architectures, training data and prediction tasks shape model behavior. We also synthesize how interpretability methods and evaluation practices have elucidated cis-regulatory organization and highlighted systematic failure modes, clarifying why strong predictive accuracy can fail to translate into robust regulatory understanding. Thus, we suggest that progress requires reframing seq2func models as continually refined systems, in which targeted perturbation experiments, systematic evaluation and iterative model updates are tightly coupled through artificial intelligence–experiment feedback loops, enabling self-improving models that progressively deepen mechanistic understanding and more reliably support biological discovery.",
+    "notes": "## Key Findings\n\n- **Question:** What prevents sequence-to-function models from becoming generalizable, mechanistically reliable systems across variants, cellular contexts, assays, and species?\n- **Approach:** This Review integrates evidence across architectures, training regimes, prediction tasks, interpretation methods, benchmarks, and experimental perturbation strategies.\n- **Finding:** Strong held-out accuracy does not guarantee causal understanding or transfer; interpretation must be paired with systematic perturbations and continual AI–experiment refinement.\n- **PlantCAD relevance:** The review provides the organizing framework for testing PlantCAD across species and assays, measuring functional receptive field, interpreting hidden states, and closing the loop with promoter MPRA or Plant STARR-seq.\n- **Caveat:** Active and continual learning introduce practical hazards: assay cost, catastrophic forgetting, benchmark leakage, biased acquisition, and self-confirming loops that repeatedly sample what the current model already expects. Independent validation sets and deliberately exploratory experiments are essential.",
+    "addedDate": "2026-08-02",
+    "source": "Nature Genetics"
   }
 ]

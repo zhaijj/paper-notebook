@@ -5226,5 +5226,463 @@
     "notes": "## Key Findings\n\n- DeepTX enables genome-wide inference of transcriptional burst kinetics (size and frequency) directly from scRNA-seq data by linking deep learning to mechanistic transcription models.\n- Different DNA-damaging drug treatments shift distinct bursting parameters: burst size changes track differentiation, while burst frequency changes track apoptosis vs. survival fate decisions.\n\n## Methods Worth Noting\n\n- Interpretable, scalable inference framework that solves mechanistic stochastic transcription models using deep learning, avoiding costly numerical solutions per gene.\n- General design pattern — deep learning as a fast surrogate solver for mechanistic biophysical models fit to omics data — transferable to plant single-cell/spatial transcriptomics and regulatory network inference.",
     "addedDate": "2026-08-19",
     "source": "eLife"
+  },
+  {
+    "id": "liu2026life",
+    "title": "Toward life with a 19–amino acid alphabet through generative artificial intelligence design",
+    "authors": [
+      "Liyuan Liu",
+      "Charlotte Rochereau",
+      "Simon Kozlov",
+      "Guillaume Urtecho",
+      "Xiaonan Liu",
+      "Jiahui Zhao",
+      "Jasmine Wang",
+      "Yiming Huang",
+      "Yiming Qu",
+      "Zetian Zhang",
+      "Tomasz Blazejewski",
+      "Avi Swartz",
+      "Sergey Ovchinnikov",
+      "Harris H. Wang"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aeb5171",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "machine learning",
+      "protein engineering"
+    ],
+    "rating": 5,
+    "abstract": "Because all known living organisms are made from at least 20 canonical amino acids, the feasibility of life using a more simplified alphabet remains unclear. In this work, we leveraged computational design and synthetic biology to explore building a cell from a 19–amino acid alphabet. Initial analyses suggested that isoleucine (Ile) may be dispensable, which we confirmed by directly replacing Ile residues in essential proteins in Escherichia coli. Critically, protein language models and structure-based models were necessary to redesign functional Ile-less proteins in most cases. We systematically replaced all 382 Ile residues from the ribosome and combined 21 redesigned subunits at a native genomic locus to produce a viable, evolutionarily stable cell. This work provides a roadmap to create the first 19–amino acid organism since early evolution.",
+    "notes": "## Key Findings\n\n- Initial analyses suggested that isoleucine (Ile) may be dispensable, which we confirmed by directly replacing Ile residues in essential proteins in Escherichia coli.\n- Critically, protein language models and structure-based models were necessary to redesign functional Ile-less proteins in most cases.\n- We systematically replaced all 382 Ile residues from the ribosome and combined 21 redesigned subunits at a native genomic locus to produce a viable, evolutionarily stable cell.\n\n## Methods Worth Noting\n\n- Because all known living organisms are made from at least 20 canonical amino acids, the feasibility of life using a more simplified alphabet remains unclear.\n- In this work, we leveraged computational design and synthetic biology to explore building a cell from a 19–amino acid alphabet.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "ibrahim2026helper",
+    "title": "A helper NLR channels organellar calcium to trigger plant immunity",
+    "authors": [
+      "Tarhan Ibrahim",
+      "Freddie J. King",
+      "AmirAli Toghani",
+      "Luyao Wang",
+      "Saskia Jenkins",
+      "Enoch Lok Him Yuen",
+      "Hung-Yu Wang",
+      "Cristina Vuolo",
+      "Nick Eilmann",
+      "Vanda Adamkova",
+      "Khong-Sam Chia",
+      "Baptiste Castel",
+      "Jonathan D. G. Jones",
+      "Philip Carella",
+      "Chih-Hang Wu",
+      "Jiorgos Kourelis",
+      "Sophien Kamoun",
+      "Tolga O. Bozkurt"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aeb6690",
+    "tags": [
+      "plant genomics",
+      "genomics",
+      "bioinformatics"
+    ],
+    "rating": 5,
+    "abstract": "Upon activation, plant nucleotide-binding leucine-rich repeat (NLR) immune receptors are known to assemble into oligomeric resistosomes that insert into the plasma membrane, forming calcium (Ca 2+)–permeable channels and triggering immunity. Here, we found that the RPW8-like coiled-coil NLR (CC R -NLR) N requirement gene 1 (NRG1) primarily targets organelles instead of the plasma membrane. Unlike canonical CC-NLRs, activated NRG1 accumulated at the chloroplast envelope and channeled stromal Ca 2+ into the cytosol. AlphaFold modeling of the NRG1 resistosome revealed an unusually long amino-terminal membrane-insertion structure that could span the double membrane of the chloroplast. Nanobody-mediated relocalization showed functional membrane specificity: Chloroplast trapping abolished activity of the canonical helper CC-NLR NRC4 but not NRG1. NRG1 orthologs, from nonflowering lineages to angiosperms, targeted chloroplasts, suggesting that organelle-centered defense dates back at least ~360 million years. We propose that CC-NLR diversification has enabled compartment-specific immune signaling to capture diverse Ca 2+ stores.",
+    "notes": "## Key Findings\n\n- AlphaFold modeling of the NRG1 resistosome revealed an unusually long amino-terminal membrane-insertion structure that could span the double membrane of the chloroplast.\n- Nanobody-mediated relocalization showed functional membrane specificity: Chloroplast trapping abolished activity of the canonical helper CC-NLR NRC4 but not NRG1.\n- We propose that CC-NLR diversification has enabled compartment-specific immune signaling to capture diverse Ca 2+ stores.\n\n## Methods Worth Noting\n\n- Upon activation, plant nucleotide-binding leucine-rich repeat (NLR) immune receptors are known to assemble into oligomeric resistosomes that insert into the plasma membrane, forming calcium (Ca 2+)–permeable channels and triggering immunity.\n- Here, we found that the RPW8-like coiled-coil NLR (CC R -NLR) N requirement gene 1 (NRG1) primarily targets organelles instead of the plasma membrane.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "tran2026rapid",
+    "title": "Rapid directed evolution guided by protein language models and epistatic interactions",
+    "authors": [
+      "Vincent Q. Tran",
+      "Matthew Nemeth",
+      "Liam J. Bartie",
+      "Sita S. Chandrasekaran",
+      "Alison Fanton",
+      "Hyungseok C. Moon",
+      "Brian L. Hie",
+      "Silvana Konermann",
+      "Patrick D. Hsu"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aea1820",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "machine learning",
+      "genome assembly",
+      "protein engineering"
+    ],
+    "rating": 5,
+    "abstract": "Protein engineering is limited by the inefficient search through a high-dimensional sequence space to find combinations of synergistic mutations. Traditional approaches use stepwise mutation stacking, whereas machine learning methods require extensive datasets or multiple experimental rounds and are bottlenecked by costly, length-limited gene synthesis. We present MULTI-evolve (where MULTI stands for model-guided, universal, targeted installation of multimutants), a rapid evolution framework that systematically engineers multimutants. Our approach combines protein language models or existing functional data with epistatic modeling to predict synergistic combinations. Proposed multimutants are built through MULTI-assembly, a mutagenesis method enabling high-efficiency assembly across multikilobase sequences. Applying MULTI-evolve to three proteins achieved up to 10-fold improvements with a single round of machine learning–guided directed evolution. MULTI-evolve provides a streamlined approach for end-to-end, multimutant engineering for a broad range of protein types and functions.",
+    "notes": "## Key Findings\n\n- Protein engineering is limited by the inefficient search through a high-dimensional sequence space to find combinations of synergistic mutations.\n- Our approach combines protein language models or existing functional data with epistatic modeling to predict synergistic combinations.\n- Applying MULTI-evolve to three proteins achieved up to 10-fold improvements with a single round of machine learning–guided directed evolution.\n\n## Methods Worth Noting\n\n- We present MULTI-evolve (where MULTI stands for model-guided, universal, targeted installation of multimutants), a rapid evolution framework that systematically engineers multimutants.\n- Proposed multimutants are built through MULTI-assembly, a mutagenesis method enabling high-efficiency assembly across multikilobase sequences.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "pearce2026transcriptformer",
+    "title": "TranscriptFormer: A generative cell atlas across 1.5 billion years of evolution",
+    "authors": [
+      "James D. Pearce",
+      "Sara E. Simmonds",
+      "Gita Mahmoudabadi",
+      "Lakshmi Krishnan",
+      "Giovanni Palla",
+      "Ana-Maria Istrate",
+      "Alexander Tarashansky",
+      "Benjamin Nelson",
+      "Omar Valenzuela",
+      "Donghui Li",
+      "Stephen R. Quake",
+      "Theofanis Karaletsos"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aec8514",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "single-cell",
+      "transcriptomics"
+    ],
+    "rating": 5,
+    "abstract": "Single-cell transcriptomics is revolutionizing our understanding of cellular diversity, yet comparing transcriptional programs across the tree of life remains challenging. We developed TranscriptFormer, a family of generative foundation models trained on up to 112 million cells spanning 1.53 billion years of evolution across 12 species. We demonstrate state-of-the-art performance on cell type classification, even for species separated by over 685 million years of evolution, and zero-shot disease state identification in human cells. Developmental trajectories, phylogenetic relationships, and cellular hierarchies emerge naturally in TranscriptFormer’s representations without any explicit training on these annotations. This work establishes a powerful framework for quantitative single-cell analysis and comparative cellular biology, thus demonstrating that universal principles of cellular organization can be learned and predicted across the tree of life.",
+    "notes": "## Key Findings\n\n- We demonstrate state-of-the-art performance on cell type classification, even for species separated by over 685 million years of evolution, and zero-shot disease state identification in human cells.\n- This work establishes a powerful framework for quantitative single-cell analysis and comparative cellular biology, thus demonstrating that universal principles of cellular organization can be learned and predicted across the tree of life.\n- Single-cell transcriptomics is revolutionizing our understanding of cellular diversity, yet comparing transcriptional programs across the tree of life remains challenging.\n\n## Methods Worth Noting\n\n- We developed TranscriptFormer, a family of generative foundation models trained on up to 112 million cells spanning 1.53 billion years of evolution across 12 species.\n- Developmental trajectories, phylogenetic relationships, and cellular hierarchies emerge naturally in TranscriptFormer’s representations without any explicit training on these annotations.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "skopintsev2026structure",
+    "title": "Structure and evolution-guided design of minimal RNA-guided nucleases",
+    "authors": [
+      "Petr Skopintsev",
+      "Isabel Esain-Garcia",
+      "Evan C. DeTurk",
+      "Peter H. Yoon",
+      "Zehan Zhou",
+      "Trevor Weiss",
+      "Maris Kamalu",
+      "Ajit Chamraj",
+      "Kenneth J. Loi",
+      "Conner J. Langeberg",
+      "Ron S. Boger",
+      "Hunter Nisonoff",
+      "Hannah M. Karp",
+      "Lin-Xing Chen",
+      "Honglue Shi",
+      "Kamakshi Vohra",
+      "Jillian F. Banfield",
+      "Jamie H. D. Cate",
+      "Steven E. Jacobsen",
+      "Jennifer A. Doudna"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aed6123",
+    "tags": [
+      "plant genomics",
+      "evolution",
+      "machine learning",
+      "genome editing",
+      "transcriptomics",
+      "protein engineering"
+    ],
+    "rating": 5,
+    "abstract": "The design of RNA-guided nucleases with properties not limited by evolution can expand programmable genome-editing capabilities. However, generating diverse multidomain proteins with robust enzymatic properties remains challenging. Here, we use a protein design strategy that couples a structure-guided inverse-folding model with evolution-informed residue constraints to generate active, divergent variants of TnpB, a minimal CRISPR-Cas12–like nuclease, termed SynTnpBs. High-throughput screening of artificial intelligence–generated variants yielded editors that retained or exceeded wild-type activity in bacterial, plant, and human cells. Cryo–electron microscopy–based structure determination of the most divergent variant revealed stabilizing contacts in the RNA–DNA interfaces across conformations, demonstrating the design potential of this approach. Together, these results establish a strategy for creating non-natural RNA-guided nucleases and conformationally active nucleic acid binders, enlarging the designable protein space.",
+    "notes": "## Key Findings\n\n- Here, we use a protein design strategy that couples a structure-guided inverse-folding model with evolution-informed residue constraints to generate active, divergent variants of TnpB, a minimal CRISPR-Cas12–like nuclease, termed SynTnpBs.\n- High-throughput screening of artificial intelligence–generated variants yielded editors that retained or exceeded wild-type activity in bacterial, plant, and human cells.\n- Cryo–electron microscopy–based structure determination of the most divergent variant revealed stabilizing contacts in the RNA–DNA interfaces across conformations, demonstrating the design potential of this approach.\n\n## Methods Worth Noting\n\n- The design of RNA-guided nucleases with properties not limited by evolution can expand programmable genome-editing capabilities.\n- However, generating diverse multidomain proteins with robust enzymatic properties remains challenging.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "king2026generative",
+    "title": "Generative design of bacteriophages with genome language models",
+    "authors": [
+      "Samuel H. King",
+      "Claudia L. Driscoll",
+      "David B. Li",
+      "Daniel Guo",
+      "Aditi T. Merchant",
+      "Garyk Brixi",
+      "Max E. Wilkinson",
+      "Brian L. Hie"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.aec2657",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "machine learning"
+    ],
+    "rating": 5,
+    "abstract": "Many important biological functions arise not from single genes but from complex interactions encoded by entire genomes. We report the first generative design of complete bacteriophage genomes using genome language models. We generated viable bacteriophages with target host tropism, using the phage ΦX174 as our design template. Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions. Cryo–electron microscopy confirmed that a generated phage utilizes an evolutionarily distant DNA packaging protein in its capsid. A cocktail of generated phages rapidly overcomes ΦX174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence–generated phage therapies against rapidly evolving bacterial pathogens. This work provides a blueprint for the design of diverse synthetic bacteriophages and useful biological systems at the genome scale.",
+    "notes": "## Key Findings\n\n- We report the first generative design of complete bacteriophage genomes using genome language models.\n- We generated viable bacteriophages with target host tropism, using the phage ΦX174 as our design template.\n- Cryo–electron microscopy confirmed that a generated phage utilizes an evolutionarily distant DNA packaging protein in its capsid.\n\n## Methods Worth Noting\n\n- Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions.\n- A cocktail of generated phages rapidly overcomes ΦX174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence–generated phage therapies against rapidly evolving bacterial pathogens.",
+    "addedDate": "2026-08-19",
+    "source": "Science"
+  },
+  {
+    "id": "li2026lineage",
+    "title": "Lineage-specific evolution of regulatory landscapes in a polyploid plant and its diploid progenitors",
+    "authors": [
+      "Xiang Li",
+      "Xuan Zhang",
+      "Ziliang Luo",
+      "Hao Zhang",
+      "John Pablo Mendieta",
+      "Robert J. Schmitz"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2530814123",
+    "tags": [
+      "plant genomics",
+      "evolution",
+      "regulatory genomics"
+    ],
+    "rating": 5,
+    "abstract": "Cis -regulatory elements are specific DNA sequences that control gene expression in a spatiotemporal manner, and variation within these elements represents a major source of phenotypic diversity and evolutionary innovation. Nevertheless, how regulatory elements evolve and shape gene expression remains poorly understood, particularly in plants. The well-resolved phylogeny of allopolyploid peanut (Arachis hypogaea) and its diploid progenitors, Arachis duranensis and Arachis ipaensis, provides an ideal system to investigate the regulatory evolution at a lineage-specific level. By integrating comparative analyses of sequence similarity, chromatin accessibility, histone modifications, conserved noncoding sequences (CNSs), and gene expression, we reconstructed the evolutionary trajectories of Accessible Chromatin Regions (ACRs), where regulatory elements typically reside, and revealed their distinct contributions to homoeolog expression bias, unequal expressions between homoeologs. Most ACRs exhibited high sequence similarity, comparable chromatin accessibility, and conserved states for H3K4me3, H3K56ac, and H3K36me3, indicating regulatory stability after hybridization and polyploidization. However, a subset of novel ACRs emerged de novo from previously nonregulatory regions or through sequence mutations in preexisting ACRs, arising at different rates and evolutionary stages. Notably, even highly sequence-conserved ACRs exhibited substantial variation in chromatin accessibility, consistent with CNS composition differences and minor sequence variation, although causal relationships remain to be demonstrated. Our analyses further revealed a complex spectrum of CNS dynamics within the diploid-polyploid framework. Overall, our study provides empirical insights into the fine-scale evolution of plant regulatory landscapes and complements previous large-scale comparisons across distant lineages.",
+    "notes": "## Key Findings\n\n- The well-resolved phylogeny of allopolyploid peanut (Arachis hypogaea) and its diploid progenitors, Arachis duranensis and Arachis ipaensis, provides an ideal system to investigate the regulatory evolution at a lineage-specific level.\n- By integrating comparative analyses of sequence similarity, chromatin accessibility, histone modifications, conserved noncoding sequences (CNSs), and gene expression, we reconstructed the evolutionary trajectories of Accessible Chromatin Regions (ACRs), where regulatory elements typically reside, and revealed their distinct contributions to homoeolog expression bias, unequal expressions between homoeologs.\n- Notably, even highly sequence-conserved ACRs exhibited substantial variation in chromatin accessibility, consistent with CNS composition differences and minor sequence variation, although causal relationships remain to be demonstrated.\n\n## Methods Worth Noting\n\n- Cis -regulatory elements are specific DNA sequences that control gene expression in a spatiotemporal manner, and variation within these elements represents a major source of phenotypic diversity and evolutionary innovation.\n- Most ACRs exhibited high sequence similarity, comparable chromatin accessibility, and conserved states for H3K4me3, H3K56ac, and H3K36me3, indicating regulatory stability after hybridization and polyploidization.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "ning2026genomic",
+    "title": "Genomic diversity and the domestication history of cotton (Gossypium hirsutum)",
+    "authors": [
+      "Weixuan Ning",
+      "Mark A. Arick",
+      "Joshua A. Udall",
+      "Chuan-Yu Hsu",
+      "Luis Abdala-Roberts",
+      "Uriel Solís-Rodríguez",
+      "Yeyson Briones-May",
+      "Zenaida V. Magbanua",
+      "Olga Pechanova",
+      "Carlos Bustos-Segura",
+      "Mary V. Clancy",
+      "Sandra Díaz-Cruz",
+      "Alejandra Garnica-Cabrera",
+      "Marine Mamin",
+      "John Z. Yu",
+      "Ted C. J. Turlings",
+      "Guanjing Hu",
+      "Daniel G. Peterson",
+      "Corrinne E. Grover",
+      "Jonathan F. Wendel"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2607107123",
+    "tags": [
+      "plant genomics",
+      "crop breeding",
+      "evolution",
+      "transposable elements"
+    ],
+    "rating": 5,
+    "abstract": "Gossypium hirsutum is the leading fiber crop globally, but its origin as a domesticated plant and patterns of diversity in the wild remain to be elucidated. Here, we use extensive sampling of wild populations and comparative genome sequence data to illuminate the scope and patterning of wild cotton diversity across its native range. Analyses confirm the hypothesis that the Yucatán Peninsula (México) is the center of domestication, from which the original perennial forms and later modern annualized cultivars were derived. Population structure and phylogenomic analyses indicate that northwestern Yucatán harbors greater genetic diversity relative to smaller, geographically dispersed populations in northeastern Yucatán and the Caribbean basin. Genetic load and transposable element burden also are the lowest in northwestern Yucatán relative to other regions, consistent with its greater diversity and reflecting the effects of historical genetic bottlenecks in other populations. Populations from Florida and elsewhere in the Caribbean basin maintain unique pockets of diversity. Analyses of selection suggest that cotton domestication entailed long-term accumulation of mutations with relatively minor phenotypic effects, as opposed to a more punctuated process involving major domestication genes. Our study quantifies the scope and scale of genomic diversity in wild cotton, the origin of the cultivated gene pool, and the likely ecological and anthropogenic processes that shaped extant diversity and modern geographic patterning.",
+    "notes": "## Key Findings\n\n- Analyses confirm the hypothesis that the Yucatán Peninsula (México) is the center of domestication, from which the original perennial forms and later modern annualized cultivars were derived.\n- Gossypium hirsutum is the leading fiber crop globally, but its origin as a domesticated plant and patterns of diversity in the wild remain to be elucidated.\n- Here, we use extensive sampling of wild populations and comparative genome sequence data to illuminate the scope and patterning of wild cotton diversity across its native range.\n\n## Methods Worth Noting\n\n- Population structure and phylogenomic analyses indicate that northwestern Yucatán harbors greater genetic diversity relative to smaller, geographically dispersed populations in northeastern Yucatán and the Caribbean basin.\n- Analyses of selection suggest that cotton domestication entailed long-term accumulation of mutations with relatively minor phenotypic effects, as opposed to a more punctuated process involving major domestication genes.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "malbranke2026proteomelm",
+    "title": "ProteomeLM: A proteome-scale language model enables accurate and rapid prediction of protein–protein interactions and gene essentiality across taxa",
+    "authors": [
+      "Cyril Malbranke",
+      "Gionata Paolo Zalaffi",
+      "Anne-Florence Bitbol"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2524201123",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "genomics"
+    ],
+    "rating": 5,
+    "abstract": "Language models trained on biological sequences are advancing inference tasks from the scale of single proteins to that of genomic neighborhoods. Here, we introduce ProteomeLM, a transformer-based language model that uniquely operates on entire proteomes from species spanning the tree of life. ProteomeLM is trained to reconstruct masked protein embeddings using the whole proteomic context, yielding contextualized protein representations that reflect proteome-scale functional constraints. Notably, ProteomeLM’s attention coefficients encode protein–protein interactions (PPI), despite being trained without interaction labels. Furthermore, it enables interactome-wide PPI screening that is substantially more accurate, and orders of magnitude faster, than amino acid coevolution-based methods. We further develop ProteomeLM-PPI, a supervised model that combines ProteomeLM embeddings and attention coefficients to achieve state-of-the-art PPI prediction across benchmarks and species. Finally, we introduce ProteomeLM-Ess, a supervised gene essentiality predictor that generalizes across diverse taxa. Our results demonstrate the potential of proteome-scale language models for addressing function and interactions at the organism level.",
+    "notes": "## Key Findings\n\n- ProteomeLM is trained to reconstruct masked protein embeddings using the whole proteomic context, yielding contextualized protein representations that reflect proteome-scale functional constraints.\n- Furthermore, it enables interactome-wide PPI screening that is substantially more accurate, and orders of magnitude faster, than amino acid coevolution-based methods.\n- We further develop ProteomeLM-PPI, a supervised model that combines ProteomeLM embeddings and attention coefficients to achieve state-of-the-art PPI prediction across benchmarks and species.\n\n## Methods Worth Noting\n\n- Language models trained on biological sequences are advancing inference tasks from the scale of single proteins to that of genomic neighborhoods.\n- Here, we introduce ProteomeLM, a transformer-based language model that uniquely operates on entire proteomes from species spanning the tree of life.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "xu2026genomic",
+    "title": "Genomic reconstruction of upland cotton domestication uncovers staged selection, gene flow, and flowering-time adaptation",
+    "authors": [
+      "Yanchao Xu",
+      "Xiaoyan Cai",
+      "Zhongli Zhou",
+      "Damar Lopez-Arredondo",
+      "Yuqing Hou",
+      "Jie Zheng",
+      "Hongge Li",
+      "Gaofei Sun",
+      "Dingsha Jin",
+      "Panhong Dai",
+      "Yangyang Wei",
+      "Yuling Liu",
+      "Pengtao Li",
+      "Qiankun Liu",
+      "Heng Wang",
+      "Runrun Sun",
+      "Lijie Li",
+      "Xiaoping Pan",
+      "Kunbo Wang",
+      "Xiongming Du",
+      "Guoli Song",
+      "Baohong Zhang",
+      "Luis Rafael Herrera-Estrella",
+      "Shoupu He",
+      "Fang Liu",
+      "Renhai Peng"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2601246123",
+    "tags": [
+      "pangenomics",
+      "plant genomics",
+      "crop breeding",
+      "evolution",
+      "GWAS"
+    ],
+    "rating": 5,
+    "abstract": "Upland cotton (Gossypium hirsutum L.) makes up about 90% of global cotton farming. Despite its importance, the origins and domestication history of upland cotton remain poorly understood. Here, we present a high-density pan-genome variation map constructed from 2,910 cotton accessions, including 440 newly sequenced G. hirsutum landraces. Our pan-genome analysis indicates that modern upland cotton most probably originated from a single domestication and underwent three major stages. We also identified several genomic signatures associated with agriculturally important traits, including photoperiod sensitivity, fiber properties, and seed yield, which map to candidate loci GhTOFD06, GhFLD11, and GhSID05, respectively, through a genome-wide association study (GWAS) and VIGS knockdown. During the third domestication stage (D3), selective pressures favored genes, such as GhTOFD06, a homolog of Arabidopsis COP9 signalosome complex subunit 5b (CSN5B), that control photoperiod-regulated flowering, thereby accelerating cotton domestication and facilitating upland cotton’s latitudinal expansion. Notably, functional validation via gene silencing showed that knockdown of GhSID05 reduced single seed weight by 11.41%, confirming its pivotal role in seed yield regulation. Additionally, we revealed natural gene flow between G. hirsutum and G. barbadense, which has significantly enriched the genetic diversity of the G. hirsutum gene pool and may have contributed favorable alleles for improving modern upland cotton. Our study provides a comprehensive understanding of the genomic evolution of G. hirsutum and valuable genetic resources for future breeding programs.",
+    "notes": "## Key Findings\n\n- We also identified several genomic signatures associated with agriculturally important traits, including photoperiod sensitivity, fiber properties, and seed yield, which map to candidate loci GhTOFD06, GhFLD11, and GhSID05, respectively, through a genome-wide association study (GWAS) and VIGS knockdown.\n- Notably, functional validation via gene silencing showed that knockdown of GhSID05 reduced single seed weight by 11.41%, confirming its pivotal role in seed yield regulation.\n- Additionally, we revealed natural gene flow between G. hirsutum and G. barbadense, which has significantly enriched the genetic diversity of the G. hirsutum gene pool and may have contributed favorable alleles for improving modern upland cotton.\n\n## Methods Worth Noting\n\n- Here, we present a high-density pan-genome variation map constructed from 2,910 cotton accessions, including 440 newly sequenced G. hirsutum landraces.\n- Our pan-genome analysis indicates that modern upland cotton most probably originated from a single domestication and underwent three major stages.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "dotan2026betadescribe",
+    "title": "BetaDescribe: Providing rich descriptions from protein sequences",
+    "authors": [
+      "Edo Dotan",
+      "Iris Lyubman",
+      "Marcelo Ehrlich",
+      "Eran Bacharach",
+      "Tal Pupko",
+      "Yonatan Belinkov"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2537345123",
+    "tags": [
+      "foundation models",
+      "genomics",
+      "bioinformatics"
+    ],
+    "rating": 4,
+    "abstract": "Deciphering protein function is fundamental to advancements in medicine and biotechnology. However, conventional experimental characterization remains resource-intensive. Public large language models (LLMs), though proficient in natural language processing, often fail to accurately interpret and predict the functional and structural properties of proteins, limiting their utility in bioinformatics. To address this gap, we introduce BetaDescribe, designed to generate detailed and rich textual descriptions of proteins, including their function, catalytic activity, involvement in specific metabolic pathways, subcellular localizations, and the presence of specific domains. The trained BetaDescribe model receives protein sequences as input and outputs a textual description of these properties. BetaDescribe starting point was the LLAMA2 model, which was trained on trillions of tokens. Our model was next trained on datasets containing both biological and English text, which allowed the incorporation of biological knowledge. In addition to the description generator, BetaDescribe comprises multiple validator models and a judge, which together enable accurate ranking of alternative generated descriptions. We demonstrate the utility of BetaDescribe by providing descriptions for proteins that share little to no sequence similarity to proteins with functional descriptions in public datasets. Using in silico mutagenesis, we further show that BetaDescribe relies on functionally important regions, as part of its prediction, suggesting that the model identifies regions of importance for the protein functionality without needing homologous sequence. BetaDescribe offers a powerful tool to explore protein functionality, augmenting existing approaches such as annotation transfer based on sequence or structure similarity.",
+    "notes": "## Key Findings\n\n- Public large language models (LLMs), though proficient in natural language processing, often fail to accurately interpret and predict the functional and structural properties of proteins, limiting their utility in bioinformatics.\n- To address this gap, we introduce BetaDescribe, designed to generate detailed and rich textual descriptions of proteins, including their function, catalytic activity, involvement in specific metabolic pathways, subcellular localizations, and the presence of specific domains.\n- In addition to the description generator, BetaDescribe comprises multiple validator models and a judge, which together enable accurate ranking of alternative generated descriptions.\n\n## Methods Worth Noting\n\n- The trained BetaDescribe model receives protein sequences as input and outputs a textual description of these properties.\n- BetaDescribe starting point was the LLAMA2 model, which was trained on trillions of tokens.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "yanai2026contrastive",
+    "title": "Contrastive learning unites sequence and structure in a global representation of protein space",
+    "authors": [
+      "Guy Yanai",
+      "Gabriel Axel",
+      "Liam M. Longo",
+      "Nir Ben-Tal",
+      "Rachel Kolodny"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2532702123",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "machine learning",
+      "protein engineering"
+    ],
+    "rating": 5,
+    "abstract": "Establishing a coherent mapping of the relationships among all known proteins is crucial for elucidating processes of protein emergence and evolution. Yet the capacity to fully capture relationships of protein similarity is complicated by the nonstraightforward interplay between sequence and structure; indeed, proteins with unrelated sequences can adopt similar structures, and, conversely, proteins with similar or identical sequences can manifest radically different structures. Here, we introduce Contrastive Learning Sequence–Structure (CLSS), a contrastive protein language model (PLM) trained to coembed sequence and structure information in a self-supervised manner, facilitating a holistic representation of protein relatedness. CLSS represents the structures and sequences of full domains and domain subsequences as vectors in the same high-dimensional latent space. We show that this approach yields meaningful shared representations, which recapitulate the extensive structure- and sequence-based knowledge encoded in human-curated hierarchical protein classification systems (ECOD and CATH). Moreover, the representations generated by CLSS outperform those generated by alternative state-of-the-art PLMs in downstream classification tasks. Notably, we show that even the far larger space of domain subsequences is successfully coembedded, establishing a PLM tailored to these evolutionarily meaningful objects. CLSS embeddings produce informative representations of the protein universe without further downstream processing, as we demonstrate by analyzing preferential associations between protein architectures and ligand types across protein space.",
+    "notes": "## Key Findings\n\n- Establishing a coherent mapping of the relationships among all known proteins is crucial for elucidating processes of protein emergence and evolution.\n- Yet the capacity to fully capture relationships of protein similarity is complicated by the nonstraightforward interplay between sequence and structure; indeed, proteins with unrelated sequences can adopt similar structures, and, conversely, proteins with similar or identical sequences can manifest radically different structures.\n- We show that this approach yields meaningful shared representations, which recapitulate the extensive structure- and sequence-based knowledge encoded in human-curated hierarchical protein classification systems (ECOD and CATH).\n\n## Methods Worth Noting\n\n- Here, we introduce Contrastive Learning Sequence–Structure (CLSS), a contrastive protein language model (PLM) trained to coembed sequence and structure information in a self-supervised manner, facilitating a holistic representation of protein relatedness.\n- CLSS represents the structures and sequences of full domains and domain subsequences as vectors in the same high-dimensional latent space.",
+    "addedDate": "2026-08-19",
+    "source": "PNAS"
+  },
+  {
+    "id": "baghbanzadeh2026seqlens",
+    "title": "seqLens: Optimizing Language Models for Genomic Predictions",
+    "authors": [
+      "Mahdi Baghbanzadeh",
+      "Brendan T Mann",
+      "Keith A Crandall",
+      "Ali Rahnavard"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag139",
+    "tags": [
+      "evolution",
+      "foundation models",
+      "genomics"
+    ],
+    "rating": 5,
+    "abstract": "Understanding evolutionary variation in genomic sequences through the lens of language modeling has the potential to revolutionize biological research. Yet to maximize the utility of language modeling in genomics, we must overcome computational challenges in tokenization and model architecture adapted to diverse genomic features across evolutionary timescales. In this study, we investigated key elements in genomic language modeling (gLM), including tokenization, pretraining datasets, fine-tuning approaches, pooling methods, and domain adaptation, and applied the language models to diverse genomic data. We gathered two evolutionarily distinct pretraining datasets: one consisting of 19,551 reference genomes, including over 18,000 prokaryotic genomes (115 B nucleotides) and the remainder eukaryotic genomes, and another more balanced dataset with 1,354 genomes, including 1,166 prokaryotic and 188 eukaryotic reference genomes (180 B nucleotides). We trained five byte-pair encoding tokenizers and pretrained 52 gLMs, systematically comparing different architectures, hyperparameters, and classification heads. We introduce seqLens, a family of models based on disentangled attention with relative positional encoding, which outperforms relatively similar-sized models in 13 of 19 benchmarking phenotypic predictions. We further explore continual pretraining, domain adaptation, and parameter-efficient fine-tuning methods to assess trade-offs between computational efficiency and accuracy. Our findings demonstrate that relevant pretraining data significantly boost performance, alternative pooling techniques can enhance classification, tokenizers with larger vocabulary sizes negatively impact generalization, and gLMs are capable of understanding evolutionary relationships. These insights provide a foundation for optimizing genomic language models for identifying diverse evolutionary genomic features and improving genome annotations.",
+    "notes": "## Key Findings\n\n- We introduce seqLens, a family of models based on disentangled attention with relative positional encoding, which outperforms relatively similar-sized models in 13 of 19 benchmarking phenotypic predictions.\n- Our findings demonstrate that relevant pretraining data significantly boost performance, alternative pooling techniques can enhance classification, tokenizers with larger vocabulary sizes negatively impact generalization, and gLMs are capable of understanding evolutionary relationships.\n- These insights provide a foundation for optimizing genomic language models for identifying diverse evolutionary genomic features and improving genome annotations.\n\n## Methods Worth Noting\n\n- Understanding evolutionary variation in genomic sequences through the lens of language modeling has the potential to revolutionize biological research.\n- Yet to maximize the utility of language modeling in genomics, we must overcome computational challenges in tokenization and model architecture adapted to diverse genomic features across evolutionary timescales.",
+    "addedDate": "2026-08-19",
+    "source": "MBE"
+  },
+  {
+    "id": "gaut2026what",
+    "title": "What has population genomics told us about the dynamics of selection and plant adaptation?",
+    "authors": [
+      "Brandon S Gaut",
+      "Stephen I Wright",
+      "Tianpeng Wang",
+      "Peter L Morrell"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag171",
+    "tags": [
+      "structural variation",
+      "plant genomics",
+      "crop breeding",
+      "evolution"
+    ],
+    "rating": 5,
+    "abstract": "Population genomics has transformed our understanding of how natural selection shapes plant genomes. The explosion of whole-genome resequencing data has enabled estimates of nucleotide diversity across genomes, clarified how selection interacts with recombination and demography, and broadened inference beyond crops and model species to virtually any plant system. Here, we synthesize key lessons and outstanding challenges concerning the action of natural selection on plant genomes. One message is that purifying selection is a pervasive selective force acting against deleterious mutations and structural variants, but its efficacy varies predictably and is often relaxed after demographic contractions, including domestication bottlenecks, range expansions, shifts in mating systems, and polyploid formation. Adaptation also routinely shapes genetic diversity, as evidenced by the detection of selective sweeps. Swept genes have functional biases, but many outstanding questions about adaptive variation remain, including the selection coefficients of adaptive alleles, whether selection typically acts on segregating variants or de novo mutations, and how often selection is polygenic. As with polygenic selection, our knowledge about balancing selection is limited, due in part to challenges in its detection. It is known, however, to act on disease-resistance genes and genes that govern breeding systems. Finally, an emerging theme in plant population genomics is the interplay between introgression and adaptation, but it remains challenging to link introgression confidently to fitness, and further study requires an expanded, multispecies scale. This review reveals the power, and some of the limits, of population genomics to infer the dynamics of selection on plant genomes.",
+    "notes": "## Key Findings\n\n- The explosion of whole-genome resequencing data has enabled estimates of nucleotide diversity across genomes, clarified how selection interacts with recombination and demography, and broadened inference beyond crops and model species to virtually any plant system.\n- One message is that purifying selection is a pervasive selective force acting against deleterious mutations and structural variants, but its efficacy varies predictably and is often relaxed after demographic contractions, including domestication bottlenecks, range expansions, shifts in mating systems, and polyploid formation.\n- This review reveals the power, and some of the limits, of population genomics to infer the dynamics of selection on plant genomes.\n\n## Methods Worth Noting\n\n- Population genomics has transformed our understanding of how natural selection shapes plant genomes.\n- Here, we synthesize key lessons and outstanding challenges concerning the action of natural selection on plant genomes.",
+    "addedDate": "2026-08-19",
+    "source": "MBE"
+  },
+  {
+    "id": "serok2026deep",
+    "title": "A deep learning–based score to evaluate multiple sequence alignments",
+    "authors": [
+      "Nimrod Serok",
+      "Ksenia Polonsky",
+      "Haim Ashkenazy",
+      "Itay Mayrose",
+      "Jeffrey L Thorne",
+      "Tal Pupko"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag173",
+    "tags": [
+      "evolution",
+      "machine learning",
+      "sequence alignment"
+    ],
+    "rating": 5,
+    "abstract": "Multiple sequence alignment (MSA) inference is a central task in molecular evolution and comparative genomics, and the reliability of downstream analyses, including phylogenetic inference, depends critically on alignment quality. Despite this importance, most widely used MSA methods optimize the sum-of-pairs (SoP) score, and relatively little attention has been paid to whether this objective function accurately reflects alignment accuracy. Here, we evaluate the performance of the SoP score using simulated and empirical benchmark alignments. For each dataset, we compare alternative MSAs derived from the same unaligned sequences and quantify the relationship between their SoP scores and their distances from a reference alignment. We show that the alignment with the optimal SoP score often does not correspond to the most accurate alignment. To address this limitation, we develop deep learning–based scoring functions that integrate a collection of MSA features. We first introduce Model 1, a regression model that predicts the distance of a given MSA from the reference alignment. Across simulated and empirical datasets, this learned score correlates more strongly with true alignment accuracy than the SoP score. However, Model 1 is less effective at identifying the best alignment among alternatives. We therefore develop Model 2, which takes as input a set of alternative MSAs generated from the same sequences and predicts their relative ranking. Model 2 more accurately identifies the top-ranking MSA than the SoP score, Model 1, and several widely used alignment programs. Using simulations, we show that selecting MSAs based on our approach leads to more accurate phylogenetic reconstructions.",
+    "notes": "## Key Findings\n\n- We show that the alignment with the optimal SoP score often does not correspond to the most accurate alignment.\n- We first introduce Model 1, a regression model that predicts the distance of a given MSA from the reference alignment.\n- Across simulated and empirical datasets, this learned score correlates more strongly with true alignment accuracy than the SoP score.\n\n## Methods Worth Noting\n\n- Multiple sequence alignment (MSA) inference is a central task in molecular evolution and comparative genomics, and the reliability of downstream analyses, including phylogenetic inference, depends critically on alignment quality.\n- Here, we evaluate the performance of the SoP score using simulated and empirical benchmark alignments.",
+    "addedDate": "2026-08-19",
+    "source": "MBE"
   }
 ]

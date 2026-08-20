@@ -98,6 +98,43 @@ function setupReadToggleBtn(paperId) {
     refresh();
 }
 
+// ── Deep Read Status (shared localStorage key with app.js) ────
+const LS_KEY_DEEPREAD = 'paper-notebook-deepread';
+
+function loadDeepReadStatus() {
+    try {
+        const stored = localStorage.getItem(LS_KEY_DEEPREAD);
+        return new Set(stored ? JSON.parse(stored) : []);
+    } catch { return new Set(); }
+}
+
+function saveDeepReadStatus(set) {
+    localStorage.setItem(LS_KEY_DEEPREAD, JSON.stringify([...set]));
+}
+
+function setupDeepReadToggleBtn(paperId) {
+    const btn = document.getElementById('btn-deepread-toggle');
+    if (!btn) return;
+
+    function refresh() {
+        const deepReadSet = loadDeepReadStatus();
+        const isDeepRead = deepReadSet.has(paperId);
+        btn.innerHTML = isDeepRead
+            ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Remove from Deep Read`
+            : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Worth Deep Reading`;
+        btn.classList.toggle('btn-deepread-active', isDeepRead);
+    }
+
+    btn.addEventListener('click', () => {
+        const deepReadSet = loadDeepReadStatus();
+        if (deepReadSet.has(paperId)) { deepReadSet.delete(paperId); } else { deepReadSet.add(paperId); }
+        saveDeepReadStatus(deepReadSet);
+        refresh();
+    });
+
+    refresh();
+}
+
 function renderPaper(paper, base) {
     const slug = JOURNAL_SLUGS[paper.journal] || 'default';
     const accent = JOURNAL_ACCENTS[slug] || JOURNAL_ACCENTS.default;
@@ -147,6 +184,9 @@ function renderPaper(paper, base) {
 
     // Read toggle button
     setupReadToggleBtn(paper.id);
+
+    // Deep Read toggle button
+    setupDeepReadToggleBtn(paper.id);
 
     // Sidebar info
     setHTML('info-journal', paper.journal || '—');

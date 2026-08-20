@@ -43,6 +43,7 @@ let searchQuery = '';
 let deepNotesOnly = false;
 let unreadOnly = false;
 let readOnly = false;
+let deepReadOnly = false;
 let activeSort = 'newest'; // 'newest' | 'oldest' | 'rating'
 let displayLimit = 50;   // 25 | 50 | 100 | 0 (= all)
 
@@ -66,9 +67,30 @@ function toggleRead(id) {
     saveReadStatus();
 }
 
+// ── Deep Read / "Worth Deep Reading" Status (localStorage) ─────
+const LS_KEY_DEEPREAD = 'paper-notebook-deepread';
+let deepReadPapers = new Set();
+
+function loadDeepReadStatus() {
+    try {
+        const stored = localStorage.getItem(LS_KEY_DEEPREAD);
+        deepReadPapers = new Set(stored ? JSON.parse(stored) : []);
+    } catch { deepReadPapers = new Set(); }
+}
+
+function saveDeepReadStatus() {
+    localStorage.setItem(LS_KEY_DEEPREAD, JSON.stringify([...deepReadPapers]));
+}
+
+function toggleDeepRead(id) {
+    if (deepReadPapers.has(id)) { deepReadPapers.delete(id); } else { deepReadPapers.add(id); }
+    saveDeepReadStatus();
+}
+
 // ── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
     loadReadStatus();
+    loadDeepReadStatus();
     const base = getBasePath();
     allPapers = await loadPapers(base);
     renderStats();
@@ -78,6 +100,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupDeepNotesToggle();
     setupUnreadToggle();
     setupReadToggle();
+    setupDeepReadToggle();
     setupSortSelect();
     setupDisplayLimit();
 });
@@ -205,6 +228,18 @@ function setupReadToggle() {
     });
 }
 
+// ── Deep Read Only Toggle ────────────────────────────────────
+function setupDeepReadToggle() {
+    const btn = document.getElementById('deepread-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+        deepReadOnly = !deepReadOnly;
+        btn.setAttribute('aria-pressed', deepReadOnly);
+        btn.classList.toggle('active', deepReadOnly);
+        renderCards();
+    });
+}
+
 // ── Sort Select ───────────────────────────────────────────────
 function setupSortSelect() {
     const sel = document.getElementById('sort-select');
@@ -260,6 +295,7 @@ function filterPapers() {
         const deepMatch = !deepNotesOnly || !!p.notebooklm_url;
         const unreadMatch = !unreadOnly || !readPapers.has(p.id);
         const readMatch = !readOnly || readPapers.has(p.id);
+        const deepReadMatch = !deepReadOnly || deepReadPapers.has(p.id);
         const q = searchQuery;
 
         // Handle authors as string or array
@@ -270,7 +306,7 @@ function filterPapers() {
             authorsString.toLowerCase().includes(q) ||
             (p.tags && p.tags.join(' ').toLowerCase().includes(q)) ||
             (p.abstract && p.abstract.toLowerCase().includes(q));
-        return journalMatch && tagMatch && deepMatch && unreadMatch && readMatch && searchMatch;
+        return journalMatch && tagMatch && deepMatch && unreadMatch && readMatch && deepReadMatch && searchMatch;
     });
 }
 
@@ -280,9 +316,10 @@ function buildCard(paper, animIndex) {
     const accent = JOURNAL_ACCENTS[slug] || JOURNAL_ACCENTS.default;
     const detailUrl = `paper.html?id=${paper.id}`;
     const isRead = readPapers.has(paper.id);
+    const isDeepRead = deepReadPapers.has(paper.id);
 
     const card = document.createElement('a');
-    card.className = 'paper-card' + (isRead ? ' paper-card--read' : '');
+    card.className = 'paper-card' + (isRead ? ' paper-card--read' : '') + (isDeepRead ? ' paper-card--deepread' : '');
     card.href = detailUrl;
     card.style.setProperty('--card-accent', accent);
     card.style.setProperty('--accent-glow', hexToRgba(accent, 0.15));
@@ -301,6 +338,9 @@ function buildCard(paper, animIndex) {
   <div class="card-header">
     <span class="journal-badge journal-${slug}">${paper.journal}</span>
     <span class="card-year">${paper.year}</span>
+    <button class="deepread-star ${isDeepRead ? 'deepread-star--active' : ''}" title="${isDeepRead ? 'Remove from Deep Read' : 'Mark worth deep reading'}" aria-label="${isDeepRead ? 'Remove from Deep Read' : 'Mark worth deep reading'}" aria-pressed="${isDeepRead}">
+      ${isDeepRead ? '★ Deep Read' : '☆ Deep Read'}
+    </button>
     <button class="read-checkbox ${isRead ? 'read-checkbox--read' : ''}" title="${isRead ? 'Mark as unread' : 'Mark as read'}" aria-label="${isRead ? 'Mark as unread' : 'Mark as read'}" aria-pressed="${isRead}">
       ${isRead ? '✓ Read' : '○ Unread'}
     </button>
@@ -343,6 +383,24 @@ function buildCard(paper, animIndex) {
             card.classList.toggle('paper-card--read', nowRead);
             // If unread-only filter is active, re-render to hide newly read card
             if (unreadOnly) renderCards();
+        });
+    }
+
+    // Deep Read star — toggle "worth deep reading" without navigating to paper
+    const deepReadBtn = card.querySelector('.deepread-star');
+    if (deepReadBtn) {
+        deepReadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleDeepRead(paper.id);
+            const nowDeepRead = deepReadPapers.has(paper.id);
+            deepReadBtn.classList.toggle('deepread-star--active', nowDeepRead);
+            deepReadBtn.textContent = nowDeepRead ? '★ Deep Read' : '☆ Deep Read';
+            deepReadBtn.title = nowDeepRead ? 'Remove from Deep Read' : 'Mark worth deep reading';
+            deepReadBtn.setAttribute('aria-pressed', nowDeepRead);
+            card.classList.toggle('paper-card--deepread', nowDeepRead);
+            // If Deep Read Only filter is active, re-render so unmarked cards drop out
+            if (deepReadOnly) renderCards();
         });
     }
 

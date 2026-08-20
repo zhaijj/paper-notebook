@@ -529,6 +529,36 @@ body::after {
   opacity: 0.88;
 }
 
+/* Deep Read Only chip — indigo accent, distinct from read/unread/notes chips */
+.deepread-chip {
+  border-style: dashed;
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+  gap: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.deepread-chip:hover {
+  color: var(--text-primary);
+  border-color: #7c4dff;
+  background: var(--bg-glass);
+}
+
+.deepread-chip.active {
+  background: #7c4dff;
+  border-color: #7c4dff;
+  border-style: solid;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(124, 77, 255, 0.4);
+}
+
+.deepread-chip.active:hover {
+  background: #7c4dff;
+  opacity: 0.88;
+}
+
 /* ── Read Checkbox (on each card) ────────────────────────────── */
 .read-checkbox {
   margin-left: auto;
@@ -566,10 +596,52 @@ body::after {
   background: rgba(229, 115, 115, 0.1);
 }
 
+/* ── Deep Read Star (on each card) ───────────────────────────── */
+.deepread-star {
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px dashed var(--border-hover);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.deepread-star:hover {
+  border-color: #7c4dff;
+  color: #7c4dff;
+  border-style: solid;
+}
+
+.deepread-star--active {
+  border-style: solid;
+  border-color: #7c4dff;
+  background: rgba(124, 77, 255, 0.12);
+  color: #7c4dff;
+  font-weight: 600;
+}
+
+.deepread-star--active:hover {
+  border-color: #e57373;
+  color: #e57373;
+  background: rgba(229, 115, 115, 0.1);
+}
+
 /* ── Read card: subtle dimming ───────────────────────────────── */
 .paper-card--read {
   opacity: 0.62;
   filter: saturate(0.7);
+}
+
+/* ── Deep Read card: indigo accent border ────────────────────── */
+.paper-card--deepread {
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 1px rgba(124, 77, 255, 0.4), 0 4px 20px rgba(124, 77, 255, 0.15);
 }
 
 .paper-card--read:hover {
@@ -925,6 +997,17 @@ body::after {
 
 .btn-read-active:hover {
   background: rgba(76, 175, 80, 0.18) !important;
+}
+
+/* Active deep-read state on detail page */
+.btn-deepread-active {
+  border-color: #7c4dff !important;
+  color: #7c4dff !important;
+  background: rgba(124, 77, 255, 0.1) !important;
+}
+
+.btn-deepread-active:hover {
+  background: rgba(124, 77, 255, 0.18) !important;
 }
 
 .paper-content {

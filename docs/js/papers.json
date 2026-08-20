@@ -6162,5 +6162,529 @@
     "notes": "## Key Findings\n\n- Sequence and evolutionary features distinguish phenotype-associated plant genes from other annotations.\n- A maize-trained model transfers to rice and Arabidopsis and enriches for validated phenotype genes.\n- High-scoring predictions include poorly characterized gene families and domains of unknown function.\n\n## Methods Worth Noting\n\n- Cross-species classifier using reference-genome-derived sequence and evolutionary features.\n- Validation against experimentally linked genes and premature-stop-tolerant gene models.",
     "addedDate": "2026-08-20",
     "source": "Genome Research"
+  },
+  {
+    "id": "daoud2026deepplant",
+    "tags": [
+      "plant genomics",
+      "machine learning",
+      "foundation model",
+      "regulatory genomics",
+      "chromatin"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Deep-Plant predicts plant chromatin state directly from genomic sequence across tissues and conditions.\\n- Chromatin-informed supervision improves regulatory-activity and enhancer prediction over fine-tuned DNA language models.\\n- Arabidopsis and rice models transfer to related crops including maize.\\n\\n## Methods Worth Noting\\n\\n- Supervised pretraining on accessibility, transcription-factor binding, and histone-modification tracks.\\n- Cross-species evaluation of sequence-to-regulatory-function representations.",
+    "title": "Deep-Plant: a supervised foundation model for plant regulatory genomics",
+    "authors": [
+      "Ahmed Daoud",
+      "Soumyadip Roy",
+      "Haoxuan Zeng",
+      "Xinyu Bao",
+      "Zhenhao Zhang",
+      "Jiakang Wang",
+      "Paul Parodi",
+      "Anireddy SN Reddy",
+      "Jie Liu",
+      "Asa Ben-Hur"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.04.06.716755",
+    "abstract": "Large-scale sequence-to-function deep learning models have demonstrated unparalleled ability to model biological sequences and have revolutionized the field of regulatory genomics. However, the majority of such efforts have centered on human and mammalian systems, leaving plant regulatory genomics comparatively underexplored. To address this gap, we introduce Deep-Plant , a supervised foundation model trained to predict chromatin state directly from genomic sequence. In contrast to large language models, which are trained in a self-supervised manner using sequence alone, our model is trained to predict chromatin state across tissues and conditions. Training the model on a large collection of genome-wide experiments including DNA accessibility, transcription factor binding, and histone modifications, provides it with added biological context beyond the sequence itself. We demonstrate that the resulting model is an effective platform for developing accurate models of regulatory activity relevant to gene expression and active enhancers, exhibiting large improvements in speed, accuracy, and interpretability over the complementary approach of fine-tuning DNA language models. Deep-Plant models are available in Arabidopsis and rice, and work well as a building block for sequence modeling in related species such as corn. Together, these results establish supervised, chromatin-informed foundation models as a practical and effective paradigm for regulatory sequence modeling in plants.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "johansen2026sorghum",
+    "tags": [
+      "sorghum",
+      "protein language model",
+      "variant effects",
+      "crop breeding"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- ESM2 conservation scores identify sorghum mutations enriched for positive-selection signatures.\\n- Predicted mutation load associates with several field agronomic traits.\\n- Protein language models can complement association-based crop variant prioritization.\\n\\n## Methods Worth Noting\\n\\n- ESM2 scoring of nonsynonymous variants across 387 sorghum accessions.\\n- Integration with site-frequency-spectrum inference and multi-trait field phenotypes.",
+    "title": "Evolutionary-scale protein language models uncover beneficial variants in a Sorghum bicolor diversity panel",
+    "authors": [
+      "Natasha H. Johansen",
+      "Janek Sven-Ole Sendowski",
+      "Eleni Nikolaidou",
+      "Savvas Chatzivasileiou",
+      "Shuai Wang",
+      "Baoxing Song",
+      "Andrew Olson",
+      "Thomas Bataillon",
+      "Guillaume P. Ramstein"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.04.10.717708",
+    "abstract": "Quantitative genetic approaches such as genome-wide association studies and genomic prediction are widely used to identify favourable genetic variation, but they have limited resolution due to linkage disequilibrium. Comparative genomics approaches, especially Protein Language Models (PLMs), have emerged as powerful alternatives, by detecting phylogenetic residue conservation (PRC) across evolutionary time scales. However, the extent to which these tools can guide the detection of impactful variants for field agronomic traits is still unclear. In this study, we used the pre-trained PLM ESM2 to predict PRC scores of nonsynonymous mutations segregating within a diverse panel of 387 accessions in sorghum (SAP). The distribution of fitness effects (DFE) of the same set of nonsynonymous mutations was inferred using unfolded site frequency spectra to assess whether the DFE distribution covaried with PRC scores. Furthermore, we estimated the load of putatively nonneutral mutations of SAP accessions and evaluated associations between this mutation load and phenotypic performance across multiple agronomic traits. Our results show that ESM2 can detect mutations associated with fitness-enhancing effects in SAP, as indicated by enrichments in positive selection signatures among the variants with positive PRC scores. Significant associations were also detected between phenotypic performance and mutation load for several agronomic traits, indicating that PLMs can identify functionally important genetic variation. However, these signals were not consistent across all traits in the SAP population. Altogether, our findings suggest that large language models may support breeding efforts, as PLM predictions covaried with fitness effects and captured agronomic performance for some traits in plant populations.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "qian2026onegenome",
+    "tags": [
+      "rice",
+      "genomic foundation model",
+      "mixture of experts",
+      "crop breeding"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- OneGenome-Rice is a 1.25B-parameter model trained on 422 cultivated and wild rice genomes.\\n- It supports single-nucleotide modeling across contexts up to one million bases.\\n- The model improves multiple genomic benchmarks and supports introgression, locus, and expression analyses.\\n\\n## Methods Worth Noting\\n\\n- Mixture-of-experts Transformer with ultra-long genomic context.\\n- Evaluation across 11 task families and several rice functional-genomics applications.",
+    "title": "OneGenome-Rice (OGR): A genomic foundation model for rice",
+    "authors": [
+      "Bilian Qian",
+      "Chengwei Liang",
+      "Chao Qin",
+      "Chao Liu",
+      "Chunling Zhang",
+      "Chunyan Xu",
+      "Dongxu Li",
+      "Guirong Xue",
+      "Hang He",
+      "He Zhang",
+      "Huiying He",
+      "Duoyuan Chen",
+      "Jiwei Xu",
+      "Junyang Zhang",
+      "Jian Sun",
+      "Lianguang Shang",
+      "Jinling Jiang",
+      "Keke Xia",
+      "Liyuan Zhong",
+      "Ling-Ling Chen",
+      "Longjiang Fan",
+      "Longqi Liu",
+      "Mumu Qin",
+      "Qian Li",
+      "Rui Huang",
+      "Shenjun Zhu",
+      "Shengwei Ma",
+      "Shiping Liu",
+      "Shiyu Zhang",
+      "Shuai Fu",
+      "Tong Wei",
+      "Xiaolong Xu",
+      "Xinye Jia",
+      "Xun Xu",
+      "Yi Jing",
+      "Yu Xu",
+      "Yutao Bian",
+      "Yinuo Zhao",
+      "Yunlong Xue",
+      "Yafei Guo",
+      "Zhan Xiao",
+      "Zhaorong Li",
+      "Zhefu Li",
+      "Zhen Yue",
+      "Ziqing Deng"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.04.21.719822",
+    "abstract": "The transition of genomics to a predictive intelligence discipline is driven by the advent of genomic foundation models. While substantial progress has been observed in all-life and human-centric models, plant species, particularly for the staple crops, remains hindered by a lack of models. Here we introduce OneGenome-Rice (OGR), a rice ( Oryza sativa ) genomic foundation model pre-trained on a genomic dataset comprising 422 high-quality genomes of cultivated and wild rice. OGR is engineered upon a Mixture of Experts (MoE) transformer architecture with 1.25-billion parameters and supports an ultra-long context window of up to 1 million base (Mb) pairs at single-nucleotide resolution. A comprehensive benchmark demonstrated that OGR significantly outperforms existing state-of-the-art multi-plant or all-life genome models in 11 categories (e.g. motif identification, sweep detection, etc). We further demonstrated the utility of OGR in several downstream applications, such as indica - japonica subspecies introgression analysis, identification of agronomy trait-associated functional loci and prediction of gene expression from DNA sequences. These results establish OGR as a promising foundational computational infrastructure for rice functional genomics and precision breeding. The OGR and its fine-tuned models, including pretrained weights, training code and the rice genomic benchmark suit, have been fully opened.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "jores2026enhancers",
+    "tags": [
+      "plant enhancers",
+      "machine learning",
+      "deep learning",
+      "regulatory genomics",
+      "synthetic biology"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Enhancer activity was measured for more than 350,000 sequences from four plant genomes.\\n- plantGREP predicts enhancer strength and identifies functional sequence motifs.\\n- The model supports design of constitutive, species-specific, and condition-specific enhancers.\\n\\n## Methods Worth Noting\\n\\n- Massively parallel functional characterization of accessible-chromatin sequences.\\n- Deep-learning prediction and in silico evolution of plant enhancers.",
+    "title": "Massively parallel characterization and deep learning of enhancers in plant genomes",
+    "authors": [
+      "Tobias Jores",
+      "Nicholas A. Mueth",
+      "Sayeh Gorjifard",
+      "Sebastian Triesch",
+      "Dominic Schirmer",
+      "Jackson Tonnies",
+      "Kerry L. Bubb",
+      "Josh T Cuperus",
+      "Stanley Fields",
+      "Christine Queitsch"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.04.26.720828",
+    "abstract": "Enhancers coordinate gene expression in response to developmental and environmental cues. Because plant enhancers lack the readily detectable molecular hallmarks of animal enhancers, their systematic functional characterization has yet to be accomplished. Here, we characterize the species- and condition-specific enhancer activity of over 350,000 sequences derived from accessible chromatin regions of the Arabidopsis , tomato, maize, and sorghum genomes. Enabled by the massive scale of the data, we developed plantGREP, a deep learning model that predicts enhancer strength and identifies the underlying functional sequence motifs. We apply plantGREP to evolve strong constitutive as well as species- and condition-specific enhancers, and to locate regions with enhancer activity upstream of developmental genes in crop genomes. These results should facilitate the targeted editing of enhancers in crop genomes and the design of cell-type-specific plant enhancers.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "yang2026oryzag3",
+    "tags": [
+      "rice pangenome",
+      "DNA language model",
+      "machine learning",
+      "foundation model",
+      "crop genomics"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- OryzaG3 is a 700M-parameter model pretrained on 149 chromosome-level rice genomes.\\n- It matches leading multispecies models on polyadenylation prediction with fourfold faster inference.\\n- High-quality species-specific pangenomes can support efficient crop foundation models.\\n\\n## Methods Worth Noting\\n\\n- Non-overlapping 3-mer tokenization and causal language modeling.\\n- Context-length variants up to 32,000 tokens trained on 59.2 Gb of rice sequence.",
+    "title": "OryzaG3: A Single-species Genomic Foundation Model Pretrained on Rice Pangenome",
+    "authors": [
+      "Lin Yang",
+      "Yu Xia",
+      "Zhuang Yang",
+      "Chengcai Xia",
+      "Tingxun Wu",
+      "Meiling Zou",
+      "Zhiqiang Xia"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.05.22.727045",
+    "abstract": "While multi-species genomic language models have advanced biological representation learning, high-quality, single-species foundation models for crops remain scarce. Leveraging recently expanded rice pangenome resources, we introduce OryzaG3, a species-specific DNA language model with 700M parameters. OryzaG3 was pretrained on 59.20 Gb of chromosome-level sequences from 149 high-quality rice genomes using a non-overlapping 3-mer tokenization strategy and a causal language modeling objective, featuring context-length variants up to 32k tokens. On the Plants Genomic Benchmark polyA prediction task, OryzaG3 achieves competitive predictive performance against leading multi-species models while delivering a four-fold increase in inference throughput under identical long-context conditions. Ultimately, OryzaG3 demonstrates that lightweight, single-species foundation models trained on high-quality pangenomes can match multi-species benchmarks while significantly reducing computational overhead. This work provides a scalable framework for rice functional genomics, molecular breeding, and targeted crop foundation model development.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "zhang2026plantgeneann",
+    "tags": [
+      "gene annotation",
+      "plant genomes",
+      "machine learning",
+      "foundation model",
+      "variant effects"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- PlantGeneAnn improves ab initio gene-structure annotation across 13 plant species.\\n- Carefully curated annotations from nine species outperform larger but lower-quality training sets.\\n- The model identifies cryptic splice donors and premature stops in maize and rice.\\n\\n## Methods Worth Noting\\n\\n- Strand-specific plant genome foundation model evaluated from base to full-transcript level.\\n- Zero-shot saturation mutagenesis for single-nucleotide variant effects.",
+    "title": "PlantGeneAnn: a strand-specific genome foundation model for ab initio gene structure annotation of plant genomes",
+    "authors": [
+      "Qizhe Zhang",
+      "Zhengyang Zhang",
+      "Kepeng Lin",
+      "Jing Wang",
+      "Kaixuan Deng",
+      "Xianglei Xiang",
+      "Wei Xu",
+      "Xuehai Hu"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.06.25.733695",
+    "abstract": "High-quality plant genome assemblies are rapidly increasing, but accurate structural annotation remains reliant on transcript and homology evidence, limiting applications in newly sequenced and non-model species. Here, we present PlantGeneAnn , a plant-optimized, strand-specific genome foundation model for ab initio gene structure annotation. Fine-tuned on only nine high-quality model plant annotations, PlantGeneAnn outperformed a multi-species model trained on 42 species, showing that annotation quality is more important than token volume. On a stringent 13-species benchmark covering rosids, asterids, and monocots, PlantGeneAnn surpassed four state-of-the-art baselines across five evaluation levels, from base-level classification to complete transcript recovery. It achieved higher intron precision and better captured complex gene structures. In zero-shot variant effect prediction, PlantGeneAnn identified cryptic splice donors and premature stop codons in maize and rice, with saturation mutagenesis confirming single-nucleotide, context-dependent sensitivity. It also retained generalizability for epigenomic track prediction, highlighting its value for pan-genomics, crop improvement, and non-model plant research.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "munasinghe2026promoter",
+    "tags": [
+      "maize",
+      "structural variation",
+      "gene expression",
+      "transposable elements"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Thousands of maize genes show tissue-specific expression differences associated with promoter structural variants.\\n- LTR retrotransposons are enriched among expression-associated promoter variants.\\n- Many regulatory effects appear context-dependent rather than broadly pleiotropic.\\n\\n## Methods Worth Noting\\n\\n- Genome assemblies and transcriptomes from 26 maize lines across ten tissues.\\n- Genome-wide association of promoter structural variants with expression variation.",
+    "title": "Promoter Structural Variants are Drivers of Genome-Wide Differential Expression in Maize",
+    "authors": [
+      "Manisha Munasinghe",
+      "Andrew Read",
+      "Aimee Schulz",
+      "Yaniv Brandvain",
+      "Nathan Springer",
+      "Candice Hirsch"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.06.23.734061",
+    "abstract": "Background Structural variants (SVs) are large insertions or deletions of DNA sequences. While less numerous than single nucleotide polymorphisms, SVs often account for a greater proportion of nucleotide differences between genomes. Their size and frequent association with repetitive sequences has historically hindered their detection, which has limited the ability to associate this variation with molecular and phenotypic trait variation. While some SVs have been linked to observable traits, it remains unclear whether such effects are rare or broadly distributed across the genome. Results To test for genome-wide relationships between SVs and gene expression, we analyzed genome assemblies and transcriptomic data from 10 tissues across 26 diverse maize inbred lines. We identified SVs amongst these lines and examined variants located within the 1kb promoter region upstream of genes. Thousands of genes showed expression differences associated with promoter SVs, often in a tissue-specific manner. One common feature of these SVs was the presence of transposable element sequences. LTR retrotransposons were enriched amongst promoter SVs associated with differential expression and often reduced expression of the nearby gene. Despite widespread expression changes, we found no enrichment for specific biological functions or pathways among affected genes. Conclusions Our findings indicate that extant TE-mediated promoter SVs play a significant role in shaping gene expression patterns across the maize genome. However, their phenotypic effects appear limited or context-dependent, suggesting that many variants may have minimal impact outside specific developmental stages or environmental conditions.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "schuster2026subgenome",
+    "tags": [
+      "polyploidy",
+      "explainable AI",
+      "maize",
+      "Brassica",
+      "chromatin"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Explainable models identify recombination as the strongest predictor of subgenome identity.\\n- Chromosome position, transposon density, accessibility, and active histone marks also contribute.\\n- Recombination and chromatin environment help explain biased fractionation after polyploidy.\\n\\n## Methods Worth Noting\\n\\n- Supervised classification using 60 maize and 45 Brassica genomic and epigenomic features.\\n- Explainable-AI feature rankings and interaction networks across two allopolyploids.",
+    "title": "Explainable AI identifies recombination and chromatin environment as key predictors of subgenome evolution in maize and Brassica",
+    "authors": [
+      "Layla A. Schuster",
+      "Beibei Liu",
+      "Jose Cleydson F Silva",
+      "Xi Cheng",
+      "Raquel Dias",
+      "Meixia Zhao"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.07.13.738278",
+    "abstract": "Polyploidy, or whole genome duplication, reshapes genomes through biased gene loss and regulatory rewiring, yet the drivers of biased fractionation among subgenomes remain unclear. Using maize and Brassica rapa as model allopolyploids, we compiled 60 genomic and epigenomic features in maize and 45 in B. rapa and constructed supervised machine-learning models to classify genes by subgenome identity. In both species, eXplainable Artificial Intelligence (XAI) approaches identified recombination rate as the most influential and highly interconnected feature despite nonsignificant mean differences between subgenome groups. Chromosome location, transposon density, and chromatin-associated features, including the proximity of accessible chromatin regions to genes and active histone marks such as H3K9ac and H3K27ac, consistently ranked among the top contributors to subgenome classification. XAI-derived co-variation and interaction networks further revealed recombination rate as the central node connecting significant features. Together, these results highlight recombination and chromatin environment as major predictors of subgenome divergence in polyploid genomes. Teaser Recombination and chromatin environment are key predictors of unequal gene loss and subgenome dominance after polyploidy.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "farghadan2026cascade",
+    "tags": [
+      "DNA language model",
+      "soybean",
+      "regulatory motifs",
+      "single-cell genomics"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- A soybean sequence-to-expression model predicts expression across 66 cell types.\\n- CASCADE shifts attribution-based motif discovery toward promoter-associated signals.\\n- The method identifies about 1.39 million broadly active and cell-type-restricted candidate elements.\\n\\n## Methods Worth Noting\\n\\n- Soybean-adapted genomic pretraining coupled to cell-type-specific prediction heads.\\n- Position-aware significance testing of saturation-mutagenesis attributions.",
+    "title": "CASCADE recovers promoter-associated regulatory motifs from cell-type-resolved DNA language-model attributions",
+    "authors": [
+      "Ali Farghadan",
+      "Robert J. Schmitz",
+      "Scott A. Jackson",
+      "Ethan Pickering"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.07.16.738979",
+    "abstract": "Gene expression is governed by regulatory DNA and their associated trans factors acting in specific cell types, yet the sequences underlying this control remain poorly mapped in plants. Genome-pretrained DNA language models provide a route to interrogate regulatory sequence directly, but their attributions have largely been interpreted using bulk or whole-tissue data, and standard attribution pipelines can preferentially highlight sequences downstream of the transcription start (TSS) site rather than promoter-associated signals. Here, we train a celltype-resolved sequence-to-expression model from a single-cell soybean ( Glycine max ) atlas by coupling a soybean-adapted Genomic Pre-trained Network (GPN) to a shared sequence encoder with 66 cell-type-specific output heads. Across 38,339 protein-coding genes, the model achieves a mean per-cell-type, across-gene Pearson correlation of 0.683 and, recast as a highversus-low expression classification, reaches an area under the ROC curve of 0.92 to 0.97 across tissues, at or above dedicated plant sequence models. We then introduce ContextAware Significance of Cross-gene Attribution for Discovering Elements (CASCADE), a positionspecific statistical framework for identifying model-derived candidate regulatory elements from in silico saturation mutagenesis. Relative to the pooled null used by TF-MoDISco, CASCADE shifts motif recovery from downstream of the transcription start site toward promoter sequence, with 77% of CASCADE-exclusive motifs, compared with 12% of TF-MoDISco-exclusive motifs, falling within the promoter. Applied across the atlas, CASCADE identifies approximately 1.39 million candidate elements spanning broadly active, tissue-restricted and cell-type-restricted classes. Together, these analyses establish a position-aware approach for extracting promoterassociated regulatory hypotheses from sequence models and generate a cell-type-resolved map of candidate cis -regulatory elements.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "manlapaz2026ricevariants",
+    "tags": [
+      "rice GWAS",
+      "noncoding variants",
+      "DNA language model",
+      "chromatin"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Chromatin-informed DNA-model scores prioritize candidate regulatory variants within rice GWAS loci.\\n- Case studies support variants associated with heat tolerance, yield, and drought response.\\n- Saturation mutagenesis localizes high-impact promoter regions and candidate TF-binding sites.\\n\\n## Methods Worth Noting\\n\\n- DNA language model fine-tuned on rice ChIP-seq and ATAC-seq.\\n- Post-GWAS prioritization integrated with chromatin predictions and in silico mutagenesis.",
+    "title": "Prioritizing Non-coding Variants in Rice GWAS Loci with a Chromatin-Informed DNA Language Model",
+    "authors": [
+      "Josef Paolo A. Manlapaz",
+      "Anish M. S. Shrestha"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.07.24.740656",
+    "abstract": "Numerous genome-wide association studies in rice have identified loci associated with diverse agronomic traits. However, interpreting the regulatory and functional significance of these loci remains challenging because each locus often contains multiple variants in linkage disequilibrium, many of which lie in non-coding regions. Here, we present a method for prioritizing non-coding variants within an associated locus by integrating chromatin feature information predicted by a pretrained DNA language model fine-tuned on rice ChIP-seq and ATAC-seq datasets. We demonstrate the utility of our method through three case studies. In a post-GWAS analysis of heat tolerance, prioritized variants overlapped promoters of candidate genes previously identified through integrated GWAS and transcriptomic analyses, providing independent support for their potential regulatory roles. For the high-yield gene DEP1 , promoter variant prioritization combined with in silico saturation mutagenesis identified a localized regulatory region enriched for high-impact mutations overlapping predicted transcription factor binding sites. For the drought-associated gene OsHAK1 , the highest-ranked variant was predicted to be associated with chromatin features in a manner consistent with the reported co-occurrence of H2Bub with H3K4 methylation marks in plants. Overall, these results demonstrate the utility of our method for functionally informative prioritization of non-coding variants, facilitating the interpretation of GWAS loci and the identification of candidate regulatory variants in rice.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "cheng2026scmaize",
+    "tags": [
+      "maize",
+      "single-cell genomics",
+      "machine learning",
+      "foundation model",
+      "gene ontology"
+    ],
+    "rating": 4,
+    "notes": "## Key Findings\\n\\n- scMaizeAtlas integrates 385,675 cells across seven maize tissues.\\n- Gene Ontology priors improve ranking, attention coherence, and representation organization.\\n- Few-shot adaptation transfers cell-type representations to rice and Arabidopsis.\\n\\n## Methods Worth Noting\\n\\n- Two Transformer models compare expression-only and GO-informed pretraining.\\n- Cross-species classification, perturbation analysis, and expression projection benchmarks.",
+    "title": "scMaize: A Single-Cell Foundation Model and Integrated Atlas for Maize",
+    "authors": [
+      "Qian Cheng",
+      "Ying Zhang",
+      "Tianhao Wu",
+      "Anwen Zhao",
+      "Meiqi Shang",
+      "Xiangfeng Wang",
+      "Jun Yan"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.08.01.742180",
+    "abstract": "Single-cell transcriptomics has resolved cell type-specific gene expression in plants, yet maize still lacks an integrated reference and species-specific foundation models. We present scMaize, which combines scMaizeAtlas, an integrated atlas of 385,675 cells from 20 projects and 66 samples across seven tissues with hierarchical annotation, with two Transformer-based foundation models pretrained on this atlas. scMaizeExp serves as an expression-only baseline, whereas scMaizeGO incorporates Gene Ontology (GO) functional embeddings as an inductive bias. Although the two models showed comparable global expression prediction accuracy, the GO prior improved rank-order prediction, strengthened attention toward functionally coherent gene modules, and enhanced embedding organization. scMaizeGO achieved 86.0% cell type classification accuracy and 97.1% tissue classification accuracy. Evaluation on independent maize, rice, and Arabidopsis datasets demonstrated the transferability of scMaizeGO representations, while few-shot fine-tuning enabled accurate cross-species classification using a limited fraction of labeled cells. Perturbation analysis further showed that the model captured treatment-associated cellular states, and expression projection identified condition-responsive genes enriched in established stress pathways. An online platform ( https://www.scmaize.com ) provides atlas exploration, model access, and zero-code analysis tools. Together, scMaize provides an integrated resource and computational framework for transferable and perturbation-aware representation learning in crop single-cell genomics. HIGHLIGHTS scMaizeAtlas integrates 385,675 cells from 20 maize single-cell projects. scMaizeGO incorporates Gene Ontology priors into maize-specific pretraining. GO priors improve rank-order prediction, attention coherence and embeddings. Few-shot tuning enables cross-species cell-type classification with limited labels. Expression projection reveals stress-responsive genes in root cell states.",
+    "addedDate": "2026-08-20",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "wang2026wisteria",
+    "tags": [
+      "DNA language model",
+      "Mamba",
+      "multi-scale modeling",
+      "regulatory genomics"
+    ],
+    "rating": 4,
+    "notes": "## Key Findings\\n\\n- Wisteria jointly models local regulatory motifs and long-range genomic dependencies.\\n- Frequency-domain attention supports periodic structure and length generalization.\\n- The architecture performs strongly across short- and long-context DNA benchmarks.\\n\\n## Methods Worth Noting\\n\\n- Mamba backbone augmented with gated dilated convolutions and gated MLPs.\\n- Fourier-based attention for multi-scale sequence representation.",
+    "title": "Wisteria: A Unified Multi-Scale Feature Learning Framework for DNA Language Model",
+    "authors": [
+      "Weihua Wang",
+      "Haoji Li",
+      "Feilong Bao",
+      "Lei Yang",
+      "Guanglai Gao"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2605.05913",
+    "abstract": "DNA language model aims to decipher the regulatory grammar and semantic of genomes by capturing long range dependencies in DNA sequences. Existing methods emphasize long range token interactions but often ignore the interplay between local motifs and global dependencies. In this paper, we propose Wisteria, a genomic language model that integrates multi scale feature learning within a unified framework for DNA sequence. Specifically, Wisteria augments the Mamba based architecture with gated dilated convolutions to capture local motifs and regulatory patterns, while gated multilayer perceptrons refine global dependencies. We further introduce a Fourier based attention mechanism to support frequency domain modeling, periodic extension and length generalization. Across four experimental settings with both short and long range dependencies, Wisteria demonstrates strong performance on downstream benchmarks against competitive DNA language model baselines. These results indicate that Wisteria effectively unifies local and global dependency modeling for multi scale genomic sequence analysis.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "ledneva2026geneb",
+    "tags": [
+      "genomic foundation models",
+      "benchmarking",
+      "representation learning",
+      "model evaluation"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- GENEB compares frozen representations from 40 genomic foundation models across 100 tasks.\\n- Aggregate rankings are unstable and vary sharply across functional categories.\\n- Architecture and pretraining alignment often matter more than parameter count.\\n\\n## Methods Worth Noting\\n\\n- Unified probing protocol spanning 13 functional categories and few-shot regimes.\\n- Controlled analysis of scale, architecture, tokenization, and pretraining data.",
+    "title": "GENEB: Why Genomic Models Are Hard to Compare",
+    "authors": [
+      "Daria Ledneva",
+      "Mikhail Nuridinov",
+      "Denis Kuznetsov"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2606.04525",
+    "abstract": "Progress in genomic foundation models is difficult to assess due to fragmented benchmarks, incompatible evaluation protocols, and task-specific reporting. As a result, claims of superiority or generality across models are often not directly comparable. We introduce GENEB, a large-scale diagnostic benchmark that evaluates frozen representations from 40 genomic foundation models across 100 tasks spanning 13 functional categories under a unified probing-based protocol, including few-shot regimes. GENEB enables controlled comparison across model scale, architecture, tokenization, and pretraining data while explicitly exposing task-level trade-offs. Our analysis shows that aggregate leaderboards are unstable: model rankings vary sharply across task categories, scale provides only modest and inconsistent gains, and architectural and pretraining alignment frequently outweigh parameter count. These results highlight limitations of current evaluation practices and position GENEB as a reference framework for principled comparison and category-aware model selection in genomic machine learning.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "baranwal2026regulome",
+    "tags": [
+      "genomic foundation models",
+      "regulatory genomics",
+      "interpretability",
+      "in silico mutagenesis"
+    ],
+    "rating": 4,
+    "notes": "## Key Findings\\n\\n- Language-model likelihood can confound sequence predictability with regulatory importance.\\n- A simple sequence baseline reproduces much of one model's top-ranked signal.\\n- Residualization separates predictability-driven features from regulatory-output features.\\n\\n## Methods Worth Noting\\n\\n- Residualization and permutation diagnostics for in silico mutagenesis studies.\\n- Cross-architecture comparison of Caduceus-Ph, HyenaDNA, and Enformer.",
+    "title": "The Dark Regulome: Disentangling Predictability from Regulation in Genomic Foundation Models",
+    "authors": [
+      "Chahat Baranwal",
+      "Aaditya Baranwal",
+      "Lakshya Nitin Tandon"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2606.06834",
+    "abstract": "High-grade gliomas integrate into neural circuits through functional synapses with neurons, raising the question of which noncoding elements shape synaptogenic gene expression in tumor cells. The regulatory program written across the dark genome, what we call the $\\textit{dark regulome}$, is the natural substrate to probe, and sequence foundation models offer a zero-shot route through in-silico mutagenesis (ISM); yet likelihood-based scoring is tautologically coupled to local sequence predictability, leaving the regulatory interpretation underdetermined. Across three architecturally distinct foundation models (Caduceus-Ph, HyenaDNA, Enformer) and 30,448 dark genome elements at 92 glioma-relevant loci, we introduce a residualization-and-permutation diagnostic that separates predictability-driven from regulation-driven RIS variance. A sharp 10kb proximal-regulatory horizon survives every control we apply, but the LM-derived element-class hierarchy does not: a six-feature linear baseline matches Caduceus top-decile membership at AUC $= 0.985$. Cross-architecture decomposition cleanly separates a sequence-predictability layer (the two language models co-rank long well-predicted transposable elements) from a regulatory-output layer (Enformer alone retains residual cCRE-discriminative signal), with literally zero overlap between the two top-100 lists. Conservation, brain cis-eQTL, and STRING-PPI cross-checks then anchor what biology survives: top-100 elements across all three models are $3.3\\times$ enriched per model for matching brain eQTLs ($p_\\mathrm{emp} < 5\\times 10^{-3}$), while a tempting transposable-element regulatory layer and a striking NRXN1+NLGN1 protein-pair convergence both fail proper permutation tests once those tests are constructed. We deliver the diagnostic as a general methodological tool for any ISM-based regulatory study.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "karpinsky2026dnalanguage",
+    "tags": [
+      "DNA language models",
+      "pretraining",
+      "tokenization",
+      "benchmarking"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- The study tests whether Transformer pretraining justifies its computational cost on genomic tasks.\\n- It isolates the contribution of pretraining rather than attributing all gains to architecture.\\n- It also evaluates whether byte-pair encoding is appropriate for DNA sequences.\\n\\n## Methods Worth Noting\\n\\n- Controlled comparison of pretrained Transformers and convolutional genomic models.\\n- Ablations focused on pretraining and BPE tokenization.",
+    "title": "DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks",
+    "authors": [
+      "Romain Karpinsky",
+      "Julien Mozziconacci",
+      "Mickaël Delcey"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2606.30140",
+    "abstract": "Recent breakthroughs in foundation models and Large Language Models (LLMs) have introduced new opportunities for studying and decoding genomic sequences. Several state-of-the-art approaches, such as DNABERT2, rely on transformer-based architectures, while others, such as ConvNova, still build upon more conventional convolutional models. However, systematic benchmark comparisons across these methods remain scarce. Given that transformer-based models require extensive and costly pretraining, it is crucial to evaluate whether their performance gains justify this overhead. Moreover, LLMs such as DNABERT2 typically rely on Byte Pair Encoding (BPE) tokenization, whose relevance for DNA sequence representation is still debated within the genomics community. In this work, we investigate three key questions: (i) do transformer-based models provide sufficient improvements on fine-tuning tasks upon heavy pretraining, (ii) what is the actual contribution of pretraining in this setting, and (iii) how does BPE tokenization impact performance on genomics-related tasks?",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "ali2026causal",
+    "tags": [
+      "genomic language models",
+      "interpretability",
+      "transcription factors",
+      "sparse autoencoders"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Sparse dictionaries recover monosemantic features aligned with transcription-factor motifs.\\n- Composition-matched controls eliminate many spurious motif associations.\\n- Causal ablation shows that validated features influence cell-type-specific TF-binding predictions.\\n\\n## Methods Worth Noting\\n\\n- Top-k sparse autoencoders applied to Nucleotide Transformer and DNABERT-2 activations.\\n- Binding-resolved controls plus causal intervention on learned dictionary directions.",
+    "title": "Causal dictionary learning reveals and validates transcription-factor binding features in genomic language models",
+    "authors": [
+      "Sarwan Ali"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2607.19618",
+    "abstract": "Genomic language models achieve strong performance across regulatory-genomics tasks, yet what these models internally represent remains opaque, and the field lacks a principled procedure for verifying that an apparent ``concept'' inside a model is real rather than an artifact of sequence composition. We introduce a framework that combines sparse dictionary learning with causal intervention to extract, validate, and causally test interpretable features in genomic foundation models. Training top-$k$ sparse autoencoders on the hidden activations of two architecturally distinct models, Nucleotide Transformer ($6$-mer tokenization) and DNABERT-2 (byte-pair encoding), we recover thousands of monosemantic features that map to transcription-factor (TF) sequence motifs. We show that the naive validation of such features against position weight matrices is severely confounded by GC composition and repetitive elements, producing hundreds of spurious ``TF features'', and we develop a composition-matched, binding-resolved protocol that removes these confounds. Critically, we move beyond correlation: by ablating individual dictionary directions during the model's forward pass and measuring the induced shift in the model's own predictive distribution, we establish that specific features are \\emph{causally} used to represent cell-type-specific TF binding, not merely motif presence. Across three transcription factors (CTCF, GATA1, REST) and both architectures, causally validated binding features emerge reproducibly ($7$--$14$ of $15$ tested features per condition), while two classes of negative control, scrambled binding labels and randomly selected features, yield no detectable signal. The framework is purely computational, uses only public data, and provides a reusable standard for interpretability claims in genomic deep learning.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "zhao2026plantbgc",
+    "tags": [
+      "plant genomics",
+      "biosynthetic gene clusters",
+      "transformer",
+      "domain adaptation"
+    ],
+    "rating": 4,
+    "notes": "## Key Findings\\n\\n- PlantBGC transfers microbial biosynthetic-cluster supervision to plant genomes.\\n- Label-free adaptation substantially improves recovery of curated plant clusters.\\n- Weak supervision reduces false-positive primary-metabolism-like regions.\\n\\n## Methods Worth Noting\\n\\n- Transformer modeling of ordered Pfam-domain sequences.\\n- Masked-language-model domain adaptation with GO- and KEGG-derived weak supervision.",
+    "title": "PlantBGC: Transformer for Plant BGC Discovery via Label-Free Domain Adaptation and Weak Supervision",
+    "authors": [
+      "Yuhan Zhao",
+      "Nidhi Grover",
+      "Zhishan Guo",
+      "Ning Sui"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2607.27258",
+    "abstract": "Plant biosynthetic gene clusters (BGCs) encode specialized-metabolite pathways, yet curated plant BGC labels remain scarce, hindering supervised discovery at genome scale. Existing plant BGC mining tools are largely signature- and rule-driven and do not fully leverage recent advances in contextual representation learning for modeling long-range domain context and controlling false positives under strong domain shift. We seek an AI-assisted workflow that narrows experimental search space by transferring supervision from well-annotated microbial BGCs to plant genomes. We present PlantBGC, representing genomes as ordered Pfam-domain sequences and learning BGC-likeness with an encoder-only Transformer trained on MIBiG microbial BGCs and adapted to plants via label-free masked language modeling. On microbial benchmarks, PlantBGC achieves token-level AUC = 0.988 (10-fold CV) and 0.979 (leave-class-out). On plants, adaptation improves known-BGC recovery on n = 34 curated loci under strict 100% coverage, increasing recovery from 29.4% to 67.6% and indicating more complete boundaries. GO/KEGG-derived weak supervision reduces proxy primary-like ratio by 48.40% (GO) and 45.20% (KEGG), with consistent per-species reductions (paired Wilcoxon p = 1.53e-5). Compared to plantiSMASH, PlantBGC yields more compact loci on matched regions (median length ratio = 0.278; 93.8% of pairs are shorter).",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "zhu2026curriculum",
+    "tags": [
+      "biological sequences",
+      "curriculum learning",
+      "evolution",
+      "variant effects"
+    ],
+    "rating": 4,
+    "notes": "## Key Findings\\n\\n- Ordering training sequences by evolutionary distance improves biological VAE learning.\\n- The curriculum improves protein variant-effect prediction in EVE experiments.\\n- It also improves generated RNA-family sequence quality across tested families.\\n\\n## Methods Worth Noting\\n\\n- Power-law curriculum that progressively expands evolutionary distance from sampled anchors.\\n- Evaluation across protein and RNA domains with multiple architectures and random seeds.",
+    "title": "Evolutionary Curriculum Learning Improves Biological Sequence Modeling",
+    "authors": [
+      "Richard Zhu",
+      "Kento Nishi"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2608.00697",
+    "abstract": "Variational autoencoders (VAEs) trained on multiple sequence alignments (MSAs) have emerged as powerful generative models for biological sequences, with applications ranging from disease variant prediction to functional RNA design. However, standard biological VAE training treats all sequences as exchangeable, ignoring the rich evolutionary structure that organizes homologous sequences from evolutionarily close to highly divergent. We propose Evolutionary Curriculum Learning (ECL), a training strategy that exploits this structure by progressively exposing the model to sequences of increasing evolutionary distance from sampled anchors, following a power-law expansion schedule. Applied to two architecturally distinct VAE models and two biological domains--protein variant effect prediction with EVE and RNA family sequence generation with RfamGen--ECL improves downstream task performance across five random seeds per configuration. Mean ClinVar classification AUROC rises from 0.981 to 0.989 for p53; for PTEN, ECL attains 1.000 in every seed whereas the baseline is unstable (mean 0.905, falling as low as 0.54). For RNA, ECL raises mean covariance-model bit scores on all three families tested and exceeds its seed-matched baseline in 12 of 15 training runs, though with only three families the effect cannot be established as significant at the family level. Ablation experiments show that progressively expanding the sampled sequences by evolutionary distance outperforms fixed-size neighborhood sampling in addition to uniform random sampling. Evolutionary distance is therefore a useful inductive bias for ordering the training curriculum in biological sequence modeling.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
+  },
+  {
+    "id": "datta2026frozen",
+    "tags": [
+      "genomic language models",
+      "representation learning",
+      "fine-tuning",
+      "variant effects"
+    ],
+    "rating": 5,
+    "notes": "## Key Findings\\n\\n- Frozen genomic representations nearly recover fine-tuned performance on promoter tasks.\\n- Accessibility falls substantially on splice-site and some regulatory tasks.\\n- Biological information may be encoded internally but unavailable through final pooled embeddings.\\n\\n## Methods Worth Noting\\n\\n- Unified frozen-probing comparison of five genomic foundation models.\\n- Layer-wise probes, saturation mutagenesis, variant-effect prediction, and embedding geometry.",
+    "title": "Frozen but Not Always Accessible: A Representation Analysis of Genomic Language Models",
+    "authors": [
+      "Nirjhor Datta",
+      "Swakkhar Shatabda",
+      "M. Sohel Rahman"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2608.05329",
+    "abstract": "Genomic foundation models are increasingly reused as frozen feature extractors for downstream sequence prediction, offering a compute-efficient alternative to full fine-tuning. However, it remains unclear when biological information encoded by these models is accessible without task-specific adaptation. We present a representation-accessibility analysis of frozen genomic language models across regulatory, epigenetic, promoter, splice-site, and variant-effect prediction tasks. We evaluate DNABERT-2, Nucleotide Transformer, HyenaDNA, GENERATOR-v2, and Omni-DNA under unified frozen-probing protocols, while separating diagnostic readout analyses from validation-selected checks. Our results reveal a consistent task-dependent pattern: frozen probes recover 95-100 % of fine-tuned performance on promoter tasks, but average splice-site recovery drops to 60-88 %. Frozen embeddings are also competitive on broad Genomic Benchmark tasks such as coding-region and species-discrimination classification, but show larger gaps on some regulatory and OCR tasks. Layer-wise probing, in-silico mutagenesis, variant-effect prediction, and embedding geometry show that local biological signal is partially present in frozen representations, but is not always accessible through final pooled embeddings.",
+    "addedDate": "2026-08-20",
+    "source": "arXiv"
   }
 ]

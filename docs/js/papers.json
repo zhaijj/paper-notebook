@@ -6876,5 +6876,29 @@
     "notes": "## Key Findings\n\n- Argues molecular-level Gen-AI successes (protein folding, de novo design, mutation-effect prediction) have not yet translated into reliable cellular/multicellular-level predictive models.\n- Identifies three core obstacles: complexity of mechanisms linking molecules to cell/organismal behavior, insufficient training data, and the inherently multicellular nature of most pathophysiologic phenotypes.\n- Proposes fifteen grand challenges, modeled on Hilbert's list of mathematical problems, to focus the field on tractable, high-value predictive questions.\n\n## Methods Worth Noting\n\n- Perspective piece (no new experimental method) — argues for Gen-AI frameworks that integrate prior biological knowledge such as molecular interaction networks rather than relying on data scale alone.",
     "addedDate": "2026-08-24",
     "source": "Cell"
+  },
+  {
+    "id": "liu2026splicingdistillation",
+    "title": "Interpretable distillation reveals that deep learning splicing models suffer from pervasive confounders and blind spots",
+    "authors": [
+      "Simon Liu",
+      "Wenjing Zhang",
+      "Oded Regev"
+    ],
+    "journal": "Genome Biology",
+    "year": 2026,
+    "doi": "10.1186/s13059-026-04124-9",
+    "tags": [
+      "deep learning interpretability",
+      "RNA splicing",
+      "sequence models",
+      "model distillation",
+      "genomics"
+    ],
+    "rating": 5,
+    "abstract": "Predicting RNA splicing from genomic sequence is a crucial task for understanding gene regulation and interpreting genetic variation. Recent deep learning advancements have led to splicing prediction algorithms that achieve state-of-the-art performance compared to earlier models. However, owing to the limited interpretability of deep learning models, the predictive mechanisms of current splicing models remain poorly understood. Here we develop a framework to explain model prediction logic using interpretable distillation. Applying our framework, we find that RNA splicing prediction models suffer from pervasive confounders and blind spots, leading to poor performance on non-reference sequences. We find that splicing models recognize exons through surprisingly simple additive combinations of sequence motifs, including known splicing regulatory elements. Critically, our analysis also reveals that splicing models exploit genomic confounders unrelated to splicing and fail to adequately capture the effects of RNA structure, leading to systematic prediction errors. Our findings illuminate fundamental limitations of training models on genomic sequences and suggest ways to overcome them.",
+    "notes": "## Key Findings\n\n- Distilling black-box splicing DL models into interpretable form shows they recognize exons via simple additive combinations of known splicing regulatory motifs.\n- Models exploit genomic confounders unrelated to splicing itself, causing systematic prediction errors, especially on non-reference sequences.\n- Models largely fail to capture RNA secondary structure effects on splicing, revealing a specific blind spot in current sequence-to-function architectures.\n\n## Methods Worth Noting\n\n- Interpretable-distillation framework: trains a simplified, interpretable surrogate to reproduce a black-box splicing model's predictions, exposing its decision logic.\n- Systematic confounder analysis using non-reference/held-out sequence variation to stress-test genomic deep learning models — a general diagnostic applicable to other sequence-to-function models (e.g., genomic language models).",
+    "addedDate": "2026-08-24",
+    "source": "Genome Biology"
   }
 ]

@@ -6686,5 +6686,39 @@
     "abstract": "Genomic foundation models are increasingly reused as frozen feature extractors for downstream sequence prediction, offering a compute-efficient alternative to full fine-tuning. However, it remains unclear when biological information encoded by these models is accessible without task-specific adaptation. We present a representation-accessibility analysis of frozen genomic language models across regulatory, epigenetic, promoter, splice-site, and variant-effect prediction tasks. We evaluate DNABERT-2, Nucleotide Transformer, HyenaDNA, GENERATOR-v2, and Omni-DNA under unified frozen-probing protocols, while separating diagnostic readout analyses from validation-selected checks. Our results reveal a consistent task-dependent pattern: frozen probes recover 95-100 % of fine-tuned performance on promoter tasks, but average splice-site recovery drops to 60-88 %. Frozen embeddings are also competitive on broad Genomic Benchmark tasks such as coding-region and species-discrimination classification, but show larger gaps on some regulatory and OCR tasks. Layer-wise probing, in-silico mutagenesis, variant-effect prediction, and embedding geometry show that local biological signal is partially present in frozen representations, but is not always accessible through final pooled embeddings.",
     "addedDate": "2026-08-20",
     "source": "arXiv"
+  },
+  {
+    "id": "wan2026evomax",
+    "title": "Adaptive model-guided protein evolution with sparse data optimizes compact eukaryotic genome editors",
+    "authors": [
+      "Shijie Wan",
+      "Jackson Gold",
+      "Pranay Vure",
+      "Casey S. Mogilevsky",
+      "Ananya Talikoti",
+      "Tianrong Chen",
+      "Aman Gupta",
+      "Trisha Biswas",
+      "Zheng You",
+      "Vir Acharya",
+      "Pranam Chatterjee",
+      "Xiao Wang",
+      "Xue Gao"
+    ],
+    "journal": "Nature Biotechnology",
+    "year": 2026,
+    "doi": "10.1038/s41587-026-03272-4",
+    "tags": [
+      "protein language models",
+      "directed evolution",
+      "genome editing",
+      "Fanzor2",
+      "Gaussian process regression"
+    ],
+    "rating": 4,
+    "abstract": "Efficient protein engineering is constrained by vast sequence space and limited experimental throughput, particularly for protein families that lack large mutational datasets. Here we combine Fanzor2 (Fz2) ortholog discovery, ωRNA scaffold engineering and EvoMax, a model-guided prioritization strategy for sparse-data engineering of compact eukaryotic Fz2 nucleases. EvoMax integrates iterative experimental profiling with Gaussian process regression, protein language models and inverse folding to navigate complex sequence-to-fitness landscapes. Applied to eukaryotic Fz2 nucleases, this strategy yielded a high-performance variant, FanzMAX v3-hLa, achieving up to 97% editing efficiency at the best-performing endogenous locus and a mean editing efficiency of ~33% across 19 endogenous loci, outperforming the established compact genome editors enNlovFz2 and enCnCas12f1 by more than 2.6-fold. In vivo editing of hPCSK9 in humanized mice supported the translational potential of optimized Fz2 editors. Together, these results establish EvoMax as an integrated strategy for engineering compact eukaryotic Fz2 genome editors and identify FanzMAX v3-hLa as a high-efficiency programmable nuclease for mammalian genome editing.",
+    "notes": "## Key Findings\n\n- EvoMax combines Gaussian process regression, protein language models, and inverse folding to guide sparse-data protein engineering.\n- The resulting FanzMAX v3-hLa variant reaches up to 97% editing efficiency at its best locus and ~33% mean efficiency across 19 endogenous loci.\n- FanzMAX v3-hLa outperforms established compact genome editors enNlovFz2 and enCnCas12f1 by >2.6-fold, with in vivo validation via hPCSK9 editing in humanized mice.\n\n## Methods Worth Noting\n\n- Fanzor2 ortholog discovery and ωRNA scaffold engineering to build a compact eukaryotic nuclease scaffold.\n- Model-guided prioritization (EvoMax) integrating protein language models with active-learning-style Gaussian process regression to navigate sequence-to-fitness landscapes under sparse experimental data.",
+    "addedDate": "2026-08-24",
+    "source": "Nature Biotechnology"
   }
 ]

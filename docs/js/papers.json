@@ -6720,5 +6720,51 @@
     "notes": "## Key Findings\n\n- EvoMax combines Gaussian process regression, protein language models, and inverse folding to guide sparse-data protein engineering.\n- The resulting FanzMAX v3-hLa variant reaches up to 97% editing efficiency at its best locus and ~33% mean efficiency across 19 endogenous loci.\n- FanzMAX v3-hLa outperforms established compact genome editors enNlovFz2 and enCnCas12f1 by >2.6-fold, with in vivo validation via hPCSK9 editing in humanized mice.\n\n## Methods Worth Noting\n\n- Fanzor2 ortholog discovery and ωRNA scaffold engineering to build a compact eukaryotic nuclease scaffold.\n- Model-guided prioritization (EvoMax) integrating protein language models with active-learning-style Gaussian process regression to navigate sequence-to-fitness landscapes under sparse experimental data.",
     "addedDate": "2026-08-24",
     "source": "Nature Biotechnology"
+  },
+  {
+    "id": "takedakimura2026poaceae",
+    "title": "Genomes of Poaceae relatives reveal key metabolic innovations preceding the evolution of grasses",
+    "authors": [
+      "Yuri Takeda-Kimura",
+      "Bethany Moore",
+      "Samuel Holden",
+      "Jae S. Morris",
+      "Sontosh K. Deb",
+      "Carly Sanders",
+      "Jorge El-Azaz",
+      "Matt Barrett",
+      "David Lorence",
+      "Marcos V. V. de Oliveira",
+      "Wynne Havranek",
+      "Jane Grimwood",
+      "Melissa Williams",
+      "Lori Beth Boston",
+      "Jerry Jenkins",
+      "Christopher Plott",
+      "Shengqiang Shu",
+      "Kerrie Barry",
+      "David M. Goodstein",
+      "Jeremy Schmutz",
+      "Joseph M. Jez",
+      "Matthew J. Moscou",
+      "Michael R. McKain",
+      "James H. Leebens-Mack",
+      "Hiroshi A. Maeda"
+    ],
+    "journal": "Science",
+    "year": 2026,
+    "doi": "10.1126/science.adv0443",
+    "tags": [
+      "plant genomics",
+      "whole-genome duplication",
+      "comparative genomics",
+      "grass evolution",
+      "metabolic evolution"
+    ],
+    "rating": 5,
+    "abstract": "The grass family (Poaceae) has immense economic and ecological importance and exhibits distinctive metabolic traits, including dual starch and lignin biosynthetic pathways. We sequenced the genomes of Pharus, Joinvillea, Ecdeiocolea, and Typha species to investigate when and how these metabolic innovations evolved relative to the origin of the grass family. The rho whole-genome duplication (ρWGD) within the lineage that led to the last common ancestor of all grasses contributed to the gene family expansions underlying cytosolic starch biosynthesis, whereas an earlier tandem duplication of phenylalanine ammonia lyase (PAL) gave rise to phenylalanine/tyrosine ammonia lyase (PTAL), which is responsible for the dual lignin biosynthesis. Integrated biochemical, functional, and structural studies, guided by phylogenomic analyses, further revealed the molecular basis of key metabolic innovations predating the evolution of grasses, including two key residues (Ile112 and His140) responsible for the neofunctionalization of PAL into PTAL, providing a promising gene-editing strategy to enhance diverse phenylpropanoid production in plants.",
+    "notes": "## Key Findings\n\n- New reference-quality genomes for Pharus, Joinvillea, Ecdeiocolea, and Typha place the timing of the rho whole-genome duplication (ρWGD) just after divergence of the grass sister lineages.\n- ρWGD drove gene family expansions underlying cytosolic starch biosynthesis in grass endosperm.\n- An earlier tandem duplication of PAL into PTAL (predating ρWGD) explains the dual lignin biosynthesis pathway unique to grasses; two residues (Ile112, His140) underlie this neofunctionalization.\n\n## Methods Worth Noting\n\n- Chromosome-scale genome assembly and annotation of four non-model Poales species as outgroups to the grass family.\n- Phylogenomic dating combined with site-directed mutagenesis and x-ray crystal structure analysis to pinpoint the molecular basis of enzyme neofunctionalization.",
+    "addedDate": "2026-08-24",
+    "source": "Science"
   }
 ]

@@ -6900,5 +6900,64 @@
     "notes": "## Key Findings\n\n- Distilling black-box splicing DL models into interpretable form shows they recognize exons via simple additive combinations of known splicing regulatory motifs.\n- Models exploit genomic confounders unrelated to splicing itself, causing systematic prediction errors, especially on non-reference sequences.\n- Models largely fail to capture RNA secondary structure effects on splicing, revealing a specific blind spot in current sequence-to-function architectures.\n\n## Methods Worth Noting\n\n- Interpretable-distillation framework: trains a simplified, interpretable surrogate to reproduce a black-box splicing model's predictions, exposing its decision logic.\n- Systematic confounder analysis using non-reference/held-out sequence variation to stress-test genomic deep learning models — a general diagnostic applicable to other sequence-to-function models (e.g., genomic language models).",
     "addedDate": "2026-08-24",
     "source": "Genome Biology"
+  },
+  {
+    "id": "liang2026maizesalt",
+    "title": "A domestication-selected CIPK–MYB–HAK module improves salt tolerance in modern maize",
+    "authors": [
+      "Xiaoyan Liang",
+      "Pan Yin",
+      "Chenhuan Guo",
+      "Ziying Zhao",
+      "Rumeng Liu",
+      "Yalin Li",
+      "Chuang Zhang",
+      "Feng Tian",
+      "Xiangdong Fu",
+      "Caifu Jiang"
+    ],
+    "journal": "Nature Plants",
+    "year": 2026,
+    "doi": "10.1038/s41477-026-02384-8",
+    "tags": [
+      "maize",
+      "domestication",
+      "salt tolerance",
+      "population genomics",
+      "crop evolution"
+    ],
+    "rating": 4,
+    "abstract": "Domestication has profoundly reshaped the maize genome, yet its impact on abiotic stress resilience remains largely unresolved. Here we show that modern maize exhibits markedly greater salt tolerance than its wild progenitor, teosinte. Using a maize–teosinte (W22-T8759) recombinant inbred line population, we identify the transcriptional repressor MYB28 as a major genetic determinant underlying this divergence. MYB28 negatively regulates salt tolerance by impairing shoot Na+ exclusion. In modern maize (W22), however, salt stress activates CIPK20, which phosphorylates MYB28 to relieve its repression. A non-synonymous single nucleotide polymorphism (SNP1409T) disrupts this regulation in teosinte (T8759), conferring salt sensitivity. We further identify HAK4 as a downstream target of the CIPK20–MYB28 pathway, mediating shoot Na+ exclusion and salt adaptation. Population genomic and cross-species analyses revealed that the salt-tolerant SNP1409T MYB28 allele originated in ancestral teosinte and was positively selected during domestication, increasing yield in salt-affected fields. Together, our findings uncover a domestication-selected CIPK20–MYB28–HAK4 module that provides mechanistic insights into the evolutionary trajectory of salt tolerance, and identifies valuable targets for developing salt-resilient cultivars.",
+    "notes": "## Key Findings\n\n- Modern maize (W22) is markedly more salt-tolerant than its wild progenitor teosinte (T8759), traced via a recombinant inbred line population to the transcriptional repressor MYB28.\n- A CIPK20–MYB28–HAK4 signaling module controls shoot Na+ exclusion: salt stress activates CIPK20, which phosphorylates MYB28 to relieve repression and allow HAK4-mediated Na+ exclusion.\n- A single non-synonymous SNP (SNP1409T) in MYB28 disrupts this regulation in teosinte; the salt-tolerant allele arose in ancestral teosinte and was positively selected during domestication.\n\n## Methods Worth Noting\n\n- Maize–teosinte recombinant inbred line (RIL) mapping population (W22 × T8759) used to localize the causal locus.\n- Population genomic and cross-species analyses to trace the evolutionary origin and selection history of the salt-tolerant allele.",
+    "addedDate": "2026-09-04",
+    "source": "Nature Plants"
+  },
+  {
+    "id": "zhang2026vim24epimutation",
+    "title": "Mapping genetic modifiers of epimutation rates identifies VIM2/4 as dosage-sensitive negative regulators of CG methylation maintenance",
+    "authors": [
+      "Zhilin Zhang",
+      "Wilma Wanney",
+      "Yangyang Xu",
+      "Johan Zicola",
+      "Angela M. Hancock",
+      "Robert J. Schmitz",
+      "Frank Johannes"
+    ],
+    "journal": "Nature Plants",
+    "year": 2026,
+    "doi": "10.1038/s41477-026-02396-4",
+    "tags": [
+      "DNA methylation",
+      "epigenetics",
+      "Arabidopsis",
+      "quantitative genetics",
+      "genome evolution"
+    ],
+    "rating": 4,
+    "abstract": "Spontaneous epimutations are stochastic gains and losses of cytosine methylation that arise from imperfect maintenance across cell divisions. At CG sites, such epimutations can be inherited across generations in plants and constitute a major source of CG methylation (mCG) diversity. However, why the fidelity of mCG inheritance varies among genotypes, and how this variation relates to steady-state mCG levels, remains poorly understood. Here we tracked DNA methylation over 10 generations in ~400 mutation-accumulation lines derived from ~70 Arabidopsis thaliana Ler × Cvi recombinant inbred founders. By treating methylation gain and loss rates as quantitative molecular traits, we mapped a major-effect locus to a Cvi-derived deletion between VARIANT IN METHYLATION (VIM)2 and VIM4, two key components of the METHYLTRANSFERASE 1-dependent mCG maintenance pathway. Lines carrying this deletion showed elevated VIM2/4 expression, a rapid shift of genome-wide mCG towards a lower steady state and reduced fidelity of methylation inheritance across generations. Complementary overexpression and loss-of-function experiments identify VIM2/4 as dosage-sensitive negative regulators of mCG maintenance, in contrast to the canonical positive role of VIM-family proteins in mCG. Together, our results support a punctuated-equilibrium model of DNA methylome evolution, in which naturally segregating modifiers of mCG homeostasis can produce abrupt shifts in methylation state and alter the rate at which heritable epigenetic variation accumulates in plant genomes.",
+    "notes": "## Key Findings\n\n- Tracked DNA methylation over 10 generations in ~400 mutation-accumulation lines from ~70 Arabidopsis Ler × Cvi recombinant inbred founders, treating methylation gain/loss rates as quantitative molecular traits.\n- Mapped a major-effect locus to a Cvi-derived deletion between VIM2 and VIM4, components of the MET1-dependent CG methylation maintenance pathway; the deletion elevates VIM2/4 expression and destabilizes genome-wide mCG.\n- VIM2/4 act as dosage-sensitive negative regulators of mCG maintenance (opposite to the canonical positive role of VIM-family proteins), supporting a punctuated-equilibrium model of DNA methylome evolution.\n\n## Methods Worth Noting\n\n- Multi-generation mutation-accumulation line panel with epimutation rates treated and mapped as quantitative traits (QTL-style approach applied to methylation dynamics).\n- Complementary overexpression and loss-of-function validation of the VIM2/4 locus.",
+    "addedDate": "2026-09-04",
+    "source": "Nature Plants"
   }
 ]

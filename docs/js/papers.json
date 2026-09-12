@@ -7274,5 +7274,92 @@
     "notes": "## Key Findings\n\n- Extended the classic reciprocal-transplant design to multiple lake and stream stickleback populations, statistically partitioning fitness variation into shared habitat-level vs. unique site-specific adaptation components.\n- Site-specific local adaptation was twice as large as the shared habitat-level (lake-vs-stream) adaptive signal, showing that most fitness-relevant evolutionary variation is invisible to standard \"repeated evolution\" comparative approaches.\n\n## Methods Worth Noting\n\n- Multi-population field transplant framework (beyond simple pairwise reciprocal exchange) applied to lake-stream stickleback to directly measure fitness and decompose adaptation into habitat-level vs. site-specific components.",
     "addedDate": "2026-09-12",
     "source": "PNAS"
+  },
+  {
+    "id": "tjeng2026arabisalpina",
+    "title": "Adaptation to seasonal drought in Arabis alpina is linked to the demographic history and climatic changes since the last glacial maximum",
+    "authors": [
+      "Bastiaan Tjeng",
+      "Mehak Mehak",
+      "Helene Bråten Grindeland",
+      "Jasmin Zohren",
+      "Andrea Dalla Libera",
+      "Jörg Wunder",
+      "Carlos Alonso-Blanco",
+      "George Coupland",
+      "Andrea Fulgione"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag212",
+    "tags": [
+      "population genomics",
+      "drought adaptation",
+      "demographic history",
+      "Arabis alpina",
+      "climate adaptation"
+    ],
+    "rating": 4,
+    "abstract": "Understanding how species adapt to new environments is a central goal in evolutionary biology, and a topical question in climate change research. Here, we sequenced the genomes of 426 individuals of the perennial, Arctic-alpine herb Arabis alpina to study demography and adaptation, with a focus on populations in Northern Spain, that experience warm and dry summers. Our inference supports a scenario in which A. alpina colonized Northern Spain in a range expansion event that started near the Alps around 216 thousand years ago (kya). During the last glacial episode (115 to 12 kya), this expansion proceeded westward, and effective population sizes were large across Europe, likely due to a larger suitable habitat for A. alpina. These ancient demographic events gave rise to a highly diverged genetic lineage in Northern Spain. In the present interglacial (between 12 kya and present), populations became increasingly fragmented, and lost genetic diversity across Europe. Furthermore, we detected signatures of selection at genes associated with responses to abiotic stress, including drought stress, and regulation of growth, for instance at SC5D and NAC055, which reflects the climatic changes since the last glacial period. Notably, an ancient polymorphism at the gene FRL1 emerged as a candidate for conferring variation in flowering behavior, and for contributing to adaptation to drought. Our study suggests that the combination of ancestral variation in flowering behavior, and positive selection on new mutations involved in drought responses, underlies the evolution of a new trait syndrome, and adaptation to climate change.",
+    "notes": "## Key Findings\n\n- Whole-genome sequencing of 426 Arabis alpina individuals reconstructs a range expansion from the Alps into Northern Spain starting ~216 kya, proceeding westward during the last glacial episode with large effective population sizes, then fragmenting and losing diversity in the current interglacial.\n- Detected selection signatures at abiotic/drought-stress and growth-regulation genes (SC5D, NAC055) in the warm, dry Northern Spain lineage.\n- An ancient polymorphism at FRL1 is a candidate driver of flowering-time variation contributing to drought adaptation, suggesting ancestral standing variation plus new positive selection jointly produced a novel adaptive trait syndrome.\n\n## Methods Worth Noting\n\n- Large-sample (426 genomes) population genomics combining demographic inference (range expansion, effective population size through glacial/interglacial cycles) with selection scans tied to a specific climate-adaptation phenotype.",
+    "addedDate": "2026-09-12",
+    "source": "MBE"
+  },
+  {
+    "id": "perry2026bearhibernation",
+    "title": "Regulatory activity and evolutionary co-option of cis-regulatory elements underlying bear hibernation",
+    "authors": [
+      "Blair W. Perry",
+      "Kara Ryan",
+      "Kerry L. McGowan",
+      "T. Brock Wooldridge",
+      "Marina Savenkova",
+      "Sascha H. Duttke",
+      "Heiko T. Jansen",
+      "Charles T. Robbins",
+      "Joanna L. Kelley"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag193",
+    "tags": [
+      "cis-regulatory evolution",
+      "enhancer co-option",
+      "hibernation",
+      "comparative genomics",
+      "gene regulation"
+    ],
+    "rating": 4,
+    "abstract": "Uncovering the regulatory architectures that underlie complex phenotypes can provide insight into both the mechanisms and evolution of unique adaptations. This study identifies dynamic enhancers in brown bear adipose tissue during hibernation using capped small-RNA sequencing. Many of these enhancers share sequence similarity with human enhancers yet target distinct genes, suggesting regulatory co-option drove the evolution of hibernation. The study identifies transcription factors underlying hibernation-associated gene expression and finds evidence for selection acting on cis-regulatory sequences associated with this physiological adaptation across bears.",
+    "notes": "## Key Findings\n\n- Capped small-RNA sequencing of brown bear adipose tissue across hibernation identifies dynamic enhancers driving hibernation-associated gene expression.\n- Many hibernation-active bear enhancers share sequence similarity with human enhancers but regulate different target genes, indicating regulatory co-option (repurposing conserved regulatory sequence) rather than novel enhancer origin drove hibernation evolution.\n- Evidence of selection acting on these cis-regulatory sequences across bear lineages links regulatory evolution directly to a physiological adaptation.\n\n## Methods Worth Noting\n\n- Capped small-RNA-seq (enhancer-RNA based) used to identify active enhancers in a non-model mammal across a physiological time series (hibernation), combined with cross-species enhancer sequence comparison and selection scans.",
+    "addedDate": "2026-09-12",
+    "source": "MBE"
+  },
+  {
+    "id": "mirchandani2026snparcher",
+    "title": "Variant calling in non-model organisms with snpArcher",
+    "authors": [
+      "Cade Mirchandani",
+      "Abdelmajid Omarjee",
+      "Guillaume Achaz",
+      "Erik Enbody",
+      "Gregg Thomas",
+      "Timothy B. Sackton"
+    ],
+    "journal": "MBE",
+    "year": 2026,
+    "doi": "10.1093/molbev/msag220",
+    "tags": [
+      "variant calling",
+      "non-model organisms",
+      "population genomics",
+      "workflow",
+      "quality control"
+    ],
+    "rating": 3,
+    "abstract": "This protocol paper presents snpArcher, a Snakemake-based workflow that takes raw sequencing reads and a reference genome as input and produces a filtered, joint-called VCF suitable for downstream population genomic analysis. The protocol encompasses six phases: installation, sample sheet creation, run configuration, execution on computing systems, quality control review via an interactive dashboard, and downstream analysis. The QC dashboard integrates metrics such as principal component analysis, relatedness estimation, and admixture analysis to identify batch effects and contamination. The authors demonstrate the filtering process using 137 burrowing owl genomes, illustrating how removing low-coverage samples and problematic genomic regions corrects demographic inference artifacts.",
+    "notes": "## Key Findings\n\n- snpArcher is a Snakemake workflow taking raw reads + reference genome to a filtered, joint-called VCF ready for population genomic analysis in any non-model species.\n- An interactive QC dashboard (PCA, relatedness, admixture) flags batch effects and contamination before downstream analysis.\n- Demonstrated on 137 burrowing owl genomes: removing low-coverage samples/problematic regions corrects demographic inference artifacts, showing QC choices materially change biological conclusions.\n\n## Methods Worth Noting\n\n- End-to-end, reproducible Snakemake pipeline standardizing variant calling and QC for non-model organism population genomics — directly reusable infrastructure for cross-species genomic studies.",
+    "addedDate": "2026-09-12",
+    "source": "MBE"
   }
 ]

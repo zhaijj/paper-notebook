@@ -7187,5 +7187,92 @@
     "notes": "## Key Findings\n\n- COSIGT genotypes complex loci in pangenome graphs by matching read-depth distributions to haplotype paths via cosine similarity rather than absolute read counts.\n- Substantially outperforms likelihood-based genotypers at low coverage (1-2X) and scales to thousands of modern and ancient genomes.\n\n## Methods Worth Noting\n\n- Cosine-similarity-based genotyping metric designed specifically for low-coverage/degraded samples (e.g., ancient DNA), applied at population scale against pangenome graph haplotype paths.",
     "addedDate": "2026-09-12",
     "source": "Genome Biology"
+  },
+  {
+    "id": "walkerhale2026melon",
+    "title": "Ancient DNA reveals early use of melons in China's Song dynasty",
+    "authors": [
+      "Nathanael Walker-Hale",
+      "Yunfei Zheng",
+      "Marion Verdenaud",
+      "Lara Pereira",
+      "Oscar Alejandro Pérez-Escobar",
+      "Michaela Preick",
+      "Abdelhafid Bendahmane",
+      "Michael V. Westbury",
+      "Michael Hofreiter",
+      "Hanno Schaefer",
+      "Xinyi Liu",
+      "Guillaume Chomicki",
+      "Susanne S. Renner"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2610284123",
+    "tags": [
+      "ancient DNA",
+      "melon",
+      "crop domestication",
+      "archaeogenomics",
+      "Cucurbitaceae"
+    ],
+    "rating": 4,
+    "abstract": "Melon (Cucumis melo L.) domestication is thought to have occurred independently once in Northeast Africa and twice in India, but archaeobotanical seed remains point to a possible additional domestication event in China. Because Cucumis seeds are difficult to diagnose morphologically, genomic data from archaeological material are needed to evaluate these scenarios and reconstruct ancient melon traits. We sequenced two Song Dynasty (960-1279 CE) melon seeds from Shuomen Gugang (China), recovering 5.5x and 2.1x nuclear genome coverage. Nuclear and chloroplast analyses place both seeds within cultivated C. melo from China, within the \"agrestis\" East Asian gene pool. To assess whether these seeds carried traits associated with sweet dessert melons, we examined loci underlying fruit phenotypes. Neither seed carried alleles for orange flesh; one harbored an allele linked to yellow/orange peel, the other possessed alleles associated with green flesh and reduced acidity. Since wild melons are monoecious, the presence of the derived andromonoecy allele in one seed, associated with rounder fruit shape, suggests early selection on fruit morphology. Together, these findings indicate that Song Dynasty melons were likely consumed as fresh or culinary fruits rather than sweet dessert melons. Their flesh coloration resonates with Song-period aesthetic sensibilities, exemplified by jade-green celadon ceramics frequently crafted in melon-shaped forms. By anchoring East Asian archaeobotanical remains within modern melon genomic variation, this study provides a temporal framework for melon cultivation in China and shows how ancient genomics can illuminate past crop use.",
+    "notes": "## Key Findings\n\n- Sequenced two Song Dynasty (960-1279 CE) melon seeds from China (5.5x and 2.1x nuclear genome coverage), placing them within the cultivated East Asian \"agrestis\" C. melo gene pool — supporting an independent Chinese domestication lineage alongside the known Northeast African and Indian events.\n- Genotyping of fruit-trait loci shows these ancient melons lacked sweet-dessert alleles (no orange flesh) but carried alleles for yellow/orange peel, green flesh, reduced acidity, and one derived andromonoecy allele linked to rounder fruit — indicating they were culinary rather than dessert melons.\n\n## Methods Worth Noting\n\n- Low-coverage ancient DNA sequencing of archaeological seeds anchored against modern melon genomic variation to resolve domestication history and reconstruct ancient crop phenotypes.",
+    "addedDate": "2026-09-12",
+    "source": "PNAS"
+  },
+  {
+    "id": "chiang2026enzymelatent",
+    "title": "Leveraging latent space models for enzyme discovery and sampling",
+    "authors": [
+      "Chang-Hwa Chiang",
+      "Daniel Ong",
+      "Alison R. H. Narayan",
+      "Charles L. Brooks"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2608891123",
+    "tags": [
+      "variational autoencoder",
+      "enzyme discovery",
+      "sequence-function landscape",
+      "machine learning",
+      "deep learning",
+      "protein sequence modeling"
+    ],
+    "rating": 4,
+    "abstract": "The exponential growth in available protein sequence data has broadened enzyme discovery opportunities but simultaneously highlighted a significant gap between sequence and function information. Traditional tools like phylogenetic trees and sequence similarity networks (SSNs) are widely adopted for sampling enzymes for novel transformations. However, their utility suffers from inherent limitations, which are exacerbated for large enzyme families. Phylogenetic trees, while useful for studying evolutionary relationships, become computationally intensive and difficult to visualize for larger protein datasets. SSNs, on the other hand, are sensitive to user-defined thresholds for sequence clustering and easily fail to capture more distant relationships between clusters. Additionally, both tools are alignment based and cannot capture higher-order interactions between residues. In this study, we address these limitations by optimizing a variational autoencoder (VAE)-based latent space model to visualize and explore enzyme sequence-function landscapes. By training our models on simulated datasets and real enzyme families, such as cyclases and flavin-dependent monooxygenases (FDMOs), we demonstrated that the optimized latent space effectively preserves phylogenetic relationships and enables high-resolution clustering for functionally distinct enzymes. The models further outperform traditional SSNs in capturing local and global relationships in a continuous two-dimensional space, enabling the discovery of multiple uncharacterized FDMOs for oxidative dearomatization and decarboxylative hydroxylation that illustrates their application. Our findings show that low-dimensional latent spaces can serve as valuable tools for enzyme discovery, allowing for interpolation and extrapolation to guide novel enzyme sampling for biocatalytic reactions.",
+    "notes": "## Key Findings\n\n- A VAE-based latent space model outperforms traditional phylogenetic trees and sequence similarity networks (SSNs) for organizing large enzyme families, preserving phylogenetic relationships in a continuous 2D space without alignment-based limitations.\n- Applied to cyclases and flavin-dependent monooxygenases (FDMOs), the model enabled discovery of multiple uncharacterized FDMOs for oxidative dearomatization and decarboxylative hydroxylation.\n\n## Methods Worth Noting\n\n- Optimized VAE latent-space representation of protein sequence-function landscapes, alignment-free and capable of capturing higher-order residue interactions missed by SSNs/phylogenetics — a generative-model approach to sequence space exploration relevant to biological sequence modeling generally.",
+    "addedDate": "2026-09-12",
+    "source": "PNAS"
+  },
+  {
+    "id": "roesti2026stickleback",
+    "title": "Disentangling unique site-specific and shared habitat-level adaptation in a classic system of repeated evolution",
+    "authors": [
+      "Marius Roesti",
+      "Hannes Roesti",
+      "Hiranya Sudasinghe",
+      "Nicole Nesvadba",
+      "Verena Saladin",
+      "Catherine L. Peichel"
+    ],
+    "journal": "PNAS",
+    "year": 2026,
+    "doi": "10.1073/pnas.2612038123",
+    "tags": [
+      "repeated evolution",
+      "adaptation",
+      "field transplant experiment",
+      "stickleback",
+      "evolutionary biology"
+    ],
+    "rating": 3,
+    "abstract": "Repeated divergence across contrasting habitats is widely used to infer natural selection and adaptation. Such comparative inferences, however, remain inherently correlative and capture only adaptation shared among populations from the same habitat type, thereby missing site-specific adaptation unique to individual populations. Field transplant experiments test adaptation directly by measuring fitness in nature but are typically limited to pairwise reciprocal exchanges between populations and therefore cannot distinguish between habitat-level and site-specific adaptation. Here, we extend the typical transplant framework to include multiple populations from both within and across habitat types, allowing fitness variation to be partitioned into shared habitat-level and unique site-specific components. We apply this framework to lake-stream stickleback, a classic system for studying adaptation via repeated divergence. Specifically, we transplanted laboratory-reared fish from a panmictic lake population and four independent stream populations across one lake and two stream sites. Stream fish outperformed lake fish in streams and vice versa, demonstrating adaptive divergence across the lake-stream divide. However, at both stream sites, local stream fish also outperformed foreign stream fish. Strikingly, this site-specific advantage was twice as large as the advantage of shared stream adaptation reflected by the fitness benefit of foreign stream fish over foreign lake fish. These results show that most fitness-relevant evolutionary variation in this system is unique to individual populations and therefore invisible to approaches that rely on repeated evolution to infer adaptation. More broadly, our work underscores the importance of ecological scale for understanding adaptation and evolutionary predictability.",
+    "notes": "## Key Findings\n\n- Extended the classic reciprocal-transplant design to multiple lake and stream stickleback populations, statistically partitioning fitness variation into shared habitat-level vs. unique site-specific adaptation components.\n- Site-specific local adaptation was twice as large as the shared habitat-level (lake-vs-stream) adaptive signal, showing that most fitness-relevant evolutionary variation is invisible to standard \"repeated evolution\" comparative approaches.\n\n## Methods Worth Noting\n\n- Multi-population field transplant framework (beyond simple pairwise reciprocal exchange) applied to lake-stream stickleback to directly measure fitness and decompose adaptation into habitat-level vs. site-specific components.",
+    "addedDate": "2026-09-12",
+    "source": "PNAS"
   }
 ]

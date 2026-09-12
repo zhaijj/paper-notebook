@@ -7082,5 +7082,110 @@
     "notes": "## Key Findings\n\n- Population genomics of 507 global Puccinia striiformis f. sp. tritici (wheat stripe rust) isolates with haplotype-phased genomes reveals two ancient nuclear lineages (nuclA, nuclB) that diverged ~10,000 years ago, predating modern agriculture.\n- Wheat domestication and dispersal reinforced nuclear divergence into two allopatric sexual populations, while later agricultural intensification drove clonal propagation and somatic nuclear exchange, producing a globally dominant heterokaryotic (nuclA-nuclB) population.\n- Similar virulence traits arose convergently in both clonal and sexual populations, linking host domestication and pathogen reproductive strategy to global pathogen success.\n\n## Methods Worth Noting\n\n- Haplotype-phased genome assembly of a dikaryotic fungus to separately track two co-existing nuclear lineages.\n- Population genomics across 507 global isolates used to reconstruct nuclear-lineage evolutionary history and reproductive-strategy transitions.",
     "addedDate": "2026-09-12",
     "source": "Current Biology"
+  },
+  {
+    "id": "zhao2026tomatoase",
+    "title": "Allele-specific expression reveals complex regulatory divergence underlying fruit phenotypic differences between cultivated and wild tomato species",
+    "authors": [
+      "Jiantao Zhao",
+      "Philippe Nicolas",
+      "Yimin Xu",
+      "Julia Vrebalov",
+      "James Giovannoni",
+      "Zhangjun Fei",
+      "Carmen Catala"
+    ],
+    "journal": "Genome Biology",
+    "year": 2026,
+    "doi": "10.1186/s13059-026-04279-5",
+    "tags": [
+      "allele-specific expression",
+      "cis-regulatory variation",
+      "tomato",
+      "domestication",
+      "gene regulation"
+    ],
+    "rating": 4,
+    "abstract": "Tomato (Solanum lycopersicum) is one of the most important agricultural crops and serves as a model system for fleshy fruit biology. However, domestication bottlenecks have led to limited genetic diversity for further crop improvement. Wild relatives represent a rich reservoir of phenotypic diversity, yet the molecular basis underlying such phenotypic diversity remains largely unknown. As gene expression variation is a major driver of phenotypic diversity, we perform genome-wide allele-specific expression analyses in F1 hybrids between cultivated tomato and three wild relatives spanning a range of evolutionary distances, across three fruit tissues and multiple developmental stages. Our analysis generates a multi-species map of cis- and trans-regulatory variation, revealing a predominant role of cis-regulatory effects in expression divergence across species, tissues, and stages. The majority of cis effects are tissue- and/or stage-specific, underscoring the importance of tissue context in regulatory variation. Regulatory mechanisms and inheritance patterns shift with evolutionary distance, with more distantly related species showing increased cis-regulatory contributions. Finally, we identify extensive regulatory divergence in biosynthetic pathways related to fruit nutritional value and flavor quality, including carotenoids, flavonoids, alkaloids, sugars, and volatiles. This study presents a high-resolution map of regulatory variation underlying tomato fruit development and provides evolutionary insights into the regulation of fruit nutrition and flavor traits.",
+    "notes": "## Key Findings\n\n- Genome-wide allele-specific expression in F1 hybrids between cultivated tomato and three wild relatives (varying evolutionary distances) generates a multi-species cis/trans-regulatory variation map.\n- Cis-regulatory effects predominate in expression divergence and are mostly tissue- and/or stage-specific; cis-regulatory contribution increases with evolutionary distance between species.\n- Extensive regulatory divergence found in biosynthetic pathways controlling fruit nutrition and flavor (carotenoids, flavonoids, alkaloids, sugars, volatiles).\n\n## Methods Worth Noting\n\n- Multi-species allele-specific expression design using F1 hybrids across three fruit tissues and multiple developmental stages to separate cis vs. trans regulatory effects.",
+    "addedDate": "2026-09-12",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "nurmansyah2026wildrice",
+    "title": "Single-molecule long-read sequencing reveals transcriptome complexity and enhances annotation in wild rice",
+    "authors": [
+      "Nurmansyah",
+      "Agnelo Furtado",
+      "Robert James Henry"
+    ],
+    "journal": "Genome Biology",
+    "year": 2026,
+    "doi": "10.1186/s13059-026-04259-9",
+    "tags": [
+      "Iso-Seq",
+      "wild rice",
+      "transcriptome annotation",
+      "long-read sequencing",
+      "domestication"
+    ],
+    "rating": 4,
+    "abstract": "Wild rice species harbour extensive but largely uncharacterised transcriptional diversity that underpins key agronomic traits and represents a valuable resource for crop improvement. Here we integrate single-molecule long-read sequencing (Iso-Seq) with short-read RNA-seq to resolve transcriptomes of Australian Oryza rufipogon-like (O. rufipogon Aus) and O. meridionalis, the closest and most phylogenetically distant AA-genome relatives of Asian domesticated rice, respectively. Iso-Seq reveals substantially greater transcriptome complexity than represented in current reference annotations, identifying 48,876 transcript isoforms in O. rufipogon Aus and 69,180 in O. meridionalis. More than 60% of annotated genes are captured, and over 40% exhibit alternative isoforms, compared with approximately 10% in existing annotations. Integration of Iso-Seq data substantially improves genome annotations by restoring untranslated regions, increasing gene and transcript models, and improving BUSCO completeness. We identify 2,021 novel genes in O. rufipogon Aus and 2,645 in O. meridionalis, resolve hundreds of mis-assembled fusion genes, and uncover thousands of previously unannotated isoforms, including species-specific protein-coding transcripts and long non-coding RNAs. Analysis of three grain-size regulators (OsMADS1, GS1, and SGW5) reveals substantial isoform diversity in wild rice. Notably, functional OsMADS1 and GS1 isoforms previously identified in domesticated rice populations are also detected in wild species, demonstrating that multiple functional transcript variants exist prior to domestication. Iso-Seq further identifies O. rufipogon-specific splice variants and reduced SGW5 expression associated with its narrow-grain phenotype. Our findings uncover hidden transcriptional complexity in wild rice, substantially refine genome annotations, and provide valuable resources for functional transcript studies and precise isoform-level quantification.",
+    "notes": "## Key Findings\n\n- Iso-Seq + short-read RNA-seq on two wild Australian AA-genome rice relatives reveals far greater transcriptome complexity than existing annotations (48,876 and 69,180 isoforms), with 2,021-2,645 novel genes per species.\n- Functional OsMADS1 and GS1 grain-size regulator isoforms previously known only from domesticated rice are also present in wild species, showing these functional variants predate domestication.\n- O. rufipogon-specific splice variants and reduced SGW5 expression are linked to its narrow-grain phenotype.\n\n## Methods Worth Noting\n\n- Combined Iso-Seq (single-molecule long-read) and short-read RNA-seq to substantially improve genome annotation (UTRs, gene/transcript models, BUSCO completeness) and resolve mis-assembled fusion genes.",
+    "addedDate": "2026-09-12",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "zhang2026epiformer",
+    "title": "Epiformer: epistasis detection by genome language model and dual-channel network",
+    "authors": [
+      "Xiaowei Zhang",
+      "Liliang Liu",
+      "Liangrui Ren",
+      "Beibei Xin",
+      "Maozu Guo",
+      "Jun Wang",
+      "Guoxian Yu"
+    ],
+    "journal": "Genome Biology",
+    "year": 2026,
+    "doi": "10.1186/s13059-026-04268-8",
+    "tags": [
+      "genome language model",
+      "epistasis",
+      "Evo 2",
+      "machine learning",
+      "deep learning",
+      "phenotype prediction"
+    ],
+    "rating": 4,
+    "abstract": "Epistasis plays a crucial role in explaining missing heritability in complex traits, yet most detection methods fail to effectively capture local and global interaction patterns and long-range dependencies critical to complex trait architecture. We propose Epiformer that leverages genome language model Evo 2 to capture long-range dependencies from genetic background, and a dual-channel network to jointly model local and global epistasis and additive effects. Epiformer can identify key SNPs and their interactions from complex genomic data to empower phenotype prediction with interpretability, which reinforces epistasis detection. Epiformer performs robustly across species, revealing biologically meaningful patterns and offering new insights into genetic architecture.",
+    "notes": "## Key Findings\n\n- Epiformer combines the Evo 2 genome language model (for long-range genetic background dependencies) with a dual-channel network that jointly models local and global epistasis plus additive effects.\n- Identifies key SNPs and their interactions to improve interpretable phenotype prediction, and performs robustly across species.\n\n## Methods Worth Noting\n\n- Uses a pretrained genome language model (Evo 2) as a feature extractor for long-range genomic context, paired with a dual-channel architecture separating local vs. global epistatic signal — directly relevant to DNA foundation model applications in quantitative genetics.",
+    "addedDate": "2026-09-12",
+    "source": "Genome Biology"
+  },
+  {
+    "id": "nowbandegani2026cosigt",
+    "title": "COSIGT: population-scalable genotyping of complex loci from low-coverage sequencing data using pangenome graphs",
+    "authors": [
+      "Davide Bolognini",
+      "Andrea Guarracino",
+      "Nicole Soranzo"
+    ],
+    "journal": "Genome Biology",
+    "year": 2026,
+    "doi": "10.1186/s13059-026-04242-4",
+    "tags": [
+      "pangenome graphs",
+      "genotyping",
+      "low-coverage sequencing",
+      "structural variation",
+      "ancient DNA"
+    ],
+    "rating": 4,
+    "abstract": "Pangenome graphs capture extensive structural diversity, but resolving complex loci from shallow sequencing remains challenging, particularly when samples are of low quality such as in ancient DNA. We introduce COSIGT (COsine SImilarity-based GenoTyper), which assigns diploid genotypes by matching read-depth distributions to haplotype paths via cosine similarity. Because this metric evaluates relative coverage profiles rather than absolute read counts, COSIGT substantially outperforms existing likelihood-based tools at low coverage (1-2X). We demonstrate scalability to thousands of modern and ancient genomes, enabling robust, population-scale analyses of complex variation directly from low-coverage datasets.",
+    "notes": "## Key Findings\n\n- COSIGT genotypes complex loci in pangenome graphs by matching read-depth distributions to haplotype paths via cosine similarity rather than absolute read counts.\n- Substantially outperforms likelihood-based genotypers at low coverage (1-2X) and scales to thousands of modern and ancient genomes.\n\n## Methods Worth Noting\n\n- Cosine-similarity-based genotyping metric designed specifically for low-coverage/degraded samples (e.g., ancient DNA), applied at population scale against pangenome graph haplotype paths.",
+    "addedDate": "2026-09-12",
+    "source": "Genome Biology"
   }
 ]

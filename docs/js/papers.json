@@ -7361,5 +7361,91 @@
     "notes": "## Key Findings\n\n- snpArcher is a Snakemake workflow taking raw reads + reference genome to a filtered, joint-called VCF ready for population genomic analysis in any non-model species.\n- An interactive QC dashboard (PCA, relatedness, admixture) flags batch effects and contamination before downstream analysis.\n- Demonstrated on 137 burrowing owl genomes: removing low-coverage samples/problematic regions corrects demographic inference artifacts, showing QC choices materially change biological conclusions.\n\n## Methods Worth Noting\n\n- End-to-end, reproducible Snakemake pipeline standardizing variant calling and QC for non-model organism population genomics — directly reusable infrastructure for cross-species genomic studies.",
     "addedDate": "2026-09-12",
     "source": "MBE"
+  },
+  {
+    "id": "chai2026celltypemotifs",
+    "title": "Flexible use of conserved motifs constrains genome access in cell type evolution",
+    "authors": [
+      "Chew Chai",
+      "Jesse Gibson",
+      "Pengyang Li",
+      "Brennan D. McDonald",
+      "Anusri Pampari",
+      "Aman Patel",
+      "Anshul Kundaje",
+      "Bo Wang"
+    ],
+    "journal": "Nature Ecology & Evolution",
+    "year": 2026,
+    "doi": "10.1038/s41559-026-03164-5",
+    "tags": [
+      "machine learning",
+      "deep learning",
+      "regulatory evolution",
+      "chromatin accessibility",
+      "cross-species comparative genomics",
+      "cell type evolution"
+    ],
+    "rating": 4,
+    "abstract": "Cell types can be organized into related families, but the regulatory mechanisms that define and maintain these families across deep evolutionary time remain unknown. Here, combining single-nucleus multi-omic sequencing with deep learning to analyse the accessible genomes of two groups of vastly divergent animals including flatworms and vertebrates, we find that hundreds of accessibility-dictating sequence motifs partition into distinct yet conserved sets, or 'vocabularies', each associated with a specific cell type family. However, combinatorial relationships among these motifs preferred by individual cell types are largely species specific. Deep-learning models trained on one species accurately predict family-level chromatin accessibility in distantly related species, albeit frequently rely on different motifs from shared vocabularies to reach convergent predictions. By contrast, models trained on individual cell types within a family lose cross-species predictive power, indicating that the regulatory syntax governing cell type-level identity evolves rapidly. We propose a 'collective maintenance' model in which motif vocabularies defining cell type families are evolutionarily stable, while recombination of these motifs generates cell type-specific regulatory programmes. This suggests that family identity is maintained collectively by large, conserved pools of regulatory factors, analogous to the logic of developmental homology, where character identity persists through network-level conservation despite extensive rewiring.",
+    "notes": "## Key Findings\n\n- Deep-learning models trained on single-nucleus multi-omic accessibility data from flatworms and vertebrates reveal that sequence-motif 'vocabularies' defining cell type families are conserved across deep evolutionary time, even though the combinatorial syntax within each species is largely species-specific.\n- Models trained on one species accurately predict family-level chromatin accessibility in distantly related species (though using different motifs from the shared vocabulary), but lose cross-species power when trained on individual cell types — showing cell-type-level regulatory syntax evolves rapidly while family-level identity is conserved.\n- Proposes a 'collective maintenance' model: family identity persists through network-level conservation of a large regulatory-factor pool despite extensive motif-combination rewiring, analogous to developmental homology.\n\n## Methods Worth Noting\n\n- Cross-species transfer-learning test of deep-learning chromatin accessibility models (train on one species, predict in a distantly related one) as a way to probe conservation vs. divergence of regulatory syntax.",
+    "addedDate": "2026-09-15",
+    "source": "Nature Ecology & Evolution"
+  },
+  {
+    "id": "hu2026peppercentromere",
+    "title": "Evolution and domestication-trait associations of ultra-long centromere haplotypes in pepper plants",
+    "authors": [
+      "Ming Hu",
+      "Jiahao Chen",
+      "Shaoxuan Huang",
+      "Jie Teng",
+      "Chengjie Chen",
+      "Jiahao Cao",
+      "Jiaowen Cheng",
+      "Brandon S. Gaut",
+      "Changming Chen",
+      "Zhangsheng Zhu",
+      "Yi Liao"
+    ],
+    "journal": "Nature Ecology & Evolution",
+    "year": 2026,
+    "doi": "10.1038/s41559-026-03143-w",
+    "tags": [
+      "centromere evolution",
+      "pepper",
+      "domestication",
+      "population genetics",
+      "genome assembly"
+    ],
+    "rating": 4,
+    "abstract": "Centromeric and pericentromeric regions of most eukaryotic genomes are highly repetitive and strongly recombination-suppressed, confounding efforts to resolve genetic variation, population structure and phenotypic associations. Pepper (Capsicum annuum) centromeres are nearly devoid of satellite repeats, facilitating assembly and population-level comparison of centromeric regions. Here we integrate 9 near-complete genome assemblies, CENH3 ChIP-seq profiles from 26 diverse accessions, and resequencing and phenotypic data from ~400 cultivated and wild accessions to investigate population-level diversity and phenotypic relevance of pepper peri/centromeric regions. Functional centromere positions are largely fixed on 8 of 12 chromosomes, whereas the remaining 4 carry distinct centromeric epialleles shaped mainly by centromere repositioning and pericentromeric inversions. Pepper centromeres are embedded within ultra-long centromere-spanning haplotype (cenhap) blocks, ranging from 29.8 to 112.9 Mb and collectively covering 23.96% of the genome; each block contains only 1-4 major haplotypes. Some cenhaps may act as supergene-like units and are strongly associated with fruit traits, probably because recombination-suppressed intervals harbour multiple fruit-related genes, including OFP and F-box genes. F2 segregation assays further reveal transmission distortion of chromosomes carrying alternative cenhaps. Together, these findings highlight peri/centromeric regions as underrecognized reservoirs of agronomically important variation.",
+    "notes": "## Key Findings\n\n- Integrating 9 near-complete pepper genome assemblies, CENH3 ChIP-seq from 26 accessions, and resequencing/phenotype data from ~400 cultivated and wild accessions reveals that pepper centromeres, unusually low in satellite repeats, are tractable for population-level comparison.\n- 4 of 12 chromosomes carry distinct centromeric epialleles from repositioning/pericentromeric inversions; centromeres sit within ultra-long 'cenhap' haplotype blocks (29.8-112.9 Mb, ~24% of the genome) with only 1-4 major haplotypes each.\n- Some cenhaps act as supergene-like units strongly associated with fruit traits (harboring OFP and F-box genes) and show transmission distortion in F2 segregation — implicating peri/centromeric regions as an underrecognized reservoir of domestication-relevant variation.\n\n## Methods Worth Noting\n\n- Combines near-complete (T2T-adjacent) genome assemblies with CENH3 ChIP-seq to map functional centromere identity across a population, then links centromere-spanning haplotype blocks to phenotype via resequencing and segregation analysis — a population-genomics approach to a genomic region usually excluded from GWAS/variant analysis.",
+    "addedDate": "2026-09-15",
+    "source": "Nature Ecology & Evolution"
+  },
+  {
+    "id": "aube2026fitnessfunction",
+    "title": "The shape of fitness functions and the distribution of mutational effect sizes jointly limit adaptation by regulatory mutations",
+    "authors": [
+      "Simon Aubé",
+      "Alexandre K. Dubé",
+      "Christian R. Landry"
+    ],
+    "journal": "Nature Ecology & Evolution",
+    "year": 2026,
+    "doi": "10.1038/s41559-026-03142-x",
+    "tags": [
+      "cis-regulatory evolution",
+      "fitness landscape",
+      "saturation mutagenesis",
+      "gene expression",
+      "adaptation"
+    ],
+    "rating": 3,
+    "abstract": "Mutations in gene regulatory regions have been shown to play a role in rapid adaptation, but the factors determining their contribution are largely unknown. Here, using the metabolic enzyme cytosine deaminase of budding yeast, we examine whether adaptation to 5-fluorocytosine, which requires reduced cytosine deamination and can readily arise from amino acid substitutions, may be reached by single promoter mutations. We generated all single-nucleotide substitutions and indels in the FCY1 promoter and assayed the resulting mutants in presence of 5-fluorocytosine. This revealed that no promoter mutation is sufficient for adaptation to occur. We next investigated how this inaccessibility of adaptation arises by combining large-scale expression measurements with the experimental characterization of the corresponding expression-fitness function. These experiments showed that the shape of this function precludes single promoter mutations from being adaptive. Although 24% of mutations significantly affect expression, the fitness curve is flat around wild-type level. As such, adaptation can only emerge from a severe reduction of expression, which cannot occur from a single mutation in the promoter. Our results show that the contribution of regulatory mutations to rapid adaptation depends not only on the distribution of mutational effect sizes on expression level but also on the shape of the function linking fitness to expression levels.",
+    "notes": "## Key Findings\n\n- Complete saturation mutagenesis (all single-nucleotide substitutions and indels) of the yeast FCY1 promoter shows no single promoter mutation is sufficient for adaptation to 5-fluorocytosine, despite 24% of mutations significantly affecting expression.\n- Combining expression measurements with the experimentally characterized expression-fitness function shows the fitness curve is flat around wild-type expression, so only a severe expression reduction (unreachable by one mutation) would be adaptive.\n- Demonstrates that regulatory mutations' contribution to rapid adaptation depends jointly on the distribution of mutational effect sizes AND the shape of the fitness function linking expression to fitness — not effect size alone.\n\n## Methods Worth Noting\n\n- Full saturation mutagenesis of a single promoter paired with direct experimental mapping of the expression-to-fitness function, rather than assuming a monotonic or linear relationship — a generalizable framework for evaluating cis-regulatory evolvability.",
+    "addedDate": "2026-09-15",
+    "source": "Nature Ecology & Evolution"
   }
 ]

@@ -9173,5 +9173,175 @@
     "notes": "## Key Findings\n\n- Introduces a sequence-to-distribution (S2d) framework that models the full probabilistic distribution of single-molecule chromatin states from DNA sequence alone, rather than the cell-population averages predicted by existing sequence-to-function models.\n- Mola, a single-molecule chromatin accessibility model trained with S2d, reveals distinct modes of TF–nucleosome engagement, including a novel nucleosome-trapping factor (ZNF146), and identifies YY1 as the strongest +1 nucleosome-positioning factor after TSSs.\n- Long-context single-molecule modeling uncovers a shared sequence basis for co-accessibility of regulatory elements and co-footprinting of TFs; joint methylation + accessibility prediction reveals a sequence-driven bimodal state mediated by methylation-sensitive TFs.\n- Mola predicts and interprets variant effects at the single-molecule level, showing how sequence changes reshape distal regulatory coordination.\n\n## Methods Worth Noting\n\n- Distribution-level (not mean-level) training objective for sequence models — a direct conceptual extension for DNA LM / sequence-to-function work that currently predicts bulk tracks.\n- Generation of pseudo-dynamic trajectories of chromatin states from static single-molecule snapshots.",
     "addedDate": "2026-11-07",
     "source": "bioRxiv"
+  },
+  {
+    "id": "bjerregaard2026bend",
+    "title": "BEND 2.0: Benchmarking the Capabilities Needed to Design DNA",
+    "authors": [
+      "Andreas Bjerregaard",
+      "Rachael DeVries",
+      "Dionysia Danai Brilli",
+      "Panagiotis Antoniadis",
+      "Yan Li",
+      "Anders Krogh",
+      "Wouter Boomsma",
+      "Ole Winther",
+      "Frederikke Isa Marin"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2611.03806",
+    "tags": [
+      "dna language model",
+      "benchmark",
+      "variant effect",
+      "sequence design",
+      "linear probing"
+    ],
+    "rating": 5,
+    "abstract": "Genomic foundation models are increasingly used to propose DNA sequences and edits. But successful design requires capabilities that current benchmarks do not measure. Here we introduce BEND 2.0 (BENchmark for DNA language models), which tests how well models predict the effects of DNA changes and whether these predictions can guide sequence design. Across eight tasks built on five experimental datasets, we find that model choice and how representations are accessed both affect performance. Linear readouts fitted to frozen representations can match or exceed models' native outputs, and functional post-training substantially improves the models' capabilities. Linear readouts transfer well across experimental assays and genes, suggesting that models capture functional patterns beyond the data used to fit individual predictors. At the same time, strong prediction of average effects can conceal weaker prediction of context-specific effects, and accurate prediction of combined mutation effects does not imply accurate prediction of their interactions. In design tasks, model predictions can reduce the number of candidates needed to find a desired response, but still leave substantial room for better design choices, particularly for context-specific and multi-cell objectives. Our benchmark reveals that genomic models now display signs of general utility but have yet to saturate on performance in even simple tasks.",
+    "notes": "## Key Findings\n\n- Introduces BEND 2.0, eight tasks on five experimental datasets testing whether genomic foundation models predict effects of DNA changes and can guide design.\n- Linear readouts on frozen representations can match or exceed models' native outputs, and functional post-training substantially improves capabilities; readouts transfer across assays and genes.\n- Strong prediction of average effects can hide weak context-specific prediction, and accurate combined-mutation effects do not imply accurate interaction (epistasis) prediction.\n- Model predictions reduce candidates needed in design tasks but leave substantial headroom, especially for context-specific and multi-cell objectives.\n\n## Methods Worth Noting\n\n- Evaluation separates how representations are accessed (native output vs linear readout) from model choice.\n- Design-oriented tasks measure candidate-count reduction rather than only correlation.",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
+  },
+  {
+    "id": "sadjadi2026isoalign",
+    "title": "IsoAlign: Isoform-Aware DNA-Protein Alignment via Joint-Embedding Predictive Architectures",
+    "authors": [
+      "Niousha Sadjadi",
+      "Arman Seyed-Ahmadi",
+      "Tony Tu",
+      "Micaela Elisa Consens",
+      "Kerr Ding",
+      "Alif Munim",
+      "Lila Kari",
+      "Zehui Li",
+      "Barry B. Rubin",
+      "Bo Wang",
+      "Vallijah Subasri"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2611.00241",
+    "tags": [
+      "genomic foundation model",
+      "jepa",
+      "alternative splicing",
+      "dna-protein alignment",
+      "pretraining"
+    ],
+    "rating": 4,
+    "abstract": "Genomic foundation models (GFMs) have emerged as a powerful paradigm for learning DNA sequence representations, yet existing self-supervised pretraining strategies overlook alternative splicing and underperform compared to specialized models. To address this gap, we introduce IsoAlign, a multimodal framework that grounds genomic pretraining in isoform-aware DNA-protein alignment to learn biologically meaningful representations. IsoAlign aligns transcripts to their corresponding protein isoforms, capturing both coding sequences and broader regulatory contexts, using two Joint-Embedding Predictive Architectures (JEPA): DNA-Protein JEPA (DP-JEPA), which predicts protein representations from DNA using contrastive alignment, and Isoform-Masked JEPA (IM-JEPA), which models relationships among alternative isoforms of the same gene through masked protein prediction. We evaluate the learned DNA representations of these architectures across a multi-metric evaluation suite spanning tasks, including the prediction of pathogenicity, fitness, gene expression, and TF binding. Our results demonstrate that isoform-aware cross-modal alignment using JEPA significantly improves functional representations and downstream performance, establishing a promising direction for GFM pretraining.",
+    "notes": "## Key Findings\n\n- Proposes IsoAlign, grounding genomic foundation model pretraining in isoform-aware DNA-protein alignment.\n- DP-JEPA predicts protein representations from DNA via contrastive alignment; IM-JEPA models relationships among alternative isoforms via masked protein prediction.\n- Isoform-aware cross-modal alignment improves learned DNA representations on pathogenicity, fitness, gene expression and TF-binding tasks.\n\n## Methods Worth Noting\n\n- Joint-Embedding Predictive Architectures used as a pretraining signal for DNA encoders instead of pure token reconstruction.\n- Protein isoform embeddings as cross-modal supervision for transcript DNA.",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
+  },
+  {
+    "id": "ding2026fp8",
+    "title": "Accuracy is not compatibility: two Evo 2 checkpoints hinge on one FP8 matrix multiplication",
+    "authors": [
+      "Xun Ding",
+      "Ziyuan Qin"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2610.39415",
+    "tags": [
+      "evo 2",
+      "dna language model",
+      "fp8",
+      "reproducibility",
+      "variant effect"
+    ],
+    "rating": 4,
+    "abstract": "FP8 formats specify how values are stored, not how products are summed; this gap can break checkpoints. Evo 2, a DNA language model, documents a Hopper FP8 requirement for its 1B and 40B checkpoints. On two Blackwell (sm_120) GPUs both fail the developers' forward test (the 7B passes); on an RTX 5070 Ti the 40B's next-base accuracy is 25.7%, near guessing. Greater accuracy breaks them, as BioNeMo saw for the 40B on Hopper: natively, 99.996% of one projection's outputs are correctly rounded (H100: about 30%), and fp32 accumulation of the same operands fails. Our H100 FP8 GEMM emulator, mmaemu (bit-exact on captured 1B projections), localises the dependence to the 1B's first projection (of 21), where exact sums fail but pass when shrunk by the H100's 1.4% (measured in-sample), not 2.1%. The 40B fails with only its first projection native. Emulating only that projection, weights unchanged, raises 40B BRCA1 variant-classification AUROC from 0.434 to 0.869 (H100: 0.868) on the RTX 5070 Ti, despite a narrow forward-test miss, and 0.481 to 0.867 on an RTX PRO 6000. We tested one model family but not training origin; releases should specify reference arithmetic.",
+    "notes": "## Key Findings\n\n- Evo 2 1B and 40B checkpoints fail the developers' forward test on Blackwell (sm_120) GPUs; the 40B reaches only 25.7% next-base accuracy on an RTX 5070 Ti, near guessing (7B passes).\n- The failure is localized to the 1B's first of 21 projections: the checkpoints depend on H100 FP8 accumulation behavior, and more exact sums break them.\n- Emulating only that projection raises 40B BRCA1 variant-classification AUROC from 0.434 to 0.869 on RTX 5070 Ti (H100: 0.868) and 0.481 to 0.867 on RTX PRO 6000.\n\n## Methods Worth Noting\n\n- mmaemu, an H100 FP8 GEMM emulator bit-exact on captured 1B projections.\n- Argues model releases should specify reference arithmetic, not just storage formats.",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
+  },
+  {
+    "id": "zheng2026muss",
+    "title": "MUSS: A Multi-scale and Sequence-based Model for Single-cell Gene Regulation",
+    "authors": [
+      "Kangjie Zheng",
+      "Amirhossein Vahidi",
+      "Liying Jin",
+      "Joseph Clarke",
+      "Vijaya Baskar MS",
+      "Connor Rogerson",
+      "Mengji Zhang",
+      "Muzlifah Haniffa",
+      "Anshul Kundaje",
+      "Mo Lotfollahi"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2611.08086",
+    "tags": [
+      "single-cell",
+      "gene regulation",
+      "dna sequence encoder",
+      "scatac-seq",
+      "enhancer-gene linking"
+    ],
+    "rating": 4,
+    "abstract": "Modeling gene regulation in single cells requires jointly representing DNA sequence, chromatin accessibility, and gene expression across regulatory scales. Sequence-based models capture DNA-level regulatory grammar but often lack cell-level resolution, whereas many single-cell omics models represent genes and peaks as fixed-vocabulary tokens without their underlying sequence. Here, we present MUSS, a sequence-based multi-scale model for single-cell gene regulation that preserves both DNA-level and cell-level resolution. MUSS derives peak- and gene-level representations from DNA using a frozen pre-trained sequence encoder and integrates them through peak-peak self-attention and distance-biased peak-gene interactions. Peak masked language modeling followed by training on paired scATAC-seq and scRNA-seq aligns these representations with cell-specific regulatory states. Across gene expression prediction, enhancer-gene linking, motif-guided regulatory prioritization, and zero-shot cell clustering, MUSS achieves strong performance against sequence-based and single-cell omics baselines. It further predicts expression for genes and peaks unseen during task training. These results support sequence-grounded, multi-scale representations for decoding cell-type-specific regulatory programs. Code, datasets, and model checkpoints are available at https://github.com/Lotfollahi-lab/MUSS_neurips26.",
+    "notes": "## Key Findings\n\n- MUSS derives peak- and gene-level representations from DNA with a frozen pre-trained sequence encoder and integrates them with peak-peak self-attention and distance-biased peak-gene interactions.\n- Peak masked language modeling then training on paired scATAC-seq/scRNA-seq aligns sequence representations with cell-specific regulatory states.\n- Strong performance on gene expression prediction, enhancer-gene linking, motif-guided regulatory prioritization and zero-shot cell clustering; predicts expression for genes and peaks unseen in task training.\n\n## Methods Worth Noting\n\n- Bridges sequence-based models and fixed-vocabulary single-cell omics models by keeping DNA-level and cell-level resolution.\n- Code, datasets and checkpoints released (NeurIPS 2026).",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
+  },
+  {
+    "id": "jeong2026locogen",
+    "title": "Locality-Controlled Out-of-Distribution Guidance for Robust Regulatory DNA Sequence Design",
+    "authors": [
+      "Dabin Jeong",
+      "Marwane Bourdim",
+      "Mo Lotfollahi"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2610.41736",
+    "tags": [
+      "regulatory dna design",
+      "diffusion model",
+      "reward hacking",
+      "motif",
+      "out-of-distribution guidance"
+    ],
+    "rating": 4,
+    "abstract": "Designing regulatory DNA sequences for targeted gene-expression control is an important challenge. Recent approaches frame this task as property-conditioned generation, where diffusion models trained on natural sequences are guided toward high predicted activity through reward-based fine-tuning or sampling-time guidance. We show that single-reward evaluation can obscure reward-hacking behavior. By decomposing evaluation into property, novelty, and plausibility, we identify an empirically underexplored region of the evaluation space in which all three objectives are satisfied, but no existing baseline succeeds. We postulate that this gap arises because prior methods treat guidance primarily as a matter of magnitude. In regulatory DNA, however, sequence grammar is spatially nonuniform: motif positions are sensitive to perturbation, while background regions allow more exploration. We therefore propose LOCOGEN by reformulating guidance as a problem of locality. LOCOGEN learns an invariant motif mask through sequence-level invariance learning to protect motif positions, while applying OOD damping only to background positions. It operates at sampling time on a frozen diffusion backbone, without retraining the backbone. Across HepG2, K562, and SK-N-SH, LOCOGEN reaches this previously underexplored region of the property-novelty-plausibility space. Code is available at https://github.com/Lotfollahi-lab/LocoGen.",
+    "notes": "## Key Findings\n\n- Single-reward evaluation of regulatory DNA design obscures reward hacking; evaluation is decomposed into property, novelty and plausibility.\n- Identifies a region where all three objectives are satisfied but no existing baseline succeeds.\n- LOCOGEN reaches this region across HepG2, K562 and SK-N-SH.\n\n## Methods Worth Noting\n\n- Reformulates guidance as locality: learns an invariant motif mask via sequence-level invariance learning, applying OOD damping only to background positions.\n- Operates at sampling time on a frozen diffusion backbone, no retraining.",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
+  },
+  {
+    "id": "zhang2026venusgenome",
+    "title": "VenusGenome: Genome-Aware Masked Autoencoding for Microbial Genome Representation Learning",
+    "authors": [
+      "Liang Zhang",
+      "Yukun Zhang",
+      "Yang Tan",
+      "Fan Jiang",
+      "Bozitao Zhong",
+      "Xiaoran Cheng",
+      "Liang Hong",
+      "Mingchen Li",
+      "Yuanxi Yu"
+    ],
+    "journal": "arXiv",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2611.05405",
+    "tags": [
+      "genomic context model",
+      "masked autoencoder",
+      "microbial genomes",
+      "protein embeddings",
+      "gene function"
+    ],
+    "rating": 3,
+    "abstract": "Genomic-context models have shown that contextualizing protein embeddings can improve predictions of microbial function. We observe that a gene's protein embedding is partially predictable from the embeddings of neighboring genes in the genome, motivating high-ratio masking that requires reconstruction from sparser genomic context. Genomic modeling must also distinguish biological relationships from assembly conventions, since the ordering of separate contigs does not imply adjacency and strand labels depend on the reference orientation. We therefore introduce VenusGenome, a gene-resolution masked autoencoder that combines visible-only encoding with genome-aware attention incorporating contig boundaries, relative strand orientations, and gene positions. We pretrain this model on a curated corpus of over 1.7 million microbial genome assemblies from isolate and metagenomic sources, using frozen protein embeddings as gene-level inputs. Across genome-level phenotype prediction and gene-level tasks, the resulting frozen representations achieve the highest mean performance among the evaluated models on nine of eleven primary metrics. An exploratory gene-input perturbation analysis further links representation sensitivity to experimentally measured fitness defects. Ablations support the contribution of genome-aware attention and show the benefits of masked autoencoding over BERT-style masked modeling, with further gains from higher masking ratios.",
+    "notes": "## Key Findings\n\n- A gene's protein embedding is partly predictable from neighboring genes, motivating high-ratio masked autoencoding over genomic context.\n- Pretrained on over 1.7 million microbial isolate and metagenomic assemblies, frozen representations achieve the best mean performance on nine of eleven primary metrics.\n- Representation sensitivity in gene-input perturbations links to experimentally measured fitness defects; masked autoencoding beats BERT-style masking, with gains from higher masking ratios.\n\n## Methods Worth Noting\n\n- Genome-aware attention encoding contig boundaries, relative strand orientation and gene positions.\n- Visible-only encoding with frozen protein embeddings as gene tokens.",
+    "addedDate": "2026-11-07",
+    "source": "arXiv"
   }
 ]

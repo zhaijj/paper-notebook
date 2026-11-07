@@ -9343,5 +9343,191 @@
     "notes": "## Key Findings\n\n- A gene's protein embedding is partly predictable from neighboring genes, motivating high-ratio masked autoencoding over genomic context.\n- Pretrained on over 1.7 million microbial isolate and metagenomic assemblies, frozen representations achieve the best mean performance on nine of eleven primary metrics.\n- Representation sensitivity in gene-input perturbations links to experimentally measured fitness defects; masked autoencoding beats BERT-style masking, with gains from higher masking ratios.\n\n## Methods Worth Noting\n\n- Genome-aware attention encoding contig boundaries, relative strand orientation and gene positions.\n- Visible-only encoding with frozen protein embeddings as gene tokens.",
     "addedDate": "2026-11-07",
     "source": "arXiv"
+  },
+  {
+    "id": "hingerl2026scooby2",
+    "title": "Scooby-2: fine-tuning AlphaGenome for single-cell genomic track prediction",
+    "authors": [
+      "Johannes C Hingerl",
+      "J. Gagneur"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.10.28.762238",
+    "tags": [
+      "sequence-to-function",
+      "alphagenome",
+      "single-cell",
+      "variant effect prediction",
+      "fine-tuning"
+    ],
+    "rating": 4,
+    "abstract": "Sequence-to-function models predict genomic tracks from DNA sequence. AlphaGenome has been shown to outperform previous models, including Borzoi, on most track-prediction and variant-effect benchmarks. However, like its predecessors, it predicts tracks only for predefined, mostly bulk-derived cell types and tissues. While Scooby has extended Borzoi to single-cell resolution, a single-cell adaptation of AlphaGenome is still lacking. We present Scooby-2, which combines AlphaGenome with a cell-specific decoder to predict single-cell RNA-seq coverage and chromatin-accessibility genomic tracks from DNA sequence. The package provides the implementation, the parameter-efficient fine-tuning setup, the training pipeline and inference scripts. When evaluated on the NeurIPS bone marrow single-cell dataset, Scooby-2 achieved a Pearson correlation of 0.56 when predicting cell-type-specific gene expression differences, compared with 0.53 for Scooby. When using the distilled AlphaGenome backbone, variant effect prediction concordance of fine-mapped eQTLs from the OneK1K cohort improved from 0.37 to 0.47 Spearman's rank correlation across all associations, an improvement consistent with that of AlphaGenome over Borzoi itself.",
+    "notes": "## Key Findings\n\n- Scooby-2 combines AlphaGenome with a cell-specific decoder to predict single-cell RNA-seq coverage and chromatin-accessibility tracks from DNA sequence, filling the gap left by AlphaGenome's bulk-only cell types.\n- On the NeurIPS bone marrow single-cell dataset it reaches Pearson 0.56 for cell-type-specific expression differences vs 0.53 for Scooby (Borzoi-based).\n- With the distilled AlphaGenome backbone, concordance with fine-mapped OneK1K eQTL effects improves from 0.37 to 0.47 Spearman — a gain consistent with AlphaGenome's improvement over Borzoi.\n\n## Methods Worth Noting\n\n- Parameter-efficient fine-tuning of a frozen/distilled AlphaGenome backbone with a per-cell decoder; package includes training pipeline and inference scripts.\n- Single-cell variant-effect evaluation against fine-mapped eQTLs as a benchmark for S2F models.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "lee2026chainet",
+    "title": "ChAI-Net learns a regulatory code for chromatin co-accessibility",
+    "authors": [
+      "J. Lee",
+      "K. Zhang",
+      "E. Shurberg",
+      "V. S. Ramani",
+      "Katherine S. Pollard"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.10.29.762938",
+    "tags": [
+      "single-molecule footprinting",
+      "chromatin accessibility",
+      "sequence-to-function",
+      "tf cooperativity",
+      "machine learning",
+      "deep learning"
+    ],
+    "rating": 4,
+    "abstract": "The regulation of chromatin accessibility is critical for cell function and identity. Advances in single-molecule long-read footprinting have enabled near-nucleotide-resolution readout of chromatin fiber organization, capturing both coordination of transcription factor (TF) binding and variation in nucleosome positioning previously obscured by bulk methods. Here we combine this technique with deep learning to study how protein-DNA interactions are coordinated within different types of cis-regulatory elements in mouse embryonic stem cells. First, we quantify the frequency with which pairs of positions are simultaneously accessible on individual molecules. Then, we train ChAI-Net, a neural network that predicts these locus-specific chromatin co-accessibility maps from the underlying DNA sequence. Through model interpretation and in silico experiments, we show that ChAI-Net learns unique combinations of sequence motifs underlying co-accessibility within enhancers, promoters, and CTCF-bound sites. Many of these motifs are missed when modeling average accessibility, suggesting a specific role in coordinated binding. ChAI-Net's regulatory grammar also highlights the importance of TF motif orientation, spacing, positioning, and co-occurrence in driving co-accessibility. Thus, our framework for extracting regulatory rules from footprinting data expands understanding of TF cooperativity, while laying the groundwork to elucidate how these rules vary across cellular contexts as single-molecule genomics is deployed at scale.",
+    "notes": "## Key Findings\n\n- Uses single-molecule long-read footprinting in mouse ESCs to quantify how often pairs of positions are co-accessible on the same chromatin fiber.\n- ChAI-Net predicts locus-specific co-accessibility maps from DNA sequence and learns distinct motif combinations for enhancers, promoters and CTCF-bound sites.\n- Many motifs driving co-accessibility are missed when modeling average accessibility, pointing to roles in coordinated TF binding; motif orientation, spacing, positioning and co-occurrence all matter.\n\n## Methods Worth Noting\n\n- Pairwise co-accessibility maps as a training target, beyond per-position accessibility tracks.\n- Model interpretation plus in silico experiments to extract a TF-cooperativity grammar from footprinting data.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "schwammle2026smfnet",
+    "title": "SMFnet reveals principles of combinatorial transcription factor assembly",
+    "authors": [
+      "T. Schwämmle",
+      "N. Diamant",
+      "Y. Badayeva",
+      "R. Kleinendorst",
+      "A. Kundaje",
+      "Arnaud R Krebs"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.10.30.762954",
+    "tags": [
+      "single-molecule footprinting",
+      "diffusion model",
+      "chromatin accessibility",
+      "transcription factors",
+      "sequence-to-function"
+    ],
+    "rating": 4,
+    "abstract": "Combinatorial assembly of transcription factors (TFs) opens chromatin at cis-regulatory elements (cREs) to establish cell-type-specific gene expression. Dissecting the role of individual TFs and their collective function has been limited by the diversity of TF binding-site arrangements across cREs. A single regulatory sequence can support multiple configurations of TF and nucleosome occupancy, raising the possibility that distinct chromatin states reflect different TF assemblies. Predictive models linking regulatory sequence to chromatin accessibility collapse these distinct molecular states into population averages, obscuring how TF assemblies shape accessible chromatin. Here, we introduce SMFNet, a generative diffusion model that predicts distributions of single-molecule chromatin accessibility profiles from DNA sequence, and PRISM, which identifies sequence features associated with individual molecular states. Together, these approaches enable us to systematically associate single molecule chromatin states at cREs with specific TF binding motifs. Experimental perturbation of these motifs redistributes the corresponding states as predicted by SMFNet, supporting their interpretation as TF-dependent configurations underlying chromatin opening. We then use controlled in silico motif screens to systematically dissect individual and combinatorial TF contributions to chromatin opening. Individual TFs show distinct chromatin-opening signatures, differing in accessible-region width and nucleosome-positioning precision even when associated with similar levels of chromatin accessibility. Combining motifs reveals partner- and spacing-dependent effects on chromatin accessibility, TF occupancy and nucleosome positioning. Genetic perturbation of TF binding sites using natural variation at endogenous cRE confirms that TF-specific properties shape chromatin accessibility in vivo. Together, our findings reveal sequence-encoded principles of combinatorial TF assembly during chromatin opening.",
+    "notes": "## Key Findings\n\n- SMFNet is a generative diffusion model that predicts distributions of single-molecule chromatin accessibility profiles from DNA sequence, rather than collapsing them into population averages.\n- PRISM links sequence features to individual molecular states; experimental motif perturbations redistribute states as SMFNet predicts, supporting them as TF-dependent configurations.\n- In silico motif screens show individual TFs have distinct chromatin-opening signatures (accessible-region width, nucleosome-positioning precision), and motif combinations have partner- and spacing-dependent effects; natural variation at endogenous cREs confirms this in vivo.\n\n## Methods Worth Noting\n\n- Diffusion-based generative modeling of single-molecule state distributions from sequence (complements Mola's sequence-to-distribution framing).\n- Controlled in silico motif screens to dissect individual vs combinatorial TF contributions.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "sun2026prokncrna",
+    "title": "Systematic mapping of the prokaryotic noncoding sequence space with a genomic language model",
+    "authors": [
+      "G. Sun",
+      "T. Hudelmaier",
+      "J. C. Gilligan",
+      "G. A. Gonzalez",
+      "P. Yin",
+      "F. Wan",
+      "Z. Ma",
+      "M. G. Durrant",
+      "C. Ricci-Tam",
+      "A. Pawluk",
+      "A. S. Puschnik",
+      "S. Konermann",
+      "Patrick D. Hsu"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.10.21.760802",
+    "tags": [
+      "genomic language model",
+      "noncoding rna",
+      "prokaryotes",
+      "metagenomics",
+      "machine learning",
+      "AI agents"
+    ],
+    "rating": 4,
+    "abstract": "Prokaryotic genomes encode a vast repertoire of noncoding elements such as ribozymes, riboswitches, and CRISPR RNAs. The sequence-level diversity of these intergenic elements precludes alignment-based clustering that would enable annotation and discovery of novel noncoding RNA families. Here, we show that a genomic language model fine-tuned on prokaryotic intergenic sequences learns representations of noncoding elements from DNA sequence. We used these embeddings to organize 376 million intergenic regions from 1.3 terabase pairs of prokaryotic genomes and metagenomes into 5.14 million clusters. This approach nominated 20,149 clusters of putative structured RNAs with a candidate protein partner. Periodicity in token entropies revealed internal architecture, recovering CRISPR, TIGR and VIPR arrays together with their cognate effector proteins from sequence alone. Targeted clustering of bridge recombinase-adjacent sequences identified bridge RNA variants with longer guide recognition sequences than any characterized ortholog. Finally, we directed teams of AI agents to mine the database under researcher-defined criteria, uncovering divergent riboswitches, ribozymes, and other structured RNAs with biological hypotheses for their function. We release a publicly available database that transforms the dark matter of prokaryotic genomes into an explorable resource for human-agent molecular discovery.",
+    "notes": "## Key Findings\n\n- A genomic language model fine-tuned on prokaryotic intergenic sequences learns representations of noncoding elements directly from DNA sequence, avoiding alignment-based clustering.\n- Embeddings organize 376 million intergenic regions (1.3 Tbp of genomes and metagenomes) into 5.14 million clusters, nominating 20,149 clusters of putative structured RNAs with candidate protein partners.\n- Periodicity in token entropies recovers CRISPR, TIGR and VIPR arrays with their effectors from sequence alone; targeted clustering finds bridge RNA variants with longer guide recognition sequences than any known ortholog.\n\n## Methods Worth Noting\n\n- Token-entropy periodicity from a genomic LM as an annotation signal for repeat-array architecture.\n- Teams of AI agents directed to mine the released database under researcher-defined criteria for divergent riboswitches and ribozymes.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "xiong2026pdlm",
+    "title": "Joint protein-DNA language modeling enables prediction and engineering of DNA recognition specificity",
+    "authors": [
+      "Y. Xiong",
+      "J. Ren",
+      "X. Wei",
+      "X. Li",
+      "J. Li",
+      "Wensheng Wei"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.11.05.763984",
+    "tags": [
+      "protein-dna language model",
+      "esm2",
+      "dna recognition specificity",
+      "genome editing",
+      "masked language modeling"
+    ],
+    "rating": 3,
+    "abstract": "Protein-DNA recognition specificity underlies transcriptional regulation, DNA replication, chromatin remodeling and genome editing. Protein-DNA recognition depends on both interacting sequences, yet language models that learn this cross-molecular dependence explicitly during pretraining remain limited. Here, we developed the Protein-DNA Language Models (PDLMs), interaction-aware language models that jointly represent protein and DNA sequences. PDLMs were built by continued pretraining from ESM2 with masked language modeling on paired protein-DNA sequences. A shared encoder places amino acids and nucleotides in the same molecular context, enabling conditional sequence scoring and transferable pair representations. We further introduced a domain-aware masking strategy that increased masking probability within DNA-binding domains to strengthen learning of interaction-relevant regions. Across downstream tasks, PDLMs improved protein-DNA pair classification relative to independent-encoder baselines and supported prediction of mutation-associated binding changes. Zero-shot scoring recovered known changes in DNA-recognition specificity and prioritized variants with higher editing activity. Learned representations also supported cross-study prediction of base editor activity. After fine-tuning on transcription factor binding data, PDLMs predicted DNA motifs directly from protein sequences. Together, PDLMs provide a framework for interaction-aware biomolecular language modeling, with potential applications in protein engineering and genome editing.",
+    "notes": "## Key Findings\n\n- PDLMs jointly represent protein and DNA sequences in a shared encoder, built by continued masked-LM pretraining from ESM2 on paired protein–DNA sequences.\n- Improve protein–DNA pair classification over independent-encoder baselines and support prediction of mutation-associated binding changes.\n- Zero-shot scoring recovers known changes in DNA-recognition specificity and prioritizes higher-activity editor variants; after fine-tuning on TF binding data, PDLMs predict DNA motifs directly from protein sequence.\n\n## Methods Worth Noting\n\n- Domain-aware masking that raises masking probability within DNA-binding domains.\n- Placing amino acids and nucleotides in one token context for conditional cross-molecular scoring.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "cheng2026brieno",
+    "title": "Towards a foundation model for raw nanopore signal through discrete tokenization",
+    "authors": [
+      "G. Cheng",
+      "E. Pitkänen"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.11.05.764536",
+    "tags": [
+      "nanopore",
+      "machine learning",
+      "foundation model",
+      "tokenization",
+      "dna methylation",
+      "self-supervised learning"
+    ],
+    "rating": 3,
+    "abstract": "Nanopore sequencing reads nucleic acids as changes in ionic current that carry information beyond the base sequence. Self-supervised pretrained models have advanced genomic sequence modeling and single-cell analysis, but remain underexplored for raw nanopore signals, which are continuous and lack a native token vocabulary. Here we present Brieno, an approach combining reconstruction-based tokenization through residual vector quantization with a Transformer for contextual representation learning. We pretrain the Transformer using masked-token prediction on raw nanopore signals from 118 million reads. With frozen or fine-tuned features, the model identifies species without requiring reference genomes. It complements Dorado by accurately classifying reads left unclassified in native-barcode demultiplexing, approaches Dorado's basecalling performance across six genomes, and exceeds Dorado's specialized 5-methylcytosine model as well as a dedicated 6-methyladenine caller. Brieno also supports accurate CpG methylation detection with limited labeled data. Across tasks, pretrained contextual representations improve downstream performance over non-pretrained baselines and generalize across sequencing runs. Together, these findings support self-supervised pretraining as a basis for transferable representations of raw nanopore signals.",
+    "notes": "## Key Findings\n\n- Brieno tokenizes raw nanopore current signal via residual vector quantization and pretrains a Transformer with masked-token prediction on 118 million reads.\n- Frozen or fine-tuned features identify species without reference genomes and classify reads left unclassified by Dorado's native-barcode demultiplexing; basecalling approaches Dorado across six genomes.\n- Exceeds Dorado's specialized 5mC model and a dedicated 6mA caller, and detects CpG methylation accurately with limited labels.\n\n## Methods Worth Noting\n\n- Reconstruction-based discrete tokenization for a continuous signal with no native vocabulary — a tokenization strategy relevant beyond nanopore data.\n- Pretrained representations generalize across sequencing runs.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
+  },
+  {
+    "id": "cavus2026avi",
+    "title": "Benchmarking the AlphaGenome Variant Impact score against SpliceAI on post-release ClinVar classifications and experimental splicing assays",
+    "authors": [
+      "Ozge A. Cavus",
+      "A. Kuskucu"
+    ],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.10.11.758362",
+    "tags": [
+      "alphagenome",
+      "variant effect prediction",
+      "splicing",
+      "benchmark",
+      "clinvar"
+    ],
+    "rating": 3,
+    "abstract": "The AlphaGenome Variant Impact (AVI) score ranks variants by predicted impact, and its developers report large gains over other genome-wide scores for intronic ClinVar variants. We tested AVI on two kinds of ground truth the developers did not use, under an analysis plan set before scoring: ClinVar classifications made after the developers' ClinVar release (87,666 rare single-nucleotide variants outside AVI's training chromosomes), and six splicing assays whose variants no predictor chose. In intronic variants at least 3 bases from an exon (449 pathogenic or likely pathogenic, 28,188 benign or likely benign), AVI reached an area under the receiver operating characteristic curve (AUROC) of 0.957. It did not differ detectably from SpliceAI (difference -0.005, 95% interval -0.017 to 0.006) or Pangolin (-0.006, -0.018 to 0.007); both intervals exclude differences larger than about 0.02. AVI had a higher AUROC than CADD (+0.071). In deep intronic variants it trailed SpliceAI (-0.070, -0.118 to -0.026). Under an adapted ClinGen calibration, AVI gave strong evidence to 52% of pathogenic variants on the pooled test set, but its levels did not hold in every region. It gave benign evidence to 24% of benign variants, against 90% for SpliceAI. On the assays, AVI ranked splice-altering variants below raw SpliceAI (pooled difference -0.089, -0.129 to -0.049) and did not differ from masked SpliceAI (+0.003). SpliceAI2, released during the study, led AVI on both kinds of ground truth. AVI did not outperform splicing predictors on AUROC and gave little benign evidence. AlphaGenome outputs are provided for research use, not for diagnostic decisions.",
+    "notes": "## Key Findings\n\n- Pre-registered benchmark of the AlphaGenome Variant Impact (AVI) score on post-release ClinVar classifications (87,666 rare SNVs outside AVI training chromosomes) and six unbiased splicing assays.\n- For intronic variants ≥3 bp from exons, AVI reaches AUROC 0.957 — indistinguishable from SpliceAI and Pangolin, better than CADD (+0.071), but trails SpliceAI on deep intronic variants (−0.070).\n- Under adapted ClinGen calibration AVI gives benign evidence to only 24% of benign variants vs 90% for SpliceAI; on splicing assays it ranks splice-altering variants below raw SpliceAI, and SpliceAI2 leads AVI on both ground truths.\n\n## Methods Worth Noting\n\n- Analysis plan fixed before scoring, using ground truth the model developers did not use — a template for leakage-free evaluation of S2F variant scores.\n- Comparison with masked vs raw SpliceAI to separate genuine signal from evaluation artifacts.",
+    "addedDate": "2026-11-07",
+    "source": "bioRxiv"
   }
 ]
